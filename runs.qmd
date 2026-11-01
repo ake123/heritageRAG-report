@@ -129,19 +129,17 @@ automatically.
 | `claims.csv`, `traceability.csv` | The AI answers split into sentences, and their citations |
 | `study.rds` | Everything above in one R file |
 
-::: {.callout-tip}
-## Updating this report after a new run
+<!-- ## Updating this report after a new run -->
 
-Copy the new results into the report and render it again:
+<!-- Copy the new results into the report and render it again: -->
 
-```bash
-Rscript prepare_data.R ../heritageRAG/results/final ../heritageRAG/results/batch-pilot ../heritageRAG/results/sami-sensitivity
-quarto render
-```
+<!-- ```bash -->
+<!-- Rscript prepare_data.R ../heritageRAG/results/final ../heritageRAG/results/batch-pilot ../heritageRAG/results/sami-sensitivity -->
+<!-- quarto render -->
+<!-- ``` -->
 
-The third folder (the Sámi test on [Extra tests](extra-tests.qmd)) is optional. To redo the
-analysis and the [paper figures](paper-figures.qmd) with a newer heritageRAG without searching
-again, first run `Rscript scripts/refresh_analysis.R results/final` in the heritageRAG folder. Every number
-and chart on these pages is recalculated from the files. Only the short notes in `notes.csv`
-are written by hand, so check those after a new run.
-:::
+<!-- The third folder (the Sámi test on [Extra tests](extra-tests.qmd)) is optional. To redo the -->
+<!-- analysis and the [paper figures](paper-figures.qmd) with a newer heritageRAG without searching -->
+<!-- again, first run `Rscript scripts/refresh_analysis.R results/final` in the heritageRAG folder. Every number -->
+<!-- and chart on these pages is recalculated from the files. Only the short notes in `notes.csv` -->
+<!-- are written by hand, so check those after a new run. -->
