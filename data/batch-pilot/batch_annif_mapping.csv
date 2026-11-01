@@ -1,0 +1,116 @@
+"question_id","label","uri","score","facet","anchor","mapping","used"
+"women-advertising","women","http://www.yso.fi/onto/yso/p16991",0.578883945941925,1,"women","anchor_concept",FALSE
+"women-advertising","advertising","http://www.yso.fi/onto/yso/p1232",0.295313119888306,2,"advertising","anchor_concept",FALSE
+"women-advertising","woman's status","http://www.yso.fi/onto/yso/p6365",0.166747868061066,,,"unanchored",FALSE
+"women-advertising","history","http://www.yso.fi/onto/yso/p1780",0.144507497549057,,,"unanchored",FALSE
+"women-advertising","view of women","http://www.yso.fi/onto/yso/p11173",0.115848913788795,1,"women","lexical",TRUE
+"women-advertising","representation (mental objects)","http://www.yso.fi/onto/yso/p1407",0.0876752361655235,,,"unanchored",FALSE
+"women-advertising","gender","http://www.yso.fi/onto/yso/p5291",0.0733040645718575,,,"unanchored",FALSE
+"women-advertising","media","http://www.yso.fi/onto/yso/p2445",0.0580290593206882,,,"unanchored",FALSE
+"women-advertising","gender roles","http://www.yso.fi/onto/yso/p928",0.0569184422492981,,,"unanchored",FALSE
+"women-advertising","journalistic writing","http://www.yso.fi/onto/yso/p20540",0.0568271279335022,,,"unanchored",FALSE
+"women-advertising-fi","mainokset","http://www.yso.fi/onto/yso/p6726",0.456222832202911,2,"mainonta","lexical",TRUE
+"women-advertising-fi","mainonta","http://www.yso.fi/onto/yso/p1232",0.354116231203079,2,"mainonta","anchor_concept",FALSE
+"women-advertising-fi","naiset","http://www.yso.fi/onto/yso/p16991",0.338128089904785,1,"naiset","anchor_concept",FALSE
+"women-advertising-fi","historia","http://www.yso.fi/onto/yso/p1780",0.319838315248489,,,"unanchored",FALSE
+"women-advertising-fi","lehtimainonta","http://www.yso.fi/onto/yso/p16494",0.234360709786415,2,"mainonta","narrower",TRUE
+"women-advertising-fi","suomalaiset","http://www.yso.fi/onto/yso/p3180",0.184949353337288,,,"unanchored",FALSE
+"women-advertising-fi","naisen asema","http://www.yso.fi/onto/yso/p6365",0.087389700114727,1,"naiset","lexical",TRUE
+"women-advertising-fi","sukupuoliroolit","http://www.yso.fi/onto/yso/p928",0.0868213027715683,,,"unanchored",FALSE
+"women-advertising-fi","Suomi","http://www.yso.fi/onto/yso/p94426",0.0824697911739349,,,"unanchored",FALSE
+"women-advertising-fi","valokuvaus","http://www.yso.fi/onto/yso/p1979",0.0639202520251274,,,"unanchored",FALSE
+"emigrant-letters","migrants","http://www.yso.fi/onto/yso/p6457",0.567232847213745,1,"emigrants","narrower",TRUE
+"emigrant-letters","migration (demography)","http://www.yso.fi/onto/yso/p10006",0.474875628948212,,,"unanchored",FALSE
+"emigrant-letters","Finns","http://www.yso.fi/onto/yso/p3180",0.313764452934265,,,"unanchored",FALSE
+"emigrant-letters","Finnish Americans","http://www.yso.fi/onto/yso/p5280",0.2818783223629,,,"unanchored",FALSE
+"emigrant-letters","history","http://www.yso.fi/onto/yso/p1780",0.239326626062393,,,"unanchored",FALSE
+"emigrant-letters","correspondence (communication)","http://www.yso.fi/onto/yso/p4844",0.221778124570847,2,"letters","related",TRUE
+"emigrant-letters","emigration","http://www.yso.fi/onto/yso/p14721",0.207157716155052,1,"emigrants","lexical",TRUE
+"emigrant-letters","letters","http://www.yso.fi/onto/yso/p8646",0.190494999289513,2,"letters","anchor_concept",FALSE
+"emigrant-letters","North America","http://www.yso.fi/onto/yso/p105416",0.162573263049126,,,"unanchored",FALSE
+"emigrant-letters","Finnish Canadians","http://www.yso.fi/onto/yso/p12452",0.0958316922187805,,,"unanchored",FALSE
+"civil-war-camps","Finnish Civil War","http://www.yso.fi/onto/yso/p10970",0.462874919176102,1,"civil wars","narrower",TRUE
+"civil-war-camps","prisoners","http://www.yso.fi/onto/yso/p5511",0.365743160247803,2,"prison camps","partial_phrase",FALSE
+"civil-war-camps","civil wars","http://www.yso.fi/onto/yso/p15837",0.337457895278931,1,"civil wars","anchor_concept",FALSE
+"civil-war-camps","history","http://www.yso.fi/onto/yso/p1780",0.290956377983093,,,"unanchored",FALSE
+"civil-war-camps","prison camps","http://www.yso.fi/onto/yso/p145",0.285865783691406,2,"prison camps","anchor_concept",FALSE
+"civil-war-camps","prisons","http://www.yso.fi/onto/yso/p11055",0.278158664703369,2,"prison camps","partial_phrase",FALSE
+"civil-war-camps","collections","http://www.yso.fi/onto/yso/p12676",0.158204063773155,,,"unanchored",FALSE
+"civil-war-camps","prisoners of war","http://www.yso.fi/onto/yso/p16759",0.126133754849434,2,"prison camps","related",TRUE
+"civil-war-camps","correctional treatment","http://www.yso.fi/onto/yso/p12898",0.108217909932137,,,"unanchored",FALSE
+"civil-war-camps","camps","http://www.yso.fi/onto/yso/p143",0.0991961136460304,2,"prison camps","partial_phrase",FALSE
+"temperance-posters","history","http://www.yso.fi/onto/yso/p1780",0.591122448444366,,,"unanchored",FALSE
+"temperance-posters","temperance movements","http://www.yso.fi/onto/yso/p11053",0.339646100997925,1,"temperance movement","anchor_concept",FALSE
+"temperance-posters","Finland","http://www.yso.fi/onto/yso/p94426",0.194337248802185,,,"unanchored",FALSE
+"temperance-posters","prohibition acts","http://www.yso.fi/onto/yso/p3486",0.127803906798363,,,"unanchored",FALSE
+"temperance-posters","temperance","http://www.yso.fi/onto/yso/p10885",0.0852717310190201,1,"temperance movement","partial_phrase",FALSE
+"temperance-posters","illustrated works","http://www.yso.fi/onto/yso/p2599",0.0754786878824234,,,"unanchored",FALSE
+"temperance-posters","economic history","http://www.yso.fi/onto/yso/p17789",0.0644171088933945,,,"unanchored",FALSE
+"sami-handicrafts","Sámi people","http://www.yso.fi/onto/yso/p11537",0.288193106651306,1,"Sami","anchor_concept",FALSE
+"sami-handicrafts","handicrafts","http://www.yso.fi/onto/yso/p4923",0.275671720504761,2,"handicrafts","anchor_concept",FALSE
+"sami-handicrafts","handicraft tradition","http://www.yso.fi/onto/yso/p5244",0.204613134264946,2,"handicrafts","related",TRUE
+"sami-handicrafts","cultural heritage","http://www.yso.fi/onto/yso/p8475",0.203576922416687,,,"unanchored",FALSE
+"sami-handicrafts","duodji","http://www.yso.fi/onto/yso/p40232",0.14200647175312,,,"unanchored",FALSE
+"sami-handicrafts","exhibition publications","http://www.yso.fi/onto/yso/p8972",0.108601093292236,,,"unanchored",FALSE
+"sami-handicrafts","collections","http://www.yso.fi/onto/yso/p12676",0.102309077978134,,,"unanchored",FALSE
+"sami-handicrafts","history","http://www.yso.fi/onto/yso/p1780",0.093034066259861,,,"unanchored",FALSE
+"sami-handicrafts","folklore","http://www.yso.fi/onto/yso/p1362",0.0859560519456863,,,"unanchored",FALSE
+"sami-handicrafts","art handicraft","http://www.yso.fi/onto/yso/p1000",0.0815081149339676,2,"handicrafts","related",TRUE
+"karelian-evacuees","Karelians","http://www.yso.fi/onto/yso/p13373",0.370697975158691,,,"unanchored",FALSE
+"karelian-evacuees","Finland","http://www.yso.fi/onto/yso/p94426",0.27303010225296,,,"unanchored",FALSE
+"karelian-evacuees","history","http://www.yso.fi/onto/yso/p1780",0.19512115418911,,,"unanchored",FALSE
+"karelian-evacuees","internally displaced persons","http://www.yso.fi/onto/yso/p8438",0.178496986627579,,,"unanchored",FALSE
+"karelian-evacuees","migratory movement (demography)","http://www.yso.fi/onto/yso/p6119",0.0981889367103577,,,"unanchored",FALSE
+"karelian-evacuees","identity (mental objects)","http://www.yso.fi/onto/yso/p9743",0.0794572681188583,,,"unanchored",FALSE
+"karelian-evacuees","local area tourism","http://www.yso.fi/onto/yso/p22247",0.0647701174020767,,,"unanchored",FALSE
+"karelian-evacuees","national minorities","http://www.yso.fi/onto/yso/p1816",0.0645695477724075,,,"unanchored",FALSE
+"karelian-evacuees","reminiscing","http://www.yso.fi/onto/yso/p13858",0.0579327456653118,,,"unanchored",FALSE
+"karelian-evacuees","illustrated works","http://www.yso.fi/onto/yso/p2599",0.0571586564183235,,,"unanchored",FALSE
+"working-class-housing","towns and cities","http://www.yso.fi/onto/yso/p1688",0.462676405906677,,,"unanchored",FALSE
+"working-class-housing","history","http://www.yso.fi/onto/yso/p1780",0.364986479282379,,,"unanchored",FALSE
+"working-class-housing","working class","http://www.yso.fi/onto/yso/p11280",0.280066847801208,1,"working class","anchor_concept",FALSE
+"working-class-housing","architecture","http://www.yso.fi/onto/yso/p8025",0.181663542985916,,,"unanchored",FALSE
+"working-class-housing","residence","http://www.yso.fi/onto/yso/p1797",0.10163164883852,,,"unanchored",FALSE
+"working-class-housing","urban landscape","http://www.yso.fi/onto/yso/p17178",0.0810445696115494,,,"unanchored",FALSE
+"working-class-housing","urban space","http://www.yso.fi/onto/yso/p18147",0.0771150141954422,,,"unanchored",FALSE
+"working-class-housing","documents","http://www.yso.fi/onto/yso/p2325",0.0769113451242447,,,"unanchored",FALSE
+"working-class-housing","housings","http://www.yso.fi/onto/yso/p256",0.0767412483692169,2,"housing","anchor_concept",FALSE
+"working-class-housing","residential buildings","http://www.yso.fi/onto/yso/p2074",0.0656857565045357,,,"unanchored",FALSE
+"finland-swedish-theatre","theatre (art forms)","http://www.yso.fi/onto/yso/p2625",0.425029307603836,2,"theatre","anchor_concept",FALSE
+"finland-swedish-theatre","Finland","http://www.yso.fi/onto/yso/p94426",0.300424516201019,1,"Finland Swedes","partial_phrase",FALSE
+"finland-swedish-theatre","theatres","http://www.yso.fi/onto/yso/p3203",0.176512315869331,2,"theatre","related",TRUE
+"finland-swedish-theatre","history","http://www.yso.fi/onto/yso/p1780",0.14323154091835,,,"unanchored",FALSE
+"finland-swedish-theatre","Swedish-speaking Finns","http://www.yso.fi/onto/yso/p3418",0.0708594396710396,,,"unanchored",FALSE
+"finland-swedish-theatre","documentation","http://www.yso.fi/onto/yso/p16361",0.0587976276874542,,,"unanchored",FALSE
+"finland-swedish-theatre","performance analysis","http://www.yso.fi/onto/yso/p6373",0.0505974180996418,,,"unanchored",FALSE
+"womens-suffrage","women","http://www.yso.fi/onto/yso/p16991",0.663475513458252,2,"women","anchor_concept",FALSE
+"womens-suffrage","right to vote","http://www.yso.fi/onto/yso/p9796",0.496358007192612,1,"suffrage","anchor_concept",FALSE
+"womens-suffrage","history","http://www.yso.fi/onto/yso/p1780",0.417606383562088,,,"unanchored",FALSE
+"womens-suffrage","woman's status","http://www.yso.fi/onto/yso/p6365",0.334905415773392,,,"unanchored",FALSE
+"womens-suffrage","women's history","http://www.yso.fi/onto/yso/p10493",0.232143610715866,2,"women","lexical",TRUE
+"womens-suffrage","women's rights movements","http://www.yso.fi/onto/yso/p10578",0.174769327044487,1,"suffrage","lexical",TRUE
+"womens-suffrage","Finland","http://www.yso.fi/onto/yso/p94426",0.112604647874832,,,"unanchored",FALSE
+"womens-suffrage","reforms","http://www.yso.fi/onto/yso/p6795",0.0942930579185486,,,"unanchored",FALSE
+"womens-suffrage","equality (values)","http://www.yso.fi/onto/yso/p2399",0.0904062390327454,,,"unanchored",FALSE
+"womens-suffrage","United Kingdom","http://www.yso.fi/onto/yso/p104990",0.0850750803947449,,,"unanchored",FALSE
+"sawmill-workers","sawmills","http://www.yso.fi/onto/yso/p14013",0.234766110777855,1,"sawmills","anchor_concept",FALSE
+"sawmill-workers","history","http://www.yso.fi/onto/yso/p1780",0.21091715991497,,,"unanchored",FALSE
+"sawmill-workers","sawmill worker","http://www.yso.fi/onto/yso/p26227",0.133603304624557,1,"sawmills","lexical",TRUE
+"sawmill-workers","folkloristics","http://www.yso.fi/onto/yso/p17883",0.125410586595535,,,"unanchored",FALSE
+"sawmill-workers","sawmill industry","http://www.yso.fi/onto/yso/p2590",0.112337231636047,1,"sawmills","lexical",TRUE
+"sawmill-workers","biographies","http://www.yso.fi/onto/yso/p11597",0.0734153538942337,,,"unanchored",FALSE
+"sawmill-workers","documents","http://www.yso.fi/onto/yso/p2325",0.0686043575406075,,,"unanchored",FALSE
+"sawmill-workers","workers","http://www.yso.fi/onto/yso/p4189",0.0607390180230141,2,"workers","anchor_concept",FALSE
+"childrens-book-illustration","children's literature","http://www.yso.fi/onto/yso/p4742",0.631820321083069,1,"children's literature","anchor_concept",FALSE
+"childrens-book-illustration","illustrations","http://www.yso.fi/onto/yso/p2738",0.127001389861107,2,"illustrations","anchor_concept",FALSE
+"childrens-book-illustration","history","http://www.yso.fi/onto/yso/p1780",0.0822631865739822,,,"unanchored",FALSE
+"childrens-book-illustration","juvenile literature","http://www.yso.fi/onto/yso/p5398",0.0665124207735062,1,"children's literature","related",TRUE
+"childrens-book-illustration","children's authors","http://www.yso.fi/onto/yso/p12012",0.0530594810843468,1,"children's literature","lexical",TRUE
+"amateur-radio","amateur radio","http://www.yso.fi/onto/yso/p14876",0.326454818248749,1,"amateur radio","anchor_concept",FALSE
+"amateur-radio","radio amateurs","http://www.yso.fi/onto/yso/p18713",0.237553685903549,1,"amateur radio","related",TRUE
+"amateur-radio","Finland","http://www.yso.fi/onto/yso/p94426",0.181327342987061,,,"unanchored",FALSE
+"amateur-radio","radio technology","http://www.yso.fi/onto/yso/p18574",0.168721958994865,1,"amateur radio","lexical",TRUE
+"amateur-radio","history","http://www.yso.fi/onto/yso/p1780",0.150685667991638,,,"unanchored",FALSE
+"amateur-radio","radio operators","http://www.yso.fi/onto/yso/p19542",0.111840263009071,1,"amateur radio","lexical",TRUE
+"amateur-radio","radio equipment","http://www.yso.fi/onto/yso/p2204",0.0592877231538296,1,"amateur radio","lexical",FALSE
+"amateur-radio","construction","http://www.yso.fi/onto/yso/p3673",0.0575978308916092,,,"unanchored",FALSE

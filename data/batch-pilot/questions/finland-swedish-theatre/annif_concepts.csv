@@ -1,0 +1,8 @@
+"label","uri","score","facet","mapping","anchor","used"
+"theatre (art forms)","http://www.yso.fi/onto/yso/p2625",0.425029307603836,2,"anchor_concept","theatre",FALSE
+"Finland","http://www.yso.fi/onto/yso/p94426",0.300424516201019,1,"partial_phrase","Finland Swedes",FALSE
+"theatres","http://www.yso.fi/onto/yso/p3203",0.176512315869331,2,"related","theatre",TRUE
+"history","http://www.yso.fi/onto/yso/p1780",0.14323154091835,,"unanchored",,FALSE
+"Swedish-speaking Finns","http://www.yso.fi/onto/yso/p3418",0.0708594396710396,,"unanchored",,FALSE
+"documentation","http://www.yso.fi/onto/yso/p16361",0.0587976276874542,,"unanchored",,FALSE
+"performance analysis","http://www.yso.fi/onto/yso/p6373",0.0505974180996418,,"unanchored",,FALSE

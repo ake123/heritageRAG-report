@@ -1,0 +1,7 @@
+"facet","anchor_uri","relation","uri","prefLabel"
+1,"http://www.yso.fi/onto/yso/p9796","broader","http://www.yso.fi/onto/yso/p2404","political rights"
+1,"http://www.yso.fi/onto/yso/p9796","related","http://www.yso.fi/onto/yso/p9795","eligibility of candidacy"
+1,"http://www.yso.fi/onto/yso/p9796","related","http://www.yso.fi/onto/yso/p3225","elections"
+2,"http://www.yso.fi/onto/yso/p16991","broader","http://www.yso.fi/onto/yso/p22231","role related to gender"
+2,"http://www.yso.fi/onto/yso/p16991","narrower","http://www.yso.fi/onto/yso/p40253","transgender women"
+2,"http://www.yso.fi/onto/yso/p16991","related","http://www.yso.fi/onto/yso/p7196","girls"

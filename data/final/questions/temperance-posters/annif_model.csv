@@ -1,0 +1,2 @@
+"project_id","name","backend","language","vocabulary","is_trained","model_modified","annif_package","checked_at"
+"yso-en","YSO NN ensemble English","nn_ensemble","en","en, fi, se, sv","TRUE","2025-09-16 16:44:39","0.1.1","2026-10-30 00:30:15 EET"

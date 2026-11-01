@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","äänioikeus.",2,0.181818181818182,1,TRUE
+"A_direct","kvinnor.",2,0.181818181818182,2,TRUE
+"A_direct","kvinnosaksrörelser.",2,0.181818181818182,3,TRUE
+"A_direct","naisasialiikkeet",2,0.181818181818182,4,TRUE
+"A_direct","naisasialiikkeet.",2,0.181818181818182,5,TRUE
+"A_direct","naiset.",2,0.181818181818182,6,TRUE
+"A_direct","rösträtt.",2,0.181818181818182,7,TRUE
+"A_direct","aikakauslehdet.",1,0.0909090909090909,8,TRUE
+"A_direct","australia.",1,0.0909090909090909,9,TRUE
+"A_direct","australien.",1,0.0909090909090909,10,TRUE
+"A_direct","feminister",1,0.0909090909090909,11,TRUE
+"A_direct","finlandssvenskar",1,0.0909090909090909,12,TRUE
+"A_direct","förenta staterna.",1,0.0909090909090909,13,TRUE
+"A_direct","great britain.",1,0.0909090909090909,14,TRUE
+"A_direct","journalister",1,0.0909090909090909,15,TRUE
+"B_annif","women's rights movements",22,0.407407407407407,1,FALSE
+"B_annif","naisasialiikkeet",17,0.314814814814815,2,TRUE
+"B_annif","women's rights organisations",12,0.222222222222222,3,FALSE
+"B_annif","naisen asema",7,0.12962962962963,4,FALSE
+"B_annif","feminism",6,0.111111111111111,5,FALSE
+"B_annif","historia",6,0.111111111111111,6,FALSE
+"B_annif","kvinnor.",5,0.0925925925925926,7,TRUE
+"B_annif","naiset.",5,0.0925925925925926,8,TRUE
+"B_annif","naisliikkeet",5,0.0925925925925926,9,FALSE
+"B_annif","tasa-arvo",5,0.0925925925925926,10,FALSE
+"B_annif","emansipaatio",4,0.0740740740740741,11,FALSE
+"B_annif","kehitys",4,0.0740740740740741,12,FALSE
+"B_annif","kvinnosaksrörelser.",4,0.0740740740740741,13,TRUE
+"B_annif","naisasialiikkeet.",4,0.0740740740740741,14,TRUE
+"B_annif","naiset",4,0.0740740740740741,15,FALSE
+"C_finto","women's rights movements",22,0.366666666666667,1,FALSE
+"C_finto","kvinnor.",17,0.283333333333333,2,TRUE
+"C_finto","naiset.",17,0.283333333333333,3,TRUE
+"C_finto","äänioikeus.",15,0.25,4,TRUE
+"C_finto","rösträtt.",15,0.25,5,TRUE
+"C_finto","women's rights organisations",13,0.216666666666667,6,FALSE
+"C_finto","äänioikeus",11,0.183333333333333,7,FALSE
+"C_finto","naiset",10,0.166666666666667,8,FALSE
+"C_finto","naisasialiikkeet",9,0.15,9,TRUE
+"C_finto","naisen asema",7,0.116666666666667,10,FALSE
+"C_finto","feminism",6,0.1,11,FALSE
+"C_finto","naisasia",6,0.1,12,FALSE
+"C_finto","right to vote",5,0.0833333333333333,13,FALSE
+"C_finto","activism",3,0.05,14,FALSE
+"C_finto","arbetarrörelsen.",3,0.05,15,FALSE

@@ -1,0 +1,677 @@
+"condition","dimension","value","records","share"
+"A_direct","decade","1950s",40,0.666666666666667
+"A_direct","decade","1960s",12,0.2
+"A_direct","decade","1940s",5,0.0833333333333333
+"A_direct","decade","1930s",2,0.0333333333333333
+"A_direct","decade","1920s",1,0.0166666666666667
+"B_annif","decade","1960s",16,0.285714285714286
+"B_annif","decade","1950s",15,0.267857142857143
+"B_annif","decade","1930s",9,0.160714285714286
+"B_annif","decade","1940s",9,0.160714285714286
+"B_annif","decade","1920s",7,0.125
+"C_finto","decade","1960s",32,0.533333333333333
+"C_finto","decade","1950s",20,0.333333333333333
+"C_finto","decade","1930s",4,0.0666666666666667
+"C_finto","decade","1920s",2,0.0333333333333333
+"C_finto","decade","1940s",2,0.0333333333333333
+"A_direct","institution","Helsinki City Museum",42,0.7
+"A_direct","institution","Tampere City Museums (Siiri)",6,0.1
+"A_direct","institution","Hyvinkää City Museum",5,0.0833333333333333
+"A_direct","institution","North Karelian Museum",2,0.0333333333333333
+"A_direct","institution","The Labour Archives",2,0.0333333333333333
+"A_direct","institution","The Finnish Arts and Culture Agency",1,0.0166666666666667
+"A_direct","institution","The Finnish Museum of Photography",1,0.0166666666666667
+"A_direct","institution","The Finnish Railway Museum",1,0.0166666666666667
+"B_annif","institution","Helsinki City Museum",21,0.375
+"B_annif","institution","Turun kaupunginmuseo",7,0.125
+"B_annif","institution","Tampere City Museums (Siiri)",6,0.107142857142857
+"B_annif","institution","Finnish Heritage Agency",4,0.0714285714285714
+"B_annif","institution","The Uusikaupunki museum",4,0.0714285714285714
+"B_annif","institution","Central Archives for Finnish Business Records",3,0.0535714285714286
+"B_annif","institution","The Finnish Labour Museum Werstas",3,0.0535714285714286
+"B_annif","institution","The National Library",3,0.0535714285714286
+"B_annif","institution","Hyvinkää City Museum",1,0.0178571428571429
+"B_annif","institution","Lahti City Museums",1,0.0178571428571429
+"B_annif","institution","The Finnish Arts and Culture Agency",1,0.0178571428571429
+"B_annif","institution","The Labour Archives",1,0.0178571428571429
+"B_annif","institution","The People's Archives",1,0.0178571428571429
+"C_finto","institution","Hyvinkää City Museum",34,0.566666666666667
+"C_finto","institution","The Finnish Labour Museum Werstas",11,0.183333333333333
+"C_finto","institution","Lahti City Museums",4,0.0666666666666667
+"C_finto","institution","The Labour Archives",3,0.05
+"C_finto","institution","The People's Archives",3,0.05
+"C_finto","institution","The Finnish Migration Museum",2,0.0333333333333333
+"C_finto","institution","Helsinki City Museum",1,0.0166666666666667
+"C_finto","institution","Lusto - The Finnish Forest Museum",1,0.0166666666666667
+"C_finto","institution","The Society of Swedish Literature in Finland",1,0.0166666666666667
+"A_direct","language","(unknown)",60,1
+"B_annif","language","(unknown)",53,0.946428571428571
+"B_annif","language","fin",2,0.0357142857142857
+"B_annif","language","swe",1,0.0178571428571429
+"C_finto","language","(unknown)",59,0.983333333333333
+"C_finto","language","swe",1,0.0166666666666667
+"A_direct","material","Image",56,0.933333333333333
+"A_direct","material","Archive/Collection",2,0.0333333333333333
+"A_direct","material","Physical object",1,0.0166666666666667
+"A_direct","material","Video",1,0.0166666666666667
+"B_annif","material","Physical object",24,0.428571428571429
+"B_annif","material","Image",23,0.410714285714286
+"B_annif","material","Archive/Collection",5,0.0892857142857143
+"B_annif","material","Text",3,0.0535714285714286
+"B_annif","material","Video",1,0.0178571428571429
+"C_finto","material","Image",54,0.9
+"C_finto","material","Physical object",2,0.0333333333333333
+"C_finto","material","Work of art",2,0.0333333333333333
+"C_finto","material","Archive/Collection",1,0.0166666666666667
+"C_finto","material","Book material",1,0.0166666666666667
+"A_direct","subject","naiset",45,0.75
+"A_direct","subject","mainonta",42,0.7
+"A_direct","subject","uusimaa",25,0.416666666666667
+"A_direct","subject","europe",24,0.4
+"A_direct","subject","finland",24,0.4
+"A_direct","subject","helsinki",24,0.4
+"A_direct","subject","nordic countries",24,0.4
+"A_direct","subject","markkinointi",21,0.35
+"A_direct","subject","taka-töölö",17,0.283333333333333
+"A_direct","subject","töölö",17,0.283333333333333
+"A_direct","subject","mannerheimintie 17",15,0.25
+"A_direct","subject","miehet",13,0.216666666666667
+"A_direct","subject","näyttelyt",11,0.183333333333333
+"A_direct","subject","pukeutuminen",11,0.183333333333333
+"A_direct","subject","messut",10,0.166666666666667
+"A_direct","subject","osuusliike elanto",10,0.166666666666667
+"A_direct","subject","vaatteet",9,0.15
+"A_direct","subject","advertising",8,0.133333333333333
+"A_direct","subject","hiukset kampaukset",7,0.116666666666667
+"A_direct","subject","tekstiiliteollisuus vaatetusteollisuus",7,0.116666666666667
+"A_direct","subject","teollisuus",7,0.116666666666667
+"A_direct","subject","vaatteet asusteet päähineet",7,0.116666666666667
+"A_direct","subject","valokuvaus",7,0.116666666666667
+"A_direct","subject","women",7,0.116666666666667
+"A_direct","subject","jalkineet",6,0.1
+"A_direct","subject","kauppa",6,0.1
+"A_direct","subject","päähineet",6,0.1
+"A_direct","subject","mainokset",5,0.0833333333333333
+"A_direct","subject","mainoskuvat",5,0.0833333333333333
+"A_direct","subject","vaunuteos oy",5,0.0833333333333333
+"A_direct","subject","avajaiset",4,0.0666666666666667
+"A_direct","subject","esiintyjät",4,0.0666666666666667
+"A_direct","subject","itävalta",4,0.0666666666666667
+"A_direct","subject","jalkakäytävät",4,0.0666666666666667
+"A_direct","subject","kansainväliset suhteet",4,0.0666666666666667
+"A_direct","subject","kluuvi",4,0.0666666666666667
+"A_direct","subject","lapset",4,0.0666666666666667
+"A_direct","subject","lastenvaatteet",4,0.0666666666666667
+"A_direct","subject","markkinointi mainonta",4,0.0666666666666667
+"A_direct","subject","matkailu",4,0.0666666666666667
+"A_direct","subject","osuustoiminta",4,0.0666666666666667
+"A_direct","subject","politiikka kansainvälinen politiikka",4,0.0666666666666667
+"A_direct","subject","somistus",4,0.0666666666666667
+"A_direct","subject","tapahtumat",4,0.0666666666666667
+"A_direct","subject","48.",3,0.05
+"A_direct","subject","aleksanterinkatu 46",3,0.05
+"A_direct","subject","arkistokuva",3,0.05
+"A_direct","subject","ikkunat näyteikkunat",3,0.05
+"A_direct","subject","juhlat",3,0.05
+"A_direct","subject","kuusinen oy",3,0.05
+"A_direct","subject","lastenvaunut",3,0.05
+"A_direct","subject","liikehuoneistot",3,0.05
+"A_direct","subject","messut (tapahtumat)",3,0.05
+"A_direct","subject","myymälät vaatetusliikkeet",3,0.05
+"A_direct","subject","nuket mallinuket",3,0.05
+"A_direct","subject","textile industry",3,0.05
+"A_direct","subject","työvaatteet",3,0.05
+"A_direct","subject","vaatteet mekot",3,0.05
+"A_direct","subject","autot",2,0.0333333333333333
+"A_direct","subject","cooperative system",2,0.0333333333333333
+"A_direct","subject","elintarvikkeet",2,0.0333333333333333
+"A_direct","subject","elokuvat",2,0.0333333333333333
+"A_direct","subject","espoo",2,0.0333333333333333
+"A_direct","subject","etiketit",2,0.0333333333333333
+"A_direct","subject","hallman oy",2,0.0333333333333333
+"A_direct","subject","henkilöstö työntekijät",2,0.0333333333333333
+"A_direct","subject","interiöörit",2,0.0333333333333333
+"A_direct","subject","jalankulkijat",2,0.0333333333333333
+"A_direct","subject","joensuu",2,0.0333333333333333
+"A_direct","subject","joensuun matkustajasatama",2,0.0333333333333333
+"A_direct","subject","kahvi",2,0.0333333333333333
+"A_direct","subject","käyttögrafiikka",2,0.0333333333333333
+"A_direct","subject","keittiöt",2,0.0333333333333333
+"A_direct","subject","kellot rannekellot",2,0.0333333333333333
+"A_direct","subject","keräily",2,0.0333333333333333
+"A_direct","subject","laivat",2,0.0333333333333333
+"A_direct","subject","lastenvaunut lastenrattaat",2,0.0333333333333333
+"A_direct","subject","lattiat",2,0.0333333333333333
+"A_direct","subject","lavasteet",2,0.0333333333333333
+"A_direct","subject","leikkikalut nuket",2,0.0333333333333333
+"A_direct","subject","liedet",2,0.0333333333333333
+"A_direct","subject","mainonta mainokset mainoskuvat",2,0.0333333333333333
+"A_direct","subject","makeiset",2,0.0333333333333333
+"A_direct","subject","messut näyttelyt",2,0.0333333333333333
+"A_direct","subject","myyjät",2,0.0333333333333333
+"A_direct","subject","osuuskunnat",2,0.0333333333333333
+"A_direct","subject","paikallistelevisio",2,0.0333333333333333
+"A_direct","subject","pohjois-karjala",2,0.0333333333333333
+"A_direct","subject","pojat",2,0.0333333333333333
+"A_direct","subject","rantakatu 2",2,0.0333333333333333
+"A_direct","subject","savukkeet",2,0.0333333333333333
+"A_direct","subject","sok suomen osuuskauppojen keskuskunta",2,0.0333333333333333
+"A_direct","subject","sukupuoliroolit",2,0.0333333333333333
+"A_direct","subject","tavaratalot",2,0.0333333333333333
+"A_direct","subject","tekstiiliteollisuus",2,0.0333333333333333
+"A_direct","subject","televisio (joukkoviestimet)",2,0.0333333333333333
+"A_direct","subject","televisio-ohjelmat",2,0.0333333333333333
+"A_direct","subject","televisiokanavat",2,0.0333333333333333
+"A_direct","subject","teollisuus elintarviketeollisuus juomateollisuus",2,0.0333333333333333
+"A_direct","subject","teollisuus tekstiiliteollisuus vaatetusteollisuus",2,0.0333333333333333
+"A_direct","subject","tuhkakupit",2,0.0333333333333333
+"A_direct","subject","tulitikut",2,0.0333333333333333
+"A_direct","subject","tupakka",2,0.0333333333333333
+"A_direct","subject","tupakointi",2,0.0333333333333333
+"A_direct","subject","työntekijät",2,0.0333333333333333
+"A_direct","subject","vaatteet turkikset",2,0.0333333333333333
+"A_direct","subject","vaatteet työvaatteet",2,0.0333333333333333
+"A_direct","subject","vuotuisjuhlat uusivuosi",2,0.0333333333333333
+"A_direct","subject","wool industry",2,0.0333333333333333
+"A_direct","subject","yleisö",2,0.0333333333333333
+"A_direct","subject","102",1,0.0166666666666667
+"A_direct","subject","104",1,0.0166666666666667
+"A_direct","subject","16. neljäs linja 2",1,0.0166666666666667
+"A_direct","subject","1956",1,0.0166666666666667
+"A_direct","subject","3",1,0.0166666666666667
+"A_direct","subject","4.",1,0.0166666666666667
+"A_direct","subject","51",1,0.0166666666666667
+"A_direct","subject","aidat",1,0.0166666666666667
+"A_direct","subject","aikakauslehdet",1,0.0166666666666667
+"A_direct","subject","alusvaatteet",1,0.0166666666666667
+"A_direct","subject","ammatit",1,0.0166666666666667
+"A_direct","subject","arpajaiset",1,0.0166666666666667
+"A_direct","subject","asetinlaitteet",1,0.0166666666666667
+"A_direct","subject","asiakkaat",1,0.0166666666666667
+"A_direct","subject","asuinrakennukset",1,0.0166666666666667
+"A_direct","subject","asunnot",1,0.0166666666666667
+"A_direct","subject","beauty care",1,0.0166666666666667
+"A_direct","subject","birds",1,0.0166666666666667
+"A_direct","subject","blankets",1,0.0166666666666667
+"A_direct","subject","commissions (organs)",1,0.0166666666666667
+"A_direct","subject","eating",1,0.0166666666666667
+"A_direct","subject","eine",1,0.0166666666666667
+"A_direct","subject","elannon isku",1,0.0166666666666667
+"A_direct","subject","esiliinat",1,0.0166666666666667
+"A_direct","subject","essut",1,0.0166666666666667
+"A_direct","subject","hämeentie 14",1,0.0166666666666667
+"A_direct","subject","harrastukset",1,0.0166666666666667
+"A_direct","subject","henkilöautot",1,0.0166666666666667
+"A_direct","subject","henkilöt",1,0.0166666666666667
+"A_direct","subject","hok-elanto",1,0.0166666666666667
+"A_direct","subject","hotellit",1,0.0166666666666667
+"A_direct","subject","huonekasvit",1,0.0166666666666667
+"A_direct","subject","hygiene",1,0.0166666666666667
+"A_direct","subject","ihmiset",1,0.0166666666666667
+"A_direct","subject","ikkunat",1,0.0166666666666667
+"A_direct","subject","järvet",1,0.0166666666666667
+"A_direct","subject","jehovan todistajat",1,0.0166666666666667
+"A_direct","subject","jernvall",1,0.0166666666666667
+"A_direct","subject","joet",1,0.0166666666666667
+"A_direct","subject","joulu",1,0.0166666666666667
+"A_direct","subject","kadunrakennus",1,0.0166666666666667
+"A_direct","subject","kadut",1,0.0166666666666667
+"A_direct","subject","kadut liikenne",1,0.0166666666666667
+"A_direct","subject","kahvipannut",1,0.0166666666666667
+"A_direct","subject","kallio",1,0.0166666666666667
+"A_direct","subject","kampanjat",1,0.0166666666666667
+"A_direct","subject","kampaukset",1,0.0166666666666667
+"A_direct","subject","kamppi",1,0.0166666666666667
+"A_direct","subject","kankaat",1,0.0166666666666667
+"A_direct","subject","käsilaukut",1,0.0166666666666667
+"A_direct","subject","käsilaukut päällystakit",1,0.0166666666666667
+"A_direct","subject","käsityö",1,0.0166666666666667
+"A_direct","subject","kassakoneet",1,0.0166666666666667
+"A_direct","subject","kättely",1,0.0166666666666667
+"A_direct","subject","kattilat",1,0.0166666666666667
+"A_direct","subject","keittiökalusteet",1,0.0166666666666667
+"A_direct","subject","kellot",1,0.0166666666666667
+"A_direct","subject","kerma",1,0.0166666666666667
+"A_direct","subject","kevät",1,0.0166666666666667
+"A_direct","subject","kiveys",1,0.0166666666666667
+"A_direct","subject","kivilammentie 1",1,0.0166666666666667
+"A_direct","subject","kodinkoneet",1,0.0166666666666667
+"A_direct","subject","kodit",1,0.0166666666666667
+"A_direct","subject","koneet",1,0.0166666666666667
+"A_direct","subject","korit",1,0.0166666666666667
+"A_direct","subject","korituolit",1,0.0166666666666667
+"A_direct","subject","kosmetiikka",1,0.0166666666666667
+"A_direct","subject","köyhyys",1,0.0166666666666667
+"A_direct","subject","kuitulevyt",1,0.0166666666666667
+"A_direct","subject","kumisaappaat",1,0.0166666666666667
+"A_direct","subject","kunniakirjat",1,0.0166666666666667
+"A_direct","subject","kutominen naisten puvut",1,0.0166666666666667
+"A_direct","subject","kyltit",1,0.0166666666666667
+"A_direct","subject","laatikot",1,0.0166666666666667
+"A_direct","subject","laitteet",1,0.0166666666666667
+"A_direct","subject","laiturit",1,0.0166666666666667
+"A_direct","subject","lakit",1,0.0166666666666667
+"A_direct","subject","lapset (ikäryhmät)",1,0.0166666666666667
+"A_direct","subject","lattianpäällysteet",1,0.0166666666666667
+"A_direct","subject","laukut",1,0.0166666666666667
+"A_direct","subject","lavastus",1,0.0166666666666667
+"A_direct","subject","lehdistö",1,0.0166666666666667
+"A_direct","subject","liha",1,0.0166666666666667
+"A_direct","subject","liha- ja leikkelemyymälät",1,0.0166666666666667
+"A_direct","subject","lihavalmisteet",1,0.0166666666666667
+"A_direct","subject","liikemerkit",1,0.0166666666666667
+"A_direct","subject","liikenne",1,0.0166666666666667
+"A_direct","subject","liikunta",1,0.0166666666666667
+"A_direct","subject","linjat helsinki",1,0.0166666666666667
+"A_direct","subject","lomailu",1,0.0166666666666667
+"A_direct","subject","loudspeakers",1,0.0166666666666667
+"A_direct","subject","mainonta puut",1,0.0166666666666667
+"A_direct","subject","maito",1,0.0166666666666667
+"A_direct","subject","mallinuket",1,0.0166666666666667
+"A_direct","subject","mallit (ammatit)",1,0.0166666666666667
+"A_direct","subject","mannekiinit",1,0.0166666666666667
+"A_direct","subject","mannequins (occupations)",1,0.0166666666666667
+"A_direct","subject","mannerheimintie 49",1,0.0166666666666667
+"A_direct","subject","mannerheimintie 5.",1,0.0166666666666667
+"A_direct","subject","männyt",1,0.0166666666666667
+"A_direct","subject","marketing",1,0.0166666666666667
+"A_direct","subject","matkailun edistäminen",1,0.0166666666666667
+"A_direct","subject","matkustajasatamat",1,0.0166666666666667
+"A_direct","subject","matot",1,0.0166666666666667
+"A_direct","subject","men",1,0.0166666666666667
+"A_direct","subject","messuhalli",1,0.0166666666666667
+"A_direct","subject","moderni",1,0.0166666666666667
+"A_direct","subject","moottoripyörät",1,0.0166666666666667
+"A_direct","subject","moottoriveneet",1,0.0166666666666667
+"A_direct","subject","muoti",1,0.0166666666666667
+"A_direct","subject","myymälät",1,0.0166666666666667
+"A_direct","subject","näyteikkunat",1,0.0166666666666667
+"A_direct","subject","nayttelyt messut",1,0.0166666666666667
+"A_direct","subject","näyttelyt messut",1,0.0166666666666667
+"A_direct","subject","nojatuolit",1,0.0166666666666667
+"A_direct","subject","nuoret",1,0.0166666666666667
+"A_direct","subject","ompelu",1,0.0166666666666667
+"A_direct","subject","osakeyhtiö partaterä",1,0.0166666666666667
+"A_direct","subject","oy strömberg ab",1,0.0166666666666667
+"A_direct","subject","päähinet",1,0.0166666666666667
+"A_direct","subject","päällystakit",1,0.0166666666666667
+"A_direct","subject","pakkaukset",1,0.0166666666666667
+"A_direct","subject","parranajo",1,0.0166666666666667
+"A_direct","subject","partaterät",1,0.0166666666666667
+"A_direct","subject","patterit",1,0.0166666666666667
+"A_direct","subject","peilit",1,0.0166666666666667
+"A_direct","subject","pienviljelijät",1,0.0166666666666667
+"A_direct","subject","pojat (ikäryhmät)",1,0.0166666666666667
+"A_direct","subject","polvihousut",1,0.0166666666666667
+"A_direct","subject","presidentinvaalit",1,0.0166666666666667
+"A_direct","subject","presidenttiehdokkaat",1,0.0166666666666667
+"A_direct","subject","proomut",1,0.0166666666666667
+"A_direct","subject","pukeutumine",1,0.0166666666666667
+"A_direct","subject","pullot",1,0.0166666666666667
+"A_direct","subject","puut",1,0.0166666666666667
+"A_direct","subject","pysäkit",1,0.0166666666666667
+"A_direct","subject","raitiotiet",1,0.0166666666666667
+"A_direct","subject","rakennukset",1,0.0166666666666667
+"A_direct","subject","rakentaminen",1,0.0166666666666667
+"A_direct","subject","rannat",1,0.0166666666666667
+"A_direct","subject","rautatieläiset",1,0.0166666666666667
+"A_direct","subject","rautatiet",1,0.0166666666666667
+"A_direct","subject","religion and religions",1,0.0166666666666667
+"A_direct","subject","religious processions",1,0.0166666666666667
+"A_direct","subject","rikkaat",1,0.0166666666666667
+"A_direct","subject","ruoanlaitto",1,0.0166666666666667
+"A_direct","subject","ruoanvalmistusvälineet",1,0.0166666666666667
+"A_direct","subject","ruuanvalmistus",1,0.0166666666666667
+"A_direct","subject","sähkölaitteet",1,0.0166666666666667
+"A_direct","subject","sandaalit",1,0.0166666666666667
+"A_direct","subject","satamat",1,0.0166666666666667
+"A_direct","subject","seinäkellot",1,0.0166666666666667
+"A_direct","subject","signboards and plates",1,0.0166666666666667
+"A_direct","subject","sikarit",1,0.0166666666666667
+"A_direct","subject","silmälasit",1,0.0166666666666667
+"A_direct","subject","sisätilat",1,0.0166666666666667
+"A_direct","subject","sisustus",1,0.0166666666666667
+"A_direct","subject","studiot",1,0.0166666666666667
+"A_direct","subject","sturenkatu 40",1,0.0166666666666667
+"A_direct","subject","takit",1,0.0166666666666667
+"A_direct","subject","tanner",1,0.0166666666666667
+"A_direct","subject","tanssi",1,0.0166666666666667
+"A_direct","subject","tasting",1,0.0166666666666667
+"A_direct","subject","tavaramerkit",1,0.0166666666666667
+"A_direct","subject","tekstiilit",1,0.0166666666666667
+"A_direct","subject","tekstiilityö",1,0.0166666666666667
+"A_direct","subject","televisiot (laitteet)",1,0.0166666666666667
+"A_direct","subject","teollisuus leikkikaluteollisuus",1,0.0166666666666667
+"A_direct","subject","teollisuustyöntekijät",1,0.0166666666666667
+"A_direct","subject","trousers",1,0.0166666666666667
+"A_direct","subject","tuolit",1,0.0166666666666667
+"A_direct","subject","turkikset",1,0.0166666666666667
+"A_direct","subject","turkit jalkineet",1,0.0166666666666667
+"A_direct","subject","tytöt",1,0.0166666666666667
+"A_direct","subject","uunit",1,0.0166666666666667
+"A_direct","subject","vaateteollisuus",1,0.0166666666666667
+"A_direct","subject","vaatteet paidat",1,0.0166666666666667
+"A_direct","subject","vaatteet takit hameet",1,0.0166666666666667
+"A_direct","subject","vaatteet turkikset takit",1,0.0166666666666667
+"A_direct","subject","vaatteet univormut",1,0.0166666666666667
+"A_direct","subject","vähittäiskauppa",1,0.0166666666666667
+"A_direct","subject","väinö",1,0.0166666666666667
+"A_direct","subject","valaisimet",1,0.0166666666666667
+"A_direct","subject","valokuvat",1,0.0166666666666667
+"A_direct","subject","vanhukset",1,0.0166666666666667
+"A_direct","subject","vapaa-aika",1,0.0166666666666667
+"A_direct","subject","vapaa-ajanvaatteet",1,0.0166666666666667
+"A_direct","subject","veneet",1,0.0166666666666667
+"A_direct","subject","vermonkuja",1,0.0166666666666667
+"A_direct","subject","voittajat",1,0.0166666666666667
+"A_direct","subject","vuotuisjuhlat uusivuosi joulu",1,0.0166666666666667
+"A_direct","subject","wheat flour",1,0.0166666666666667
+"A_direct","subject","yrjönkatu 31",1,0.0166666666666667
+"B_annif","subject","mainokset",37,0.660714285714286
+"B_annif","subject","mainonta",18,0.321428571428571
+"B_annif","subject","helsinki",14,0.25
+"B_annif","subject","naiset",14,0.25
+"B_annif","subject","europe",11,0.196428571428571
+"B_annif","subject","finland",11,0.196428571428571
+"B_annif","subject","nordic countries",11,0.196428571428571
+"B_annif","subject","uusimaa",11,0.196428571428571
+"B_annif","subject","taka-töölö",7,0.125
+"B_annif","subject","töölö",7,0.125
+"B_annif","subject","tulitikkuetiketit",7,0.125
+"B_annif","subject","mainoskuvat",6,0.107142857142857
+"B_annif","subject","mannerheimintie 17",6,0.107142857142857
+"B_annif","subject","mainosgrafiikka",5,0.0892857142857143
+"B_annif","subject","osuusliike elanto",5,0.0892857142857143
+"B_annif","subject","tuote-etiketit",5,0.0892857142857143
+"B_annif","subject","etiketit",4,0.0714285714285714
+"B_annif","subject","logot",4,0.0714285714285714
+"B_annif","subject","markkinointi mainonta",4,0.0714285714285714
+"B_annif","subject","muoti",4,0.0714285714285714
+"B_annif","subject","suomi",4,0.0714285714285714
+"B_annif","subject","tulitikut",4,0.0714285714285714
+"B_annif","subject","vaateliikkeet",4,0.0714285714285714
+"B_annif","subject","advertisements",3,0.0535714285714286
+"B_annif","subject","advertising",3,0.0535714285714286
+"B_annif","subject","elokuvat",3,0.0535714285714286
+"B_annif","subject","jalankulkijat",3,0.0535714285714286
+"B_annif","subject","jehovan todistajat",3,0.0535714285714286
+"B_annif","subject","kadut",3,0.0535714285714286
+"B_annif","subject","kamppi",3,0.0535714285714286
+"B_annif","subject","kauneudenhoito",3,0.0535714285714286
+"B_annif","subject","kengät",3,0.0535714285714286
+"B_annif","subject","kulkueet",3,0.0535714285714286
+"B_annif","subject","kyltit",3,0.0535714285714286
+"B_annif","subject","mainoskilvet",3,0.0535714285714286
+"B_annif","subject","muotiala",3,0.0535714285714286
+"B_annif","subject","naisen asema",3,0.0535714285714286
+"B_annif","subject","näyttelyt",3,0.0535714285714286
+"B_annif","subject","sara hildén",3,0.0535714285714286
+"B_annif","subject","vaatteet",3,0.0535714285714286
+"B_annif","subject","advertising photographs",2,0.0357142857142857
+"B_annif","subject","alusvaatteet",2,0.0357142857142857
+"B_annif","subject","hameet",2,0.0357142857142857
+"B_annif","subject","julisteet",2,0.0357142857142857
+"B_annif","subject","kauneus",2,0.0357142857142857
+"B_annif","subject","käyttögrafiikka",2,0.0357142857142857
+"B_annif","subject","keräily",2,0.0357142857142857
+"B_annif","subject","kesä",2,0.0357142857142857
+"B_annif","subject","lastenvaunut lastenrattaat",2,0.0357142857142857
+"B_annif","subject","mainonta mainokset mainoskuvat",2,0.0357142857142857
+"B_annif","subject","markkinointi",2,0.0357142857142857
+"B_annif","subject","messut",2,0.0357142857142857
+"B_annif","subject","messut näyttelyt",2,0.0357142857142857
+"B_annif","subject","naisasia",2,0.0357142857142857
+"B_annif","subject","naisasialiikkeet",2,0.0357142857142857
+"B_annif","subject","naisten puvut",2,0.0357142857142857
+"B_annif","subject","pakkaukset",2,0.0357142857142857
+"B_annif","subject","pesujauheet",2,0.0357142857142857
+"B_annif","subject","posters",2,0.0357142857142857
+"B_annif","subject","puistot",2,0.0357142857142857
+"B_annif","subject","pukeutuminen",2,0.0357142857142857
+"B_annif","subject","ravitsemisliikkeet",2,0.0357142857142857
+"B_annif","subject","röntgenlaitteet",2,0.0357142857142857
+"B_annif","subject","röntgentutkimus",2,0.0357142857142857
+"B_annif","subject","säilyttimet",2,0.0357142857142857
+"B_annif","subject","sillat",2,0.0357142857142857
+"B_annif","subject","tampere",2,0.0357142857142857
+"B_annif","subject","tampereen teatteri",2,0.0357142857142857
+"B_annif","subject","teatterirakennukset",2,0.0357142857142857
+"B_annif","subject","teollisuus",2,0.0357142857142857
+"B_annif","subject","tuberkuloosi",2,0.0357142857142857
+"B_annif","subject","tulentekovälineet",2,0.0357142857142857
+"B_annif","subject","tulitikkulaatikot",2,0.0357142857142857
+"B_annif","subject","vanhat mainokset",2,0.0357142857142857
+"B_annif","subject","vaunuteos oy",2,0.0357142857142857
+"B_annif","subject","veistokset",2,0.0357142857142857
+"B_annif","subject","voiteet",2,0.0357142857142857
+"B_annif","subject","women",2,0.0357142857142857
+"B_annif","subject","yrjönkatu 31",2,0.0357142857142857
+"B_annif","subject","16. neljäs linja 2",1,0.0178571428571429
+"B_annif","subject","3",1,0.0178571428571429
+"B_annif","subject","4.",1,0.0178571428571429
+"B_annif","subject","aidat",1,0.0178571428571429
+"B_annif","subject","ammatit",1,0.0178571428571429
+"B_annif","subject","arkistokuva",1,0.0178571428571429
+"B_annif","subject","asuinrakennukset",1,0.0178571428571429
+"B_annif","subject","autot",1,0.0178571428571429
+"B_annif","subject","baarit",1,0.0178571428571429
+"B_annif","subject","balls (entertainment events)",1,0.0178571428571429
+"B_annif","subject","carpets and rugs",1,0.0178571428571429
+"B_annif","subject","cinemas",1,0.0178571428571429
+"B_annif","subject","clothes",1,0.0178571428571429
+"B_annif","subject","coffee culture",1,0.0178571428571429
+"B_annif","subject","coffee cups",1,0.0178571428571429
+"B_annif","subject","commissions (organs)",1,0.0178571428571429
+"B_annif","subject","cooperative system",1,0.0178571428571429
+"B_annif","subject","curtains",1,0.0178571428571429
+"B_annif","subject","dance events",1,0.0178571428571429
+"B_annif","subject","deodorantit",1,0.0178571428571429
+"B_annif","subject","drama movies",1,0.0178571428571429
+"B_annif","subject","eating",1,0.0178571428571429
+"B_annif","subject","eine",1,0.0178571428571429
+"B_annif","subject","elintarvikkeet",1,0.0178571428571429
+"B_annif","subject","entertainment",1,0.0178571428571429
+"B_annif","subject","erva-latvala",1,0.0178571428571429
+"B_annif","subject","essut",1,0.0178571428571429
+"B_annif","subject","fanny niemelä",1,0.0178571428571429
+"B_annif","subject","films",1,0.0178571428571429
+"B_annif","subject","furniture",1,0.0178571428571429
+"B_annif","subject","garments",1,0.0178571428571429
+"B_annif","subject","grand magasin",1,0.0178571428571429
+"B_annif","subject","h. cairenius",1,0.0178571428571429
+"B_annif","subject","hämeentie 14",1,0.0178571428571429
+"B_annif","subject","harrastukset",1,0.0178571428571429
+"B_annif","subject","henkilöautot",1,0.0178571428571429
+"B_annif","subject","henkilöt",1,0.0178571428571429
+"B_annif","subject","hirsilän kenkätehdas",1,0.0178571428571429
+"B_annif","subject","hiusala",1,0.0178571428571429
+"B_annif","subject","hygienia",1,0.0178571428571429
+"B_annif","subject","hyvinkää - siltakatu 16",1,0.0178571428571429
+"B_annif","subject","ihovoiteet",1,0.0178571428571429
+"B_annif","subject","ilmakuvat",1,0.0178571428571429
+"B_annif","subject","jalkakäytävät",1,0.0178571428571429
+"B_annif","subject","jalkineet",1,0.0178571428571429
+"B_annif","subject","jalkineteollisuus",1,0.0178571428571429
+"B_annif","subject","järjestöt",1,0.0178571428571429
+"B_annif","subject","jernvall",1,0.0178571428571429
+"B_annif","subject","juhlat",1,0.0178571428571429
+"B_annif","subject","kadunrakennus",1,0.0178571428571429
+"B_annif","subject","käenkuja 4",1,0.0178571428571429
+"B_annif","subject","kallio",1,0.0178571428571429
+"B_annif","subject","kansalaistoiminta",1,0.0178571428571429
+"B_annif","subject","käsilaukut",1,0.0178571428571429
+"B_annif","subject","käsityö",1,0.0178571428571429
+"B_annif","subject","kauneudenhoitovälineet",1,0.0178571428571429
+"B_annif","subject","keittiöt",1,0.0178571428571429
+"B_annif","subject","kiveys",1,0.0178571428571429
+"B_annif","subject","kodinkoneet",1,0.0178571428571429
+"B_annif","subject","korsetit",1,0.0178571428571429
+"B_annif","subject","korvikkeet",1,0.0178571428571429
+"B_annif","subject","kosmetiikka",1,0.0178571428571429
+"B_annif","subject","lapset",1,0.0178571428571429
+"B_annif","subject","lastenvaatteet",1,0.0178571428571429
+"B_annif","subject","laukut",1,0.0178571428571429
+"B_annif","subject","lehdistö",1,0.0178571428571429
+"B_annif","subject","leisure",1,0.0178571428571429
+"B_annif","subject","lentokoneet",1,0.0178571428571429
+"B_annif","subject","lentoliikenne",1,0.0178571428571429
+"B_annif","subject","liedet",1,0.0178571428571429
+"B_annif","subject","liikenne",1,0.0178571428571429
+"B_annif","subject","liikerakennukset",1,0.0178571428571429
+"B_annif","subject","linjat helsinki",1,0.0178571428571429
+"B_annif","subject","lotat",1,0.0178571428571429
+"B_annif","subject","maanpuolustusjärjestöt",1,0.0178571428571429
+"B_annif","subject","mannequins (occupations)",1,0.0178571428571429
+"B_annif","subject","matkailu",1,0.0178571428571429
+"B_annif","subject","miehet",1,0.0178571428571429
+"B_annif","subject","mopedit",1,0.0178571428571429
+"B_annif","subject","mopot",1,0.0178571428571429
+"B_annif","subject","myyntipakkaukset",1,0.0178571428571429
+"B_annif","subject","naisjärjestöt",1,0.0178571428571429
+"B_annif","subject","nayttelyt messut",1,0.0178571428571429
+"B_annif","subject","näyttelyt messut",1,0.0178571428571429
+"B_annif","subject","newspaper advertising",1,0.0178571428571429
+"B_annif","subject","ompelu",1,0.0178571428571429
+"B_annif","subject","osuusliikkeet",1,0.0178571428571429
+"B_annif","subject","osuustoiminta",1,0.0178571428571429
+"B_annif","subject","päähineet",1,0.0178571428571429
+"B_annif","subject","palveluyritykset",1,0.0178571428571429
+"B_annif","subject","paperiteollisuus",1,0.0178571428571429
+"B_annif","subject","parturi-kampaamot",1,0.0178571428571429
+"B_annif","subject","pesuaineet",1,0.0178571428571429
+"B_annif","subject","pesukoneet",1,0.0178571428571429
+"B_annif","subject","political advertising",1,0.0178571428571429
+"B_annif","subject","pyykinpesu",1,0.0178571428571429
+"B_annif","subject","rakentaminen",1,0.0178571428571429
+"B_annif","subject","rauhanaate",1,0.0178571428571429
+"B_annif","subject","rauhanasia",1,0.0178571428571429
+"B_annif","subject","rauhantyö",1,0.0178571428571429
+"B_annif","subject","ravintolat",1,0.0178571428571429
+"B_annif","subject","ruuanvalmistus",1,0.0178571428571429
+"B_annif","subject","saippua",1,0.0178571428571429
+"B_annif","subject","saippuat",1,0.0178571428571429
+"B_annif","subject","savukkeet",1,0.0178571428571429
+"B_annif","subject","shirts",1,0.0178571428571429
+"B_annif","subject","sofas",1,0.0178571428571429
+"B_annif","subject","takit",1,0.0178571428571429
+"B_annif","subject","tampereen saippua",1,0.0178571428571429
+"B_annif","subject","tasting",1,0.0178571428571429
+"B_annif","subject","tavaramerkit",1,0.0178571428571429
+"B_annif","subject","tekstiiliteollisuus",1,0.0178571428571429
+"B_annif","subject","tekstiilityö",1,0.0178571428571429
+"B_annif","subject","teollisuustyöntekijät",1,0.0178571428571429
+"B_annif","subject","terveydenhoito",1,0.0178571428571429
+"B_annif","subject","tulitikkuteollisuus",1,0.0178571428571429
+"B_annif","subject","tupakointi",1,0.0178571428571429
+"B_annif","subject","turismi",1,0.0178571428571429
+"B_annif","subject","työvaatteet",1,0.0178571428571429
+"B_annif","subject","uunit",1,0.0178571428571429
+"B_annif","subject","valokuvat",1,0.0178571428571429
+"B_annif","subject","vienti",1,0.0178571428571429
+"B_annif","subject","wheat flour",1,0.0178571428571429
+"B_annif","subject","women's organisations",1,0.0178571428571429
+"B_annif","subject","yrjönkatu 29",1,0.0178571428571429
+"C_finto","subject","women",48,0.8
+"C_finto","subject","advertising",44,0.733333333333333
+"C_finto","subject","advertisements",38,0.633333333333333
+"C_finto","subject","hyvinkää",18,0.3
+"C_finto","subject","mannequins (occupations)",18,0.3
+"C_finto","subject","men",18,0.3
+"C_finto","subject","suomi",18,0.3
+"C_finto","subject","wool industry",17,0.283333333333333
+"C_finto","subject","clothes",15,0.25
+"C_finto","subject","fashion",15,0.25
+"C_finto","subject","fashion shows",15,0.25
+"C_finto","subject","children (age groups)",14,0.233333333333333
+"C_finto","subject","advertising photographs",13,0.216666666666667
+"C_finto","subject","textile industry",13,0.216666666666667
+"C_finto","subject","marketing",12,0.2
+"C_finto","subject","audience",9,0.15
+"C_finto","subject","helsinki",7,0.116666666666667
+"C_finto","subject","advertising photography",4,0.0666666666666667
+"C_finto","subject","dishes (household supplies)",4,0.0666666666666667
+"C_finto","subject","käenkuja 3",4,0.0666666666666667
+"C_finto","subject","margarine",4,0.0666666666666667
+"C_finto","subject","margarine industry",4,0.0666666666666667
+"C_finto","subject","pastries",4,0.0666666666666667
+"C_finto","subject","carpets and rugs",3,0.05
+"C_finto","subject","cinemas",3,0.05
+"C_finto","subject","films",3,0.05
+"C_finto","subject","gloves (clothing accessories)",3,0.05
+"C_finto","subject","hats",3,0.05
+"C_finto","subject","käenkuja 4",3,0.05
+"C_finto","subject","shirts",3,0.05
+"C_finto","subject","woman's status",3,0.05
+"C_finto","subject","women's organisations",3,0.05
+"C_finto","subject","young people",3,0.05
+"C_finto","subject","biscuit industry",2,0.0333333333333333
+"C_finto","subject","celebrations",2,0.0333333333333333
+"C_finto","subject","cooperative system",2,0.0333333333333333
+"C_finto","subject","curtains",2,0.0333333333333333
+"C_finto","subject","entertainment",2,0.0333333333333333
+"C_finto","subject","furniture",2,0.0333333333333333
+"C_finto","subject","housecleaning",2,0.0333333333333333
+"C_finto","subject","household work",2,0.0333333333333333
+"C_finto","subject","political advertising",2,0.0333333333333333
+"C_finto","subject","posters",2,0.0333333333333333
+"C_finto","subject","tools",2,0.0333333333333333
+"C_finto","subject","trousers",2,0.0333333333333333
+"C_finto","subject","walls of buildings",2,0.0333333333333333
+"C_finto","subject","work",2,0.0333333333333333
+"C_finto","subject","workwear",2,0.0333333333333333
+"C_finto","subject","advertising graphics",1,0.0166666666666667
+"C_finto","subject","beauty care",1,0.0166666666666667
+"C_finto","subject","birds",1,0.0166666666666667
+"C_finto","subject","blankets",1,0.0166666666666667
+"C_finto","subject","buildings",1,0.0166666666666667
+"C_finto","subject","cardboard",1,0.0166666666666667
+"C_finto","subject","central organisations",1,0.0166666666666667
+"C_finto","subject","charity",1,0.0166666666666667
+"C_finto","subject","cheese",1,0.0166666666666667
+"C_finto","subject","cleanliness",1,0.0166666666666667
+"C_finto","subject","coffee culture",1,0.0166666666666667
+"C_finto","subject","coffee cups",1,0.0166666666666667
+"C_finto","subject","commissions (organs)",1,0.0166666666666667
+"C_finto","subject","conversation",1,0.0166666666666667
+"C_finto","subject","doors",1,0.0166666666666667
+"C_finto","subject","ebba östenson",1,0.0166666666666667
+"C_finto","subject","elokuvat",1,0.0166666666666667
+"C_finto","subject","employees",1,0.0166666666666667
+"C_finto","subject","etiketit",1,0.0166666666666667
+"C_finto","subject","everyday",1,0.0166666666666667
+"C_finto","subject","exhibitions",1,0.0166666666666667
+"C_finto","subject","factories",1,0.0166666666666667
+"C_finto","subject","floors",1,0.0166666666666667
+"C_finto","subject","graphic design",1,0.0166666666666667
+"C_finto","subject","helping",1,0.0166666666666667
+"C_finto","subject","home",1,0.0166666666666667
+"C_finto","subject","hygiene",1,0.0166666666666667
+"C_finto","subject","hyvinkää - kaukas",1,0.0166666666666667
+"C_finto","subject","industry",1,0.0166666666666667
+"C_finto","subject","käyttögrafiikka",1,0.0166666666666667
+"C_finto","subject","keräily",1,0.0166666666666667
+"C_finto","subject","lapintie 3",1,0.0166666666666667
+"C_finto","subject","mainokset",1,0.0166666666666667
+"C_finto","subject","mainonta",1,0.0166666666666667
+"C_finto","subject","new products",1,0.0166666666666667
+"C_finto","subject","newspaper advertising",1,0.0166666666666667
+"C_finto","subject","nudity",1,0.0166666666666667
+"C_finto","subject","office workers",1,0.0166666666666667
+"C_finto","subject","pellavatehtaan juhlatalo",1,0.0166666666666667
+"C_finto","subject","persons",1,0.0166666666666667
+"C_finto","subject","political organisations",1,0.0166666666666667
+"C_finto","subject","political youth organisations",1,0.0166666666666667
+"C_finto","subject","poster art",1,0.0166666666666667
+"C_finto","subject","products",1,0.0166666666666667
+"C_finto","subject","reklam",1,0.0166666666666667
+"C_finto","subject","relief work",1,0.0166666666666667
+"C_finto","subject","riksdagsval",1,0.0166666666666667
+"C_finto","subject","savings associations",1,0.0166666666666667
+"C_finto","subject","shoes",1,0.0166666666666667
+"C_finto","subject","sketches",1,0.0166666666666667
+"C_finto","subject","sofas",1,0.0166666666666667
+"C_finto","subject","students",1,0.0166666666666667
+"C_finto","subject","svenska folkpartiet",1,0.0166666666666667
+"C_finto","subject","tampere",1,0.0166666666666667
+"C_finto","subject","tulitikut",1,0.0166666666666667
+"C_finto","subject","wedding costumes",1,0.0166666666666667

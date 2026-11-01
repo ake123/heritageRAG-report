@@ -1,0 +1,142 @@
+---
+title: "Human checking: the next step"
+subtitle: "What the two checkers do, why it is done blind, and how the scores appear here"
+---
+
+```{r}
+source("_common.R", encoding = "UTF-8")
+st <- read_status()
+rel_sum <- rd("annotation/scores_relevance_summary.csv")
+rel_agr <- rd("annotation/scores_relevance_agreement.csv")
+rel_q <- rd("annotation/scores_relevance_by_question.csv")
+cl_cond <- rd("annotation/scores_claims_by_condition.csv")
+cl_agr <- rd("annotation/scores_claims_agreement.csv")
+n_rel <- if (!is.null(st)) st$items[st$task == "relevance"][1] else NA
+n_cl <- if (!is.null(st)) st$items[st$task == "claims"][1] else NA
+done_rel <- if (!is.null(st)) min(st$done[st$task == "relevance"]) else 0
+done_cl <- if (!is.null(st)) min(st$done[st$task == "claims"]) else 0
+scored <- !is.null(rel_agr) && any(rel_agr$items > 0)
+claims_scored <- !is.null(cl_agr) && any(cl_agr$items > 0)
+```
+
+::: {.in-short}
+**In short.** Computers can show that the three searches find *different* records. Only people
+can say whether the records are *useful* for the question, and whether the AI's sentences are
+*true to the records*. Two people each judge **`r num(n_rel)` records** and
+**`r num(n_cl)` sentences**, without knowing which search they came from.
+`r if (!scored) "**This has not been done yet**, which is why all the scores in the result files are empty." else "The scores are shown below."`
+:::
+
+## Progress
+
+```{r}
+if (!is.null(st)) {
+  s <- st
+  s$task <- ifelse(s$task == "relevance", "Records (is it useful?)", "Sentences (is it supported?)")
+  s$progress <- pct(s$done / s$items)
+  tbl(s[, c("task", "sheet", "items", "done", "progress")], c("Task", "Sheet", "Items", "Judged", "Progress"))
+} else cat("No checking sheets were found in this run.")
+```
+
+## What the checkers do
+
+### Sheet 1: records (`relevance_annotator_1.csv`, `relevance_annotator_2.csv`)
+
+Each row is one record: its title, year, institution, type, language, subject words, and a link
+to Finna. The checker reads the research question shown in the same row and writes one number
+in the column `relevance_0_1_2`:
+
+| Number | Meaning |
+|---|---|
+| **2** | Directly useful: the record is about the topic and the period of the question |
+| **1** | Partly useful: related topic, period or background, but not direct evidence |
+| **0** | Not useful |
+
+Every record appears **only once**, even if two or three searches found it, so nobody judges
+the same thing twice.
+
+### Sheet 2: sentences (`claims_annotator_1.csv`, `claims_annotator_2.csv`)
+
+Each row is one sentence from an AI answer, with the records it cites shown next to it. The
+checker fills two columns.
+
+`claim_type`, what kind of sentence it is:
+
+| Value | Meaning |
+|---|---|
+| `observation` | States what the records contain or show |
+| `interpretation` | Goes further: a trend, a cause, a general conclusion |
+| `evidence_statement` | A remark about the evidence itself, e.g. "the sample is small" |
+
+`support`, judged against the cited records **only**:
+
+| Value | Meaning |
+|---|---|
+| `supported` | The cited records clearly back the sentence |
+| `partial` | Part of it is backed, part goes beyond the records |
+| `unsupported` | No citation, or the records do not back it |
+| `cannot_judge` | The record information is not enough to decide (explain in `note`) |
+
+The full instructions are in `annotation/ANNOTATION_GUIDE.md`.
+
+## Why "blind"?
+
+The rows are shuffled, and the sheets do not say which search found a record or wrote a
+sentence. If a checker knew that a record came from "the clever search C", they might
+unconsciously rate it higher. The answer key is kept in the files `KEY_relevance.csv` and
+`KEY_claims.csv`. **Only the study lead should open those**, and checkers should not read the
+[Question by question](questions.qmd) or [AI answers](ai-answers.qmd) pages until they have
+finished.
+
+Two people judge everything so that we can measure how much they **agree**. If two careful
+people often disagree, the judgement is hard and the results should be read with care.
+
+## How to finish
+
+1. Give each checker their own sheet (`..._annotator_1.csv` to one person, `..._annotator_2.csv`
+   to the other). They can open it in Excel or LibreOffice, but must save it as CSV again.
+2. Each checker works alone and fills in every row.
+3. Put the filled sheets back in `results/final/annotation/` with the same file names.
+4. Calculate the scores and update this report:
+
+```bash
+# in the heritageRAG folder
+Rscript scripts/annotation.R score results/final
+# in the report's folder
+Rscript prepare_data.R ../heritageRAG/results/final ../heritageRAG/results/batch-pilot
+quarto render
+```
+
+Plan for the time it takes: at about 30 seconds a record and 45 seconds a sentence, one person
+needs roughly **`r num((n_rel * 0.5 + n_cl * 0.75) / 60, 1)` hours** in total.
+
+## Results
+
+```{r}
+#| results: asis
+if (!scored) {
+  callout("note", "No judgements yet",
+          "When the sheets are filled in and scored, this section shows: how often the top records of each search were useful; how well each search ranked useful records first; whether the records only search C found were useful; how much the two checkers agreed; and how many of the AI's sentences were supported.")
+} else {
+  cat("### Were the records useful?\n\n")
+  r <- rel_sum
+  tbl_out <- data.frame(Search = cond_short[r$condition],
+                        `Useful (1 or 2)` = pct(r$precision_at_k), `Directly useful (2)` = pct(r$highly_relevant_share),
+                        `Average score (0-2)` = num(r$mean_relevance, 2), `Good order (0-1)` = num(r$ndcg_at_k, 2),
+                        `Useful among records A missed` = pct(r$not_in_A_relevant_share), check.names = FALSE)
+  cat(paste(knitr::kable(tbl_out, row.names = FALSE), collapse = "\n"), "\n\n")
+  cat("*Good order* is close to 1 when the useful records come first in the list.\n\n")
+  cat(sprintf("**Agreement between the checkers:** they gave exactly the same number for %s of the records. The agreement score (kappa, where 0 means no better than chance and 1 means perfect) is %s.\n\n",
+              pct(rel_agr$exact_agreement[1]), num(rel_agr$kappa[1], 2)))
+}
+if (claims_scored) {
+  cat("### Were the AI's sentences supported?\n\n")
+  cc <- cl_cond
+  out <- data.frame(Search = cond_short[cc$condition], Sentences = cc$claims, Supported = pct(cc$supported_share),
+                    Partly = pct(cc$partial_share), Unsupported = pct(cc$unsupported_share),
+                    `Unsupported interpretations` = pct(cc$unsupported_interpretation_share), check.names = FALSE)
+  cat(paste(knitr::kable(out, row.names = FALSE), collapse = "\n"), "\n\n")
+  ag <- cl_agr[cl_agr$label == "support", ]
+  cat(sprintf("**Agreement on support:** %s identical; kappa %s.\n\n", pct(ag$exact_agreement[1]), num(ag$kappa[1], 2)))
+}
+```

@@ -1,0 +1,9 @@
+"label","uri","score","facet","mapping","anchor","used"
+"amateur radio","http://www.yso.fi/onto/yso/p14876",0.326454818248749,1,"anchor_concept","amateur radio",FALSE
+"radio amateurs","http://www.yso.fi/onto/yso/p18713",0.237553685903549,1,"related","amateur radio",TRUE
+"Finland","http://www.yso.fi/onto/yso/p94426",0.181327342987061,,"unanchored",,FALSE
+"radio technology","http://www.yso.fi/onto/yso/p18574",0.168721958994865,1,"lexical","amateur radio",TRUE
+"history","http://www.yso.fi/onto/yso/p1780",0.150685667991638,,"unanchored",,FALSE
+"radio operators","http://www.yso.fi/onto/yso/p19542",0.111840263009071,1,"lexical","amateur radio",TRUE
+"radio equipment","http://www.yso.fi/onto/yso/p2204",0.0592877231538296,1,"lexical","amateur radio",FALSE
+"construction","http://www.yso.fi/onto/yso/p3673",0.0575978308916092,,"unanchored",,FALSE

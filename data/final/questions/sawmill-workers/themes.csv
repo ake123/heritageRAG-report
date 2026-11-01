@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","sawmills",51,0.85,1,TRUE
+"A_direct","sawmill industry",50,0.833333333333333,2,TRUE
+"A_direct","industrial workers",29,0.483333333333333,3,TRUE
+"A_direct","men",29,0.483333333333333,4,TRUE
+"A_direct","forest industry",26,0.433333333333333,5,TRUE
+"A_direct","wood industry",22,0.366666666666667,6,TRUE
+"A_direct","interiors",17,0.283333333333333,7,TRUE
+"A_direct","satakunta",15,0.25,8,TRUE
+"A_direct","timber",15,0.25,9,TRUE
+"A_direct","pori",14,0.233333333333333,10,TRUE
+"A_direct","women",14,0.233333333333333,11,TRUE
+"A_direct","employees",12,0.2,12,TRUE
+"A_direct","sawmill worker",12,0.2,13,TRUE
+"A_direct","workers",12,0.2,14,TRUE
+"A_direct","industry",10,0.166666666666667,15,TRUE
+"B_annif","sawmill industry",51,0.85,1,TRUE
+"B_annif","sawmills",44,0.733333333333333,2,TRUE
+"B_annif","men",26,0.433333333333333,3,TRUE
+"B_annif","industrial workers",24,0.4,4,TRUE
+"B_annif","sawmill worker",24,0.4,5,TRUE
+"B_annif","forest industry",21,0.35,6,TRUE
+"B_annif","wood industry",18,0.3,7,TRUE
+"B_annif","interiors",16,0.266666666666667,8,TRUE
+"B_annif","satakunta",16,0.266666666666667,9,TRUE
+"B_annif","pori",15,0.25,10,TRUE
+"B_annif","timber",15,0.25,11,TRUE
+"B_annif","women",14,0.233333333333333,12,TRUE
+"B_annif","employees",9,0.15,13,TRUE
+"B_annif","sawn timber",8,0.133333333333333,14,FALSE
+"B_annif","workers",8,0.133333333333333,15,TRUE
+"C_finto","sawmill industry",48,0.8,1,TRUE
+"C_finto","sawmills",45,0.75,2,TRUE
+"C_finto","men",22,0.366666666666667,3,TRUE
+"C_finto","sawmill worker",21,0.35,4,TRUE
+"C_finto","forest industry",17,0.283333333333333,5,TRUE
+"C_finto","industrial workers",17,0.283333333333333,6,TRUE
+"C_finto","satakunta",16,0.266666666666667,7,TRUE
+"C_finto","pori",15,0.25,8,TRUE
+"C_finto","wood industry",15,0.25,9,TRUE
+"C_finto","interiors",14,0.233333333333333,10,TRUE
+"C_finto","timber",13,0.216666666666667,11,TRUE
+"C_finto","women",11,0.183333333333333,12,TRUE
+"C_finto","workers",11,0.183333333333333,13,TRUE
+"C_finto","employees",8,0.133333333333333,14,TRUE
+"C_finto","isosanta",7,0.116666666666667,15,FALSE

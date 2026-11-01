@@ -1,0 +1,292 @@
+---
+title: "What we found across all questions"
+subtitle: "Eight findings, each with what we measured, what it means and what to be careful about"
+---
+
+```{r}
+source("_common.R", encoding = "UTF-8")
+med_B <- median(idx$ratio_B, na.rm = TRUE); med_C <- median(idx$ratio_C, na.rm = TRUE)
+same_B <- sum(idx$A_direct == idx$B_annif & idx$question_id %in% usable_q)
+jac <- function(c) ov_A$jaccard[ov_A$condition_b == c & ov_A$question_id %in% usable_q]
+push_C <- ov_A[ov_A$condition_b == "C_finto" & ov_A$question_id %in% usable_q, ]
+```
+
+::: {.in-short}
+**In short.** Across the `r length(usable_q)` questions that found records (out of `r n_q`):
+
+1. the fullest search matches far more records;
+2. it shows mostly different records;
+3. Annif often frames the question in its own way;
+4. other institutions come forward;
+5. so do Finnish- and Swedish-language records;
+6. the types of material shift towards texts and artworks;
+7. the subject words change a lot;
+8. in some questions the period covered moves.
+
+Whether the new records are *better* is not yet known: that needs the
+[human checking](human-check.qmd).
+:::
+
+`r left_out_text()`
+
+## 1. The fullest search matches many more records
+
+**What we measured.** For each search, how many records in the whole Finna index match it.
+This shows how wide the "net" is.
+
+```{r}
+#| fig-height: 5.2
+#| fig-alt: "Dot chart: matching records in Finna for searches A, B and C, per question, on a log scale."
+dot_chart(idx, "Matching records in the Finna index (log scale)", log = TRUE, order_ids = qids)
+```
+<p class="how-to-read">How to read this: each row is a question, each dot a search. Further right
+means more matching records. The scale jumps by ten at each step (1, 10, 100, 1000). An open
+circle at the far left means the search matched nothing.</p>
+
+**What it means.** Compared with our own words (A):
+
+- with Annif's words (B), the middle question matched **`r times(med_B)`** as many records;
+- with the thesaurus terms (C), it matched **`r times(med_C)`** as many.
+
+In `r same_B` of the `r length(usable_q)` questions, Annif's words did not change the number
+of matches at all.
+
+**Be careful.** More matching records does not mean better ones. A wider net also catches
+more that is off topic. `r if (newer_than("0.3.0")) "In the first run, Annif's *Finland* turned the [Swedish-language theatre](questions.qmd#finland-swedish-theatre) search into any theatre in Finland; this run no longer adds such partial words (see [Problems to fix](problems.qmd))." else "The [Swedish-language theatre](questions.qmd#finland-swedish-theatre) question shows how a wider search can drift away from the question."`
+
+## 2. Wider searches show different records
+
+**What we measured.** How many of the 60 kept records two searches have in common (the
+**overlap**: records found by both, divided by records found by either).
+
+```{r}
+#| fig-height: 4.8
+#| fig-alt: "Dot chart: overlap of search B and search C with search A, per question."
+o <- data.frame(question_id = usable_q,
+                A_direct = NA,
+                B_annif = ov_A$jaccard[ov_A$condition_b == "B_annif"][match(usable_q, ov_A$question_id[ov_A$condition_b == "B_annif"])],
+                C_finto = ov_A$jaccard[ov_A$condition_b == "C_finto"][match(usable_q, ov_A$question_id[ov_A$condition_b == "C_finto"])])
+dot_chart(o, "Share of records in common with search A (0 = none, 1 = all)", xlim = c(0, 1), show = c("B_annif", "C_finto"))
+```
+<p class="how-to-read">How to read this: a dot at 1 means the search showed exactly the same
+records as search A; a dot near 0 means almost entirely different records.</p>
+
+**What it means.** On average, search B shares **`r pct(mean(jac("B_annif"), na.rm = TRUE))`**
+of its records with A, and search C only **`r pct(mean(jac("C_finto"), na.rm = TRUE))`**.
+Because each search keeps only 60 records, the wider search C also **pushed out** records:
+on average `r num(mean(push_C$only_a))` of the records that A showed are missing from C.
+
+**Be careful.** The overlap only tells us the records are different. Whether those
+"pushed out" records mattered for the question is for the human checkers to judge.
+
+## 3. Annif often frames the question in its own way
+
+**What we measured.** Every subject word Annif suggested, and whether it fitted one of the
+researcher's key words.
+
+```{r}
+m <- as.data.frame(table(factor(annif$fits, fits_levels)))
+m <- m[m$Freq > 0 | m$Var1 != "only part of your word (not used)", ]
+m$share <- pct(m$Freq / sum(m$Freq))
+tbl(m, c("What happened to Annif's suggestion", "Number", "Share"))
+hist_n <- length(unique(annif$question_id[annif$label == "history"]))
+un <- annif[annif$mapping == "unanchored" & annif$label != "history", ]
+un <- un[order(-un$score), ]
+ex_un <- head(un[!duplicated(un$label), ], 8)
+```
+
+**What it means.** Most suggestions (`r pct(mean(annif$mapping == "unanchored"))`) did not fit
+the researcher's words. Annif suggested **history** for `r hist_n` of the `r n_q` questions: it
+reads "how did X change" as a question about history in general. Other suggestions that did
+not fit show a different way of describing the topic:
+`r paste0("*", ex_un$label, "* (", qname(ex_un$question_id), ")", collapse = "; ")`.
+
+These words were **not searched** in this study. They are a finding in themselves: they show
+how an automatic indexer would redraw the question's boundaries. For the
+[Karelian evacuees](questions.qmd#karelian-evacuees) question, Annif's *internally displaced
+persons* is in fact the official term, while the everyday word *evacuees* found nothing.
+`r if ("finland-swedish-theatre" %in% empty_q && any(annif$question_id == "finland-swedish-theatre" & annif$label == "Swedish-speaking Finns")) "Likewise, for [Swedish-language theatre](questions.qmd#finland-swedish-theatre) Annif suggested *Swedish-speaking Finns*, the thesaurus's name for the group, while the everyday *Finland Swedes* found nothing." else ""`
+
+## 4. Other institutions come forward
+
+**What we measured.** Which museum, archive or library each record comes from. We compare the
+mix of institutions between searches with a 0-to-1 **difference score** (0 = same mix,
+1 = completely different; see the [word list](how-it-works.qmd#words-used-in-this-report)).
+
+```{r}
+inst <- vis[vis$dimension == "institution" & vis$from == "A_direct" & vis$question_id %in% usable_q, ]
+w <- data.frame(Question = qname(usable_q))
+for (c in c("B_annif", "C_finto")) {
+  r <- inst[inst$to == c, ][match(usable_q, inst$question_id[inst$to == c]), ]
+  w[[paste(cond_short[c], "difference")]] <- num(r$jsd, 2)
+}
+ic <- reshape(metrics[, c("question_id", "condition", "institutions")], idvar = "question_id", timevar = "condition", direction = "wide")
+ic <- ic[match(usable_q, ic$question_id), ]
+w$`Institutions in A` <- ic$institutions.A_direct
+w$`Institutions in C` <- ic$institutions.C_finto
+rC <- inst[inst$to == "C_finto", ][match(usable_q, inst$question_id[inst$to == "C_finto"]), ]
+w$`New in C (examples)` <- ifelse(is.na(rC$examples_gained), "", rC$examples_gained)
+tbl(w)
+```
+
+```{r}
+#| fig-height: 5.6
+#| fig-alt: "Grouped bar chart: the 12 institutions with most records, share of records in searches A, B and C, all questions together."
+draw_group_bars(pooled_counts("institution"), pooled_n(), top = 12)
+```
+<p class="how-to-read">How to read this: all questions together, the twelve institutions with the
+most records. Each group of bars is one institution; the bars show its share of each search's
+records, and the number is the record count. Purple, bold names appear only in B or C; grey names
+disappear in C. Charts for each question are on [Compare searches](compare.qmd).</p>
+
+**What it means.** The median difference score for institutions between A and C is
+**`r num(median(inst$jsd[inst$to == "C_finto"], na.rm = TRUE), 2)`**, against
+`r num(median(inst$jsd[inst$to == "B_annif"], na.rm = TRUE), 2)` between A and B. The
+thesaurus terms reach collections that our own English words do not, often regional museums
+and specialist archives whose records are written in Finnish or Swedish.
+`r noise_sentence(inst, "institutions")`
+
+**Be careful.** These are the institutions among 60 records per search, not across all of
+Finna. A museum that is "new in C" may well have more relevant material that no search
+showed.
+
+## 5. Finnish- and Swedish-language records come forward
+
+**What we measured.** The language of each record, where Finna gives one.
+
+```{r}
+#| fig-height: 3.4
+#| fig-alt: "Stacked bars: languages of records with a known language, per search, all questions together."
+lang_known$lang2 <- ifelse(lang_known$language %in% sami_codes, "smi", lang_known$language)
+t <- table(factor(lang_known$condition, conds), lang_known$lang2)
+top <- names(sort(colSums(t), decreasing = TRUE))[1:min(5, ncol(t))]
+tt <- cbind(t[, top, drop = FALSE], other = rowSums(t[, setdiff(colnames(t), top), drop = FALSE]))
+share <- prop.table(tt, 1)
+lang_names <- c(fin = "Finnish", swe = "Swedish", eng = "English", smi = "Sámi", sme = "Northern Sámi",
+                nor = "Norwegian", deu = "German", other = "Other")
+cols <- c("#C9A227", "#4F8FBF", "#B5523B", "#5B8C5A", "#8A6FA8", "#9AA5AB")[seq_len(ncol(share))]
+chart_par(mar = c(4, 9, 1, 9), xpd = TRUE)
+graphics::barplot(t(share[rev(conds), , drop = FALSE]), horiz = TRUE, col = cols, border = "white",
+                  names.arg = cond_short[rev(conds)], xlab = "Share of records with a known language")
+graphics::legend("right", inset = c(-0.28, 0), legend = ifelse(colnames(share) %in% names(lang_names), lang_names[colnames(share)], colnames(share)),
+                 fill = cols, border = NA, bty = "n", cex = 0.85)
+n_known <- table(factor(lang_known$condition, conds)); n_all <- table(factor(rec_use$condition, conds))
+smi_n <- if ("smi" %in% colnames(t)) t[, "smi"] else c(0, 0, 0)
+```
+<p class="how-to-read">How to read this: each bar is one search, all questions together. The
+coloured parts show which languages its records are in, counting only records whose language
+is known.</p>
+
+```{r}
+k <- data.frame(Search = cond_short,
+                `Records` = as.integer(n_all), `Language known` = as.integer(n_known),
+                Finnish = pct(share[, "fin"]), Swedish = pct(share[, "swe"]), English = pct(share[, "eng"]),
+                check.names = FALSE)
+if ("smi" %in% colnames(share)) k$`Sámi` <- pct(share[, "smi"])
+tbl(k)
+```
+
+**What it means.** Our English key words mostly find English-language records and records
+with no language at all (photographs and objects). The thesaurus terms in C bring
+Finnish-language records forward (`r pct(share["A_direct", "fin"])` → `r pct(share["C_finto", "fin"])`)
+and Swedish-language records (`r pct(share["A_direct", "swe"])` → `r pct(share["C_finto", "swe"])`).
+`r if ("smi" %in% colnames(share)) paste0("Sámi-language records go the other way (", pct(share["A_direct", "smi"]), " → ", pct(share["C_finto", "smi"]), ", or ", smi_n[1], " records → ", smi_n[3], "): the study added Finnish, Swedish and English terms only, so the national languages took space in the top 60 that Sámi-language records had held. This is a clear example of how a standard vocabulary can shift *whose* material is visible.") else ""`
+`r if (have_sami) { s <- sami_summary; paste0("The [Sámi test](extra-tests.qmd) checks this directly: when search C also used the thesaurus's Northern Sámi names, it kept **", s$focus_records_alt, "** Sámi-language records instead of ", s$focus_records_base, ".") } else ""`
+
+**Be careful.** Only **`r pct(lang_known_share)`** of all kept records have a language at
+all; most are images and objects. Read these shares as "among records with a language".
+
+## 6. The types of material shift
+
+```{r}
+mt <- table(factor(rec_use$condition, conds), rec_use$material_type)
+topm <- names(sort(colSums(mt), decreasing = TRUE))[1:min(6, ncol(mt))]
+ms <- prop.table(mt, 1)[, topm, drop = FALSE]
+md <- data.frame(Search = cond_short, apply(ms, 2, pct), check.names = FALSE)
+tbl(md)
+mat <- vis[vis$dimension == "material" & vis$from == "A_direct" & vis$question_id %in% usable_q, ]
+```
+
+```{r}
+#| fig-height: 4.2
+#| fig-alt: "Grouped bar chart: material types, share of records in searches A, B and C, all questions together."
+draw_group_bars(pooled_counts("material"), pooled_n(), top = 8)
+```
+
+**What it means.** Images make up most records in every search, but their share falls in C,
+while texts, journal articles and works of art come in. The median difference score for
+material types between A and C is `r num(median(mat$jsd[mat$to == "C_finto"], na.rm = TRUE), 2)`.
+`r noise_sentence(mat, "material types")`
+
+## 7. The subject words change a lot
+
+**What we measured.** The subject words that catalogues attached to the records, and how the
+mix of subject words differs between searches.
+
+```{r}
+sub <- vis[vis$dimension == "subject" & vis$from == "A_direct" & vis$question_id %in% usable_q, ]
+picks <- intersect(c("emigrant-letters", "womens-suffrage", "childrens-book-illustration"), usable_q)
+ex <- do.call(rbind, lapply(picks, function(q) {
+  th <- themes[themes$question_id == q, ]
+  th$term <- sub("[.]+$", "", th$term)
+  a <- head(unique(th$term[th$condition == "A_direct"]), 5)
+  c <- unique(th$term[th$condition == "C_finto" & !th$in_A_top])
+  data.frame(Question = qname(q), `Top subject words in A` = paste(a, collapse = ", "),
+             `New top words in C` = paste(head(c, 5), collapse = ", "), check.names = FALSE)
+}))
+tbl(ex)
+```
+
+**What it means.** The subject words change more than anything else: the median difference
+score between A and C is **`r num(median(sub$jsd[sub$to == "C_finto"], na.rm = TRUE), 2)`**.
+`r noise_sentence(sub, "subject words")`
+Partly this is simply language (*siirtolaiset* is Finnish for *emigrants*). Partly the
+records really are about different things, so a researcher would build a different story from
+them.
+
+**Be careful.** The same idea written in two languages counts as two different subject
+words here, which makes this difference look larger than it is.
+
+## 8. Time coverage changes in some questions
+
+```{r}
+tm <- temporal[temporal$question_id %in% usable_q & temporal$records > 0, ]
+tw <- reshape(tm[, c("question_id", "condition", "median")], idvar = "question_id", timevar = "condition", direction = "wide")
+tw <- tw[match(usable_q, tw$question_id), ]
+tw$shift <- tw$median.C_finto - tw$median.A_direct
+out <- data.frame(Question = qname(tw$question_id), `Middle year A` = yr(tw$median.A_direct),
+                  `Middle year B` = yr(tw$median.B_annif), `Middle year C` = yr(tw$median.C_finto),
+                  `Change A to C (years)` = ifelse(is.na(tw$shift), "-", sprintf("%+d", round(tw$shift))), check.names = FALSE)
+tbl(out)
+big <- tw[!is.na(tw$shift) & abs(tw$shift) >= 5, ]
+```
+
+**What it means.** For most questions the period stays the same (the year range is fixed in
+the search). In `r nrow(big)` questions the middle year moves by five years or more,
+`r if (nrow(big)) paste0("for example ", paste0(qname(big$question_id), " (", sprintf("%+d", round(big$shift)), " years)", collapse = ", ")) else ""`.
+The thesaurus terms can reach older or newer material than our own words do.
+
+## All the main numbers in one table
+
+```{r}
+s <- metrics[metrics$question_id %in% usable_q, ]
+agg <- do.call(rbind, lapply(conds, function(c) {
+  x <- s[s$condition == c, ]
+  data.frame(Search = cond_short[c],
+             `Search words (average)` = num(mean(x$query_terms), 1),
+             `Matching records (middle value)` = num(median(x$index_matches)),
+             `Records kept (average)` = num(mean(x$records), 1),
+             `Institutions (average)` = num(mean(x$institutions), 1),
+             `Found only through new words` = pct(mean(x$expansion_dependent_share, na.rm = TRUE)),
+             `Match hidden` = pct(mean(x$unobserved_match_share, na.rm = TRUE)),
+             check.names = FALSE)
+}))
+tbl(agg)
+```
+
+*Found only through new words* is the share of records that only match through a word added by
+Annif or the thesaurus. *Match hidden* is the share where none of the search words can be seen
+in the part of the record Finna shows us (see [How it works](how-it-works.qmd#why-was-each-record-found)).
+
+The ready-made figures for the paper are in `results/final/paper/`; [Paper figures](paper-figures.qmd)
+shows and explains them.

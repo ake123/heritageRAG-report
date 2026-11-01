@@ -1,0 +1,8 @@
+"label","uri","score","facet","mapping","anchor","used"
+"history","http://www.yso.fi/onto/yso/p1780",0.591122448444366,,"unanchored",,FALSE
+"temperance movements","http://www.yso.fi/onto/yso/p11053",0.339646100997925,1,"anchor_concept","temperance movement",FALSE
+"Finland","http://www.yso.fi/onto/yso/p94426",0.194337248802185,,"unanchored",,FALSE
+"prohibition acts","http://www.yso.fi/onto/yso/p3486",0.127803906798363,,"unanchored",,FALSE
+"temperance","http://www.yso.fi/onto/yso/p10885",0.0852717310190201,1,"partial_phrase","temperance movement",FALSE
+"illustrated works","http://www.yso.fi/onto/yso/p2599",0.0754786878824234,,"unanchored",,FALSE
+"economic history","http://www.yso.fi/onto/yso/p17789",0.0644171088933945,,"unanchored",,FALSE

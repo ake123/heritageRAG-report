@@ -1,0 +1,4 @@
+"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
+"A_direct","women AND advertising",2,"en","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",245,60,0.518208980560303,
+"B_annif","(women OR ""view of women"") AND advertising",3,"en","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",245,60,0.51754093170166,
+"C_finto","(women OR ""view of women"" OR naiset OR kvinnor OR naiskuva OR kvinnobilden) AND (advertising OR mainonta OR reklam)",9,"en, fi, sv","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",1150,60,0.643969058990479,

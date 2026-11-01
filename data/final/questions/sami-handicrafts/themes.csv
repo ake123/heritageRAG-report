@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","saamelaiset",28,0.466666666666667,1,TRUE
+"A_direct","käsityöt",25,0.416666666666667,2,TRUE
+"A_direct","handarbeten och hantverk (objekt)",14,0.233333333333333,3,TRUE
+"A_direct","käsityöperinne",14,0.233333333333333,4,TRUE
+"A_direct","samer",14,0.233333333333333,5,TRUE
+"A_direct","handicrafts",12,0.2,6,TRUE
+"A_direct","saamelaiset.",10,0.166666666666667,7,TRUE
+"A_direct","gákti (sámi clothing)",9,0.15,8,TRUE
+"A_direct","textile handicrafts",9,0.15,9,TRUE
+"A_direct","sami",8,0.133333333333333,10,TRUE
+"A_direct","hantverkstradition",7,0.116666666666667,11,TRUE
+"A_direct","kansantaide",7,0.116666666666667,12,TRUE
+"A_direct","käsityöt.",7,0.116666666666667,13,TRUE
+"A_direct","folk art",6,0.1,14,TRUE
+"A_direct","samer.",6,0.1,15,TRUE
+"B_annif","saamelaiset",27,0.45,1,TRUE
+"B_annif","käsityöt",26,0.433333333333333,2,TRUE
+"B_annif","handicrafts",15,0.25,3,TRUE
+"B_annif","handarbeten och hantverk (objekt)",13,0.216666666666667,4,TRUE
+"B_annif","handicraft tradition",13,0.216666666666667,5,FALSE
+"B_annif","käsityöperinne",13,0.216666666666667,6,TRUE
+"B_annif","samer",12,0.2,7,TRUE
+"B_annif","boneworks",10,0.166666666666667,8,FALSE
+"B_annif","sámi people",10,0.166666666666667,9,FALSE
+"B_annif","hornwork",9,0.15,10,FALSE
+"B_annif","sami",8,0.133333333333333,11,TRUE
+"B_annif","art handicraft",7,0.116666666666667,12,FALSE
+"B_annif","saamelaiset.",7,0.116666666666667,13,TRUE
+"B_annif","hantverkstradition",6,0.1,14,TRUE
+"B_annif","kansanpuvut",6,0.1,15,FALSE
+"C_finto","saamelaiset",50,0.833333333333333,1,TRUE
+"C_finto","käsityöt",45,0.75,2,TRUE
+"C_finto","handarbeten och hantverk (objekt)",44,0.733333333333333,3,TRUE
+"C_finto","samer",44,0.733333333333333,4,TRUE
+"C_finto","käsityöperinne",31,0.516666666666667,5,TRUE
+"C_finto","hantverkstradition",28,0.466666666666667,6,TRUE
+"C_finto","taidekäsityö",18,0.3,7,FALSE
+"C_finto","konsthantverk",15,0.25,8,FALSE
+"C_finto","käsityöläiset",11,0.183333333333333,9,FALSE
+"C_finto","hantverkare",10,0.166666666666667,10,FALSE
+"C_finto","lappi",10,0.166666666666667,11,FALSE
+"C_finto","lappland",10,0.166666666666667,12,FALSE
+"C_finto","duodji",6,0.1,13,FALSE
+"C_finto","saamelaiskulttuuri",6,0.1,14,FALSE
+"C_finto","samisk kultur",6,0.1,15,FALSE

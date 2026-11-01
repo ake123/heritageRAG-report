@@ -1,0 +1,4 @@
+"condition","query_terms","term_languages","index_matches","retrieved","removed_by_date_check","records","undated","institutions","institution_diversity","languages","language_diversity","expansion_dependent_share","unobserved_match_share","evidence_records"
+"A_direct",2,1,6,6,0,6,0,1,1,0,,0,0,6
+"B_annif",2,1,6,6,0,6,0,1,1,0,,0,0,6
+"C_finto",7,3,25,25,0,25,0,5,2.85533982050475,1,1,0.52,0.24,8

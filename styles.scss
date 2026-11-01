@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Spectral:wght@500;600&display=swap');
+
+$font-family-sans-serif: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Spectral", Georgia, serif;
+$headings-font-weight: 600;
+$font-size-base: 1.06rem;
+$line-height-base: 1.6;
+$body-bg: #F7F8F7;
+$body-color: #1D2B33;
+$primary: #1D2B33;
+$link-color: #2E6F8E;
+$navbar-bg: #FFFFFF;
+$navbar-fg: #1D2B33;
+$navbar-hl: #8A5A9E;
+$border-radius: 3px;
+$table-border-color: #D5DCDF;
+
+/*-- scss:rules --*/
+main { max-width: 860px; }
+h1.title { font-size: 2.2rem; line-height: 1.2; }
+h2 { margin-top: 2.4rem; padding-bottom: .25rem; border-bottom: 1px solid #D5DCDF; }
+h3 { margin-top: 1.6rem; }
+.navbar { border-bottom: 1px solid #D5DCDF; }
+
+/* Short summaries at the top of each page */
+.in-short { background: #FFFFFF; border-left: 5px solid #1D2B33; padding: .9rem 1.2rem; margin: 1rem 0 1.6rem; }
+.in-short p:last-child, .in-short ul:last-child { margin-bottom: 0; }
+
+/* The three searches keep the same colour everywhere */
+.cond { display: inline-block; padding: 0 .45rem; border-left: 5px solid var(--c); background: #FFFFFF; font-weight: 700; }
+.cond-a { --c: #3A5A78; } .cond-b { --c: #2E8B7A; } .cond-c { --c: #8A5A9E; }
+
+.query { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86rem; background: #FFFFFF;
+  border-left: 5px solid var(--c, #55636B); padding: .5rem .8rem; margin: .3rem 0 1rem; overflow-wrap: anywhere; }
+.query p { margin: 0; }
+
+.how-to-read { font-size: .93rem; color: #44545C; margin-top: -.4rem; }
+.big-number { font-family: "Spectral", Georgia, serif; font-size: 1.15em; font-weight: 600; }
+
+table { font-size: .93rem; background: #FFFFFF; }
+thead th { border-bottom: 2px solid #1D2B33 !important; }
+.answer-md { font-size: .95rem; background: #FFFFFF; padding: .8rem 1rem; border: 1px solid #D5DCDF; margin-bottom: 1rem; }
+.answer-md p:last-child, .answer-md ul:last-child { margin-bottom: 0; }
+.answer-text { white-space: pre-wrap; font-size: .95rem; background: #FFFFFF; padding: .8rem 1rem; border: 1px solid #D5DCDF; }
+.term dt { font-weight: 700; margin-top: .8rem; }
+.term dd { margin-left: 0; }
+
+/* Status of a problem: fixed in this run, or fixed in the package but not yet re-run */
+.status { display: inline-block; font-size: .8rem; font-weight: 700; padding: .05rem .5rem; margin-right: .4rem;
+  border-radius: 3px; letter-spacing: .01em; }
+.status-fixed { background: #E3F1EC; color: #1F6B57; border: 1px solid #9CCDBD; }
+.status-pending { background: #FBF1DE; color: #7A5212; border: 1px solid #E5C78E; }
+.status-todo { background: #EEF0F1; color: #44545C; border: 1px solid #C9D1D5; }
+.status-line { margin: -.2rem 0 1rem; }
+
+/* Ten pages: keep the navigation on one line on laptop screens */
+@media (min-width: 992px) {
+  .navbar .navbar-nav .nav-link { font-size: .9rem; padding-left: .42rem; padding-right: .42rem; white-space: nowrap; }
+  .navbar-brand .navbar-title { font-size: 1rem; }
+}

@@ -1,0 +1,4 @@
+"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
+"A_direct","naiset AND mainonta",2,"fi","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",935,60,0.43492603302002,
+"B_annif","(naiset OR ""naisen asema"") AND (mainonta OR mainokset OR lehtimainonta)",5,"fi","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",2792,60,0.640913963317871,
+"C_finto","(naiset OR ""naisen asema"" OR kvinnor OR women OR ""kvinnans ställning"" OR ""woman's status"") AND (mainonta OR mainokset OR lehtimainonta OR reklam OR advertising OR reklamer OR advertisements OR tidningsreklam OR ""newspaper advertising"")",15,"en, fi, sv","search_daterange_mv:""overlap|[1920 TO 1960]""","ok",2812,60,0.906692028045654,

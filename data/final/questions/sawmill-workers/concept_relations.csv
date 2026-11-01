@@ -1,0 +1,6 @@
+"facet","anchor_uri","relation","uri","prefLabel"
+1,"http://www.yso.fi/onto/yso/p14013","broader","http://www.yso.fi/onto/yso/p27906","production plants"
+1,"http://www.yso.fi/onto/yso/p14013","related","http://www.yso.fi/onto/yso/p12409","factories"
+2,"http://www.yso.fi/onto/yso/p4189","broader","http://www.yso.fi/onto/yso/p2432","role related to socio-economic group"
+2,"http://www.yso.fi/onto/yso/p4189","related","http://www.yso.fi/onto/yso/p1075","employees"
+2,"http://www.yso.fi/onto/yso/p4189","related","http://www.yso.fi/onto/yso/p11280","working class"

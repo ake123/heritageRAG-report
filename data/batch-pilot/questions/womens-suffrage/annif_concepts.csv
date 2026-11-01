@@ -1,0 +1,11 @@
+"label","uri","score","facet","mapping","anchor","used"
+"women","http://www.yso.fi/onto/yso/p16991",0.663475513458252,2,"anchor_concept","women",FALSE
+"right to vote","http://www.yso.fi/onto/yso/p9796",0.496358007192612,1,"anchor_concept","suffrage",FALSE
+"history","http://www.yso.fi/onto/yso/p1780",0.417606383562088,,"unanchored",,FALSE
+"woman's status","http://www.yso.fi/onto/yso/p6365",0.334905415773392,,"unanchored",,FALSE
+"women's history","http://www.yso.fi/onto/yso/p10493",0.232143610715866,2,"lexical","women",TRUE
+"women's rights movements","http://www.yso.fi/onto/yso/p10578",0.174769327044487,1,"lexical","suffrage",TRUE
+"Finland","http://www.yso.fi/onto/yso/p94426",0.112604647874832,,"unanchored",,FALSE
+"reforms","http://www.yso.fi/onto/yso/p6795",0.0942930579185486,,"unanchored",,FALSE
+"equality (values)","http://www.yso.fi/onto/yso/p2399",0.0904062390327454,,"unanchored",,FALSE
+"United Kingdom","http://www.yso.fi/onto/yso/p104990",0.0850750803947449,,"unanchored",,FALSE

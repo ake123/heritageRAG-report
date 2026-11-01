@@ -1,0 +1,8 @@
+"condition","sentence_no","text","cited_ids","n_cited","invalid_ids","has_citation","trend_language","meta_statement","cited_introduced_by","cited_expansion_dependent","cited_not_in_A"
+"C_finto",1,"Direct observations:","",0,"",FALSE,FALSE,FALSE,"",0,0
+"C_finto",2,"The catalogue entry is titled ""Tammerkoski"" and is dated 1938, with subjects listed as ""kotiseutututkimus.; hembygdsforskning."" [helka.9914699183506253]","helka.9914699183506253",1,"",TRUE,FALSE,FALSE,"unobserved",0,1
+"C_finto",3,"The catalogue entry is titled ""Nokian uutiset"" and is dated 1939, with subjects listed as ""Nokia (kaupunki); Pirkanmaa."" [piki.311241]","piki.311241",1,"",TRUE,FALSE,FALSE,"unobserved",0,1
+"C_finto",4,"Interpretation and limitations:","",0,"",FALSE,FALSE,FALSE,"",0,0
+"C_finto",5,"The provided catalogue metadata for these two records does not mention amateur radio or amateur radio clubs in the fields shown, so the metadata alone does not indicate that these items document amateur radio activity. [helka.9914699183506253; piki.311241]","helka.9914699183506253; piki.311241",2,"",TRUE,FALSE,FALSE,"unobserved",0,2
+"C_finto",6,"Because the retrieved evidence consists only of these two catalogue entries, it is insufficient to answer how amateur radio clubs operated in Finland between 1925 and 1939. [helka.9914699183506253; piki.311241]","helka.9914699183506253; piki.311241",2,"",TRUE,FALSE,TRUE,"unobserved",0,2
+"C_finto",7,"I cannot assume the actual textual or visual content of the items beyond the supplied catalogue metadata; full item descriptions, digitized content, or additional records explicitly about amateur radio clubs from 1925–1939 would be needed to address your question.","",0,"",FALSE,FALSE,FALSE,"",0,0

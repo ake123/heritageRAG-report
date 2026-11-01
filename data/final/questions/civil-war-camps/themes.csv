@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","civil wars",58,1,1,TRUE
+"A_direct","prison camps",58,1,2,TRUE
+"A_direct","prisoners",20,0.344827586206897,3,TRUE
+"A_direct","tampere",10,0.172413793103448,4,TRUE
+"A_direct","kalevankangas",7,0.120689655172414,5,TRUE
+"A_direct","red guards",6,0.103448275862069,6,TRUE
+"A_direct","collections",3,0.0517241379310345,7,TRUE
+"A_direct","church buildings",2,0.0344827586206897,8,TRUE
+"A_direct","hospitals",2,0.0344827586206897,9,TRUE
+"A_direct","keskustori",2,0.0344827586206897,10,TRUE
+"A_direct","memorabilia",2,0.0344827586206897,11,TRUE
+"A_direct","nurses",2,0.0344827586206897,12,TRUE
+"A_direct","wooden buildings",2,0.0344827586206897,13,TRUE
+"A_direct","adult study",1,0.0172413793103448,14,TRUE
+"A_direct","barbed wire",1,0.0172413793103448,15,TRUE
+"B_annif","civil wars",56,0.949152542372881,1,TRUE
+"B_annif","prison camps",50,0.847457627118644,2,TRUE
+"B_annif","prisoners of war",38,0.644067796610169,3,FALSE
+"B_annif","red guards",26,0.440677966101695,4,TRUE
+"B_annif","finnish civil war",15,0.254237288135593,5,FALSE
+"B_annif","prisoners",8,0.135593220338983,6,TRUE
+"B_annif","reds (finnish civil war)",8,0.135593220338983,7,FALSE
+"B_annif","whites (finnish civil war)",8,0.135593220338983,8,FALSE
+"B_annif","germans",7,0.11864406779661,9,FALSE
+"B_annif","military law",6,0.101694915254237,10,FALSE
+"B_annif","punishments",6,0.101694915254237,11,FALSE
+"B_annif","war crimes",6,0.101694915254237,12,FALSE
+"B_annif","civilian population",4,0.0677966101694915,13,FALSE
+"B_annif","manors",4,0.0677966101694915,14,FALSE
+"B_annif","memorabilia",3,0.0508474576271186,15,TRUE
+"C_finto","civil wars",58,0.983050847457627,1,TRUE
+"C_finto","prison camps",47,0.796610169491525,2,TRUE
+"C_finto","prisoners of war",42,0.711864406779661,3,FALSE
+"C_finto","red guards",28,0.474576271186441,4,TRUE
+"C_finto","finnish civil war",20,0.338983050847458,5,FALSE
+"C_finto","prisoners",10,0.169491525423729,6,TRUE
+"C_finto","reds (finnish civil war)",9,0.152542372881356,7,FALSE
+"C_finto","military law",8,0.135593220338983,8,FALSE
+"C_finto","punishments",8,0.135593220338983,9,FALSE
+"C_finto","war crimes",8,0.135593220338983,10,FALSE
+"C_finto","whites (finnish civil war)",8,0.135593220338983,11,FALSE
+"C_finto","germans",7,0.11864406779661,12,FALSE
+"C_finto","memorabilia",7,0.11864406779661,13,TRUE
+"C_finto","civilian population",4,0.0677966101694915,14,FALSE
+"C_finto","manors",4,0.0677966101694915,15,FALSE

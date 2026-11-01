@@ -1,0 +1,87 @@
+---
+title: "How the way we search changes what we find"
+subtitle: "A report of the HeritageRAG study"
+---
+
+```{r}
+source("_common.R", encoding = "UTF-8")
+med_C <- median(idx$ratio_C, na.rm = TRUE)
+med_B <- median(idx$ratio_B, na.rm = TRUE)
+jac_C <- mean(ov_A$jaccard[ov_A$condition_b == "C_finto" & ov_A$question_id %in% usable_q], na.rm = TRUE)
+jac_B <- mean(ov_A$jaccard[ov_A$condition_b == "B_annif" & ov_A$question_id %in% usable_q], na.rm = TRUE)
+lk <- prop.table(table(factor(lang_known$condition, conds), lang_known$language), 1)
+fin_A <- lk["A_direct", "fin"]; fin_C <- lk["C_finto", "fin"]
+unanch <- mean(annif$mapping == "unanchored")
+hist_n <- length(unique(annif$question_id[annif$label == "history"]))
+ex <- queries[queries$question_id == "women-advertising", ]
+q_of <- function(c) ex$query[ex$condition == c]
+run_date <- format(as.Date(substr(run_info$run_date, 1, 10)), "%d %B %Y")
+```
+
+::: {.in-short}
+**In short.** We asked `r n_q` questions about Finnish history and searched the national
+heritage portal Finna for each one in three ways: with our own words only, with extra words
+suggested by a computer, and with official thesaurus terms in Finnish, Swedish and English.
+**How we searched changed what we found.** For the middle question, the fullest search (C)
+matched **`r times(med_C)`** as many records as our own words did, and
+the records it showed were **mostly different ones**. It brought forward Finnish- and
+Swedish-language material and other museums and archives. People still need to check whether
+those records are *better*, and whether the AI's answers are right.
+:::
+
+## What is this study about?
+
+Historians and other researchers now find most of their sources through computer systems.
+Between a research question and the evidence on the screen there are several hidden steps:
+catalogues from many institutions, lists of official subject words, automatic indexing
+tools and, more and more, AI that writes summaries.
+
+These steps help, but they also make choices for us. They decide which words count, which
+records come first and which collections appear at all. This study makes those steps
+**visible** and measures **what each step changes**.
+
+## The three ways of searching
+
+Think of asking a library for material on *how women were shown in Finnish advertising,
+1920 to 1960*. We picked two key words, **women** and **advertising**, and searched in three
+ways:
+
+<span class="cond cond-a">Search A: your own words using Finna</span>
+We search for exactly the words we chose.
+
+::: {.query style="--c:#3A5A78"}
+`r q_of("A_direct")`
+:::
+
+<span class="cond cond-b">Search B: your words + the indexer's suggestions</span>
+A computer tool called **Annif** reads the question and suggests subject words, the way a
+cataloguer would. We add the suggestions that fit one of our words.
+
+::: {.query style="--c:#2E8B7A"}
+`r q_of("B_annif")`
+:::
+
+<span class="cond cond-c">Search C: B + official thesaurus terms</span>
+The national thesaurus **YSO** (looked up through the **Finto** service) gives the official
+name of each idea in Finnish, Swedish and English. We add those as well.
+
+::: {.query style="--c:#8A5A9E"}
+`r q_of("C_finto")`
+:::
+
+`AND` means "both must appear" and `OR` means "any of these will do". So every search keeps
+the whole topic (women *and* advertising); the searches differ only in **how many ways of
+saying each idea** they accept.
+
+## What we did
+
+1. We wrote `r n_q` research questions on different topics and periods, each with two key words.
+2. We searched Finna in the three ways above, with the same year range for all three.
+3. From each search we kept the **top 60 records**, in Finna's own order.
+4. We recorded *why* each record was found: which word matched it.
+5. An AI model (OpenAI) read the **top 8 records** of each search and wrote a short answer,
+   citing the records it used.
+6. We compared the three searches, and the three answers, with each other.
+
+<!-- The search was run on `r run_date`. -->
+

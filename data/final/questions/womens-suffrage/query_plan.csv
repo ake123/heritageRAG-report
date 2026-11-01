@@ -1,0 +1,4 @@
+"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
+"A_direct","suffrage AND women",2,"en","search_daterange_mv:""overlap|[1900 TO 1910]""","ok",13,13,0.392120122909546,
+"B_annif","(suffrage OR ""women's rights movements"") AND (women OR ""women's history"")",4,"en","search_daterange_mv:""overlap|[1900 TO 1910]""","ok",112,60,0.577600002288818,
+"C_finto","(suffrage OR ""women's rights movements"" OR äänioikeus OR rösträtt OR ""right to vote"" OR naisasialiikkeet OR kvinnosaksrörelser) AND (women OR ""women's history"" OR naiset OR kvinnor OR naishistoria OR kvinnohistoria)",13,"en, fi, sv","search_daterange_mv:""overlap|[1900 TO 1910]""","ok",401,60,0.934932947158813,

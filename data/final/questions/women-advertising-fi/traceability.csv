@@ -1,0 +1,4 @@
+"condition","sentences","cited_share","invalid_citations","uncited_claims","trend_sentences","trend_cited_share","cited_records","cited_expansion_dependent_share","cited_not_in_A_share"
+"A_direct",17,0.176470588235294,0,14,0,,3,0,0
+"B_annif",16,0.4375,0,9,1,0,8,0.375,0.5
+"C_finto",14,0.214285714285714,0,11,0,,3,1,1

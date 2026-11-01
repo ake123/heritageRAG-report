@@ -1,0 +1,4 @@
+"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
+"A_direct","""amateur radio"" AND clubs",2,"en","search_daterange_mv:""overlap|[1925 TO 1939]""","ok",2,2,0.48433780670166,
+"B_annif","(""amateur radio"" OR ""radio amateurs"" OR ""radio technology"" OR ""radio operators"") AND clubs",5,"en","search_daterange_mv:""overlap|[1925 TO 1939]""","ok",2,2,0.504878044128418,
+"C_finto","(""amateur radio"" OR ""radio amateurs"" OR ""radio technology"" OR ""radio operators"" OR radioamatööritoiminta OR radioamatörverksamhet OR radioamatöörit OR radioamatörer OR radiotekniikka OR radioteknik OR radiosähköttäjät OR radiotelegrafister) AND (clubs OR musiikkiklubit OR musikklubbar OR ""music clubs"")",16,"en, fi, sv","search_daterange_mv:""overlap|[1925 TO 1939]""","ok",5,5,1.1806161403656,

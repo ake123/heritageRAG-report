@@ -1,0 +1,6 @@
+"label","uri","score","facet","mapping","anchor","used"
+"children's literature","http://www.yso.fi/onto/yso/p4742",0.631820321083069,1,"anchor_concept","children's literature",FALSE
+"illustrations","http://www.yso.fi/onto/yso/p2738",0.127001389861107,2,"anchor_concept","illustrations",FALSE
+"history","http://www.yso.fi/onto/yso/p1780",0.0822631865739822,,"unanchored",,FALSE
+"juvenile literature","http://www.yso.fi/onto/yso/p5398",0.0665124207735062,1,"related","children's literature",TRUE
+"children's authors","http://www.yso.fi/onto/yso/p12012",0.0530594810843468,1,"lexical","children's literature",TRUE

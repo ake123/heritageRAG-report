@@ -1,0 +1,9 @@
+"label","uri","score","facet","mapping","anchor","used"
+"sawmills","http://www.yso.fi/onto/yso/p14013",0.234766110777855,1,"anchor_concept","sawmills",FALSE
+"history","http://www.yso.fi/onto/yso/p1780",0.21091715991497,,"unanchored",,FALSE
+"sawmill worker","http://www.yso.fi/onto/yso/p26227",0.133603304624557,1,"lexical","sawmills",TRUE
+"folkloristics","http://www.yso.fi/onto/yso/p17883",0.125410586595535,,"unanchored",,FALSE
+"sawmill industry","http://www.yso.fi/onto/yso/p2590",0.112337231636047,1,"lexical","sawmills",TRUE
+"biographies","http://www.yso.fi/onto/yso/p11597",0.0734153538942337,,"unanchored",,FALSE
+"documents","http://www.yso.fi/onto/yso/p2325",0.0686043575406075,,"unanchored",,FALSE
+"workers","http://www.yso.fi/onto/yso/p4189",0.0607390180230141,2,"anchor_concept","workers",FALSE

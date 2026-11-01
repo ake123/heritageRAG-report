@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","lastenkirjallisuus",9,0.5,1,TRUE
+"A_direct","koivu",6,0.333333333333333,2,TRUE
+"A_direct","kuvittajat",6,0.333333333333333,3,TRUE
+"A_direct","suomi",6,0.333333333333333,4,TRUE
+"A_direct","kuvitukset",5,0.277777777777778,5,TRUE
+"A_direct","children's literature",4,0.222222222222222,6,TRUE
+"A_direct","rudolf",4,0.222222222222222,7,TRUE
+"A_direct","sadut",4,0.222222222222222,8,TRUE
+"A_direct","kuvitus",3,0.166666666666667,9,TRUE
+"A_direct","kuvitustaide",3,0.166666666666667,10,TRUE
+"A_direct","rudolf.",3,0.166666666666667,11,TRUE
+"A_direct","1940-luku",2,0.111111111111111,12,TRUE
+"A_direct","barnlitteratur.",2,0.111111111111111,13,TRUE
+"A_direct","bauer",2,0.111111111111111,14,TRUE
+"A_direct","illustrationer.",2,0.111111111111111,15,TRUE
+"B_annif","lastenkirjallisuus",9,0.5,1,TRUE
+"B_annif","koivu",6,0.333333333333333,2,TRUE
+"B_annif","kuvittajat",6,0.333333333333333,3,TRUE
+"B_annif","suomi",6,0.333333333333333,4,TRUE
+"B_annif","kuvitukset",5,0.277777777777778,5,TRUE
+"B_annif","children's literature",4,0.222222222222222,6,TRUE
+"B_annif","rudolf",4,0.222222222222222,7,TRUE
+"B_annif","sadut",4,0.222222222222222,8,TRUE
+"B_annif","kuvitus",3,0.166666666666667,9,TRUE
+"B_annif","kuvitustaide",3,0.166666666666667,10,TRUE
+"B_annif","rudolf.",3,0.166666666666667,11,TRUE
+"B_annif","1940-luku",2,0.111111111111111,12,TRUE
+"B_annif","barnlitteratur.",2,0.111111111111111,13,TRUE
+"B_annif","bauer",2,0.111111111111111,14,TRUE
+"B_annif","illustrationer.",2,0.111111111111111,15,TRUE
+"C_finto","illustration (art forms)",41,0.694915254237288,1,FALSE
+"C_finto","illustrations",41,0.694915254237288,2,FALSE
+"C_finto","ungdomslitteratur",12,0.203389830508475,3,FALSE
+"C_finto","barnlitteratur",10,0.169491525423729,4,FALSE
+"C_finto","lastenkirjallisuus",10,0.169491525423729,5,TRUE
+"C_finto","nuortenkirjallisuus",10,0.169491525423729,6,FALSE
+"C_finto","käännökset",6,0.101694915254237,7,FALSE
+"C_finto","översättningar",6,0.101694915254237,8,FALSE
+"C_finto","ruotsin kieli",6,0.101694915254237,9,FALSE
+"C_finto","svenska",6,0.101694915254237,10,FALSE
+"C_finto","children's literature",4,0.0677966101694915,11,TRUE
+"C_finto","engelska",4,0.0677966101694915,12,FALSE
+"C_finto","englannin kieli",4,0.0677966101694915,13,FALSE
+"C_finto","flickböcker",4,0.0677966101694915,14,FALSE
+"C_finto","tyttökirjat",4,0.0677966101694915,15,FALSE

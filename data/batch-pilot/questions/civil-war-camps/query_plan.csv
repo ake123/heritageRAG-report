@@ -1,0 +1,4 @@
+"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
+"A_direct","""civil wars"" AND ""prison camps""",2,"en","search_daterange_mv:""overlap|[1918 TO 1920]""","ok",456,60,0.501355886459351,
+"B_annif","(""civil wars"" OR ""Finnish Civil War"") AND (""prison camps"" OR ""prisoners of war"")",4,"en","search_daterange_mv:""overlap|[1918 TO 1920]""","ok",531,60,0.661115884780884,
+"C_finto","(""civil wars"" OR ""Finnish Civil War"" OR sisällissodat OR inbördeskrig OR ""Suomen sisällissota"" OR ""finska inbördeskriget"") AND (""prison camps"" OR ""prisoners of war"" OR vankileirit OR fångläger OR sotavangit OR krigsfångar)",12,"en, fi, sv","search_daterange_mv:""overlap|[1918 TO 1920]""","ok",1612,60,0.770405054092407,

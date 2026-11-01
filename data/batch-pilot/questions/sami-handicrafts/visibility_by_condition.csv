@@ -1,0 +1,1182 @@
+"condition","dimension","value","records","share"
+"A_direct","decade","1980s",18,0.3
+"A_direct","decade","2010s",11,0.183333333333333
+"A_direct","decade","(unknown)",9,0.15
+"A_direct","decade","2000s",8,0.133333333333333
+"A_direct","decade","1990s",7,0.116666666666667
+"A_direct","decade","1970s",3,0.05
+"A_direct","decade","2020s",2,0.0333333333333333
+"A_direct","decade","1950s",1,0.0166666666666667
+"A_direct","decade","1960s",1,0.0166666666666667
+"B_annif","decade","1980s",16,0.266666666666667
+"B_annif","decade","(unknown)",11,0.183333333333333
+"B_annif","decade","2010s",9,0.15
+"B_annif","decade","1990s",8,0.133333333333333
+"B_annif","decade","2000s",8,0.133333333333333
+"B_annif","decade","1970s",4,0.0666666666666667
+"B_annif","decade","2020s",2,0.0333333333333333
+"B_annif","decade","1950s",1,0.0166666666666667
+"B_annif","decade","1960s",1,0.0166666666666667
+"C_finto","decade","2000s",18,0.3
+"C_finto","decade","1980s",15,0.25
+"C_finto","decade","2010s",8,0.133333333333333
+"C_finto","decade","1990s",7,0.116666666666667
+"C_finto","decade","1960s",4,0.0666666666666667
+"C_finto","decade","(unknown)",3,0.05
+"C_finto","decade","1970s",2,0.0333333333333333
+"C_finto","decade","2020s",2,0.0333333333333333
+"C_finto","decade","1920s",1,0.0166666666666667
+"A_direct","institution","The National Library",16,0.266666666666667
+"A_direct","institution","Lapin kirjasto",12,0.2
+"A_direct","institution","Sámi Museum Siida",9,0.15
+"A_direct","institution","Helka Libraries",6,0.1
+"A_direct","institution","University of Oulu",3,0.05
+"A_direct","institution","3AMK libraries",2,0.0333333333333333
+"A_direct","institution","Aalto University Learning Centre",2,0.0333333333333333
+"A_direct","institution","Finnish National Gallery / Library",2,0.0333333333333333
+"A_direct","institution","Åbo Akademi Library",1,0.0166666666666667
+"A_direct","institution","Arcada library",1,0.0166666666666667
+"A_direct","institution","Curated materials",1,0.0166666666666667
+"A_direct","institution","Deutsche Bibliothek",1,0.0166666666666667
+"A_direct","institution","Institutional Repository for the Government",1,0.0166666666666667
+"A_direct","institution","Lapland University Consortium Library",1,0.0166666666666667
+"A_direct","institution","The Finnish Arts and Culture Agency",1,0.0166666666666667
+"A_direct","institution","The National Archives",1,0.0166666666666667
+"B_annif","institution","The National Library",16,0.266666666666667
+"B_annif","institution","Lapin kirjasto",14,0.233333333333333
+"B_annif","institution","Sámi Museum Siida",12,0.2
+"B_annif","institution","Helka Libraries",6,0.1
+"B_annif","institution","3AMK libraries",2,0.0333333333333333
+"B_annif","institution","Finnish National Gallery / Library",2,0.0333333333333333
+"B_annif","institution","University of Oulu",2,0.0333333333333333
+"B_annif","institution","Åbo Akademi Library",1,0.0166666666666667
+"B_annif","institution","Curated materials",1,0.0166666666666667
+"B_annif","institution","Deutsche Bibliothek",1,0.0166666666666667
+"B_annif","institution","Finnish Literature Society",1,0.0166666666666667
+"B_annif","institution","Institutional Repository for the Government",1,0.0166666666666667
+"B_annif","institution","Lapland University Consortium Library",1,0.0166666666666667
+"C_finto","institution","The National Library",38,0.633333333333333
+"C_finto","institution","Lapin kirjasto",8,0.133333333333333
+"C_finto","institution","Helka Libraries",3,0.05
+"C_finto","institution","Sámi Museum Siida",3,0.05
+"C_finto","institution","Aalto University Learning Centre",2,0.0333333333333333
+"C_finto","institution","Vaasa City Library",2,0.0333333333333333
+"C_finto","institution","Åbo Akademi Library",1,0.0166666666666667
+"C_finto","institution","Anders Libraries",1,0.0166666666666667
+"C_finto","institution","Kyyti-libraries",1,0.0166666666666667
+"C_finto","institution","The National Archives",1,0.0166666666666667
+"A_direct","language","eng",16,0.266666666666667
+"A_direct","language","smi",15,0.25
+"A_direct","language","(unknown)",10,0.166666666666667
+"A_direct","language","fin",7,0.116666666666667
+"A_direct","language","nor",4,0.0666666666666667
+"A_direct","language","deu",2,0.0333333333333333
+"A_direct","language","swe",2,0.0333333333333333
+"A_direct","language","fra",1,0.0166666666666667
+"A_direct","language","rus",1,0.0166666666666667
+"A_direct","language","sme",1,0.0166666666666667
+"A_direct","language","spa",1,0.0166666666666667
+"B_annif","language","smi",16,0.266666666666667
+"B_annif","language","eng",14,0.233333333333333
+"B_annif","language","(unknown)",12,0.2
+"B_annif","language","fin",7,0.116666666666667
+"B_annif","language","nor",4,0.0666666666666667
+"B_annif","language","deu",2,0.0333333333333333
+"B_annif","language","fra",1,0.0166666666666667
+"B_annif","language","rus",1,0.0166666666666667
+"B_annif","language","sme",1,0.0166666666666667
+"B_annif","language","spa",1,0.0166666666666667
+"B_annif","language","swe",1,0.0166666666666667
+"C_finto","language","fin",28,0.466666666666667
+"C_finto","language","swe",12,0.2
+"C_finto","language","smi",8,0.133333333333333
+"C_finto","language","eng",4,0.0666666666666667
+"C_finto","language","nor",4,0.0666666666666667
+"C_finto","language","(unknown)",3,0.05
+"C_finto","language","rus",1,0.0166666666666667
+"A_direct","material","Book material",33,0.55
+"A_direct","material","Journal/Article",10,0.166666666666667
+"A_direct","material","Physical object",9,0.15
+"A_direct","material","Video",6,0.1
+"A_direct","material","Curated materials",1,0.0166666666666667
+"A_direct","material","Thesis",1,0.0166666666666667
+"B_annif","material","Book material",30,0.5
+"B_annif","material","Physical object",12,0.2
+"B_annif","material","Journal/Article",10,0.166666666666667
+"B_annif","material","Video",6,0.1
+"B_annif","material","Curated materials",1,0.0166666666666667
+"B_annif","material","Image",1,0.0166666666666667
+"C_finto","material","Journal/Article",31,0.516666666666667
+"C_finto","material","Book material",26,0.433333333333333
+"C_finto","material","Physical object",3,0.05
+"A_direct","subject","saamelaiset",28,0.466666666666667
+"A_direct","subject","käsityöt",25,0.416666666666667
+"A_direct","subject","handarbeten och hantverk (objekt)",14,0.233333333333333
+"A_direct","subject","käsityöperinne",14,0.233333333333333
+"A_direct","subject","samer",14,0.233333333333333
+"A_direct","subject","handicrafts",12,0.2
+"A_direct","subject","saamelaiset.",10,0.166666666666667
+"A_direct","subject","gákti (sámi clothing)",9,0.15
+"A_direct","subject","textile handicrafts",9,0.15
+"A_direct","subject","sami",8,0.133333333333333
+"A_direct","subject","hantverkstradition",7,0.116666666666667
+"A_direct","subject","kansantaide",7,0.116666666666667
+"A_direct","subject","käsityöt.",7,0.116666666666667
+"A_direct","subject","folk art",6,0.1
+"A_direct","subject","samer.",6,0.1
+"A_direct","subject","duodji",5,0.0833333333333333
+"A_direct","subject","käsityöperinne.",5,0.0833333333333333
+"A_direct","subject","näyttelyjulkaisut",5,0.0833333333333333
+"A_direct","subject","saamelaiskulttuuri",5,0.0833333333333333
+"A_direct","subject","samisk kultur",5,0.0833333333333333
+"A_direct","subject","taide",5,0.0833333333333333
+"A_direct","subject","taide.",5,0.0833333333333333
+"A_direct","subject","taidekäsityö",5,0.0833333333333333
+"A_direct","subject","folkkonst",4,0.0666666666666667
+"A_direct","subject","folkkonst.",4,0.0666666666666667
+"A_direct","subject","kansanperinne",4,0.0666666666666667
+"A_direct","subject","kansanpuvut",4,0.0666666666666667
+"A_direct","subject","kansantaide.",4,0.0666666666666667
+"A_direct","subject","käsityö (toiminta)",4,0.0666666666666667
+"A_direct","subject","nahkatyöt",4,0.0666666666666667
+"A_direct","subject","nauhat (tekstiilit)",4,0.0666666666666667
+"A_direct","subject","pirtanauhat",4,0.0666666666666667
+"A_direct","subject","traditional handicrafts",4,0.0666666666666667
+"A_direct","subject","alkuperäiskansat",3,0.05
+"A_direct","subject","elinkeinot",3,0.05
+"A_direct","subject","finland",3,0.05
+"A_direct","subject","historia",3,0.05
+"A_direct","subject","konst.",3,0.05
+"A_direct","subject","kulttuuri",3,0.05
+"A_direct","subject","lappi",3,0.05
+"A_direct","subject","saamelaiskulttuuri.",3,0.05
+"A_direct","subject","sápmelaččat",3,0.05
+"A_direct","subject","suomi",3,0.05
+"A_direct","subject","taidekäsityö.",3,0.05
+"A_direct","subject","(unknown)",2,0.0333333333333333
+"A_direct","subject","aikio",2,0.0333333333333333
+"A_direct","subject","etnologi.",2,0.0333333333333333
+"A_direct","subject","etnologia.",2,0.0333333333333333
+"A_direct","subject","folktradition",2,0.0333333333333333
+"A_direct","subject","giehtaduojit",2,0.0333333333333333
+"A_direct","subject","hantverkstradition.",2,0.0333333333333333
+"A_direct","subject","holm",2,0.0333333333333333
+"A_direct","subject","hopeatyöt",2,0.0333333333333333
+"A_direct","subject","iver",2,0.0333333333333333
+"A_direct","subject","järjestöt",2,0.0333333333333333
+"A_direct","subject","kansanperinne.",2,0.0333333333333333
+"A_direct","subject","käsityöohjeet",2,0.0333333333333333
+"A_direct","subject","kolttasaamelaiset",2,0.0333333333333333
+"A_direct","subject","konst",2,0.0333333333333333
+"A_direct","subject","konsthantverk",2,0.0333333333333333
+"A_direct","subject","korut",2,0.0333333333333333
+"A_direct","subject","koulut",2,0.0333333333333333
+"A_direct","subject","kulttuuri.",2,0.0333333333333333
+"A_direct","subject","kulttuurihistoria",2,0.0333333333333333
+"A_direct","subject","kultur",2,0.0333333333333333
+"A_direct","subject","kuvateokset",2,0.0333333333333333
+"A_direct","subject","lappi (suomi)",2,0.0333333333333333
+"A_direct","subject","lappland",2,0.0333333333333333
+"A_direct","subject","lappland (finland)",2,0.0333333333333333
+"A_direct","subject","lena",2,0.0333333333333333
+"A_direct","subject","luutyöt",2,0.0333333333333333
+"A_direct","subject","näringar",2,0.0333333333333333
+"A_direct","subject","näyttelyt",2,0.0333333333333333
+"A_direct","subject","norja",2,0.0333333333333333
+"A_direct","subject","outi",2,0.0333333333333333
+"A_direct","subject","päähineet",2,0.0333333333333333
+"A_direct","subject","paulat",2,0.0333333333333333
+"A_direct","subject","pieski",2,0.0333333333333333
+"A_direct","subject","puutyöt",2,0.0333333333333333
+"A_direct","subject","rakennusohjeet",2,0.0333333333333333
+"A_direct","subject","saamelaiset : kulttuuri",2,0.0333333333333333
+"A_direct","subject","saamelaiskielet",2,0.0333333333333333
+"A_direct","subject","sámekultuvra",2,0.0333333333333333
+"A_direct","subject","sami.",2,0.0333333333333333
+"A_direct","subject","samisk kultur.",2,0.0333333333333333
+"A_direct","subject","skolor (läroanstalter)",2,0.0333333333333333
+"A_direct","subject","stenberg",2,0.0333333333333333
+"A_direct","subject","turi",2,0.0333333333333333
+"A_direct","subject","utställningskataloger",2,0.0333333333333333
+"A_direct","subject","vaatteet",2,0.0333333333333333
+"A_direct","subject","1700-luku",1,0.0166666666666667
+"A_direct","subject","1800-luku",1,0.0166666666666667
+"A_direct","subject","1844-1913.",1,0.0166666666666667
+"A_direct","subject","1854-1936.",1,0.0166666666666667
+"A_direct","subject","1932-.",1,0.0166666666666667
+"A_direct","subject","1937-2022.",1,0.0166666666666667
+"A_direct","subject","1961-.",1,0.0166666666666667
+"A_direct","subject","1973-",1,0.0166666666666667
+"A_direct","subject","aesthetics.",1,0.0166666666666667
+"A_direct","subject","aiheet",1,0.0166666666666667
+"A_direct","subject","aineellinen kulttuuri.",1,0.0166666666666667
+"A_direct","subject","alf",1,0.0166666666666667
+"A_direct","subject","alkuperäiskansat.",1,0.0166666666666667
+"A_direct","subject","ammatillinen koulutus",1,0.0166666666666667
+"A_direct","subject","ammatilliset oppilaitokset",1,0.0166666666666667
+"A_direct","subject","ámmátlaš oahppolágádusat",1,0.0166666666666667
+"A_direct","subject","ámmátlaš skuvlejupmi",1,0.0166666666666667
+"A_direct","subject","ämnen (områden)",1,0.0166666666666667
+"A_direct","subject","anders",1,0.0166666666666667
+"A_direct","subject","andersson",1,0.0166666666666667
+"A_direct","subject","annelise",1,0.0166666666666667
+"A_direct","subject","arkitektur.",1,0.0166666666666667
+"A_direct","subject","arkkitehtuuri.",1,0.0166666666666667
+"A_direct","subject","art",1,0.0166666666666667
+"A_direct","subject","artists",1,0.0166666666666667
+"A_direct","subject","asbjorn",1,0.0166666666666667
+"A_direct","subject","asusteet",1,0.0166666666666667
+"A_direct","subject","asutushistoria",1,0.0166666666666667
+"A_direct","subject","ausstellungskatalog",1,0.0166666666666667
+"A_direct","subject","bente",1,0.0166666666666667
+"A_direct","subject","bildkonst",1,0.0166666666666667
+"A_direct","subject","bildkonstnärer.",1,0.0166666666666667
+"A_direct","subject","bildverk",1,0.0166666666666667
+"A_direct","subject","blad (växtdelar)",1,0.0166666666666667
+"A_direct","subject","boneworks",1,0.0166666666666667
+"A_direct","subject","britta",1,0.0166666666666667
+"A_direct","subject","bruksföremål",1,0.0166666666666667
+"A_direct","subject","carl",1,0.0166666666666667
+"A_direct","subject","carl-johan",1,0.0166666666666667
+"A_direct","subject","carola",1,0.0166666666666667
+"A_direct","subject","charlotte",1,0.0166666666666667
+"A_direct","subject","colbengtson",1,0.0166666666666667
+"A_direct","subject","copyright",1,0.0166666666666667
+"A_direct","subject","darja.",1,0.0166666666666667
+"A_direct","subject","denim demon",1,0.0166666666666667
+"A_direct","subject","duodjeárbevierru",1,0.0166666666666667
+"A_direct","subject","edmondson",1,0.0166666666666667
+"A_direct","subject","einarsen",1,0.0166666666666667
+"A_direct","subject","elinkeinot.",1,0.0166666666666667
+"A_direct","subject","elle",1,0.0166666666666667
+"A_direct","subject","enoksson",1,0.0166666666666667
+"A_direct","subject","ernst.",1,0.0166666666666667
+"A_direct","subject","estetiikka.",1,0.0166666666666667
+"A_direct","subject","estetik.",1,0.0166666666666667
+"A_direct","subject","etnografia.",1,0.0166666666666667
+"A_direct","subject","etnologi",1,0.0166666666666667
+"A_direct","subject","eva",1,0.0166666666666667
+"A_direct","subject","figenschou thoresen",1,0.0166666666666667
+"A_direct","subject","finland.",1,0.0166666666666667
+"A_direct","subject","finnland: kunst: bildende kunst",1,0.0166666666666667
+"A_direct","subject","finnland: kunst: design: kunstgewerbe",1,0.0166666666666667
+"A_direct","subject","folk dress",1,0.0166666666666667
+"A_direct","subject","folkdräkter",1,0.0166666666666667
+"A_direct","subject","folklivsskildring.",1,0.0166666666666667
+"A_direct","subject","folktradition.",1,0.0166666666666667
+"A_direct","subject","föreningar",1,0.0166666666666667
+"A_direct","subject","föreningar.",1,0.0166666666666667
+"A_direct","subject","forsoget",1,0.0166666666666667
+"A_direct","subject","fotanoff",1,0.0166666666666667
+"A_direct","subject","gavriloff",1,0.0166666666666667
+"A_direct","subject","geir tore",1,0.0166666666666667
+"A_direct","subject","geir tore.",1,0.0166666666666667
+"A_direct","subject","geving",1,0.0166666666666667
+"A_direct","subject","grahn",1,0.0166666666666667
+"A_direct","subject","grönland.",1,0.0166666666666667
+"A_direct","subject","grönlänningar.",1,0.0166666666666667
+"A_direct","subject","grönlanti.",1,0.0166666666666667
+"A_direct","subject","grönlantilaiset.",1,0.0166666666666667
+"A_direct","subject","hagenbeck",1,0.0166666666666667
+"A_direct","subject","hanne grete",1,0.0166666666666667
+"A_direct","subject","hans ragnar",1,0.0166666666666667
+"A_direct","subject","hans.",1,0.0166666666666667
+"A_direct","subject","hantverk",1,0.0166666666666667
+"A_direct","subject","hantverksindustri",1,0.0166666666666667
+"A_direct","subject","helander",1,0.0166666666666667
+"A_direct","subject","helsingfors",1,0.0166666666666667
+"A_direct","subject","helsinki",1,0.0166666666666667
+"A_direct","subject","historia.",1,0.0166666666666667
+"A_direct","subject","hopeasepät",1,0.0166666666666667
+"A_direct","subject","huivit",1,0.0166666666666667
+"A_direct","subject","indigenous peoples",1,0.0166666666666667
+"A_direct","subject","inger blix",1,0.0166666666666667
+"A_direct","subject","intellectual property",1,0.0166666666666667
+"A_direct","subject","inuiter.",1,0.0166666666666667
+"A_direct","subject","inuitit.",1,0.0166666666666667
+"A_direct","subject","irina.",1,0.0166666666666667
+"A_direct","subject","iver.",1,0.0166666666666667
+"A_direct","subject","jåks",1,0.0166666666666667
+"A_direct","subject","jåks",1,0.0166666666666667
+"A_direct","subject","jalkineet",1,0.0166666666666667
+"A_direct","subject","järjestöt.",1,0.0166666666666667
+"A_direct","subject","jefremoff",1,0.0166666666666667
+"A_direct","subject","jernsletten",1,0.0166666666666667
+"A_direct","subject","jessie.",1,0.0166666666666667
+"A_direct","subject","joar",1,0.0166666666666667
+"A_direct","subject","johan",1,0.0166666666666667
+"A_direct","subject","johan turi",1,0.0166666666666667
+"A_direct","subject","johan.",1,0.0166666666666667
+"A_direct","subject","john savio",1,0.0166666666666667
+"A_direct","subject","joiut",1,0.0166666666666667
+"A_direct","subject","josefsen",1,0.0166666666666667
+"A_direct","subject","juuso",1,0.0166666666666667
+"A_direct","subject","kansalliset vähemmistöt",1,0.0166666666666667
+"A_direct","subject","kansalliset vähemmistöt.",1,0.0166666666666667
+"A_direct","subject","kansallispuvut",1,0.0166666666666667
+"A_direct","subject","kansankuvaus.",1,0.0166666666666667
+"A_direct","subject","kansatiede",1,0.0166666666666667
+"A_direct","subject","käsiteollisuus",1,0.0166666666666667
+"A_direct","subject","käsittely",1,0.0166666666666667
+"A_direct","subject","katarina",1,0.0166666666666667
+"A_direct","subject","käyttöesineet",1,0.0166666666666667
+"A_direct","subject","kehdot",1,0.0166666666666667
+"A_direct","subject","kengät",1,0.0166666666666667
+"A_direct","subject","kenkäheinät",1,0.0166666666666667
+"A_direct","subject","keskiasteen koulutus",1,0.0166666666666667
+"A_direct","subject","kielatis",1,0.0166666666666667
+"A_direct","subject","kielet",1,0.0166666666666667
+"A_direct","subject","kiertonäyttelyt.",1,0.0166666666666667
+"A_direct","subject","kirjallisuus",1,0.0166666666666667
+"A_direct","subject","kleemann",1,0.0166666666666667
+"A_direct","subject","komsiot",1,0.0166666666666667
+"A_direct","subject","konstfilosofi.",1,0.0166666666666667
+"A_direct","subject","konsthantverk.",1,0.0166666666666667
+"A_direct","subject","konsthistoria.",1,0.0166666666666667
+"A_direct","subject","koristetaide.",1,0.0166666666666667
+"A_direct","subject","kosmologia.",1,0.0166666666666667
+"A_direct","subject","kristin",1,0.0166666666666667
+"A_direct","subject","kudonta.",1,0.0166666666666667
+"A_direct","subject","kulttuuriperinne",1,0.0166666666666667
+"A_direct","subject","kulttuuriperintö",1,0.0166666666666667
+"A_direct","subject","kulttuuriperintö.",1,0.0166666666666667
+"A_direct","subject","kultur.",1,0.0166666666666667
+"A_direct","subject","kulturarv",1,0.0166666666666667
+"A_direct","subject","kulturarv.",1,0.0166666666666667
+"A_direct","subject","kunst: angewandte kunst: volkskunst",1,0.0166666666666667
+"A_direct","subject","kuvanveisto.",1,0.0166666666666667
+"A_direct","subject","kuvataide",1,0.0166666666666667
+"A_direct","subject","kuvataide.",1,0.0166666666666667
+"A_direct","subject","kuvataiteilijat.",1,0.0166666666666667
+"A_direct","subject","kvammen",1,0.0166666666666667
+"A_direct","subject","kvinnor",1,0.0166666666666667
+"A_direct","subject","laakso",1,0.0166666666666667
+"A_direct","subject","lehdet (kasvinosat)",1,0.0166666666666667
+"A_direct","subject","linkola",1,0.0166666666666667
+"A_direct","subject","lisbeth",1,0.0166666666666667
+"A_direct","subject","liselotte",1,0.0166666666666667
+"A_direct","subject","luontaiselinkeinot",1,0.0166666666666667
+"A_direct","subject","luu",1,0.0166666666666667
+"A_direct","subject","manker",1,0.0166666666666667
+"A_direct","subject","marakatt sivertsen",1,0.0166666666666667
+"A_direct","subject","marakatt-labba",1,0.0166666666666667
+"A_direct","subject","margrethe",1,0.0166666666666667
+"A_direct","subject","marja",1,0.0166666666666667
+"A_direct","subject","markku",1,0.0166666666666667
+"A_direct","subject","martti.",1,0.0166666666666667
+"A_direct","subject","materiell kultur.",1,0.0166666666666667
+"A_direct","subject","mathisen",1,0.0166666666666667
+"A_direct","subject","matot",1,0.0166666666666667
+"A_direct","subject","matti",1,0.0166666666666667
+"A_direct","subject","mattor",1,0.0166666666666667
+"A_direct","subject","metallityöt",1,0.0166666666666667
+"A_direct","subject","monica l.",1,0.0166666666666667
+"A_direct","subject","mošnikoff",1,0.0166666666666667
+"A_direct","subject","musiikki",1,0.0166666666666667
+"A_direct","subject","mytologi.",1,0.0166666666666667
+"A_direct","subject","mytologia.",1,0.0166666666666667
+"A_direct","subject","nahka",1,0.0166666666666667
+"A_direct","subject","naiset",1,0.0166666666666667
+"A_direct","subject","nango",1,0.0166666666666667
+"A_direct","subject","näringar.",1,0.0166666666666667
+"A_direct","subject","naska.",1,0.0166666666666667
+"A_direct","subject","nationella minoriteter",1,0.0166666666666667
+"A_direct","subject","nationella minoriteter.",1,0.0166666666666667
+"A_direct","subject","nauhat",1,0.0166666666666667
+"A_direct","subject","näyttelyjulkaisut.",1,0.0166666666666667
+"A_direct","subject","näyttelyt.",1,0.0166666666666667
+"A_direct","subject","nils nilsson skum",1,0.0166666666666667
+"A_direct","subject","nils.",1,0.0166666666666667
+"A_direct","subject","nilsen",1,0.0166666666666667
+"A_direct","subject","noitarummut.",1,0.0166666666666667
+"A_direct","subject","norge",1,0.0166666666666667
+"A_direct","subject","nutidskonst.",1,0.0166666666666667
+"A_direct","subject","nutti",1,0.0166666666666667
+"A_direct","subject","nykytaide.",1,0.0166666666666667
+"A_direct","subject","oahpahus",1,0.0166666666666667
+"A_direct","subject","odd",1,0.0166666666666667
+"A_direct","subject","ohjeet",1,0.0166666666666667
+"A_direct","subject","ompelu",1,0.0166666666666667
+"A_direct","subject","ompelu.",1,0.0166666666666667
+"A_direct","subject","opetus",1,0.0166666666666667
+"A_direct","subject","oppikirjat",1,0.0166666666666667
+"A_direct","subject","ornamentiikka (koristetaide)",1,0.0166666666666667
+"A_direct","subject","parkitus",1,0.0166666666666667
+"A_direct","subject","pekka.",1,0.0166666666666667
+"A_direct","subject","per",1,0.0166666666666667
+"A_direct","subject","per isak",1,0.0166666666666667
+"A_direct","subject","performancekonstnärer.",1,0.0166666666666667
+"A_direct","subject","performanssitaiteilijat.",1,0.0166666666666667
+"A_direct","subject","perinne",1,0.0166666666666667
+"A_direct","subject","perinnekäsityöt",1,0.0166666666666667
+"A_direct","subject","persen",1,0.0166666666666667
+"A_direct","subject","pettersen",1,0.0166666666666667
+"A_direct","subject","philosophy.",1,0.0166666666666667
+"A_direct","subject","pirak sikku",1,0.0166666666666667
+"A_direct","subject","pohjoiskalotti",1,0.0166666666666667
+"A_direct","subject","pohjoismaat",1,0.0166666666666667
+"A_direct","subject","pulkat",1,0.0166666666666667
+"A_direct","subject","punontatyöt",1,0.0166666666666667
+"A_direct","subject","puu (luonnonmateriaalit)",1,0.0166666666666667
+"A_direct","subject","rajat",1,0.0166666666666667
+"A_direct","subject","reet",1,0.0166666666666667
+"A_direct","subject","rehtorit",1,0.0166666666666667
+"A_direct","subject","rektorat",1,0.0166666666666667
+"A_direct","subject","rektorer",1,0.0166666666666667
+"A_direct","subject","ribbons",1,0.0166666666666667
+"A_direct","subject","rintakorut",1,0.0166666666666667
+"A_direct","subject","rummut.",1,0.0166666666666667
+"A_direct","subject","ruotsi",1,0.0166666666666667
+"A_direct","subject","ryhmä",1,0.0166666666666667
+"A_direct","subject","saamelaisalueen ammatillinen koulutuskeskus.",1,0.0166666666666667
+"A_direct","subject","saamelaiset : nykytaide",1,0.0166666666666667
+"A_direct","subject","saamelaiskielet.",1,0.0166666666666667
+"A_direct","subject","saamelaisneuvosto.",1,0.0166666666666667
+"A_direct","subject","saamelaisuus.",1,0.0166666666666667
+"A_direct","subject","saamen kieli",1,0.0166666666666667
+"A_direct","subject","saamenmaa.",1,0.0166666666666667
+"A_direct","subject","saamenpuku",1,0.0166666666666667
+"A_direct","subject","salo",1,0.0166666666666667
+"A_direct","subject","šamaanit.",1,0.0166666666666667
+"A_direct","subject","šamanismi",1,0.0166666666666667
+"A_direct","subject","sameslöjd",1,0.0166666666666667
+"A_direct","subject","sami (european people)",1,0.0166666666666667
+"A_direct","subject","sámi art",1,0.0166666666666667
+"A_direct","subject","sami culture",1,0.0166666666666667
+"A_direct","subject","sámi duodji ry.",1,0.0166666666666667
+"A_direct","subject","sámi duodji.",1,0.0166666666666667
+"A_direct","subject","sámi people",1,0.0166666666666667
+"A_direct","subject","samiska språk",1,0.0166666666666667
+"A_direct","subject","samiska språk.",1,0.0166666666666667
+"A_direct","subject","sammallahti",1,0.0166666666666667
+"A_direct","subject","samuli",1,0.0166666666666667
+"A_direct","subject","sanastot",1,0.0166666666666667
+"A_direct","subject","säpikkäät",1,0.0166666666666667
+"A_direct","subject","sápmi.",1,0.0166666666666667
+"A_direct","subject","silje",1,0.0166666666666667
+"A_direct","subject","skoltsamer",1,0.0166666666666667
+"A_direct","subject","skulptur (bildkonst)",1,0.0166666666666667
+"A_direct","subject","skuvllat",1,0.0166666666666667
+"A_direct","subject","smycken",1,0.0166666666666667
+"A_direct","subject","sömnad.",1,0.0166666666666667
+"A_direct","subject","sunna",1,0.0166666666666667
+"A_direct","subject","suohpanterror",1,0.0166666666666667
+"A_direct","subject","suomalais-ugrilaiset kansat",1,0.0166666666666667
+"A_direct","subject","suomi: taide: kuvataide",1,0.0166666666666667
+"A_direct","subject","suomi: taide: muotoilu: taideteollisuus",1,0.0166666666666667
+"A_direct","subject","suomi.",1,0.0166666666666667
+"A_direct","subject","suonilanka",1,0.0166666666666667
+"A_direct","subject","sverige",1,0.0166666666666667
+"A_direct","subject","synnöve.",1,0.0166666666666667
+"A_direct","subject","taide: taideteollisuus: kansantaide",1,0.0166666666666667
+"A_direct","subject","taidefilosofia.",1,0.0166666666666667
+"A_direct","subject","taidehistoria",1,0.0166666666666667
+"A_direct","subject","taidehistoria.",1,0.0166666666666667
+"A_direct","subject","taiteilijat",1,0.0166666666666667
+"A_direct","subject","tårnesvik",1,0.0166666666666667
+"A_direct","subject","tekstiilit",1,0.0166666666666667
+"A_direct","subject","tomas",1,0.0166666666666667
+"A_direct","subject","trademarks",1,0.0166666666666667
+"A_direct","subject","traditional cultural expression",1,0.0166666666666667
+"A_direct","subject","traditional culture",1,0.0166666666666667
+"A_direct","subject","turkistyöt",1,0.0166666666666667
+"A_direct","subject","uljana.",1,0.0166666666666667
+"A_direct","subject","undervisning",1,0.0166666666666667
+"A_direct","subject","urbefolkningar",1,0.0166666666666667
+"A_direct","subject","utsi",1,0.0166666666666667
+"A_direct","subject","utställningar",1,0.0166666666666667
+"A_direct","subject","utställningskataloger.",1,0.0166666666666667
+"A_direct","subject","väestö",1,0.0166666666666667
+"A_direct","subject","vähemmistöt",1,0.0166666666666667
+"A_direct","subject","valkeapää",1,0.0166666666666667
+"A_direct","subject","vandringsutställningar.",1,0.0166666666666667
+"A_direct","subject","vävda band",1,0.0166666666666667
+"A_direct","subject","victoria",1,0.0166666666666667
+"A_direct","subject","wajstedt",1,0.0166666666666667
+"A_direct","subject","woodwork (handcrafting)",1,0.0166666666666667
+"A_direct","subject","yrkesläroanstalter",1,0.0166666666666667
+"A_direct","subject","yrkesutbildning",1,0.0166666666666667
+"A_direct","subject","zakæus",1,0.0166666666666667
+"B_annif","subject","saamelaiset",27,0.45
+"B_annif","subject","käsityöt",26,0.433333333333333
+"B_annif","subject","handicrafts",15,0.25
+"B_annif","subject","handarbeten och hantverk (objekt)",13,0.216666666666667
+"B_annif","subject","handicraft tradition",13,0.216666666666667
+"B_annif","subject","käsityöperinne",13,0.216666666666667
+"B_annif","subject","samer",12,0.2
+"B_annif","subject","boneworks",10,0.166666666666667
+"B_annif","subject","sámi people",10,0.166666666666667
+"B_annif","subject","hornwork",9,0.15
+"B_annif","subject","sami",8,0.133333333333333
+"B_annif","subject","art handicraft",7,0.116666666666667
+"B_annif","subject","saamelaiset.",7,0.116666666666667
+"B_annif","subject","hantverkstradition",6,0.1
+"B_annif","subject","kansanpuvut",6,0.1
+"B_annif","subject","käsityöt.",6,0.1
+"B_annif","subject","taidekäsityö",6,0.1
+"B_annif","subject","kansanperinne",5,0.0833333333333333
+"B_annif","subject","kansantaide",5,0.0833333333333333
+"B_annif","subject","saamelaiskulttuuri",5,0.0833333333333333
+"B_annif","subject","samisk kultur",5,0.0833333333333333
+"B_annif","subject","taide",5,0.0833333333333333
+"B_annif","subject","cutlery",4,0.0666666666666667
+"B_annif","subject","cutting weapons",4,0.0666666666666667
+"B_annif","subject","duodji",4,0.0666666666666667
+"B_annif","subject","folk art",4,0.0666666666666667
+"B_annif","subject","käsityö (toiminta)",4,0.0666666666666667
+"B_annif","subject","knives",4,0.0666666666666667
+"B_annif","subject","nahkatyöt",4,0.0666666666666667
+"B_annif","subject","nauhat (tekstiilit)",4,0.0666666666666667
+"B_annif","subject","näyttelyjulkaisut",4,0.0666666666666667
+"B_annif","subject","pirtanauhat",4,0.0666666666666667
+"B_annif","subject","samer.",4,0.0666666666666667
+"B_annif","subject","traditional handicrafts",4,0.0666666666666667
+"B_annif","subject","clothing accessories",3,0.05
+"B_annif","subject","elinkeinot",3,0.05
+"B_annif","subject","finland",3,0.05
+"B_annif","subject","folkkonst",3,0.05
+"B_annif","subject","gákti (sámi clothing)",3,0.05
+"B_annif","subject","historia",3,0.05
+"B_annif","subject","käsityöperinne.",3,0.05
+"B_annif","subject","lappi",3,0.05
+"B_annif","subject","sápmelaččat",3,0.05
+"B_annif","subject","sheath knives",3,0.05
+"B_annif","subject","suomi",3,0.05
+"B_annif","subject","(unknown)",2,0.0333333333333333
+"B_annif","subject","aikio",2,0.0333333333333333
+"B_annif","subject","alkuperäiskansat",2,0.0333333333333333
+"B_annif","subject","blades (machine components)",2,0.0333333333333333
+"B_annif","subject","butter",2,0.0333333333333333
+"B_annif","subject","dressing up",2,0.0333333333333333
+"B_annif","subject","engravings",2,0.0333333333333333
+"B_annif","subject","etnologi.",2,0.0333333333333333
+"B_annif","subject","etnologia.",2,0.0333333333333333
+"B_annif","subject","folkkonst.",2,0.0333333333333333
+"B_annif","subject","folktradition",2,0.0333333333333333
+"B_annif","subject","giehtaduojit",2,0.0333333333333333
+"B_annif","subject","inarinsaamelaiset",2,0.0333333333333333
+"B_annif","subject","indigenous peoples",2,0.0333333333333333
+"B_annif","subject","järjestöt",2,0.0333333333333333
+"B_annif","subject","jewellery",2,0.0333333333333333
+"B_annif","subject","kansantaide.",2,0.0333333333333333
+"B_annif","subject","käsityöohjeet",2,0.0333333333333333
+"B_annif","subject","kolttasaamelaiset",2,0.0333333333333333
+"B_annif","subject","konst",2,0.0333333333333333
+"B_annif","subject","konst.",2,0.0333333333333333
+"B_annif","subject","konsthantverk",2,0.0333333333333333
+"B_annif","subject","koulut",2,0.0333333333333333
+"B_annif","subject","kulttuuri",2,0.0333333333333333
+"B_annif","subject","kulttuurihistoria",2,0.0333333333333333
+"B_annif","subject","kultur",2,0.0333333333333333
+"B_annif","subject","kuvateokset",2,0.0333333333333333
+"B_annif","subject","lapinpuvut",2,0.0333333333333333
+"B_annif","subject","lappi (suomi)",2,0.0333333333333333
+"B_annif","subject","lappland",2,0.0333333333333333
+"B_annif","subject","lappland (finland)",2,0.0333333333333333
+"B_annif","subject","luutyöt",2,0.0333333333333333
+"B_annif","subject","metalwork",2,0.0333333333333333
+"B_annif","subject","näringar",2,0.0333333333333333
+"B_annif","subject","näyttelyt",2,0.0333333333333333
+"B_annif","subject","norja",2,0.0333333333333333
+"B_annif","subject","päähineet",2,0.0333333333333333
+"B_annif","subject","paulat",2,0.0333333333333333
+"B_annif","subject","pendants (jewellery)",2,0.0333333333333333
+"B_annif","subject","plaitwork",2,0.0333333333333333
+"B_annif","subject","puutyöt",2,0.0333333333333333
+"B_annif","subject","rakennusohjeet",2,0.0333333333333333
+"B_annif","subject","saamelaiset : kulttuuri",2,0.0333333333333333
+"B_annif","subject","saamelaiskielet",2,0.0333333333333333
+"B_annif","subject","saamelaiskulttuuri.",2,0.0333333333333333
+"B_annif","subject","sámekultuvra",2,0.0333333333333333
+"B_annif","subject","sheaths",2,0.0333333333333333
+"B_annif","subject","skolor (läroanstalter)",2,0.0333333333333333
+"B_annif","subject","spoons",2,0.0333333333333333
+"B_annif","subject","taide.",2,0.0333333333333333
+"B_annif","subject","taidekäsityö.",2,0.0333333333333333
+"B_annif","subject","taiteilijat",2,0.0333333333333333
+"B_annif","subject","vaatteet",2,0.0333333333333333
+"B_annif","subject","woodwork (handcrafting)",2,0.0333333333333333
+"B_annif","subject","1700-luku",1,0.0166666666666667
+"B_annif","subject","1800-luku",1,0.0166666666666667
+"B_annif","subject","1844-1913.",1,0.0166666666666667
+"B_annif","subject","1937-2022.",1,0.0166666666666667
+"B_annif","subject","aiheet",1,0.0166666666666667
+"B_annif","subject","aineellinen kulttuuri.",1,0.0166666666666667
+"B_annif","subject","alf",1,0.0166666666666667
+"B_annif","subject","ammatillinen koulutus",1,0.0166666666666667
+"B_annif","subject","ammatilliset oppilaitokset",1,0.0166666666666667
+"B_annif","subject","ámmátlaš oahppolágádusat",1,0.0166666666666667
+"B_annif","subject","ámmátlaš skuvlejupmi",1,0.0166666666666667
+"B_annif","subject","ämnen (områden)",1,0.0166666666666667
+"B_annif","subject","anders",1,0.0166666666666667
+"B_annif","subject","andersson",1,0.0166666666666667
+"B_annif","subject","annelise",1,0.0166666666666667
+"B_annif","subject","asbjorn",1,0.0166666666666667
+"B_annif","subject","asusteet",1,0.0166666666666667
+"B_annif","subject","asutushistoria",1,0.0166666666666667
+"B_annif","subject","ausstellungskatalog",1,0.0166666666666667
+"B_annif","subject","bagpipe",1,0.0166666666666667
+"B_annif","subject","bente",1,0.0166666666666667
+"B_annif","subject","bildkonst",1,0.0166666666666667
+"B_annif","subject","bildverk",1,0.0166666666666667
+"B_annif","subject","blad (växtdelar)",1,0.0166666666666667
+"B_annif","subject","bottles",1,0.0166666666666667
+"B_annif","subject","britta",1,0.0166666666666667
+"B_annif","subject","bruksföremål",1,0.0166666666666667
+"B_annif","subject","carl",1,0.0166666666666667
+"B_annif","subject","carl-johan",1,0.0166666666666667
+"B_annif","subject","carola",1,0.0166666666666667
+"B_annif","subject","charlotte",1,0.0166666666666667
+"B_annif","subject","colbengtson",1,0.0166666666666667
+"B_annif","subject","containers (dishes)",1,0.0166666666666667
+"B_annif","subject","copyright",1,0.0166666666666667
+"B_annif","subject","corks",1,0.0166666666666667
+"B_annif","subject","darja.",1,0.0166666666666667
+"B_annif","subject","denim demon",1,0.0166666666666667
+"B_annif","subject","dishes (household supplies)",1,0.0166666666666667
+"B_annif","subject","duodjeárbevierru",1,0.0166666666666667
+"B_annif","subject","edmondson",1,0.0166666666666667
+"B_annif","subject","einarsen",1,0.0166666666666667
+"B_annif","subject","elinkeinot.",1,0.0166666666666667
+"B_annif","subject","elle",1,0.0166666666666667
+"B_annif","subject","enoksson",1,0.0166666666666667
+"B_annif","subject","ernst.",1,0.0166666666666667
+"B_annif","subject","etnografia.",1,0.0166666666666667
+"B_annif","subject","etnologi",1,0.0166666666666667
+"B_annif","subject","eva",1,0.0166666666666667
+"B_annif","subject","fabric weaving",1,0.0166666666666667
+"B_annif","subject","figenschou thoresen",1,0.0166666666666667
+"B_annif","subject","finland.",1,0.0166666666666667
+"B_annif","subject","finnland: kunst: bildende kunst",1,0.0166666666666667
+"B_annif","subject","finnland: kunst: design: kunstgewerbe",1,0.0166666666666667
+"B_annif","subject","folk beliefs",1,0.0166666666666667
+"B_annif","subject","folk dress",1,0.0166666666666667
+"B_annif","subject","folk poetry",1,0.0166666666666667
+"B_annif","subject","folkdräkter",1,0.0166666666666667
+"B_annif","subject","folktradition.",1,0.0166666666666667
+"B_annif","subject","föreningar",1,0.0166666666666667
+"B_annif","subject","föreningar.",1,0.0166666666666667
+"B_annif","subject","forsoget",1,0.0166666666666667
+"B_annif","subject","fotanoff",1,0.0166666666666667
+"B_annif","subject","gavriloff",1,0.0166666666666667
+"B_annif","subject","geir tore",1,0.0166666666666667
+"B_annif","subject","geving",1,0.0166666666666667
+"B_annif","subject","grahn",1,0.0166666666666667
+"B_annif","subject","hagenbeck",1,0.0166666666666667
+"B_annif","subject","hanne grete",1,0.0166666666666667
+"B_annif","subject","hans ragnar",1,0.0166666666666667
+"B_annif","subject","hantverk",1,0.0166666666666667
+"B_annif","subject","hantverksindustri",1,0.0166666666666667
+"B_annif","subject","hantverkstradition.",1,0.0166666666666667
+"B_annif","subject","helander",1,0.0166666666666667
+"B_annif","subject","helsingfors",1,0.0166666666666667
+"B_annif","subject","helsinki",1,0.0166666666666667
+"B_annif","subject","historia.",1,0.0166666666666667
+"B_annif","subject","holm",1,0.0166666666666667
+"B_annif","subject","hopeatyöt",1,0.0166666666666667
+"B_annif","subject","huivit",1,0.0166666666666667
+"B_annif","subject","inarinsaame",1,0.0166666666666667
+"B_annif","subject","inger blix",1,0.0166666666666667
+"B_annif","subject","intellectual property",1,0.0166666666666667
+"B_annif","subject","irina.",1,0.0166666666666667
+"B_annif","subject","iver",1,0.0166666666666667
+"B_annif","subject","iver.",1,0.0166666666666667
+"B_annif","subject","jåks",1,0.0166666666666667
+"B_annif","subject","jalkineet",1,0.0166666666666667
+"B_annif","subject","järjestöt.",1,0.0166666666666667
+"B_annif","subject","jefremoff",1,0.0166666666666667
+"B_annif","subject","jernsletten",1,0.0166666666666667
+"B_annif","subject","joar",1,0.0166666666666667
+"B_annif","subject","johan turi",1,0.0166666666666667
+"B_annif","subject","johan.",1,0.0166666666666667
+"B_annif","subject","john savio",1,0.0166666666666667
+"B_annif","subject","joiut",1,0.0166666666666667
+"B_annif","subject","josefsen",1,0.0166666666666667
+"B_annif","subject","juuso",1,0.0166666666666667
+"B_annif","subject","kansalliset vähemmistöt",1,0.0166666666666667
+"B_annif","subject","kansalliset vähemmistöt.",1,0.0166666666666667
+"B_annif","subject","kansallispuvut",1,0.0166666666666667
+"B_annif","subject","kansanperinne.",1,0.0166666666666667
+"B_annif","subject","kansatiede",1,0.0166666666666667
+"B_annif","subject","käsiteollisuus",1,0.0166666666666667
+"B_annif","subject","käsittely",1,0.0166666666666667
+"B_annif","subject","käsityöläiset",1,0.0166666666666667
+"B_annif","subject","katarina",1,0.0166666666666667
+"B_annif","subject","käyttöesineet",1,0.0166666666666667
+"B_annif","subject","kehdot",1,0.0166666666666667
+"B_annif","subject","kengät",1,0.0166666666666667
+"B_annif","subject","kenkäheinät",1,0.0166666666666667
+"B_annif","subject","keskiasteen koulutus",1,0.0166666666666667
+"B_annif","subject","kielatis",1,0.0166666666666667
+"B_annif","subject","kielet",1,0.0166666666666667
+"B_annif","subject","kiertonäyttelyt.",1,0.0166666666666667
+"B_annif","subject","kirjallisuus",1,0.0166666666666667
+"B_annif","subject","komsiot",1,0.0166666666666667
+"B_annif","subject","konsthantverk.",1,0.0166666666666667
+"B_annif","subject","koristetaide.",1,0.0166666666666667
+"B_annif","subject","korut",1,0.0166666666666667
+"B_annif","subject","kristin",1,0.0166666666666667
+"B_annif","subject","kudonta.",1,0.0166666666666667
+"B_annif","subject","kulttuuri.",1,0.0166666666666667
+"B_annif","subject","kulttuuriperinne",1,0.0166666666666667
+"B_annif","subject","kulttuuriperintö",1,0.0166666666666667
+"B_annif","subject","kulttuuriperintö.",1,0.0166666666666667
+"B_annif","subject","kultur.",1,0.0166666666666667
+"B_annif","subject","kulturarv",1,0.0166666666666667
+"B_annif","subject","kulturarv.",1,0.0166666666666667
+"B_annif","subject","kunst: angewandte kunst: volkskunst",1,0.0166666666666667
+"B_annif","subject","kuvataide",1,0.0166666666666667
+"B_annif","subject","kvammen",1,0.0166666666666667
+"B_annif","subject","kvinnor",1,0.0166666666666667
+"B_annif","subject","laakso",1,0.0166666666666667
+"B_annif","subject","leatherwork",1,0.0166666666666667
+"B_annif","subject","lehdet (kasvinosat)",1,0.0166666666666667
+"B_annif","subject","lena",1,0.0166666666666667
+"B_annif","subject","linkola",1,0.0166666666666667
+"B_annif","subject","lisbeth",1,0.0166666666666667
+"B_annif","subject","liselotte",1,0.0166666666666667
+"B_annif","subject","luontaiselinkeinot",1,0.0166666666666667
+"B_annif","subject","luu",1,0.0166666666666667
+"B_annif","subject","manker",1,0.0166666666666667
+"B_annif","subject","marakatt sivertsen",1,0.0166666666666667
+"B_annif","subject","marakatt-labba",1,0.0166666666666667
+"B_annif","subject","margrethe",1,0.0166666666666667
+"B_annif","subject","marja",1,0.0166666666666667
+"B_annif","subject","markku",1,0.0166666666666667
+"B_annif","subject","martti.",1,0.0166666666666667
+"B_annif","subject","materiell kultur.",1,0.0166666666666667
+"B_annif","subject","mathisen",1,0.0166666666666667
+"B_annif","subject","matot",1,0.0166666666666667
+"B_annif","subject","matti",1,0.0166666666666667
+"B_annif","subject","mattor",1,0.0166666666666667
+"B_annif","subject","metallityöt",1,0.0166666666666667
+"B_annif","subject","monica l.",1,0.0166666666666667
+"B_annif","subject","mošnikoff",1,0.0166666666666667
+"B_annif","subject","music",1,0.0166666666666667
+"B_annif","subject","musiikki",1,0.0166666666666667
+"B_annif","subject","mytologi.",1,0.0166666666666667
+"B_annif","subject","mytologia.",1,0.0166666666666667
+"B_annif","subject","nahka",1,0.0166666666666667
+"B_annif","subject","naiset",1,0.0166666666666667
+"B_annif","subject","nango",1,0.0166666666666667
+"B_annif","subject","näringar.",1,0.0166666666666667
+"B_annif","subject","naska.",1,0.0166666666666667
+"B_annif","subject","nationella minoriteter",1,0.0166666666666667
+"B_annif","subject","nationella minoriteter.",1,0.0166666666666667
+"B_annif","subject","nauhat",1,0.0166666666666667
+"B_annif","subject","näyttelyt.",1,0.0166666666666667
+"B_annif","subject","necklaces",1,0.0166666666666667
+"B_annif","subject","nils nilsson skum",1,0.0166666666666667
+"B_annif","subject","nils.",1,0.0166666666666667
+"B_annif","subject","nilsen",1,0.0166666666666667
+"B_annif","subject","norge",1,0.0166666666666667
+"B_annif","subject","nutti",1,0.0166666666666667
+"B_annif","subject","oahpahus",1,0.0166666666666667
+"B_annif","subject","odd",1,0.0166666666666667
+"B_annif","subject","ohjeet",1,0.0166666666666667
+"B_annif","subject","ompelu",1,0.0166666666666667
+"B_annif","subject","ompelu.",1,0.0166666666666667
+"B_annif","subject","opetus",1,0.0166666666666667
+"B_annif","subject","oppikirjat",1,0.0166666666666667
+"B_annif","subject","ornamentiikka (koristetaide)",1,0.0166666666666667
+"B_annif","subject","outi",1,0.0166666666666667
+"B_annif","subject","parkitus",1,0.0166666666666667
+"B_annif","subject","pekka.",1,0.0166666666666667
+"B_annif","subject","per",1,0.0166666666666667
+"B_annif","subject","per isak",1,0.0166666666666667
+"B_annif","subject","perinne",1,0.0166666666666667
+"B_annif","subject","perinnekäsityöt",1,0.0166666666666667
+"B_annif","subject","persen",1,0.0166666666666667
+"B_annif","subject","pettersen",1,0.0166666666666667
+"B_annif","subject","pieski",1,0.0166666666666667
+"B_annif","subject","pirak sikku",1,0.0166666666666667
+"B_annif","subject","pohjoiskalotti",1,0.0166666666666667
+"B_annif","subject","pohjoismaat",1,0.0166666666666667
+"B_annif","subject","pukeutuminen",1,0.0166666666666667
+"B_annif","subject","pulkat",1,0.0166666666666667
+"B_annif","subject","punontatyöt",1,0.0166666666666667
+"B_annif","subject","puu (luonnonmateriaalit)",1,0.0166666666666667
+"B_annif","subject","rajat",1,0.0166666666666667
+"B_annif","subject","reet",1,0.0166666666666667
+"B_annif","subject","rehtorit",1,0.0166666666666667
+"B_annif","subject","rektorat",1,0.0166666666666667
+"B_annif","subject","rektorer",1,0.0166666666666667
+"B_annif","subject","ribbons",1,0.0166666666666667
+"B_annif","subject","ruotsi",1,0.0166666666666667
+"B_annif","subject","ryhmä",1,0.0166666666666667
+"B_annif","subject","saamelaisalueen ammatillinen koulutuskeskus.",1,0.0166666666666667
+"B_annif","subject","saamelaiset : nykytaide",1,0.0166666666666667
+"B_annif","subject","saamelaiskielet.",1,0.0166666666666667
+"B_annif","subject","saamelaisneuvosto.",1,0.0166666666666667
+"B_annif","subject","saamen kieli",1,0.0166666666666667
+"B_annif","subject","saamenpuku",1,0.0166666666666667
+"B_annif","subject","salo",1,0.0166666666666667
+"B_annif","subject","šamanismi",1,0.0166666666666667
+"B_annif","subject","sami (european people)",1,0.0166666666666667
+"B_annif","subject","sámi art",1,0.0166666666666667
+"B_annif","subject","sami culture",1,0.0166666666666667
+"B_annif","subject","sámi duodji ry.",1,0.0166666666666667
+"B_annif","subject","sámi duodji.",1,0.0166666666666667
+"B_annif","subject","sami people",1,0.0166666666666667
+"B_annif","subject","samisk kultur.",1,0.0166666666666667
+"B_annif","subject","samiska språk",1,0.0166666666666667
+"B_annif","subject","samiska språk.",1,0.0166666666666667
+"B_annif","subject","sammallahti",1,0.0166666666666667
+"B_annif","subject","samuli",1,0.0166666666666667
+"B_annif","subject","sanastot",1,0.0166666666666667
+"B_annif","subject","säpikkäät",1,0.0166666666666667
+"B_annif","subject","silje",1,0.0166666666666667
+"B_annif","subject","skoltsamer",1,0.0166666666666667
+"B_annif","subject","skuvllat",1,0.0166666666666667
+"B_annif","subject","smycken",1,0.0166666666666667
+"B_annif","subject","sömnad.",1,0.0166666666666667
+"B_annif","subject","stenberg",1,0.0166666666666667
+"B_annif","subject","sunna",1,0.0166666666666667
+"B_annif","subject","suohpanterror",1,0.0166666666666667
+"B_annif","subject","suomi: taide: kuvataide",1,0.0166666666666667
+"B_annif","subject","suomi: taide: muotoilu: taideteollisuus",1,0.0166666666666667
+"B_annif","subject","suomi.",1,0.0166666666666667
+"B_annif","subject","suonilanka",1,0.0166666666666667
+"B_annif","subject","sverige",1,0.0166666666666667
+"B_annif","subject","synnöve.",1,0.0166666666666667
+"B_annif","subject","taide: taideteollisuus: kansantaide",1,0.0166666666666667
+"B_annif","subject","taidehistoria",1,0.0166666666666667
+"B_annif","subject","tårnesvik",1,0.0166666666666667
+"B_annif","subject","tekstiilit",1,0.0166666666666667
+"B_annif","subject","tomas",1,0.0166666666666667
+"B_annif","subject","trademarks",1,0.0166666666666667
+"B_annif","subject","traditional cultural expression",1,0.0166666666666667
+"B_annif","subject","traditional culture",1,0.0166666666666667
+"B_annif","subject","turi",1,0.0166666666666667
+"B_annif","subject","turkistyöt",1,0.0166666666666667
+"B_annif","subject","uljana.",1,0.0166666666666667
+"B_annif","subject","undervisning",1,0.0166666666666667
+"B_annif","subject","urbefolkningar",1,0.0166666666666667
+"B_annif","subject","utsi",1,0.0166666666666667
+"B_annif","subject","utställningar",1,0.0166666666666667
+"B_annif","subject","utställningskataloger",1,0.0166666666666667
+"B_annif","subject","väestö",1,0.0166666666666667
+"B_annif","subject","vähemmistöt",1,0.0166666666666667
+"B_annif","subject","valkeapää",1,0.0166666666666667
+"B_annif","subject","vandringsutställningar.",1,0.0166666666666667
+"B_annif","subject","vävda band",1,0.0166666666666667
+"B_annif","subject","victoria",1,0.0166666666666667
+"B_annif","subject","wajstedt",1,0.0166666666666667
+"B_annif","subject","weapons",1,0.0166666666666667
+"B_annif","subject","yrkesläroanstalter",1,0.0166666666666667
+"B_annif","subject","yrkesutbildning",1,0.0166666666666667
+"C_finto","subject","saamelaiset",50,0.833333333333333
+"C_finto","subject","käsityöt",45,0.75
+"C_finto","subject","handarbeten och hantverk (objekt)",44,0.733333333333333
+"C_finto","subject","samer",44,0.733333333333333
+"C_finto","subject","käsityöperinne",31,0.516666666666667
+"C_finto","subject","hantverkstradition",28,0.466666666666667
+"C_finto","subject","taidekäsityö",18,0.3
+"C_finto","subject","konsthantverk",15,0.25
+"C_finto","subject","käsityöläiset",11,0.183333333333333
+"C_finto","subject","hantverkare",10,0.166666666666667
+"C_finto","subject","lappi",10,0.166666666666667
+"C_finto","subject","lappland",10,0.166666666666667
+"C_finto","subject","duodji",6,0.1
+"C_finto","subject","saamelaiskulttuuri",6,0.1
+"C_finto","subject","samisk kultur",6,0.1
+"C_finto","subject","enare",4,0.0666666666666667
+"C_finto","subject","handicrafts",4,0.0666666666666667
+"C_finto","subject","henkilöhistoria",4,0.0666666666666667
+"C_finto","subject","inari",4,0.0666666666666667
+"C_finto","subject","käsityöt.",4,0.0666666666666667
+"C_finto","subject","läderarbeten",4,0.0666666666666667
+"C_finto","subject","materiaalit",4,0.0666666666666667
+"C_finto","subject","nahkatyöt",4,0.0666666666666667
+"C_finto","subject","personhistoria",4,0.0666666666666667
+"C_finto","subject","saamelaiset.",4,0.0666666666666667
+"C_finto","subject","saamenmaa",4,0.0666666666666667
+"C_finto","subject","sameland",4,0.0666666666666667
+"C_finto","subject","samer.",4,0.0666666666666667
+"C_finto","subject","(unknown)",3,0.05
+"C_finto","subject","art handicraft",3,0.05
+"C_finto","subject","boneworks",3,0.05
+"C_finto","subject","elinkeinot",3,0.05
+"C_finto","subject","föreningar",3,0.05
+"C_finto","subject","handicraft tradition",3,0.05
+"C_finto","subject","historia",3,0.05
+"C_finto","subject","hornwork",3,0.05
+"C_finto","subject","järjestöt",3,0.05
+"C_finto","subject","kulttuuri",3,0.05
+"C_finto","subject","laiti",3,0.05
+"C_finto","subject","luutyöt",3,0.05
+"C_finto","subject","material (materia)",3,0.05
+"C_finto","subject","näringar",3,0.05
+"C_finto","subject","näyttelyt",3,0.05
+"C_finto","subject","perinne",3,0.05
+"C_finto","subject","poro",3,0.05
+"C_finto","subject","puukot",3,0.05
+"C_finto","subject","puutyöt",3,0.05
+"C_finto","subject","sami",3,0.05
+"C_finto","subject","sámi people",3,0.05
+"C_finto","subject","sápmelaččat",3,0.05
+"C_finto","subject","tillverkning",3,0.05
+"C_finto","subject","tradition",3,0.05
+"C_finto","subject","utställningar",3,0.05
+"C_finto","subject","valmistus",3,0.05
+"C_finto","subject","1933-",2,0.0333333333333333
+"C_finto","subject","aiheet",2,0.0333333333333333
+"C_finto","subject","ammatillinen koulutus",2,0.0333333333333333
+"C_finto","subject","ämnen (områden)",2,0.0333333333333333
+"C_finto","subject","broderi",2,0.0333333333333333
+"C_finto","subject","elämäntapa",2,0.0333333333333333
+"C_finto","subject","enontekiö",2,0.0333333333333333
+"C_finto","subject","enontekis",2,0.0333333333333333
+"C_finto","subject","finland",2,0.0333333333333333
+"C_finto","subject","folk art",2,0.0333333333333333
+"C_finto","subject","giehtaduojit",2,0.0333333333333333
+"C_finto","subject","haavisto",2,0.0333333333333333
+"C_finto","subject","hantverk",2,0.0333333333333333
+"C_finto","subject","hantverkssektorn",2,0.0333333333333333
+"C_finto","subject","helsingfors",2,0.0333333333333333
+"C_finto","subject","helsinki",2,0.0333333333333333
+"C_finto","subject","jalkineet",2,0.0333333333333333
+"C_finto","subject","kansanpuvut",2,0.0333333333333333
+"C_finto","subject","kansantaide",2,0.0333333333333333
+"C_finto","subject","käsityö (toiminta)",2,0.0333333333333333
+"C_finto","subject","käsityöala",2,0.0333333333333333
+"C_finto","subject","käsityönopettajat",2,0.0333333333333333
+"C_finto","subject","kirjonta",2,0.0333333333333333
+"C_finto","subject","kolttasaamelaiset",2,0.0333333333333333
+"C_finto","subject","korut",2,0.0333333333333333
+"C_finto","subject","kuksat",2,0.0333333333333333
+"C_finto","subject","kultur",2,0.0333333333333333
+"C_finto","subject","läder",2,0.0333333333333333
+"C_finto","subject","lädervaror",2,0.0333333333333333
+"C_finto","subject","livsstil",2,0.0333333333333333
+"C_finto","subject","magga-hetta",2,0.0333333333333333
+"C_finto","subject","nahka",2,0.0333333333333333
+"C_finto","subject","nahkatuotteet",2,0.0333333333333333
+"C_finto","subject","noitarummut",2,0.0333333333333333
+"C_finto","subject","petteri.",2,0.0333333333333333
+"C_finto","subject","poronnahka",2,0.0333333333333333
+"C_finto","subject","ren (tam)",2,0.0333333333333333
+"C_finto","subject","saamelaisuus",2,0.0333333333333333
+"C_finto","subject","samiskhet",2,0.0333333333333333
+"C_finto","subject","sarvityöt",2,0.0333333333333333
+"C_finto","subject","skodon",2,0.0333333333333333
+"C_finto","subject","skoltsamer",2,0.0333333333333333
+"C_finto","subject","slidknivar",2,0.0333333333333333
+"C_finto","subject","slöjd- och textillärare",2,0.0333333333333333
+"C_finto","subject","smycken",2,0.0333333333333333
+"C_finto","subject","suomi",2,0.0333333333333333
+"C_finto","subject","taiteilijat",2,0.0333333333333333
+"C_finto","subject","tekstiilitaide",2,0.0333333333333333
+"C_finto","subject","tekstiilitaiteilijat",2,0.0333333333333333
+"C_finto","subject","textilkonst",2,0.0333333333333333
+"C_finto","subject","textilkonstnärer",2,0.0333333333333333
+"C_finto","subject","toivo",2,0.0333333333333333
+"C_finto","subject","traditional handicrafts",2,0.0333333333333333
+"C_finto","subject","tuula-maija.",2,0.0333333333333333
+"C_finto","subject","yrkesutbildning",2,0.0333333333333333
+"C_finto","subject","1900-luku",1,0.0166666666666667
+"C_finto","subject","1900-talet",1,0.0166666666666667
+"C_finto","subject","1960-luku",1,0.0166666666666667
+"C_finto","subject","1960-talet",1,0.0166666666666667
+"C_finto","subject","1980-luku",1,0.0166666666666667
+"C_finto","subject","1980-talet",1,0.0166666666666667
+"C_finto","subject","2007",1,0.0166666666666667
+"C_finto","subject","2008",1,0.0166666666666667
+"C_finto","subject","2009",1,0.0166666666666667
+"C_finto","subject","2012",1,0.0166666666666667
+"C_finto","subject","accessoarer",1,0.0166666666666667
+"C_finto","subject","affärer",1,0.0166666666666667
+"C_finto","subject","aineellinen kulttuuri.",1,0.0166666666666667
+"C_finto","subject","ámmátlaš skuvlejupmi",1,0.0166666666666667
+"C_finto","subject","artesaanit",1,0.0166666666666667
+"C_finto","subject","artesaner",1,0.0166666666666667
+"C_finto","subject","asa.",1,0.0166666666666667
+"C_finto","subject","asusteet",1,0.0166666666666667
+"C_finto","subject","benarbeten",1,0.0166666666666667
+"C_finto","subject","beskattning",1,0.0166666666666667
+"C_finto","subject","bildkonstnärer",1,0.0166666666666667
+"C_finto","subject","blad (växtdelar)",1,0.0166666666666667
+"C_finto","subject","bomärken",1,0.0166666666666667
+"C_finto","subject","broderi.",1,0.0166666666666667
+"C_finto","subject","butter",1,0.0166666666666667
+"C_finto","subject","cutlery",1,0.0166666666666667
+"C_finto","subject","cutting weapons",1,0.0166666666666667
+"C_finto","subject","dáiddagiehtaduodji",1,0.0166666666666667
+"C_finto","subject","dressing up",1,0.0166666666666667
+"C_finto","subject","dryckeskärl",1,0.0166666666666667
+"C_finto","subject","dyrkan",1,0.0166666666666667
+"C_finto","subject","einar.",1,0.0166666666666667
+"C_finto","subject","elimäki.",1,0.0166666666666667
+"C_finto","subject","engravings",1,0.0166666666666667
+"C_finto","subject","eteläsaamelaiset",1,0.0166666666666667
+"C_finto","subject","etnologi",1,0.0166666666666667
+"C_finto","subject","etnologi.",1,0.0166666666666667
+"C_finto","subject","etnologia.",1,0.0166666666666667
+"C_finto","subject","fabric weaving",1,0.0166666666666667
+"C_finto","subject","folkdräkter",1,0.0166666666666667
+"C_finto","subject","folkkonst",1,0.0166666666666667
+"C_finto","subject","folkkonst.",1,0.0166666666666667
+"C_finto","subject","folkskolan",1,0.0166666666666667
+"C_finto","subject","folktradition",1,0.0166666666666667
+"C_finto","subject","företagsverksamhet",1,0.0166666666666667
+"C_finto","subject","förflyttning och överföring",1,0.0166666666666667
+"C_finto","subject","formgivning",1,0.0166666666666667
+"C_finto","subject","förteckningar",1,0.0166666666666667
+"C_finto","subject","generationer",1,0.0166666666666667
+"C_finto","subject","gudar",1,0.0166666666666667
+"C_finto","subject","handarbete och hantverk (aktivitet)",1,0.0166666666666667
+"C_finto","subject","handarbetsbeskrivningar",1,0.0166666666666667
+"C_finto","subject","händighet",1,0.0166666666666667
+"C_finto","subject","hans.",1,0.0166666666666667
+"C_finto","subject","hantverksindustri",1,0.0166666666666667
+"C_finto","subject","hantverkstradition.",1,0.0166666666666667
+"C_finto","subject","heliga platser",1,0.0166666666666667
+"C_finto","subject","helmet",1,0.0166666666666667
+"C_finto","subject","hopeatyöt",1,0.0166666666666667
+"C_finto","subject","hornarbete",1,0.0166666666666667
+"C_finto","subject","jewellery",1,0.0166666666666667
+"C_finto","subject","josef.",1,0.0166666666666667
+"C_finto","subject","jumalat",1,0.0166666666666667
+"C_finto","subject","juoma-astiat",1,0.0166666666666667
+"C_finto","subject","juuret",1,0.0166666666666667
+"C_finto","subject","juurityöt",1,0.0166666666666667
+"C_finto","subject","kaavat",1,0.0166666666666667
+"C_finto","subject","kädentaidot",1,0.0166666666666667
+"C_finto","subject","kansakoulu",1,0.0166666666666667
+"C_finto","subject","kansalliset vähemmistöt",1,0.0166666666666667
+"C_finto","subject","kansanperinne",1,0.0166666666666667
+"C_finto","subject","kansantaide.",1,0.0166666666666667
+"C_finto","subject","kansatiede",1,0.0166666666666667
+"C_finto","subject","karelen.",1,0.0166666666666667
+"C_finto","subject","karjala.",1,0.0166666666666667
+"C_finto","subject","käsi- ja taideteollisuusoppilaitokset",1,0.0166666666666667
+"C_finto","subject","käsiteollisuus",1,0.0166666666666667
+"C_finto","subject","käsityöohjeet",1,0.0166666666666667
+"C_finto","subject","käsityöperinne.",1,0.0166666666666667
+"C_finto","subject","kåsor",1,0.0166666666666667
+"C_finto","subject","kehitys",1,0.0166666666666667
+"C_finto","subject","kengät",1,0.0166666666666667
+"C_finto","subject","kieltenopettajat",1,0.0166666666666667
+"C_finto","subject","kiertonäyttelyt.",1,0.0166666666666667
+"C_finto","subject","kirjonta.",1,0.0166666666666667
+"C_finto","subject","kirjontatyöt",1,0.0166666666666667
+"C_finto","subject","kitok",1,0.0166666666666667
+"C_finto","subject","kloka gubbar och gummor",1,0.0166666666666667
+"C_finto","subject","knives",1,0.0166666666666667
+"C_finto","subject","kokoelmat",1,0.0166666666666667
+"C_finto","subject","kolahalvön.",1,0.0166666666666667
+"C_finto","subject","konst.",1,0.0166666666666667
+"C_finto","subject","konsthantverk.",1,0.0166666666666667
+"C_finto","subject","konsthantverkare",1,0.0166666666666667
+"C_finto","subject","konstnärer",1,0.0166666666666667
+"C_finto","subject","konstutställningar",1,0.0166666666666667
+"C_finto","subject","koulut",1,0.0166666666666667
+"C_finto","subject","koulutus",1,0.0166666666666667
+"C_finto","subject","kritiikki",1,0.0166666666666667
+"C_finto","subject","kritik",1,0.0166666666666667
+"C_finto","subject","kudonta",1,0.0166666666666667
+"C_finto","subject","kuolan niemimaa.",1,0.0166666666666667
+"C_finto","subject","kuvataiteilijat",1,0.0166666666666667
+"C_finto","subject","kuvateokset",1,0.0166666666666667
+"C_finto","subject","kvinnor",1,0.0166666666666667
+"C_finto","subject","lapinkylät",1,0.0166666666666667
+"C_finto","subject","lappi (suomi)",1,0.0166666666666667
+"C_finto","subject","läroanstalter för hantverk och konstindustri",1,0.0166666666666667
+"C_finto","subject","lars.",1,0.0166666666666667
+"C_finto","subject","laukut",1,0.0166666666666667
+"C_finto","subject","lehdet (kasvinosat)",1,0.0166666666666667
+"C_finto","subject","luettelot",1,0.0166666666666667
+"C_finto","subject","luu",1,0.0166666666666667
+"C_finto","subject","masurknölar",1,0.0166666666666667
+"C_finto","subject","materiell kultur.",1,0.0166666666666667
+"C_finto","subject","muotoilu",1,0.0166666666666667
+"C_finto","subject","museer",1,0.0166666666666667
+"C_finto","subject","museot",1,0.0166666666666667
+"C_finto","subject","mytologi",1,0.0166666666666667
+"C_finto","subject","mytologi.",1,0.0166666666666667
+"C_finto","subject","mytologia",1,0.0166666666666667
+"C_finto","subject","mytologia.",1,0.0166666666666667
+"C_finto","subject","myymälät",1,0.0166666666666667
+"C_finto","subject","naiset",1,0.0166666666666667
+"C_finto","subject","nationella minoriteter",1,0.0166666666666667
+"C_finto","subject","natunen",1,0.0166666666666667
+"C_finto","subject","nauhat",1,0.0166666666666667
+"C_finto","subject","näyttelyjulkaisut",1,0.0166666666666667
+"C_finto","subject","nomadkulturer",1,0.0166666666666667
+"C_finto","subject","nordkalotten",1,0.0166666666666667
+"C_finto","subject","nutukkaat",1,0.0166666666666667
+"C_finto","subject","offrande",1,0.0166666666666667
+"C_finto","subject","ompelu",1,0.0166666666666667
+"C_finto","subject","ompelutyöt",1,0.0166666666666667
+"C_finto","subject","opetus",1,0.0166666666666667
+"C_finto","subject","organisaatiot",1,0.0166666666666667
+"C_finto","subject","organisationer",1,0.0166666666666667
+"C_finto","subject","ornamentiikka",1,0.0166666666666667
+"C_finto","subject","ornamentiikka (koristetaide)",1,0.0166666666666667
+"C_finto","subject","ornamentik (dekorativ konst)",1,0.0166666666666667
+"C_finto","subject","pahkat",1,0.0166666666666667
+"C_finto","subject","paimentolaiskulttuurit",1,0.0166666666666667
+"C_finto","subject","palvonta",1,0.0166666666666667
+"C_finto","subject","pärlor",1,0.0166666666666667
+"C_finto","subject","pendants (jewellery)",1,0.0166666666666667
+"C_finto","subject","pirak",1,0.0166666666666667
+"C_finto","subject","pirtanauhat",1,0.0166666666666667
+"C_finto","subject","pohjoiskalotti",1,0.0166666666666667
+"C_finto","subject","puu (luonnonmateriaalit)",1,0.0166666666666667
+"C_finto","subject","puumerkit",1,0.0166666666666667
+"C_finto","subject","puut (kasvit)",1,0.0166666666666667
+"C_finto","subject","pyhät paikat",1,0.0166666666666667
+"C_finto","subject","religion och religioner",1,0.0166666666666667
+"C_finto","subject","ribbons",1,0.0166666666666667
+"C_finto","subject","rötter",1,0.0166666666666667
+"C_finto","subject","rovaniemi",1,0.0166666666666667
+"C_finto","subject","saamelaisalueen ammatillinen koulutuskeskus.",1,0.0166666666666667
+"C_finto","subject","saamelaisalueen koulutuskeskus",1,0.0166666666666667
+"C_finto","subject","saamelaiskielet",1,0.0166666666666667
+"C_finto","subject","saamelaiskysymys",1,0.0166666666666667
+"C_finto","subject","sábmelaš duoddjárat.",1,0.0166666666666667
+"C_finto","subject","samebyar",1,0.0166666666666667
+"C_finto","subject","sámekultuvra",1,0.0166666666666667
+"C_finto","subject","sameslöjd",1,0.0166666666666667
+"C_finto","subject","sámi duodji",1,0.0166666666666667
+"C_finto","subject","sámi duodji",1,0.0166666666666667
+"C_finto","subject","sámi duodji.",1,0.0166666666666667
+"C_finto","subject","sami.",1,0.0166666666666667
+"C_finto","subject","samiska språk",1,0.0166666666666667
+"C_finto","subject","samlingar",1,0.0166666666666667
+"C_finto","subject","satu maarit.",1,0.0166666666666667
+"C_finto","subject","schamantrummor",1,0.0166666666666667
+"C_finto","subject","sepät (ammatit)",1,0.0166666666666667
+"C_finto","subject","siirto",1,0.0166666666666667
+"C_finto","subject","silverarbeten",1,0.0166666666666667
+"C_finto","subject","skolor (läroanstalter)",1,0.0166666666666667
+"C_finto","subject","skor",1,0.0166666666666667
+"C_finto","subject","skuvllat",1,0.0166666666666667
+"C_finto","subject","smeder",1,0.0166666666666667
+"C_finto","subject","sömnad",1,0.0166666666666667
+"C_finto","subject","sömnadsarbeten",1,0.0166666666666667
+"C_finto","subject","språklärare",1,0.0166666666666667
+"C_finto","subject","sukupolvet",1,0.0166666666666667
+"C_finto","subject","taide",1,0.0166666666666667
+"C_finto","subject","taide.",1,0.0166666666666667
+"C_finto","subject","taidekäsityö.",1,0.0166666666666667
+"C_finto","subject","taidekäsityöläiset",1,0.0166666666666667
+"C_finto","subject","taidenäyttelyt",1,0.0166666666666667
+"C_finto","subject","tavaramerkit",1,0.0166666666666667
+"C_finto","subject","tietäjät",1,0.0166666666666667
+"C_finto","subject","träarbeten",1,0.0166666666666667
+"C_finto","subject","träd",1,0.0166666666666667
+"C_finto","subject","uhraaminen",1,0.0166666666666667
+"C_finto","subject","undervisning",1,0.0166666666666667
+"C_finto","subject","uskonto ja uskonnot",1,0.0166666666666667
+"C_finto","subject","utbildning",1,0.0166666666666667
+"C_finto","subject","utställningskataloger",1,0.0166666666666667
+"C_finto","subject","utveckling (process)",1,0.0166666666666667
+"C_finto","subject","vaatteet",1,0.0166666666666667
+"C_finto","subject","vandringsutställningar.",1,0.0166666666666667
+"C_finto","subject","varumärken",1,0.0166666666666667
+"C_finto","subject","väskor",1,0.0166666666666667
+"C_finto","subject","vävda band",1,0.0166666666666667
+"C_finto","subject","verotus",1,0.0166666666666667
+"C_finto","subject","wahlquist",1,0.0166666666666667
+"C_finto","subject","yritystoiminta",1,0.0166666666666667

@@ -1,0 +1,11 @@
+"label","uri","score","facet","mapping","anchor","used"
+"towns and cities","http://www.yso.fi/onto/yso/p1688",0.462676405906677,,"unanchored",,FALSE
+"history","http://www.yso.fi/onto/yso/p1780",0.364986479282379,,"unanchored",,FALSE
+"working class","http://www.yso.fi/onto/yso/p11280",0.280066847801208,1,"anchor_concept","working class",FALSE
+"architecture","http://www.yso.fi/onto/yso/p8025",0.181663542985916,,"unanchored",,FALSE
+"residence","http://www.yso.fi/onto/yso/p1797",0.10163164883852,,"unanchored",,FALSE
+"urban landscape","http://www.yso.fi/onto/yso/p17178",0.0810445696115494,,"unanchored",,FALSE
+"urban space","http://www.yso.fi/onto/yso/p18147",0.0771150141954422,,"unanchored",,FALSE
+"documents","http://www.yso.fi/onto/yso/p2325",0.0769113451242447,,"unanchored",,FALSE
+"housings","http://www.yso.fi/onto/yso/p256",0.0767412483692169,2,"anchor_concept","housing",FALSE
+"residential buildings","http://www.yso.fi/onto/yso/p2074",0.0656857565045357,,"unanchored",,FALSE

@@ -1,0 +1,25 @@
+# Shared settings. The same pages build as a website (default) or a book:
+#   quarto render                   -> website in _site/
+#   quarto render --profile book    -> book in _book/
+# Website-only settings are in _quarto-website.yml, book-only in _quarto-book.yml.
+profile:
+  default: book
+
+project:
+  execute-dir: project
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: true
+    toc-depth: 2
+    toc-title: "On this page"
+    smooth-scroll: true
+    link-external-newwindow: true
+    fig-width: 8
+    fig-height: 4.6
+
+execute:
+  echo: false
+  warning: false
+  message: false

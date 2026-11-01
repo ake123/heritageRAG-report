@@ -1,0 +1,183 @@
+---
+title: "Figures for the paper"
+subtitle: "The five figures heritageRAG made for the paper, what each one shows and how to read it"
+---
+
+```{r}
+source("_common.R", encoding = "UTF-8")
+pdir <- file.path(FINAL, "paper")
+finfo <- rd("paper/figures_info.csv")
+has_fig <- function(f) file.exists(file.path(pdir, f))
+fig_excl <- if (!is.null(finfo) && "excluded" %in% names(finfo) && !is.na(finfo$excluded[1]) && nzchar(finfo$excluded[1]))
+  trimws(strsplit(finfo$excluded[1], ";", fixed = TRUE)[[1]]) else character()
+mismatch <- !setequal(fig_excl, excluded$question_id)
+# Numbers for the text, over the questions the averages use.
+v_use <- vis[vis$question_id %in% usable_q & vis$from == "A_direct" & !is.na(vis$jsd), ]
+beyond <- function(dim, to) {
+  x <- v_use[v_use$dimension == dim & v_use$to == to, ]
+  if (!nrow(x) || !"shift_beyond_noise" %in% names(x)) return(NA_character_)
+  paste(sum(x$shift_beyond_noise %in% TRUE), "of", nrow(x))
+}
+ovu <- ov_A[ov_A$question_id %in% usable_q, ]
+mean_of <- function(cond, col) mean(ovu[[col]][ovu$condition_b == cond], na.rm = TRUE)
+tr <- if (!is.null(trace)) trace[trace$question_id %in% usable_q, ] else NULL
+pool <- function(cond, share, n) {
+  x <- tr[tr$condition == cond, ]
+  ok <- !is.na(x[[share]]) & !is.na(x[[n]])
+  if (!sum(x[[n]][ok])) NA else sum(x[[share]][ok] * x[[n]][ok]) / sum(x[[n]][ok])
+}
+# The question where C agrees with A on the records but not on their order.
+ovc <- ovu[ovu$condition_b == "C_finto" & !is.na(ovu$jaccard) & !is.na(ovu$rbo), ]
+gap <- if (nrow(ovc)) ovc[which.max(ovc$jaccard - ovc$rbo), ] else NULL
+# Language shares among records with a language, A and C.
+lk <- rec_use[nzchar(rec_use$language), ]
+lk$lang <- ifelse(lk$language %in% sami_codes, "smi", lk$language)
+lt <- prop.table(table(factor(lk$condition, conds), lk$lang), 1)
+lname <- c(fin = "Finnish", swe = "Swedish", eng = "English", smi = "Sámi")
+dl <- lt["C_finto", ] - lt["A_direct", ]
+grow <- names(which.max(dl)); shrink <- names(which.min(dl))
+lang_all <- table(factor(rec_use$condition, conds), nzchar(rec_use$language))
+not_given <- if ("FALSE" %in% colnames(lang_all)) lang_all[, "FALSE"] / rowSums(lang_all) else c(0, 0, 0)
+```
+
+::: {.in-short}
+**In short.** heritageRAG draws five figures for the paper and saves them in
+`results/final/paper/`. This page shows them as they are, with a plain explanation of each.
+The other pages draw simpler versions of some of them for a general reader.
+`r if (!is.null(finfo)) paste0("These figures were made by heritageRAG ", finfo$heritageRAG[1], " on ", format(as.Date(substr(finfo$made[1], 1, 10)), "%d %B %Y"), if (length(fig_excl)) paste0(", leaving out ", paste(qname(fig_excl), collapse = " and "), ".") else ".") else "These figures were made before heritageRAG 0.3.2. To get the corrected versions (see below), run scripts/refresh_analysis.R on the results folder and copy them in again with prepare_data.R."`
+:::
+
+```{r}
+#| results: asis
+if (!is.null(finfo) && mismatch) {
+  callout("warning", "The figures and the rest of the report leave out different questions",
+          paste0("Figures: ", if (length(fig_excl)) paste(qname(fig_excl), collapse = ", ") else "none", ". ",
+                 "Other pages (exclude.csv): ", if (nrow(excluded)) paste(qname(excluded$question_id), collapse = ", ") else "none", ". ",
+                 "Run scripts/refresh_analysis.R with the same --exclude list to bring them in line."))
+}
+if (is.null(finfo)) {
+  callout("note", "Older figures",
+          "These figures have known flaws that heritageRAG 0.3.2 fixes: questions with no matches are drawn at 1, the legend of figure 3 covers some points, and figure 4 shows language codes. Run `Rscript scripts/refresh_analysis.R results/final --exclude=amateur-radio` (no new searches) and then prepare_data.R.")
+}
+```
+
+## Figure 1. How wide each search is
+
+```{r}
+#| results: asis
+if (has_fig("fig1_search_boundary.png")) cat(sprintf("![](%s){fig-alt=\"Dot chart: matching records in the Finna index for searches A, B and C, per question, log scale.\"}\n", file.path(pdir, "fig1_search_boundary.png")))
+```
+
+**What it shows.** For each question, how many records in the whole Finna index match search
+A (your own words), B (+ Annif) and C (+ thesaurus terms).
+
+**How to read it.** One row per question, one dot per search. The scale is logarithmic: each step
+to the right is ten times more records. The grey line joins the smallest and the largest search.
+An open circle at "0" means the search matched nothing.
+
+**What it tells us.** In the middle question, search C matches **`r times(median(idx$ratio_C, na.rm = TRUE))`**
+as many records as A. Annif's words (B) often change nothing: in `r sum(idx$A_direct == idx$B_annif & idx$question_id %in% usable_q, na.rm = TRUE)` of
+`r length(usable_q)` questions the green and blue dots sit on top of each other.
+The same chart, with the questions' full names: [What we found, section 1](results.qmd#the-fullest-search-matches-many-more-records).
+
+## Figure 2. How many records the searches share
+
+```{r}
+#| results: asis
+if (has_fig("fig2_overlap.png")) cat(sprintf("![](%s){fig-alt=\"Two dot charts: Jaccard overlap and rank-biased overlap of searches B and C with search A, per question.\"}\n", file.path(pdir, "fig2_overlap.png")))
+```
+
+**What it shows.** How much of search A's list of records searches B and C still contain,
+measured in two ways.
+
+**How to read it.** 1 means the same records, 0 means none in common.
+
+- **Left, Jaccard:** records found by both searches, divided by records found by either. The order
+  of the records does not matter.
+- **Right, rank-biased overlap:** the same idea, but agreement near the **top** of the lists counts
+  most. The first ten records carry most of the weight, as they do for a researcher scrolling
+  the results. Two searches can share many records (high Jaccard) but put different ones first
+  (low rank-biased overlap).
+
+"A kept no records" marks questions where the comparison is impossible.
+
+**What it tells us.** On average B shares `r pct(mean_of("B_annif", "jaccard"))` of its records
+with A and C only `r pct(mean_of("C_finto", "jaccard"))`. At the top of the lists the agreement is
+`r num(mean_of("B_annif", "rbo"), 2)` for B and `r num(mean_of("C_finto", "rbo"), 2)` for C.
+`r if (!is.null(gap) && gap$jaccard - gap$rbo > 0.2) paste0("The two measures can tell different stories: for *", qname(gap$question_id), "*, A and C share many records (Jaccard ", num(gap$jaccard, 2), ") but put different ones first (rank-biased overlap ", num(gap$rbo, 2), ").") else ""`
+
+## Figure 3. Which differences are bigger than chance
+
+```{r}
+#| results: asis
+if (has_fig("fig3_visibility_shift.png")) cat(sprintf("![](%s){fig-alt=\"Dot chart: Jensen-Shannon divergence from search A for institutions, languages, material types, decades and subjects, with noise levels.\"}\n", file.path(pdir, "fig3_visibility_shift.png")))
+```
+
+**What it shows.** For five things (institutions, languages, material types, decades and
+subject words), how different the mix in search B or C is from search A, for each question.
+
+**How to read it.** Each dot is one question. Further right means a more different mix: 0 is
+the same mix, 1 is nothing in common (the *Jensen-Shannon divergence*, the "difference score" of
+the other pages). Each dot has a grey tick: the difference that **chance alone** would give with
+this many records. It is found by drawing two samples of the same sizes from the two searches'
+records put together, many times over. A **filled** dot is beyond its tick, a real difference. A
+**hollow** dot is within it, possibly just chance.
+
+**What it tells us.** Between A and C the difference is bigger than chance for subject words in
+**`r beyond("subject", "C_finto")`** questions, for institutions in **`r beyond("institution", "C_finto")`**,
+for languages in `r beyond("language", "C_finto")`, for material types in `r beyond("material", "C_finto")`
+and for decades in `r beyond("decade", "C_finto")`. Between A and B the counts are much lower:
+subject words `r beyond("subject", "B_annif")`, institutions `r beyond("institution", "B_annif")`,
+languages `r beyond("language", "B_annif")`, material types `r beyond("material", "B_annif")` and
+decades `r beyond("decade", "B_annif")`. The thesaurus terms change *who* and *what* is visible far
+more often than Annif's words do.
+
+## Figure 4. The languages of the records
+
+```{r}
+#| results: asis
+if (has_fig("fig4_language_mix.png")) cat(sprintf("![](%s){fig-alt=\"Stacked bars: language of the retrieved records in searches A, B and C, all questions together, including records without a language.\"}\n", file.path(pdir, "fig4_language_mix.png")))
+```
+
+**What it shows.** The language of all records each search kept, all questions together.
+All Sámi languages are counted together.
+
+**How to read it.** Each bar is one search and adds up to all its records. Grey is records
+without a language in Finna, mostly photographs and objects.
+
+**What it tells us.** The language is not given for `r pct(not_given[["A_direct"]])` of A's
+records and `r pct(not_given[["C_finto"]])` of C's. Among records with a language, the
+`r ifelse(grow %in% names(lname), lname[grow], grow)` part grows the most from A to C
+(`r pct(lt["A_direct", grow])` → `r pct(lt["C_finto", grow])`) and the
+`r ifelse(shrink %in% names(lname), lname[shrink], shrink)` part shrinks the most
+(`r pct(lt["A_direct", shrink])` → `r pct(lt["C_finto", shrink])`)`r if (shrink == "smi") ", which the [Sámi test](extra-tests.qmd) examines" else ""`.
+[What we found, section 5](results.qmd#finnish--and-swedish-language-records-come-forward) shows
+the same shares counting only records with a language.
+
+## Figure 5. Where the AI's evidence came from
+
+```{r}
+#| results: asis
+if (has_fig("fig5_traceability.png")) cat(sprintf("![](%s){fig-alt=\"Grouped bars: share of AI sentences with a citation, and shares of cited records found only through new words or not found by search A, per search.\"}\n", file.path(pdir, "fig5_traceability.png")))
+```
+
+**What it shows.** Three shares for the AI answers of each search, all answers together.
+
+**How to read it.**
+
+- **Dark:** sentences that cite at least one record.
+- **Middle:** cited records that only match through a word Annif or the thesaurus added.
+- **Light:** cited records that search A did not find at all.
+
+Search A has no middle or light bar, because all its records come from your own words.
+
+**What it tells us.** `r if (!is.null(tr) && nrow(tr)) paste0(pct(pool("C_finto", "cited_not_in_A_share", "cited_records")), " of the records the AI cites when it works from search C were not found by search A, and ", pct(pool("C_finto", "cited_expansion_dependent_share", "cited_records")), " were found only through the added words. The search step changes the evidence, and so the story the AI tells.") else "This run has no AI answers."`
+The same numbers as a table: [AI answers](ai-answers.qmd#where-did-the-cited-records-come-from).
+
+## The tables
+
+The same folder holds three tables for the paper:
+
+- `table1_queries.csv`: the exact search of each question and condition;
+- `table2_conditions.csv`: the averages per search (the table at the end of [What we found](results.qmd));
+- `table3_visibility.csv`: the differences per dimension, with how many questions are beyond chance.

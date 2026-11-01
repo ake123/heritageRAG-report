@@ -1,0 +1,46 @@
+"condition","term","records","share","rank","in_A_top"
+"A_direct","women",56,0.933333333333333,1,TRUE
+"A_direct","advertising",53,0.883333333333333,2,TRUE
+"A_direct","mannequins (occupations)",40,0.666666666666667,3,TRUE
+"A_direct","marketing",34,0.566666666666667,4,TRUE
+"A_direct","textile industry",29,0.483333333333333,5,TRUE
+"A_direct","advertising photographs",18,0.3,6,TRUE
+"A_direct","clothes",11,0.183333333333333,7,TRUE
+"A_direct","gloves (clothing accessories)",10,0.166666666666667,8,TRUE
+"A_direct","blouses",8,0.133333333333333,9,TRUE
+"A_direct","persons",8,0.133333333333333,10,TRUE
+"A_direct","textiles",8,0.133333333333333,11,TRUE
+"A_direct","wool industry",8,0.133333333333333,12,TRUE
+"A_direct","shirts",7,0.116666666666667,13,TRUE
+"A_direct","advertisements",6,0.1,14,TRUE
+"A_direct","helsinki",6,0.1,15,TRUE
+"B_annif","women",56,0.933333333333333,1,TRUE
+"B_annif","advertising",53,0.883333333333333,2,TRUE
+"B_annif","mannequins (occupations)",40,0.666666666666667,3,TRUE
+"B_annif","marketing",34,0.566666666666667,4,TRUE
+"B_annif","textile industry",29,0.483333333333333,5,TRUE
+"B_annif","advertising photographs",18,0.3,6,TRUE
+"B_annif","clothes",11,0.183333333333333,7,TRUE
+"B_annif","gloves (clothing accessories)",10,0.166666666666667,8,TRUE
+"B_annif","blouses",8,0.133333333333333,9,TRUE
+"B_annif","persons",8,0.133333333333333,10,TRUE
+"B_annif","textiles",8,0.133333333333333,11,TRUE
+"B_annif","wool industry",8,0.133333333333333,12,TRUE
+"B_annif","shirts",7,0.116666666666667,13,TRUE
+"B_annif","advertisements",6,0.1,14,TRUE
+"B_annif","helsinki",6,0.1,15,TRUE
+"C_finto","advertising",58,0.966666666666667,1,TRUE
+"C_finto","women",57,0.95,2,TRUE
+"C_finto","mannequins (occupations)",47,0.783333333333333,3,TRUE
+"C_finto","marketing",45,0.75,4,TRUE
+"C_finto","textile industry",26,0.433333333333333,5,TRUE
+"C_finto","wool industry",21,0.35,6,TRUE
+"C_finto","knitwork",13,0.216666666666667,7,FALSE
+"C_finto","headgear",12,0.2,8,FALSE
+"C_finto","persons",11,0.183333333333333,9,TRUE
+"C_finto","blouses",10,0.166666666666667,10,TRUE
+"C_finto","gloves (clothing accessories)",10,0.166666666666667,11,TRUE
+"C_finto","advertising photographs",6,0.1,12,TRUE
+"C_finto","clothes",5,0.0833333333333333,13,TRUE
+"C_finto","textiles",5,0.0833333333333333,14,TRUE
+"C_finto","helsinki",4,0.0666666666666667,15,TRUE

@@ -1,0 +1,322 @@
+"condition","dimension","value","records","share"
+"A_direct","decade","1900s",11,1
+"B_annif","decade","1900s",44,0.814814814814815
+"B_annif","decade","1910s",10,0.185185185185185
+"C_finto","decade","1900s",52,0.866666666666667
+"C_finto","decade","1910s",8,0.133333333333333
+"A_direct","institution","The National Library",5,0.454545454545455
+"A_direct","institution","Åbo Akademi Library",2,0.181818181818182
+"A_direct","institution","Helka Libraries",2,0.181818181818182
+"A_direct","institution","Swedish central archive",1,0.0909090909090909
+"A_direct","institution","University of Eastern Finland",1,0.0909090909090909
+"B_annif","institution","The Labour Archives",14,0.259259259259259
+"B_annif","institution","The National Library",10,0.185185185185185
+"B_annif","institution","The Finnish Labour Museum Werstas",9,0.166666666666667
+"B_annif","institution","Helka Libraries",5,0.0925925925925926
+"B_annif","institution","Eepos Libraries",4,0.0740740740740741
+"B_annif","institution","University of Jyväskylä",4,0.0740740740740741
+"B_annif","institution","Åbo Akademi Library",2,0.037037037037037
+"B_annif","institution","Heili Libraries",1,0.0185185185185185
+"B_annif","institution","Helsinki University Museum Flame",1,0.0185185185185185
+"B_annif","institution","Järvenpää Art Museum",1,0.0185185185185185
+"B_annif","institution","National Repository Library",1,0.0185185185185185
+"B_annif","institution","Swedish central archive",1,0.0185185185185185
+"B_annif","institution","University of Eastern Finland",1,0.0185185185185185
+"C_finto","institution","Helka Libraries",17,0.283333333333333
+"C_finto","institution","The Labour Archives",14,0.233333333333333
+"C_finto","institution","The National Library",13,0.216666666666667
+"C_finto","institution","The Finnish Labour Museum Werstas",11,0.183333333333333
+"C_finto","institution","Åbo Akademi Library",2,0.0333333333333333
+"C_finto","institution","The People's Archives",2,0.0333333333333333
+"C_finto","institution","Helsinki University Museum Flame",1,0.0166666666666667
+"A_direct","language","eng",10,0.909090909090909
+"A_direct","language","(unknown)",1,0.0909090909090909
+"B_annif","language","(unknown)",26,0.481481481481481
+"B_annif","language","fin",11,0.203703703703704
+"B_annif","language","eng",10,0.185185185185185
+"B_annif","language","swe",5,0.0925925925925926
+"B_annif","language","deu",1,0.0185185185185185
+"B_annif","language","fra",1,0.0185185185185185
+"C_finto","language","(unknown)",28,0.466666666666667
+"C_finto","language","fin",13,0.216666666666667
+"C_finto","language","swe",12,0.2
+"C_finto","language","eng",6,0.1
+"C_finto","language","deu",1,0.0166666666666667
+"A_direct","material","Book material",9,0.818181818181818
+"A_direct","material","Archive/Collection",1,0.0909090909090909
+"A_direct","material","Journal/Article",1,0.0909090909090909
+"B_annif","material","Book material",23,0.425925925925926
+"B_annif","material","Image",22,0.407407407407407
+"B_annif","material","Journal/Article",3,0.0555555555555556
+"B_annif","material","Other",2,0.037037037037037
+"B_annif","material","Text",2,0.037037037037037
+"B_annif","material","Archive/Collection",1,0.0185185185185185
+"B_annif","material","Work of art",1,0.0185185185185185
+"C_finto","material","Image",26,0.433333333333333
+"C_finto","material","Book material",23,0.383333333333333
+"C_finto","material","Text",7,0.116666666666667
+"C_finto","material","Journal/Article",3,0.05
+"C_finto","material","Other",1,0.0166666666666667
+"A_direct","subject","(unknown)",3,0.272727272727273
+"A_direct","subject","äänioikeus.",2,0.181818181818182
+"A_direct","subject","kvinnor.",2,0.181818181818182
+"A_direct","subject","kvinnosaksrörelser.",2,0.181818181818182
+"A_direct","subject","naisasialiikkeet",2,0.181818181818182
+"A_direct","subject","naisasialiikkeet.",2,0.181818181818182
+"A_direct","subject","naiset.",2,0.181818181818182
+"A_direct","subject","rösträtt.",2,0.181818181818182
+"A_direct","subject","aikakauslehdet.",1,0.0909090909090909
+"A_direct","subject","australia.",1,0.0909090909090909
+"A_direct","subject","australien.",1,0.0909090909090909
+"A_direct","subject","feminister",1,0.0909090909090909
+"A_direct","subject","finlandssvenskar",1,0.0909090909090909
+"A_direct","subject","förenta staterna.",1,0.0909090909090909
+"A_direct","subject","great britain.",1,0.0909090909090909
+"A_direct","subject","journalister",1,0.0909090909090909
+"A_direct","subject","kokoukset.",1,0.0909090909090909
+"A_direct","subject","kvinnans ställning",1,0.0909090909090909
+"A_direct","subject","marthor",1,0.0909090909090909
+"A_direct","subject","möten.",1,0.0909090909090909
+"A_direct","subject","new york (delstat)",1,0.0909090909090909
+"A_direct","subject","new york (osavaltio)",1,0.0909090909090909
+"A_direct","subject","politik",1,0.0909090909090909
+"A_direct","subject","politiker",1,0.0909090909090909
+"A_direct","subject","riksdagsledamöter",1,0.0909090909090909
+"A_direct","subject","suffrage.",1,0.0909090909090909
+"A_direct","subject","tidskrifter.",1,0.0909090909090909
+"A_direct","subject","women",1,0.0909090909090909
+"A_direct","subject","yhdysvallat.",1,0.0909090909090909
+"B_annif","subject","women's rights movements",22,0.407407407407407
+"B_annif","subject","naisasialiikkeet",17,0.314814814814815
+"B_annif","subject","women's rights organisations",12,0.222222222222222
+"B_annif","subject","naisen asema",7,0.12962962962963
+"B_annif","subject","feminism",6,0.111111111111111
+"B_annif","subject","historia",6,0.111111111111111
+"B_annif","subject","(unknown)",5,0.0925925925925926
+"B_annif","subject","kvinnor.",5,0.0925925925925926
+"B_annif","subject","naiset.",5,0.0925925925925926
+"B_annif","subject","naisliikkeet",5,0.0925925925925926
+"B_annif","subject","tasa-arvo",5,0.0925925925925926
+"B_annif","subject","emansipaatio",4,0.0740740740740741
+"B_annif","subject","kehitys",4,0.0740740740740741
+"B_annif","subject","kvinnosaksrörelser.",4,0.0740740740740741
+"B_annif","subject","naisasialiikkeet.",4,0.0740740740740741
+"B_annif","subject","naiset",4,0.0740740740740741
+"B_annif","subject","naishistoria",4,0.0740740740740741
+"B_annif","subject","suomi",4,0.0740740740740741
+"B_annif","subject","äänioikeus.",3,0.0555555555555556
+"B_annif","subject","activism",3,0.0555555555555556
+"B_annif","subject","commissions (organs)",3,0.0555555555555556
+"B_annif","subject","naisasiajärjestöt",3,0.0555555555555556
+"B_annif","subject","organisation activists",3,0.0555555555555556
+"B_annif","subject","rösträtt.",3,0.0555555555555556
+"B_annif","subject","workers' associations",3,0.0555555555555556
+"B_annif","subject","äänioikeus",2,0.037037037037037
+"B_annif","subject","boards of directors",2,0.037037037037037
+"B_annif","subject","helsinki",2,0.037037037037037
+"B_annif","subject","people's houses (community halls)",2,0.037037037037037
+"B_annif","subject","sculptures (works of art)",2,0.037037037037037
+"B_annif","subject","suomen naisyhdistys.",2,0.037037037037037
+"B_annif","subject","women's history",2,0.037037037037037
+"B_annif","subject","aikakauslehdet.",1,0.0185185185185185
+"B_annif","subject","aktivismi",1,0.0185185185185185
+"B_annif","subject","aleksanterinkatu 13",1,0.0185185185185185
+"B_annif","subject","associations (organisations)",1,0.0185185185185185
+"B_annif","subject","australia.",1,0.0185185185185185
+"B_annif","subject","australien.",1,0.0185185185185185
+"B_annif","subject","bead necklaces",1,0.0185185185185185
+"B_annif","subject","biographical history",1,0.0185185185185185
+"B_annif","subject","brooches",1,0.0185185185185185
+"B_annif","subject","cultural heritage buildings",1,0.0185185185185185
+"B_annif","subject","doctors (degrees)",1,0.0185185185185185
+"B_annif","subject","eduskuntavaali",1,0.0185185185185185
+"B_annif","subject","eduskuntavaalit",1,0.0185185185185185
+"B_annif","subject","englanti",1,0.0185185185185185
+"B_annif","subject","feminister",1,0.0185185185185185
+"B_annif","subject","finland.",1,0.0185185185185185
+"B_annif","subject","finlandssvenskar",1,0.0185185185185185
+"B_annif","subject","förenta staterna.",1,0.0185185185185185
+"B_annif","subject","france.",1,0.0185185185185185
+"B_annif","subject","government agencies",1,0.0185185185185185
+"B_annif","subject","great britain.",1,0.0185185185185185
+"B_annif","subject","halls (rooms)",1,0.0185185185185185
+"B_annif","subject","hämeenkatu 7",1,0.0185185185185185
+"B_annif","subject","hilja pärssinen",1,0.0185185185185185
+"B_annif","subject","italia",1,0.0185185185185185
+"B_annif","subject","jääski",1,0.0185185185185185
+"B_annif","subject","journalister",1,0.0185185185185185
+"B_annif","subject","julkaisu",1,0.0185185185185185
+"B_annif","subject","julkaisut",1,0.0185185185185185
+"B_annif","subject","kokoukset.",1,0.0185185185185185
+"B_annif","subject","kvinnans ställning",1,0.0185185185185185
+"B_annif","subject","kvinnans ställning.",1,0.0185185185185185
+"B_annif","subject","kvinnohistoria.",1,0.0185185185185185
+"B_annif","subject","kvinnorörelser.",1,0.0185185185185185
+"B_annif","subject","kvinnosaksrörelser",1,0.0185185185185185
+"B_annif","subject","luettelot",1,0.0185185185185185
+"B_annif","subject","maalaustaide",1,0.0185185185185185
+"B_annif","subject","manors",1,0.0185185185185185
+"B_annif","subject","marthor",1,0.0185185185185185
+"B_annif","subject","meetings (arranged events)",1,0.0185185185185185
+"B_annif","subject","möten.",1,0.0185185185185185
+"B_annif","subject","naisen asema.",1,0.0185185185185185
+"B_annif","subject","naishistoria.",1,0.0185185185185185
+"B_annif","subject","naisjärjestöt",1,0.0185185185185185
+"B_annif","subject","naisliikkeet.",1,0.0185185185185185
+"B_annif","subject","new york (delstat)",1,0.0185185185185185
+"B_annif","subject","new york (osavaltio)",1,0.0185185185185185
+"B_annif","subject","norja",1,0.0185185185185185
+"B_annif","subject","oikeusasema.",1,0.0185185185185185
+"B_annif","subject","opettajat",1,0.0185185185185185
+"B_annif","subject","perniö",1,0.0185185185185185
+"B_annif","subject","perustelut",1,0.0185185185185185
+"B_annif","subject","piirrostaide ja taidegrafiikka",1,0.0185185185185185
+"B_annif","subject","poliittinen osallistuminen.",1,0.0185185185185185
+"B_annif","subject","poliittiset järjestöt",1,0.0185185185185185
+"B_annif","subject","political parties",1,0.0185185185185185
+"B_annif","subject","politik",1,0.0185185185185185
+"B_annif","subject","politiker",1,0.0185185185185185
+"B_annif","subject","politiskt deltagande.",1,0.0185185185185185
+"B_annif","subject","portugali",1,0.0185185185185185
+"B_annif","subject","postcards",1,0.0185185185185185
+"B_annif","subject","primary school teachers (folk school)",1,0.0185185185185185
+"B_annif","subject","ranska",1,0.0185185185185185
+"B_annif","subject","rättslig ställning.",1,0.0185185185185185
+"B_annif","subject","right to vote",1,0.0185185185185185
+"B_annif","subject","riksdagsledamöter",1,0.0185185185185185
+"B_annif","subject","ruotsi",1,0.0185185185185185
+"B_annif","subject","samhällsställning.",1,0.0185185185185185
+"B_annif","subject","sosiaalidemokraatit",1,0.0185185185185185
+"B_annif","subject","strömma manor",1,0.0185185185185185
+"B_annif","subject","suffrage.",1,0.0185185185185185
+"B_annif","subject","suomi.",1,0.0185185185185185
+"B_annif","subject","tanska",1,0.0185185185185185
+"B_annif","subject","tidskrifter.",1,0.0185185185185185
+"B_annif","subject","toimeentulo.",1,0.0185185185185185
+"B_annif","subject","turku",1,0.0185185185185185
+"B_annif","subject","tussityöt",1,0.0185185185185185
+"B_annif","subject","utkomst.",1,0.0185185185185185
+"B_annif","subject","vaalikelpoisuus",1,0.0185185185185185
+"B_annif","subject","woman's status",1,0.0185185185185185
+"B_annif","subject","women",1,0.0185185185185185
+"B_annif","subject","women in the labor movement",1,0.0185185185185185
+"B_annif","subject","women's movements",1,0.0185185185185185
+"B_annif","subject","yhdysvallat.",1,0.0185185185185185
+"B_annif","subject","yhteiskunnallinen asema.",1,0.0185185185185185
+"C_finto","subject","women's rights movements",22,0.366666666666667
+"C_finto","subject","kvinnor.",17,0.283333333333333
+"C_finto","subject","naiset.",17,0.283333333333333
+"C_finto","subject","äänioikeus.",15,0.25
+"C_finto","subject","rösträtt.",15,0.25
+"C_finto","subject","women's rights organisations",13,0.216666666666667
+"C_finto","subject","äänioikeus",11,0.183333333333333
+"C_finto","subject","naiset",10,0.166666666666667
+"C_finto","subject","naisasialiikkeet",9,0.15
+"C_finto","subject","naisen asema",7,0.116666666666667
+"C_finto","subject","feminism",6,0.1
+"C_finto","subject","naisasia",6,0.1
+"C_finto","subject","right to vote",5,0.0833333333333333
+"C_finto","subject","activism",3,0.05
+"C_finto","subject","arbetarrörelsen.",3,0.05
+"C_finto","subject","commissions (organs)",3,0.05
+"C_finto","subject","finland.",3,0.05
+"C_finto","subject","kvinnosaksrörelser.",3,0.05
+"C_finto","subject","naisasialiikkeet.",3,0.05
+"C_finto","subject","organisation activists",3,0.05
+"C_finto","subject","ruotsi.",3,0.05
+"C_finto","subject","sarjajulkaisut.",3,0.05
+"C_finto","subject","seriella publikationer.",3,0.05
+"C_finto","subject","suomen sosialidemokraattinen puolue.",3,0.05
+"C_finto","subject","suomi.",3,0.05
+"C_finto","subject","sverige.",3,0.05
+"C_finto","subject","työväenliike.",3,0.05
+"C_finto","subject","women",3,0.05
+"C_finto","subject","women's history",3,0.05
+"C_finto","subject","workers' associations",3,0.05
+"C_finto","subject","äänestäminen",2,0.0333333333333333
+"C_finto","subject","artikkelit",2,0.0333333333333333
+"C_finto","subject","associations (organisations)",2,0.0333333333333333
+"C_finto","subject","boards of directors",2,0.0333333333333333
+"C_finto","subject","esitteet",2,0.0333333333333333
+"C_finto","subject","formal wear",2,0.0333333333333333
+"C_finto","subject","helsinki",2,0.0333333333333333
+"C_finto","subject","kvinnans ställning.",2,0.0333333333333333
+"C_finto","subject","kvinnor",2,0.0333333333333333
+"C_finto","subject","meetings (arranged events)",2,0.0333333333333333
+"C_finto","subject","men",2,0.0333333333333333
+"C_finto","subject","naisen asema.",2,0.0333333333333333
+"C_finto","subject","people's houses (community halls)",2,0.0333333333333333
+"C_finto","subject","perniö",2,0.0333333333333333
+"C_finto","subject","rösträtt",2,0.0333333333333333
+"C_finto","subject","sculptures (works of art)",2,0.0333333333333333
+"C_finto","subject","strömma manor",2,0.0333333333333333
+"C_finto","subject","suomen työväenpuolue.",2,0.0333333333333333
+"C_finto","subject","suomi",2,0.0333333333333333
+"C_finto","subject","vaalit",2,0.0333333333333333
+"C_finto","subject","woman's status",2,0.0333333333333333
+"C_finto","subject","women's movements",2,0.0333333333333333
+"C_finto","subject","women's organisations",2,0.0333333333333333
+"C_finto","subject","(unknown)",1,0.0166666666666667
+"C_finto","subject","1905",1,0.0166666666666667
+"C_finto","subject","aikakauslehdet.",1,0.0166666666666667
+"C_finto","subject","aktivismi",1,0.0166666666666667
+"C_finto","subject","aleksanterinkatu 13",1,0.0166666666666667
+"C_finto","subject","australia.",1,0.0166666666666667
+"C_finto","subject","australien.",1,0.0166666666666667
+"C_finto","subject","bead necklaces",1,0.0166666666666667
+"C_finto","subject","biographical history",1,0.0166666666666667
+"C_finto","subject","brooches",1,0.0166666666666667
+"C_finto","subject","cultural heritage buildings",1,0.0166666666666667
+"C_finto","subject","demonstrations (activism)",1,0.0166666666666667
+"C_finto","subject","doctors (degrees)",1,0.0166666666666667
+"C_finto","subject","eduskuntatyö",1,0.0166666666666667
+"C_finto","subject","eduskuntavaali",1,0.0166666666666667
+"C_finto","subject","eduskuntavaalit",1,0.0166666666666667
+"C_finto","subject","elections",1,0.0166666666666667
+"C_finto","subject","finland",1,0.0166666666666667
+"C_finto","subject","flags",1,0.0166666666666667
+"C_finto","subject","förenta staterna.",1,0.0166666666666667
+"C_finto","subject","government agencies",1,0.0166666666666667
+"C_finto","subject","hagman",1,0.0166666666666667
+"C_finto","subject","halls (rooms)",1,0.0166666666666667
+"C_finto","subject","hämeenkatu 7",1,0.0166666666666667
+"C_finto","subject","headgear",1,0.0166666666666667
+"C_finto","subject","hilja pärssinen",1,0.0166666666666667
+"C_finto","subject","iso-britannia",1,0.0166666666666667
+"C_finto","subject","jääski",1,0.0166666666666667
+"C_finto","subject","julkaisu",1,0.0166666666666667
+"C_finto","subject","julkaisut",1,0.0166666666666667
+"C_finto","subject","kokoukset",1,0.0166666666666667
+"C_finto","subject","kokoukset.",1,0.0166666666666667
+"C_finto","subject","kvinnohistoria.",1,0.0166666666666667
+"C_finto","subject","kvinnorörelser.",1,0.0166666666666667
+"C_finto","subject","lucina.",1,0.0166666666666667
+"C_finto","subject","mainokset",1,0.0166666666666667
+"C_finto","subject","manors",1,0.0166666666666667
+"C_finto","subject","möten.",1,0.0166666666666667
+"C_finto","subject","naishistoria.",1,0.0166666666666667
+"C_finto","subject","naisliikkeet.",1,0.0166666666666667
+"C_finto","subject","new york (delstat)",1,0.0166666666666667
+"C_finto","subject","new york (osavaltio)",1,0.0166666666666667
+"C_finto","subject","nya zeeland.",1,0.0166666666666667
+"C_finto","subject","oikeusasema.",1,0.0166666666666667
+"C_finto","subject","perustelut",1,0.0166666666666667
+"C_finto","subject","political parties",1,0.0166666666666667
+"C_finto","subject","postcards",1,0.0166666666666667
+"C_finto","subject","primary school teachers (folk school)",1,0.0166666666666667
+"C_finto","subject","rättslig ställning.",1,0.0166666666666667
+"C_finto","subject","rights",1,0.0166666666666667
+"C_finto","subject","slogans",1,0.0166666666666667
+"C_finto","subject","sosialidemokraattiset naiset.",1,0.0166666666666667
+"C_finto","subject","storbritannien",1,0.0166666666666667
+"C_finto","subject","tampere",1,0.0166666666666667
+"C_finto","subject","tasa-arvo",1,0.0166666666666667
+"C_finto","subject","tidskrifter.",1,0.0166666666666667
+"C_finto","subject","turku",1,0.0166666666666667
+"C_finto","subject","työläisnaisten liitto.",1,0.0166666666666667
+"C_finto","subject","uusi-seelanti.",1,0.0166666666666667
+"C_finto","subject","vaalikampanjat.",1,0.0166666666666667
+"C_finto","subject","vaalikelpoisuus",1,0.0166666666666667
+"C_finto","subject","valkampanjer.",1,0.0166666666666667
+"C_finto","subject","winter",1,0.0166666666666667
+"C_finto","subject","yhdysvallat.",1,0.0166666666666667

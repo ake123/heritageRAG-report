@@ -1,0 +1,290 @@
+"condition","dimension","value","records","share"
+"A_direct","decade","1890s",2,0.4
+"A_direct","decade","1930s",2,0.4
+"A_direct","decade","1900s",1,0.2
+"B_annif","decade","1890s",3,0.3
+"B_annif","decade","1880s",2,0.2
+"B_annif","decade","1930s",2,0.2
+"B_annif","decade","1900s",1,0.1
+"B_annif","decade","1910s",1,0.1
+"B_annif","decade","1920s",1,0.1
+"C_finto","decade","1890s",24,0.4
+"C_finto","decade","1900s",16,0.266666666666667
+"C_finto","decade","1880s",9,0.15
+"C_finto","decade","1910s",6,0.1
+"C_finto","decade","1920s",3,0.05
+"C_finto","decade","1930s",2,0.0333333333333333
+"A_direct","institution","The Society of Swedish Literature in Finland",3,0.6
+"A_direct","institution","Satakunta University of Applied Sciences",1,0.2
+"A_direct","institution","University of Turku",1,0.2
+"B_annif","institution","The Society of Swedish Literature in Finland",5,0.5
+"B_annif","institution","Helka Libraries",1,0.1
+"B_annif","institution","JAMK University of Applied Sciences",1,0.1
+"B_annif","institution","Lahti City Museums",1,0.1
+"B_annif","institution","Satakunta University of Applied Sciences",1,0.1
+"B_annif","institution","University of Turku",1,0.1
+"C_finto","institution","Migration Institute of Finland",46,0.766666666666667
+"C_finto","institution","The Society of Swedish Literature in Finland",5,0.0833333333333333
+"C_finto","institution","Finnish Heritage Agency",4,0.0666666666666667
+"C_finto","institution","Helka Libraries",1,0.0166666666666667
+"C_finto","institution","Lahti City Museums",1,0.0166666666666667
+"C_finto","institution","The Finnish Migration Museum",1,0.0166666666666667
+"C_finto","institution","The National Library",1,0.0166666666666667
+"C_finto","institution","University of Turku",1,0.0166666666666667
+"A_direct","language","swe",4,0.8
+"A_direct","language","eng",1,0.2
+"B_annif","language","swe",7,0.7
+"B_annif","language","eng",2,0.2
+"B_annif","language","(unknown)",1,0.1
+"C_finto","language","fin",32,0.533333333333333
+"C_finto","language","eng",15,0.25
+"C_finto","language","swe",7,0.116666666666667
+"C_finto","language","(unknown)",6,0.1
+"A_direct","material","Archive/Collection",3,0.6
+"A_direct","material","Book material",2,0.4
+"B_annif","material","Archive/Collection",5,0.5
+"B_annif","material","Book material",4,0.4
+"B_annif","material","Image",1,0.1
+"C_finto","material","Text",41,0.683333333333333
+"C_finto","material","Archive/Collection",11,0.183333333333333
+"C_finto","material","Image",6,0.1
+"C_finto","material","Book material",2,0.0333333333333333
+"A_direct","subject","brev",3,0.6
+"A_direct","subject","brevväxling",2,0.4
+"A_direct","subject","migration",2,0.4
+"A_direct","subject","utvandrare",2,0.4
+"A_direct","subject","utvandring",2,0.4
+"A_direct","subject","affect (psychology)",1,0.2
+"A_direct","subject","amerikan ruotsalaiset",1,0.2
+"A_direct","subject","amerikka.",1,0.2
+"A_direct","subject","bibliotek",1,0.2
+"A_direct","subject","dödsannonser",1,0.2
+"A_direct","subject","fotografier",1,0.2
+"A_direct","subject","kirjeet.",1,0.2
+"A_direct","subject","laivamatka",1,0.2
+"A_direct","subject","lärare",1,0.2
+"A_direct","subject","lärarutbildning",1,0.2
+"A_direct","subject","muuttosyyt",1,0.2
+"A_direct","subject","näyttelyt.",1,0.2
+"A_direct","subject","postkort",1,0.2
+"A_direct","subject","ruotsalaisten siirtolaisuus",1,0.2
+"A_direct","subject","ruotsi.",1,0.2
+"A_direct","subject","sällskapande",1,0.2
+"A_direct","subject","skolgång",1,0.2
+"A_direct","subject","släktingar",1,0.2
+"A_direct","subject","ungdomar",1,0.2
+"A_direct","subject","värväys.",1,0.2
+"B_annif","subject","brev",4,0.4
+"B_annif","subject","brevväxling",3,0.3
+"B_annif","subject","emigranter",2,0.2
+"B_annif","subject","fotografier",2,0.2
+"B_annif","subject","kirjeet.",2,0.2
+"B_annif","subject","migration",2,0.2
+"B_annif","subject","skolgång",2,0.2
+"B_annif","subject","utvandrare",2,0.2
+"B_annif","subject","utvandring",2,0.2
+"B_annif","subject","1809-1868.",1,0.1
+"B_annif","subject","affect (psychology)",1,0.1
+"B_annif","subject","amerikan ruotsalaiset",1,0.1
+"B_annif","subject","amerikka.",1,0.1
+"B_annif","subject","anteckningar",1,0.1
+"B_annif","subject","bibliotek",1,0.1
+"B_annif","subject","brev.",1,0.1
+"B_annif","subject","brevväxling.",1,0.1
+"B_annif","subject","carson",1,0.1
+"B_annif","subject","chicago",1,0.1
+"B_annif","subject","children's clothes",1,0.1
+"B_annif","subject","dödsannonser",1,0.1
+"B_annif","subject","etnologer.",1,0.1
+"B_annif","subject","etnologi.",1,0.1
+"B_annif","subject","etnologia.",1,0.1
+"B_annif","subject","etnologit.",1,0.1
+"B_annif","subject","familjer (grupper)",1,0.1
+"B_annif","subject","finnish americans",1,0.1
+"B_annif","subject","forskare.",1,0.1
+"B_annif","subject","forskning.",1,0.1
+"B_annif","subject","fortsättningskriget",1,0.1
+"B_annif","subject","frontier and pioneer life.",1,0.1
+"B_annif","subject","gruvarbetare",1,0.1
+"B_annif","subject","gruvor",1,0.1
+"B_annif","subject","gruvstäder",1,0.1
+"B_annif","subject","inbördeskrig",1,0.1
+"B_annif","subject","kärlek",1,0.1
+"B_annif","subject","kirjeenvaihto.",1,0.1
+"B_annif","subject","kit",1,0.1
+"B_annif","subject","laivamatka",1,0.1
+"B_annif","subject","lärare",1,0.1
+"B_annif","subject","lärarutbildning",1,0.1
+"B_annif","subject","lottor",1,0.1
+"B_annif","subject","metsäsuomalaiset.",1,0.1
+"B_annif","subject","migrants",1,0.1
+"B_annif","subject","mönster (handarbete)",1,0.1
+"B_annif","subject","muuttosyyt",1,0.1
+"B_annif","subject","näyttelyt.",1,0.1
+"B_annif","subject","postcards",1,0.1
+"B_annif","subject","postkort",1,0.1
+"B_annif","subject","relatives",1,0.1
+"B_annif","subject","resor",1,0.1
+"B_annif","subject","ruotsalaisten siirtolaisuus",1,0.1
+"B_annif","subject","ruotsi.",1,0.1
+"B_annif","subject","sällskapande",1,0.1
+"B_annif","subject","skogsfinnar.",1,0.1
+"B_annif","subject","släktingar",1,0.1
+"B_annif","subject","stupade",1,0.1
+"B_annif","subject","tutkijat.",1,0.1
+"B_annif","subject","tutkimus.",1,0.1
+"B_annif","subject","ungdomar",1,0.1
+"B_annif","subject","värväys.",1,0.1
+"B_annif","subject","vinterkriget",1,0.1
+"B_annif","subject","yhdysvallat",1,0.1
+"C_finto","subject","siirtolaiset",49,0.816666666666667
+"C_finto","subject","amerikansuomalaiset",47,0.783333333333333
+"C_finto","subject","muuttoliike",46,0.766666666666667
+"C_finto","subject","siirtolaisuus",46,0.766666666666667
+"C_finto","subject","ulkosuomalaiset",46,0.766666666666667
+"C_finto","subject","yhdysvallat",46,0.766666666666667
+"C_finto","subject","etelä-pohjanmaa",29,0.483333333333333
+"C_finto","subject","rockport",13,0.216666666666667
+"C_finto","subject","republic",12,0.2
+"C_finto","subject","massachusetts",4,0.0666666666666667
+"C_finto","subject","north america",4,0.0666666666666667
+"C_finto","subject","united states",4,0.0666666666666667
+"C_finto","subject","brev",3,0.05
+"C_finto","subject","brevväxling",3,0.05
+"C_finto","subject","hatut",3,0.05
+"C_finto","subject","maine (osavaltio)",3,0.05
+"C_finto","subject","chicago",2,0.0333333333333333
+"C_finto","subject","fondit",2,0.0333333333333333
+"C_finto","subject","fotografier",2,0.0333333333333333
+"C_finto","subject","kanada",2,0.0333333333333333
+"C_finto","subject","käsilaukut",2,0.0333333333333333
+"C_finto","subject","kirjeenvaihto",2,0.0333333333333333
+"C_finto","subject","kirjeet.",2,0.0333333333333333
+"C_finto","subject","migrants",2,0.0333333333333333
+"C_finto","subject","migration",2,0.0333333333333333
+"C_finto","subject","ohio",2,0.0333333333333333
+"C_finto","subject","skolgång",2,0.0333333333333333
+"C_finto","subject","takit",2,0.0333333333333333
+"C_finto","subject","utvandrare",2,0.0333333333333333
+"C_finto","subject","utvandring",2,0.0333333333333333
+"C_finto","subject","vinalhaven",2,0.0333333333333333
+"C_finto","subject","alaska",1,0.0166666666666667
+"C_finto","subject","alaskan suomalaiset",1,0.0166666666666667
+"C_finto","subject","alpha",1,0.0166666666666667
+"C_finto","subject","amerikan ruotsalaiset",1,0.0166666666666667
+"C_finto","subject","amerikka.",1,0.0166666666666667
+"C_finto","subject","anteckningar",1,0.0166666666666667
+"C_finto","subject","arkistoaineistot",1,0.0166666666666667
+"C_finto","subject","ashtabula",1,0.0166666666666667
+"C_finto","subject","bibliotek",1,0.0166666666666667
+"C_finto","subject","brev.",1,0.0166666666666667
+"C_finto","subject","brevväxling.",1,0.0166666666666667
+"C_finto","subject","brittiläinen kolumbia",1,0.0166666666666667
+"C_finto","subject","canada",1,0.0166666666666667
+"C_finto","subject","children (family members)",1,0.0166666666666667
+"C_finto","subject","children's clothes",1,0.0166666666666667
+"C_finto","subject","cleveland",1,0.0166666666666667
+"C_finto","subject","clinton",1,0.0166666666666667
+"C_finto","subject","cobalt",1,0.0166666666666667
+"C_finto","subject","dekalb",1,0.0166666666666667
+"C_finto","subject","detroit",1,0.0166666666666667
+"C_finto","subject","dödsannonser",1,0.0166666666666667
+"C_finto","subject","emigranter",1,0.0166666666666667
+"C_finto","subject","etnologer.",1,0.0166666666666667
+"C_finto","subject","etnologi.",1,0.0166666666666667
+"C_finto","subject","etnologia.",1,0.0166666666666667
+"C_finto","subject","etnologit.",1,0.0166666666666667
+"C_finto","subject","evakuering",1,0.0166666666666667
+"C_finto","subject","everett",1,0.0166666666666667
+"C_finto","subject","expatriate finns",1,0.0166666666666667
+"C_finto","subject","finländare i kanada",1,0.0166666666666667
+"C_finto","subject","finnish americans",1,0.0166666666666667
+"C_finto","subject","förflyttad befolkning",1,0.0166666666666667
+"C_finto","subject","forskare.",1,0.0166666666666667
+"C_finto","subject","forskning.",1,0.0166666666666667
+"C_finto","subject","franklin",1,0.0166666666666667
+"C_finto","subject","gloucester",1,0.0166666666666667
+"C_finto","subject","hameet",1,0.0166666666666667
+"C_finto","subject","hancock",1,0.0166666666666667
+"C_finto","subject","helmet",1,0.0166666666666667
+"C_finto","subject","ishpeming",1,0.0166666666666667
+"C_finto","subject","isokyrö",1,0.0166666666666667
+"C_finto","subject","kaleva",1,0.0166666666666667
+"C_finto","subject","kanadansuomalaiset",1,0.0166666666666667
+"C_finto","subject","kansanedustajat",1,0.0166666666666667
+"C_finto","subject","käsineet",1,0.0166666666666667
+"C_finto","subject","kaulukset",1,0.0166666666666667
+"C_finto","subject","kengät",1,0.0166666666666667
+"C_finto","subject","kirjeenvaihto.",1,0.0166666666666667
+"C_finto","subject","kirjeet",1,0.0166666666666667
+"C_finto","subject","kirjoituskeräykset",1,0.0166666666666667
+"C_finto","subject","kivenhakkaajat",1,0.0166666666666667
+"C_finto","subject","kullankaivajat",1,0.0166666666666667
+"C_finto","subject","kymenlaakso",1,0.0166666666666667
+"C_finto","subject","laivamatka",1,0.0166666666666667
+"C_finto","subject","lapset",1,0.0166666666666667
+"C_finto","subject","lärare",1,0.0166666666666667
+"C_finto","subject","lärarutbildning",1,0.0166666666666667
+"C_finto","subject","lastenvaatteet",1,0.0166666666666667
+"C_finto","subject","lippalakit",1,0.0166666666666667
+"C_finto","subject","lokalhistoria",1,0.0166666666666667
+"C_finto","subject","medicine bow",1,0.0166666666666667
+"C_finto","subject","memphis",1,0.0166666666666667
+"C_finto","subject","metsäsuomalaiset.",1,0.0166666666666667
+"C_finto","subject","michigan",1,0.0166666666666667
+"C_finto","subject","miesten puvut",1,0.0166666666666667
+"C_finto","subject","migranter",1,0.0166666666666667
+"C_finto","subject","minnesota",1,0.0166666666666667
+"C_finto","subject","muuttosyyt",1,0.0166666666666667
+"C_finto","subject","napue (isokyrö)",1,0.0166666666666667
+"C_finto","subject","nauhakengät",1,0.0166666666666667
+"C_finto","subject","näyttelyt.",1,0.0166666666666667
+"C_finto","subject","neuvostoliitonsuomalaiset",1,0.0166666666666667
+"C_finto","subject","neuvostoliitto",1,0.0166666666666667
+"C_finto","subject","painesville",1,0.0166666666666667
+"C_finto","subject","pennsylvania",1,0.0166666666666667
+"C_finto","subject","personhistoria",1,0.0166666666666667
+"C_finto","subject","petroskoi",1,0.0166666666666667
+"C_finto","subject","pittsburgh",1,0.0166666666666667
+"C_finto","subject","port arthur",1,0.0166666666666667
+"C_finto","subject","portland",1,0.0166666666666667
+"C_finto","subject","postcards",1,0.0166666666666667
+"C_finto","subject","postkort",1,0.0166666666666667
+"C_finto","subject","proctor",1,0.0166666666666667
+"C_finto","subject","puserot",1,0.0166666666666667
+"C_finto","subject","ramsay",1,0.0166666666666667
+"C_finto","subject","raymond",1,0.0166666666666667
+"C_finto","subject","relatives",1,0.0166666666666667
+"C_finto","subject","resor",1,0.0166666666666667
+"C_finto","subject","rintakorut",1,0.0166666666666667
+"C_finto","subject","ruotsalaisten siirtolaisuus",1,0.0166666666666667
+"C_finto","subject","ruotsi.",1,0.0166666666666667
+"C_finto","subject","sällskapande",1,0.0166666666666667
+"C_finto","subject","san francisco",1,0.0166666666666667
+"C_finto","subject","sanomalehdet",1,0.0166666666666667
+"C_finto","subject","seattle",1,0.0166666666666667
+"C_finto","subject","sjöfarare",1,0.0166666666666667
+"C_finto","subject","sjömän",1,0.0166666666666667
+"C_finto","subject","skärgårdar",1,0.0166666666666667
+"C_finto","subject","skärgårdsbor",1,0.0166666666666667
+"C_finto","subject","skärgårdssamhällen",1,0.0166666666666667
+"C_finto","subject","skogsfinnar.",1,0.0166666666666667
+"C_finto","subject","släktingar",1,0.0166666666666667
+"C_finto","subject","sointula",1,0.0166666666666667
+"C_finto","subject","stambaugh",1,0.0166666666666667
+"C_finto","subject","sukat",1,0.0166666666666667
+"C_finto","subject","thunder bay",1,0.0166666666666667
+"C_finto","subject","tutkijat.",1,0.0166666666666667
+"C_finto","subject","tutkimus",1,0.0166666666666667
+"C_finto","subject","tutkimus.",1,0.0166666666666667
+"C_finto","subject","ungdomar",1,0.0166666666666667
+"C_finto","subject","valkeala",1,0.0166666666666667
+"C_finto","subject","värväys.",1,0.0166666666666667
+"C_finto","subject","venäjä",1,0.0166666666666667
+"C_finto","subject","venäjän alaska",1,0.0166666666666667
+"C_finto","subject","vinterkriget",1,0.0166666666666667
+"C_finto","subject","vyöt",1,0.0166666666666667
+"C_finto","subject","waters (areas)",1,0.0166666666666667
+"C_finto","subject","wyoming",1,0.0166666666666667
+"C_finto","subject","yhdysvallat 200 vuotta-juhlavuosi",1,0.0166666666666667
+"C_finto","subject","yukon",1,0.0166666666666667

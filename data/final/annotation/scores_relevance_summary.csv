@@ -1,0 +1,4 @@
+"condition","questions","questions_judged","precision_at_k","highly_relevant_share","mean_relevance","ndcg_at_k","not_in_A_relevant_share"
+"A_direct",11,0,NA,NA,NA,NA,NA
+"B_annif",11,0,NA,NA,NA,NA,NA
+"C_finto",11,0,NA,NA,NA,NA,NA

@@ -1,0 +1,192 @@
+---
+title: "Problems we found, and what to fix"
+subtitle: "Honest notes on what in this run is not yet right, and the limits of the study"
+---
+
+```{r}
+source("_common.R", encoding = "UTF-8")
+clean <- function(x) tolower(trimws(gsub("\\s*\\([^)]*\\)", "", x)))
+# Annif suggestions whose name (without brackets) equals an unmatched key word
+um <- unmatched
+um$annif_had <- vapply(seq_len(nrow(um)), function(i) {
+  a <- annif[annif$question_id == um$question_id[i], ]
+  hit <- a$label[clean(a$label) == clean(um$anchor[i]) | clean(a$label) == paste0(clean(um$anchor[i]), "s")]
+  if (length(hit)) paste(hit, collapse = ", ") else "-"
+}, character(1))
+# Annif words that are only a piece of the key word phrase (e.g. "Finland" in "Finland Swedes")
+words <- function(x) unlist(strsplit(tolower(x), "[^[:alpha:]]+"))
+piece <- annif[annif$used & annif$mapping == "lexical", ]
+piece <- piece[vapply(seq_len(nrow(piece)), function(i) {
+  w <- words(piece$label[i]); a <- words(piece$anchor[i])
+  length(w) < length(a) && all(w %in% a)
+}, logical(1)), ]
+hidden <- tapply(metrics$unobserved_match_share, metrics$condition, mean, na.rm = TRUE)
+sv <- vis[vis$dimension %in% c("subject", "institution") & !is.na(vis$jsd) & !is.na(vis$jsd_lower), ]
+outside <- tapply(sv$jsd < sv$jsd_lower | sv$jsd > sv$jsd_upper, sv$dimension, mean)
+cl <- rd("annotation/scores_claims_by_condition.csv"); st <- read_status()
+skipped <- annif[annif$mapping %in% "partial_phrase", ]
+mp <- method_plain(anchor_tbl$method)
+methods <- table(factor(mp, unique(c(method_names, mp))))
+methods <- methods[methods > 0]
+annif_answered <- length(unique(annif$question_id))
+n_problems <- 4 + (length(empty_q) > 0)
+```
+
+::: {.in-short}
+`r if (newer_than("0.3.0")) {
+  paste0("**In short.** The first run (heritageRAG 0.2.0) showed two problems that changed some searches: some key words found no match in the thesaurus, and a matching rule let one search drift off topic. Both are **fixed in heritageRAG 0.3.0, which this run used** (", data_ver, "), together with the smaller issues below.",
+         if (identical(data_ver, "0.3.0")) " This run showed one new problem: in one question a key word matched the wrong meaning in the thesaurus. It is fixed in heritageRAG 0.3.1 and that question is left out of the averages until the next run." else "",
+         " What remains are properties of the catalogues that need care when reporting, and limits that every result shares.")
+} else {
+  paste0("**In short.** The run worked, but it showed **", n_problems, " problems** that affect some results, and a few limits that every result shares. The two most important problems: some key words found no match in the thesaurus, and a matching rule let one search drift off topic. Both are **fixed in heritageRAG 0.3.0**, together with the smaller issues below. This run used ", data_ver, ", so its numbers still show the problems until the study is run again.")
+}`
+:::
+
+## Problems that affect results
+
+### 1. Some key words found no match in the thesaurus
+
+<p class="status-line">`r fix_status("0.3.0")`</p>
+
+```{r}
+if (nrow(um)) tbl(data.frame(Question = qname(um$question_id), `Key word` = um$anchor, `Annif suggested` = um$annif_had,
+               check.names = FALSE))
+```
+
+**What happened.** `r if (!nrow(um)) paste0("In this run all ", nrow(anchor_tbl), " key words matched a thesaurus concept. In the first run 7 of 26 did not, so search C could add no Finnish or Swedish names for them.") else if (newer_than("0.3.0")) paste0("In the first run 7 of 26 key words found no concept. With the new lookup, ", nrow(um), " of ", nrow(anchor_tbl), " still find none (table above). These are not lookup failures: the thesaurus simply uses other words for these ideas, such as *internally displaced persons* and *Swedish-speaking Finns*, which Annif suggested but which do not fit the key words. Search C can add no Finnish or Swedish names for them.") else paste0("For ", nrow(um), " of the ", nrow(anchor_tbl), " key words, the tool found no official concept in YSO. Search C could then add no Finnish or Swedish names for those words, so the comparison is weaker for those questions.")`
+How the key words were matched in this run:
+`r paste0(names(methods), " ", as.integer(methods), collapse = ", ")`.
+
+**Why`r if (newer_than("0.3.0")) " it happened in the first run" else ""`.** YSO's English names often carry a clarifying word in brackets, such as
+*theatre (art forms)*, or use a different word from everyday English. The old lookup asked for
+an **exact** match`r if (nrow(um) && !newer_than("0.3.0")) ", although Annif often suggested the right concept itself (middle column)" else ", although Annif often suggested the right concept itself"`.
+
+**Fix (done in heritageRAG 0.3.0).** The lookup now also reuses Annif's concept when its name
+matches the key word apart from a bracket or a plural ending (*theatre* = *theatre (art forms)*,
+*housing* = *housings*), accepts a thesaurus search hit with the same name or another listed name,
+and accepts a search hit that Annif also suggested (*Sami* = *Sámi people*). A near hit that only
+one source supports, such as *housing policy* for *housing*, is still refused. When the thesaurus
+service cannot be reached, the tool now says so instead of reporting "no match".
+
+### 2. A matching rule let one search drift off topic
+
+<p class="status-line">`r fix_status("0.3.0")`</p>
+
+```{r}
+if (nrow(piece)) tbl(data.frame(Question = qname(piece$question_id), `Annif's word` = piece$label,
+                                `Attached to key word` = piece$anchor, check.names = FALSE))
+if (nrow(skipped)) tbl(data.frame(Question = qname(skipped$question_id), `Annif's word (not searched)` = skipped$label,
+                                  `Part of key word` = skipped$anchor, check.names = FALSE))
+```
+
+`r if (nrow(piece)) "**What happened.** The rule that adds Annif's words to a key word accepts words that share the start of a word." else "**What happened in the first run.** The rule that adds Annif's words to a key word accepted words that share the start of a word, including words that are only a piece of the key word phrase."`
+`r if (nrow(piece)) paste0("In ", tolower(number_word(nrow(piece))), " question", ifelse(nrow(piece) == 1, "", "s"), " it added a word that is only *part* of the key word phrase, which makes the search wider than the idea.") else ""`
+For *temperance posters* this was mostly harmless (temperance in general is close to the
+temperance movement). For *Swedish-language theatre* it was not: *Finland* shares the start of
+*Finland Swedes*, so search B looked for "Finland Swedes" **or** "Finland", which in practice
+means any theatre in Finland.
+`r if (nrow(piece)) "The results of B and C for that question are mostly **not about Swedish-language theatre**." else "In this run no search drifted this way."`
+
+**Fix (done in heritageRAG 0.3.0).** A suggestion that is just a piece of the key word phrase
+is no longer added, because that makes the search wider than the idea. It is listed as "only
+part of your word" instead. `r if (newer_than("0.3.0")) paste0("In this run ", nrow(skipped), " suggestion", ifelse(nrow(skipped) == 1, " was", "s were"), " skipped this way.") else "Until the study is run again, leave B and C for [Swedish-language theatre](questions.qmd#finland-swedish-theatre) out of any conclusions."`
+
+### 3. Most records have no language
+
+<p class="status-line"><span class="status status-todo">Report with care</span> A property of the catalogues, not of the tool.</p>
+
+Only **`r pct(lang_known_share)`** of the kept records have a language in Finna. The rest are
+mostly photographs and objects. The language results on [What we found](results.qmd) are
+therefore about a minority of records.
+
+**What to do.** Report language shares as "among records with a known language" and give the
+count. This is a property of the catalogues, not of our tool.
+
+### 4. Why a record matched is often hidden
+
+<p class="status-line"><span class="status status-todo">Report with care</span> Part of the finding about transparency.</p>
+
+For many records none of the search words can be seen in the parts of the record Finna shows
+us (A `r pct(hidden["A_direct"])`, B `r pct(hidden["B_annif"])`, C `r pct(hidden["C_finto"])`).
+Finna searches more fields than it returns, and it adds its own translations, so the reason
+stays hidden.
+
+**What to do.** Keep these as "hidden" (the tool never guesses). For the paper this is itself
+a finding about **transparency**: even a careful researcher cannot fully see why the portal
+showed a record.
+
+```{r}
+#| results: asis
+fail_reason <- c(
+  "karelian-evacuees" = "its English key words match nothing in Finnish catalogues and neither matched the thesaurus, although Annif suggested the official term *internally displaced persons*",
+  "finland-swedish-theatre" = "*Finland Swedes* is not the thesaurus's term (YSO says *Swedish-speaking Finns*, which Annif suggested); with the drift of the first run fixed, the everyday term finds nothing",
+  "amateur-radio" = "planned as a low-coverage test: the few matches fall outside 1925-1939")
+if (length(empty_q)) {
+  cat(sprintf("### 5. %s question%s found nothing usable\n\n", number_word(length(empty_q)), ifelse(length(empty_q) > 1, "s", "")))
+  cat(paste0("- **", qname(empty_q), "**", ifelse(empty_q %in% names(fail_reason), paste0(": ", fail_reason[empty_q]), ""), "\n"), sep = "")
+  cat("\nKeep them in the paper as **failure cases**: they show what happens when a researcher's words and the catalogue's words do not meet. To test the questions themselves, ask them again with the thesaurus's own terms as key words.\n\n")
+}
+n_wrong <- 5 + (length(empty_q) > 0)
+if (identical(data_ver, "0.3.0")) {
+  cat(sprintf("### %s. A key word matched the wrong meaning\n\n", n_wrong))
+  cat(sprintf("<p class=\"status-line\">%s</p>\n\n", fix_status("0.3.1")))
+  cat("**What happened.** For *amateur radio clubs*, the new lookup matched the key word *clubs* to the thesaurus concept *music clubs*. ",
+      "YSO lists \"clubs\" with a bracket (\"clubs (music)\") as another name of that concept, and the lookup ignored the bracket. ",
+      "Search C then also looked for *musiikkiklubit* and *musikklubbar*, and kept two newspaper records that A and B did not.\n\n",
+      "**Fix (done in heritageRAG 0.3.1).** Another name with a bracket now has to match with the bracket, so *clubs (music)* no longer counts as a name for clubs. ",
+      "When a word has several meanings in the thesaurus and Annif points to none of them, the tool now chooses none and says so. ",
+      "Only this question was affected. Until the study is run again, it is left out of the averages (see `exclude.csv`).\n\n", sep = "")
+}
+```
+
+## Smaller issues
+
+**An Annif failure would have looked like "no suggestions".** <span class="status `r if (newer_than("0.3.0")) "status-fixed" else "status-pending"`">`r if (newer_than("0.3.0")) "Fixed" else "Fixed in heritageRAG 0.3.0"`</span>
+When the Annif service cannot be reached, the annif package returns nothing with a warning. The
+old version read that as "Annif had no suggestions", so search B would silently have been the
+same as A. Now it is reported as "Annif unavailable". **This run was not affected:** Annif
+answered for `r annif_answered` of the `r n_q` questions`r if (annif_answered < n_q) " (check the others under Question by question)" else ""`.
+
+**Which Annif model was used was not recorded.** <span class="status `r if (!is.null(annif_models)) "status-fixed" else "status-pending"`">`r if (!is.null(annif_models)) "Fixed" else "Fixed in heritageRAG 0.3.0"`</span>
+Annif's models are retrained from time to time, so the same question can get different
+suggestions next year. Each run now stores the Annif model with the results. This run: annif
+package `r ifelse(is.na(annif_pkg_ver), "(version not recorded)", annif_pkg_ver)`, model
+`r annif_model_text()`.
+
+**The uncertainty ranges for subject words are not reliable.** <span class="status `r if (has_noise) "status-fixed" else "status-pending"`">`r if (has_noise) "Fixed" else "Fixed in heritageRAG 0.3.0"`</span>
+`r if (has_noise) {
+  ns <- vis[vis$from == "A_direct" & vis$to == "C_finto" & !is.na(vis$shift_beyond_noise), ]
+  ss <- ns[ns$dimension == "subject", ]
+  paste0("Each difference is now compared with the difference that chance alone gives with this many records. Between A and C, the subject-word difference is bigger than chance in **", sum(ss$shift_beyond_noise), " of ", nrow(ss), "** questions. The pages use this check instead of the old ranges.")
+} else {
+  paste0("In ", pct(outside["subject"]), " of the subject comparisons, the difference score itself falls outside its own uncertainty range (", pct(outside["institution"]), " for institutions). This happens because there are hundreds of different subject words and only 60 records. heritageRAG 0.3.0 replaces the ranges with a check against chance: two samples of the same size are drawn many times from the combined records, and a difference counts only if it is bigger than almost all of those. Until the study is run again, treat subject differences as rough indications.")
+}`
+
+**Empty checking scores show as 0.** <span class="status `r if (newer_than("0.3.0")) "status-fixed" else "status-pending"`">`r if (newer_than("0.3.0")) "Fixed" else "Fixed in heritageRAG 0.3.0"`</span>
+`r if (!is.null(cl) && "judged" %in% names(cl)) "Groups that nobody has judged now show \"not judged yet\" (an empty value) instead of 0%." else if (!is.null(cl) && !is.null(st) && sum(st$done) == 0) "Before anyone has judged a sentence, the claims score file shows 0% supported instead of \"not judged yet\". Ignore these numbers until the sheets are filled; version 0.3.0 shows them as empty." else "The claims score file can show 0% instead of \"not judged yet\" for groups that nobody has judged; version 0.3.0 shows them as empty."`
+
+## Limits that every result shares
+
+- **Records describe items; they are not the items.** A catalogue record of an advertisement
+  says little about how women are shown in it. Claims about content need a look at the
+  advertisements themselves.
+- **Same space, different nets.** Each search keeps 60 records. A wider search therefore also
+  pushes records out, so "different" can mean both "gained" and "lost".
+- **This describes searches, not collections.** The shares are about what each search showed,
+  not about how much material Finnish institutions actually hold.
+- **Finna changes over time.** The results belong to the run date (`r substr(run_info$run_date, 1, 10)`).
+  The test run, `r round(as.numeric(difftime(as.POSIXct(substr(run_info$run_date,1,19), tz="UTC"), as.POSIXct(substr(pilot_info$run_date,1,19), tz="UTC"), units="mins")))`
+  minutes earlier, gave identical searches, which shows the searches are stable in the short
+  term.
+- **The question set is a first draft.** The questions were proposed for this pilot. Before
+  the final run, agree the selection rules with the team and write them down.
+
+## Suggested order of work
+
+1. ~~Fix problems 1 and 2 in the package, plus the smaller issues.~~ Done in heritageRAG 0.3.0
+   (and the wrong-meaning match in 0.3.1).
+2. Agree the final question set (keep the failure cases and the Finnish-language twin).
+3. `r if (newer_than("0.3.1")) "~~Run the final study again with heritageRAG 0.3.1.~~ Done." else if (newer_than("0.3.0")) "~~Run the final study again with heritageRAG 0.3.0.~~ Done. Run it once more with 0.3.1 when the question set is final (it only changes the amateur radio question), then delete the row in exclude.csv." else "Run the final study again with heritageRAG 0.3.0, and the free Sámi test (see [Extra tests](extra-tests.qmd)); update this report (run prepare_data.R, then quarto render)."`
+4. Make new checking sheets from that run, and give them to the two checkers. (Sheets made
+   from an older run do not match the new searches.)
+5. Score, update the report, and write up.

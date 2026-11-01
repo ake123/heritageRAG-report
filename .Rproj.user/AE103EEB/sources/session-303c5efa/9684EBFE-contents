@@ -1,0 +1,50 @@
+project:
+  type: book
+  output-dir: _book
+  render:
+    - "*.qmd"
+
+book:
+  title: "HeritageRAG study report"
+  subtitle: "How the way we search changes what we find"
+  author:
+    - Akewak Jeba
+    - Julia Matveeva
+    - Ville Laitinen
+    - Leo Lahti
+  date: today
+  date-format: "D MMMM YYYY"
+  search: true
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - part: "The study"
+      chapters:
+        - runs.qmd
+        - how-it-works.qmd
+    - part: "What we found"
+      chapters:
+        - results.qmd
+        - questions.qmd
+        - compare.qmd
+        - ai-answers.qmd
+        - extra-tests.qmd
+        - paper-figures.qmd
+  #  - part: "What comes next"
+  #    chapters:
+  #      - human-check.qmd
+  #      - problems.qmd
+  page-footer:
+    left: "From metadata to narrative: Jeba, Matveeva, Laitinen, Lahti. University of Turku."
+    right: "Built with Quarto from the heritageRAG result files."
+
+format:
+  html:
+    # Chapters are numbered; sections keep the numbering written in the text.
+    number-sections: true
+    number-depth: 1
+    toc-title: "In this chapter"
+execute:
+  warning: false
+  message: false
+  freeze: auto
