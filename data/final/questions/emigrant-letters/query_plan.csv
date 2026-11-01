@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","emigrants AND letters",2,"en","search_daterange_mv:""overlap|[1870 TO 1930]""","ok",5,5,0.408120155334473,
-"B_annif","(emigrants OR migrants OR emigration) AND (letters OR correspondence)",5,"en","search_daterange_mv:""overlap|[1870 TO 1930]""","ok",13,13,0.59429407119751,
-"C_finto","(emigrants OR migrants OR emigration OR maastamuuttajat OR utvandrare OR siirtolaiset OR migranter OR maastamuutto OR utvandring) AND (letters OR correspondence OR kirjeet OR brev OR kirjeenvaihto OR brevväxling)",15,"en, fi, sv","search_daterange_mv:""overlap|[1870 TO 1930]""","ok",711,60,1.21925902366638,

@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","evacuees AND resettlement",2,"en","search_daterange_mv:""overlap|[1939 TO 1950]""","empty",0,0,0.165685176849365,
-"B_annif","evacuees AND resettlement",2,"en","search_daterange_mv:""overlap|[1939 TO 1950]""","empty",0,0,0.109514951705933,
-"C_finto","evacuees AND resettlement",2,"en","search_daterange_mv:""overlap|[1939 TO 1950]""","empty",0,0,0.107403993606567,

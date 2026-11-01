@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","Sami AND handicrafts",2,"en","","ok",1422,60,0.594915151596069,
-"B_annif","Sami AND (handicrafts OR ""handicraft tradition"" OR ""art handicraft"")",4,"en","","ok",1422,60,0.416146039962769,
-"C_finto","(Sami OR saamelaiset OR samer OR ""Sámi people"") AND (handicrafts OR ""handicraft tradition"" OR ""art handicraft"" OR käsityöt OR ""handarbeten och hantverk"" OR käsityöperinne OR hantverkstradition OR taidekäsityö OR konsthantverk)",13,"en, fi, sv","","ok",4298,60,0.958495140075684,

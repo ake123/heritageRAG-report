@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","""Finland Swedes"" AND theatre",2,"en","search_daterange_mv:""overlap|[1850 TO 1950]""","empty",0,0,0.549492835998535,
-"B_annif","""Finland Swedes"" AND (theatre OR theatres)",3,"en","search_daterange_mv:""overlap|[1850 TO 1950]""","empty",0,0,0.246635913848877,
-"C_finto","""Finland Swedes"" AND (theatre OR theatres OR teatteritaide OR teaterkonst OR teatterit OR teatrar)",7,"en, fi, sv","search_daterange_mv:""overlap|[1850 TO 1950]""","empty",0,0,0.265628099441528,

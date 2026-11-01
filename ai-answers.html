@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.20">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; What the AI wrote, and can we trust it? – HeritageRAG study report</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./extra-tests.html" rel="next">
+<link href="./compare.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a53c764061a324549f5579b988345580.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./results.html">What we found</a></li><li class="breadcrumb-item"><a href="./ai-answers.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">HeritageRAG study report</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How the way we search changes what we find</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">The study</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./runs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The two runs, explained</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-it-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How the study works, step by step</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">What we found</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">What we found across all questions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question by question</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./compare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ai-answers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extra-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Extra tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./paper-figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Figures for the paper</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">In this chapter</h2>
+   
+  <ul class="collapse">
+  <li><a href="#what-the-ai-was-asked-to-do" id="toc-what-the-ai-was-asked-to-do" class="nav-link active" data-scroll-target="#what-the-ai-was-asked-to-do">What the AI was asked to do</a></li>
+  <li><a href="#how-well-does-it-cite" id="toc-how-well-does-it-cite" class="nav-link" data-scroll-target="#how-well-does-it-cite">How well does it cite?</a></li>
+  <li><a href="#where-did-the-cited-records-come-from" id="toc-where-did-the-cited-records-come-from" class="nav-link" data-scroll-target="#where-did-the-cited-records-come-from">Where did the cited records come from?</a></li>
+  <li><a href="#an-example" id="toc-an-example" class="nav-link" data-scroll-target="#an-example">An example</a></li>
+  <li><a href="#what-we-cannot-tell-yet" id="toc-what-we-cannot-tell-yet" class="nav-link" data-scroll-target="#what-we-cannot-tell-yet">What we cannot tell yet</a></li>
+  <li><a href="#read-all-the-answers" id="toc-read-all-the-answers" class="nav-link" data-scroll-target="#read-all-the-answers">Read all the answers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./results.html">What we found</a></li><li class="breadcrumb-item"><a href="./ai-answers.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></h1>
+<p class="subtitle lead">How often the AI cites its sources, where those sources came from, and what still needs a human eye</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="in-short">
+<p><strong>In short.</strong> The AI wrote 30 answers, 461 sentences in all. 48% of the sentences cite at least one record. None of its citations named a record the AI had not been given: when it cites, it cites real evidence, and it is open about the limits of what it saw. <strong>A citation is not proof, though.</strong> Whether each cited record really supports its sentence can only be judged by people, and that is the next step.</p>
+</div>
+<p><em>Left out of the averages:</em> Karelian evacuees and Swedish-language theatre, which found no records in any search; Amateur radio clubs (its only records came from a wrong thesaurus match, <em>clubs</em> taken as <em>music clubs</em>, which heritageRAG 0.3.1 fixes). See <a href="./questions.html">Question by question</a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Checkers: please stop here
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page shows which search produced each sentence. If you are judging sentences for the study, please come back after you have finished.</p>
+</div>
+</div>
+<section id="what-the-ai-was-asked-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-ai-was-asked-to-do">What the AI was asked to do</h2>
+<p>For each search, the AI received the <strong>top 8 records</strong> and the research question, and these rules:</p>
+<ul>
+<li>use only the records given; do not invent records, dates, people or places;</li>
+<li>keep what the records <em>show</em> separate from your <em>interpretation</em>;</li>
+<li>say when the evidence is too thin, and do not claim a trend from a few records;</li>
+<li>end every sentence about the records with the numbers of the records that support it.</li>
+</ul>
+</section>
+<section id="how-well-does-it-cite" class="level2">
+<h2 class="anchored" data-anchor-id="how-well-does-it-cite">How well does it cite?</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Search</th>
+<th>Answers</th>
+<th>Sentences</th>
+<th>With a citation</th>
+<th>Citations to records not given</th>
+<th>Sentences without citation</th>
+<th>Sentences about change</th>
+<th>… of which cited</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A: own words</td>
+<td>10</td>
+<td>157</td>
+<td>40%</td>
+<td>0</td>
+<td>87</td>
+<td>9</td>
+<td>67%</td>
+</tr>
+<tr class="even">
+<td>B: + Annif</td>
+<td>10</td>
+<td>152</td>
+<td>56%</td>
+<td>0</td>
+<td>63</td>
+<td>8</td>
+<td>50%</td>
+</tr>
+<tr class="odd">
+<td>C: + YSO terms</td>
+<td>10</td>
+<td>152</td>
+<td>47%</td>
+<td>0</td>
+<td>78</td>
+<td>8</td>
+<td>62%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>What the columns mean:</p>
+<ul>
+<li><strong>With a citation</strong>: the sentence names at least one record.</li>
+<li><strong>Citations to records not given</strong>: the AI named a record number it never received, which means it made it up. This should be zero.</li>
+<li><strong>Sentences without citation</strong>: sentences with no record number that are <em>not</em> simply remarks about the evidence (such as “the sample is small”). These deserve a closer look: they may be unsupported interpretation.</li>
+<li><strong>Sentences about change</strong>: sentences with words like <em>shift</em>, <em>increase</em> or <em>became</em>. Claims about change over time are the riskiest, so we check whether they are backed by records.</li>
+</ul>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="ai-answers_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Dot chart: share of AI sentences with a citation, per question and search." width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p class="how-to-read">
+How to read this: each row is a question, each dot the AI answer for one search. Further right means more of its sentences cite records.
+</p>
+</section>
+<section id="where-did-the-cited-records-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-did-the-cited-records-come-from">Where did the cited records come from?</h2>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 17%">
+<col style="width: 35%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Search</th>
+<th>Records cited</th>
+<th>Found only through new words</th>
+<th>Not found by search A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A: own words</td>
+<td>174</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr class="even">
+<td>B: + Annif</td>
+<td>208</td>
+<td>13%</td>
+<td>38%</td>
+</tr>
+<tr class="odd">
+<td>C: + YSO terms</td>
+<td>195</td>
+<td>28%</td>
+<td>42%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>What it means.</strong> The answers for search C lean heavily on records that our own words would never have shown: 42% of the records it cites were <strong>not found by search A</strong>, and 28% were found <strong>only</strong> through words added by Annif or the thesaurus. So the search step does not just change the list of records. It changes the <strong>story the AI tells</strong>, because the story is built from different evidence.</p>
+</section>
+<section id="an-example" class="level2">
+<h2 class="anchored" data-anchor-id="an-example">An example</h2>
+<div class="cell" data-layout-align="left">
+<p>The first lines of the answer for <strong>Women in advertising (asked in English)</strong>, search A:</p>
+<div class="answer-md">
+<p>Observations:</p>
+<ul>
+<li><p>A 1921 advertising record is catalogued as a political advertisement linked to a women’s organisation titled “Me odotamme sinua” (Social Democratic Women’s Union). [werstas.we-1372484].</p></li>
+<li><p>A 1950 poster record is catalogued with subjects that include women’s rights movements and the cooperative system. [ta_ah.ta-1369756].</p></li>
+<li><p>A 1955 Asko advertising photograph record is catalogued with subjects that include women and newspaper advertising as well as domestic goods (coffee cups, curtains, carpets, sofas). [lahdenmuseo.lkm-461598].<br>
+</p></li>
+</ul>
+</div>
+</div>
+<p>The AI separates what the catalogue records <strong>say</strong> (<em>“catalogued with subjects including …”</em>) from its own <strong>interpretation</strong>, and it repeatedly warns that metadata is not the same as the image or text itself. That is the behaviour we asked for. It does not make the interpretations correct.</p>
+</section>
+<section id="what-we-cannot-tell-yet" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-cannot-tell-yet">What we cannot tell yet</h2>
+<ul>
+<li>whether each cited record really supports its sentence;</li>
+<li>whether the interpretations (for example “a shift from political to commercial contexts”) hold up;</li>
+<li>whether answers built on search C are better or worse than those built on search A.</li>
+</ul>
+<p>These are exactly the questions the two checkers answer on their sheets. See <a href="human-check.qmd">Human checking</a>.</p>
+</section>
+<section id="read-all-the-answers" class="level2">
+<h2 class="anchored" data-anchor-id="read-all-the-answers">Read all the answers</h2>
+<div class="cell" data-layout-align="left">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Women in advertising (asked in English)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Observations:</p>
+<ul>
+<li><p>A 1921 advertising record is catalogued as a political advertisement linked to a women’s organisation titled “Me odotamme sinua” (Social Democratic Women’s Union). [werstas.we-1372484].</p></li>
+<li><p>A 1950 poster record is catalogued with subjects that include women’s rights movements and the cooperative system. [ta_ah.ta-1369756].</p></li>
+<li><p>A 1955 Asko advertising photograph record is catalogued with subjects that include women and newspaper advertising as well as domestic goods (coffee cups, curtains, carpets, sofas). [lahdenmuseo.lkm-461598].</p></li>
+<li><p>Three 1956 product-ad records from OTK’s shirt factory are catalogued with subjects including women, shirts, mannequins (occupations), and advertising photographs. [werstas.we-1613705, werstas.we-1613706, werstas.we-1613707].</p></li>
+<li><p>Two 1960 catalogue records from textile/wool manufacturers are catalogued with subjects that include women, advertising, marketing, and clothing items such as trousers and blankets; one of these records’ title references the year 1931 while its recorded year is 1960. [hyvinkaa_mui.mui-25099, hyvinkaa_mui.mui-25159].</p></li>
+</ul>
+<p>Interpretation (separate from the direct observations above):</p>
+<ul>
+<li><p>The metadata in the retrieved records suggests that advertising involving women appears in both explicitly political/organisational contexts (1921) and in consumer, home, and clothing contexts in the 1950s–1960s. [werstas.we-1372484; ta_ah.ta-1369756; lahdenmuseo.lkm-461598; werstas.we-1613705, werstas.we-1613706, werstas.we-1613707; hyvinkaa_mui.mui-25099, hyvinkaa_mui.mui-25159].</p></li>
+<li><p>The 1950 record’s subjects indicate that references to women’s rights and cooperatives persisted into mid-century advertising metadata as well as the later consumer-oriented records. [ta_ah.ta-1369756; lahdenmuseo.lkm-461598; werstas.we-1613705, werstas.we-1613706, werstas.we-1613707; hyvinkaa_mui.mui-25099].</p></li>
+</ul>
+<p>Limitations and caution:</p>
+<ul>
+<li><p>The available evidence set is small and unevenly distributed across the four decades covered, so it is insufficient to support a general or definitive claim about broad changes in representations of women in Finnish advertising between 1920 and 1960. [werstas.we-1372484; ta_ah.ta-1369756; lahdenmuseo.lkm-461598; werstas.we-1613705, werstas.we-1613706, werstas.we-1613707; hyvinkaa_mui.mui-25099, hyvinkaa_mui.mui-25159].</p></li>
+<li><p>I have relied only on the supplied catalogue metadata; I have not assumed or described the visual or textual content beyond those metadata fields. [werstas.we-1372484; ta_ah.ta-1369756; lahdenmuseo.lkm-461598; werstas.we-1613705, werstas.we-1613706, werstas.we-1613707; hyvinkaa_mui.mui-25099, hyvinkaa_mui.mui-25159].</p></li>
+</ul>
+<p>Recommendation:</p>
+<ul>
+<li>To assess change over time with confidence, consult a larger sample of primary advertising images and their full catalog or item records (visual content and full descriptions) from each decade.</li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations (based only on the provided catalogue metadata):</p>
+<ul>
+<li><p>The 1921 record is titled “Mainos; ‘Me odotamme sinua’, Sosialidemokraattinen Työläisnaisliitto” and its subjects list advertisements, women’s organisations and political advertising [werstas.we-1372484].</p></li>
+<li><p>A 1950 poster record is catalogued as “Juliste; KK:n juliste 1950:195” with subjects including women’s rights movements, the cooperative system and advertising [ta_ah.ta-1369756].</p></li>
+<li><p>A record titled “Yhdistyneet Villatehtaat. Mainoskuva naisten arkiasusta vuodelta 1931.” is present with a year field of 1960 and subjects listing women, advertising and trousers [hyvinkaa_mui.mui-25159].</p></li>
+<li><p>A 1960 record “Villayhtymä Oy. Mainoskuva matkahuovasta.” has subjects including wool industry, textile industry, women, marketing and advertising photographs [hyvinkaa_mui.mui-25099].</p></li>
+<li><p>A 1955 record “Askon mainoskuva vuodelta 1955” lists subjects such as coffee cups, curtains, carpets and rugs, women, newspaper advertising, furniture and coffee culture [lahdenmuseo.lkm-461598].</p></li>
+<li><p>Three 1956 records titled “OTK:n paitatehtaan tuotemainos” list subjects including advertisements, advertising photographs, mannequins (occupations), women and shirts, and give a Helsinki address (Käenkuja 4) [werstas.we-1613705, werstas.we-1613706, werstas.we-1613707].</p></li>
+</ul>
+<p>Interpretation (separated from the above observations and based only on the cited metadata):</p>
+<ul>
+<li><p>The 1921 record’s metadata indicates a political advertisement connected to a women’s organisation, which contrasts with mid-20th-century records whose metadata emphasizes commercial products, textiles and domestic goods (examples: the 1955 Askon ad, the 1956 OTK shirt ads, and the 1960 textile/wool ads) [werstas.we-1372484, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, werstas.we-1613707, hyvinkaa_mui.mui-25099].</p></li>
+<li><p>The 1950 poster’s subjects (women’s rights movements; cooperative system; advertising) may indicate that gender and collective economic themes appear in advertising metadata at mid-century as well [ta_ah.ta-1369756].</p></li>
+</ul>
+<p>Limitations and caution (must be read alongside the items above):</p>
+<ul>
+<li><p>These statements are based only on catalogue metadata (titles, subjects, year fields) and do not confirm the actual visual or textual content of the items; the metadata should not be assumed to fully describe what appears in each image or poster [werstas.we-1372484, ta_ah.ta-1369756, hyvinkaa_mui.mui-25159, hyvinkaa_mui.mui-25099, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, werstas.we-1613707].</p></li>
+<li><p>The sample is small and selective; it is therefore insufficient to demonstrate a comprehensive or systematic change in representations of women across Finnish advertising between 1920 and 1960 [werstas.we-1372484, ta_ah.ta-1369756, hyvinkaa_mui.mui-25159, hyvinkaa_mui.mui-25099, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, werstas.we-1613707].</p></li>
+</ul>
+<p>If you would like, I can (a) list which records would be most useful to view to verify visual content, or (b) suggest search terms to retrieve more advertising items from 1920–1960 to support a broader analysis.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>A record titled “Yhdistyneet Villatehtaat. Mainoskuva naisten arkiasusta vuodelta 1931.” is present with the listed year 1960 and subjects including women, advertising, and trousers. [hyvinkaa_mui.mui-25159]</p></li>
+<li><p>A poster record “Juliste; KK:n juliste 1957:36” is present with the listed year 1957 and subjects including women, cooperative system, advertising, beauty care, and hygiene. [ta_ah.ta-1309443]</p></li>
+<li><p>Multiple Villayhtymä Oy records titled “Mainoskuva naisten leningistä.” are present with listed years 1959–1960 and subjects including textile industry, women, marketing, mannequins (occupations), and advertising. [hyvinkaa_mui.mui-27917; hyvinkaa_mui.mui-27808; hyvinkaa_mui.mui-27918; hyvinkaa_mui.mui-27977; hyvinkaa_mui.mui-27994; hyvinkaa_mui.mui-27969]</p></li>
+<li><p>One Villayhtymä record notes text on the reverse reading “Tuliunikko- villan.” [hyvinkaa_mui.mui-27969]</p></li>
+</ul>
+<p>Interpretation and limitations:</p>
+<ul>
+<li><p>The available records’ metadata indicate advertising items related to women’s clothing (dresses/leninki), trousers, and beauty/hygiene from the late 1950s and 1957, and a record whose title references 1931 catalogued in 1960, but the set is small and concentrated in the 1957–1960 period, so this sample is not sufficient to document changes across the full 1920–1960 period. [hyvinkaa_mui.mui-27917; hyvinkaa_mui.mui-27808; hyvinkaa_mui.mui-27918; hyvinkaa_mui.mui-27977; hyvinkaa_mui.mui-27994; hyvinkaa_mui.mui-27969; ta_ah.ta-1309443; hyvinkaa_mui.mui-25159]</p></li>
+<li><p>Because I must not assume catalogue metadata equals visual/textual content, I cannot describe how women were visually represented (poses, expressions, roles) from these records alone; the metadata only indicates topics and formats. [hyvinkaa_mui.mui-27917; ta_ah.ta-1309443; hyvinkaa_mui.mui-25159]</p></li>
+<li><p>Therefore, while the records suggest commercial advertising attention to women’s clothing and to beauty/hygiene in the late 1950s, the evidence is too limited to establish how representations of women changed across four decades (1920–1960) or to assert any broader trend. [hyvinkaa_mui.mui-27917; hyvinkaa_mui.mui-27918; hyvinkaa_mui.mui-27977; hyvinkaa_mui.mui-27994; hyvinkaa_mui.mui-27969; ta_ah.ta-1309443; hyvinkaa_mui.mui-25159]</p></li>
+</ul>
+<p>If you would like, I can: (a) request or search for additional records from earlier decades to compare, or (b) examine the images/text of any of these specific records to extract more detail (if access to the item images or full catalogue entries is available).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Women in advertising (asked in Finnish)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Tiivistelmä käytettävissä olevasta aineistosta: käytettävissä oleva Finna-kataloginäytteistö sisältää merkintöjä vuosilta 1930, 1950, 1955 ja 1958; nämä merkinnät ovat seuraavat tietueet: hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, hkm.26951127-913F-4D33-A100-68DEB634184A, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.57DF3D6C-088C-4C27-81AC-56905B3D097C, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E ja ta_ah.ta-1380177. [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, hkm.26951127-913F-4D33-A100-68DEB634184A, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.57DF3D6C-088C-4C27-81AC-56905B3D097C, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E, ta_ah.ta-1380177]</p>
+<p>Havaintoja (suoria katalogitiedoista):</p>
+<ul>
+<li><p>Katalogimerkintä, joka on merkitty “mainos, elokuvamainos, etiketti” ja koskee elokuvaa Niskavuoren naiset vuodelta 1930, on mukana aineistossa. [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2]</p></li>
+<li><p>Useat merkinnät liittyvät Osuusliike Elannon “NM eli Naiset mukaan” -toimintaan ja messu-/näyttelyosuuksiin 1950-luvulla, mukaan lukien mannekniinin esittely muotiin, nainen katselee muotia, näyttelyosastojen esittelyt sekä organisaation juhlien osastot. [hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.57DF3D6C-088C-4C27-81AC-56905B3D097C, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E]</p></li>
+<li><p>Yksi merkintä kuvailee tilannetta, jossa “neljä naista maistelee jotakin” Naiset Mukaan -toimintaan liittyvässä tapahtumassa Savonlinnassa vuonna 1958. [ta_ah.ta-1380177]</p></li>
+<li><p>Vuodelta 1950 on katalogimerkintä, joka mainostaa Vaunuteos Oy:n muunneltavia lastenvaunuja ja jossa metadataan on liitetty sanat “nainen”, “mainonta”, “lastenvaunut” ja vaate- ja jalkineaiheita. [hkm.26951127-913F-4D33-A100-68DEB634184A]</p></li>
+<li><p>Katalogitiedoissa toistuvia aiheita ovat mainonta, vaatteet/muoti, näyttelyt/messut, naiset ja kulutustuotteet. [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, hkm.26951127-913F-4D33-A100-68DEB634184A, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E, ta_ah.ta-1380177]</p></li>
+</ul>
+<p>Tulkintoja (erotettuna havainnoista, varauksin):</p>
+<ul>
+<li><p>Katalogitiedot viittaavat siihen, että näissä hakutuloksissa naisia esiintyy mainos- ja messukonteksteissa erityisesti muodin, kotitaloustuotteiden (esim. lastenvaunut, maistatustilaisuudet) ja osuustoiminnallisten näyttelyjen yhteydessä, mutta tämä perustuu ainoastaan saatuihin katalogimerkintöihin eikä kuvien tai mainostekstien analyysiin. [hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.26951127-913F-4D33-A100-68DEB634184A, ta_ah.ta-1380177, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07]</p></li>
+<li><p>Aineisto on kuitenkin hyvin rajallinen ja kattaa käytännössä vain yksittäisiä vuosikohteita 1930- ja 1950-luvuilta, joten näistä tiedoista ei voi tehdä laajempia tai mittavia johtopäätöksiä siitä, miten naisia yleisesti kuvattiin suomalaisissa mainoksissa vuosina 1920–1960. [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, hkm.26951127-913F-4D33-A100-68DEB634184A, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.57DF3D6C-088C-4C27-81AC-56905B3D097C, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E, ta_ah.ta-1380177]</p></li>
+</ul>
+<p>Rajoitukset ja menetelmähuomautus:</p>
+<ul>
+<li><p>Katalogitiedot eivät yksin kerro varmuudella kuvan visuaalisesta sisällöstä tai mainostekstien vivahteista, eikä katalogimetatietoa tule olettaa vastaavan kuva- tai tekstisisältöä ilman varsinaista kuvien tai mainosten tarkastelua.</p></li>
+<li><p>Saatu aineisto ei sisällä hakutietoja 1920-luvulta tai laajempaa otantaa 1940-luvulta, joten aikajaksosta 1920–1960 kattava analyysi edellyttää laajempaa aineistonhankintaa.</p></li>
+</ul>
+<p>Ehdotuksia jatkotoimiin:</p>
+<ul>
+<li><p>Hanki alkuperäiskuvat tai lehtileikkeet tiedostoista, joiden katalogimerkinnät on tässä listattu, jotta visuaalinen sisältö ja mainostekstit voidaan analysoida suoraan (kunkin merkinnän tunnisteet mainittu yllä). [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, hkm.26951127-913F-4D33-A100-68DEB634184A, hkm.9CA32185-6340-4B2E-9CD7-A3EF270BEC07, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.57DF3D6C-088C-4C27-81AC-56905B3D097C, hkm.C74DE4AD-E47C-411C-94A8-D619D28C986E, ta_ah.ta-1380177]</p></li>
+<li><p>Laajenna hakua arkistoihin ja sanomalehtien digikokoelmiin kattavamman otoksen saamiseksi vuosilta 1920–1960 ennen yleisten johtopäätösten tekemistä.</p></li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Havainnot (suorat metatietohavainnot):</p>
+<ul>
+<li><p>Tietueessa “mainos, elokuvamainos, etiketti; Niskavuoren naiset ohjaus Valentin Vaala” vuodelta 1930 on asiasanoina muun muassa käyttögrafiikka, mainonta ja mainokset; kuvauskenttä on merkitty NA [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2].</p></li>
+<li><p>Tietue “Naisten asema Suomessa v. 1935.” (1935) on luokiteltu aiheilla naisasialiikkeet, naisen asema, naiset ja mainokset [doria.10024_84710].</p></li>
+<li><p>Tietue “Sophie Adlersparre (Esselde)” (1923) on luokiteltu naisasialiikkeisiin ja mainoksiin [doria.10024_84667].</p></li>
+<li><p>Tietue “Naiset, rauhan ja vapauden puolesta!” (1938) on luokiteltu rauhanaatteeseen, kansalaistoimintaan ja mainoksiin [doria.10024_84171].</p></li>
+<li><p>Vuoden 1958 kuvailuissa on aineistoja, joissa mannekiini esittelee naisten muotia messuilla ja nainen katselee uusinta muotia; molempien tietueiden asiasanoina ovat vaatteet, messut, markkinointi ja mainonta [hkm.C24B377B-6054-4033-BE43-2165128E684B] [hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716].</p></li>
+<li><p>Kevätmessut‑tietue vuodelta 1948 on kuvailtu sisältävän messuja, markkinointia, mainoskuvia ja naisia [hkm.DA1B2743-6079-4E95-8A57-A9407A223682].</p></li>
+<li><p>Vuoden 1945 tietueessa mainokset liittyvät Jehovan todistajan esitelmää mainostavaan kulkueeseen; asiasanana mainokset [hkm.2C19A3BD-C679-4D63-9D59-BCD3A5EF8E8B].</p></li>
+</ul>
+<p>Tulkinnat ja rajaukset (eroteltu suoraan havainnoista):</p>
+<ul>
+<li><p>Metatiedot osoittavat, että näissä haetuissa tietueissa naisiin liittyvät mainosaiheet esiintyvät muun muassa muodin, messujen, naisasialiikkeen ja rauhantyön yhteyksissä [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, doria.10024_84710, doria.10024_84667, doria.10024_84171, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.DA1B2743-6079-4E95-8A57-A9407A223682].</p></li>
+<li><p>Metatiedoissa useissa tietueissa kuvauskenttä on merkitty NA, joten niiden perusteella ei ole riittävää näyttöä siitä, miten naiset visuaalisesti tai tekstuaalisesti esitettiin mainoksissa (sisällön tarkempi kuvailu puuttuu) [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, doria.10024_84710, doria.10024_84667, doria.10024_84171, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.DA1B2743-6079-4E95-8A57-A9407A223682, hkm.2C19A3BD-C679-4D63-9D59-BCD3A5EF8E8B].</p></li>
+<li><p>Koska aineisto on suppea ja metatiedot eivät paljasta visuaalista sisältöä, näiden tietueiden perusteella ei voi turvallisesti yleistää tai todentaa laajempaa trendiä siitä, miten naisia kuvattiin suomalaisissa mainoksissa vuosina 1920–1960 [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, doria.10024_84710, doria.10024_84667, doria.10024_84171, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.DA1B2743-6079-4E95-8A57-A9407A223682, hkm.2C19A3BD-C679-4D63-9D59-BCD3A5EF8E8B].</p></li>
+</ul>
+<p>Ehdotukset jatkotutkimukselle:</p>
+<ul>
+<li><p>Tarkista alkuperäiset kuvailusivut ja mahdolliset kuvat tai skannaukset kunkin tietueen Finna‑sivulla (linkit ja tunnukset löytyvät kustakin tietueesta) ennen visuaalisten johtopäätösten tekemistä [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, doria.10024_84710, doria.10024_84667, doria.10024_84171, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.DA1B2743-6079-4E95-8A57-A9407A223682, hkm.2C19A3BD-C679-4D63-9D59-BCD3A5EF8E8B].</p></li>
+<li><p>Laajenna hakua ja kartoita lisää mainos‑, muoti‑ ja lehtiaineistoja 1920–1960‑vuosilta, jotta mahdolliset kuvalliset ja tekstuaaliset kuvastot voidaan analysoida luotettavammin (tässä vastaus perustuu vain yllä lueteltuihin tietueisiin) [hkm.DCEBE6FC-A3D9-48C4-9BC5-06976202ECA2, doria.10024_84710, doria.10024_84667, doria.10024_84171, hkm.C24B377B-6054-4033-BE43-2165128E684B, hkm.E44F0E6E-A905-42DD-BC4E-DA3013B6B716, hkm.DA1B2743-6079-4E95-8A57-A9407A223682, hkm.2C19A3BD-C679-4D63-9D59-BCD3A5EF8E8B].</p></li>
+</ul>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Vastaan ainoastaan annettuihin tietueisiin perustuen. [ta_ah.ta-1595150, lahdenmuseo.lkm-381533, werstas.we-1372484, werstas.we-1613707, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, lahdenmuseo.lkm-381387]</p>
+<p>Havainnot (vain katalogimerkintöjen tiedot):</p>
+<ul>
+<li><p>Katalogimerkinnöissä esiintyy naisten asema ja naiset asiasanoina useissa tietueissa. [ta_ah.ta-1595150, lahdenmuseo.lkm-381533, werstas.we-1613707, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, lahdenmuseo.lkm-381387]</p></li>
+<li><p>Kotityöhön ja puhtauteen liittyvät asiasanat esiintyvät ainakin kahdessa mainostietueessa vuodelta 1950 ja 1960. [lahdenmuseo.lkm-381387, lahdenmuseo.lkm-381533]</p></li>
+<li><p>Kotiin ja kahvikulttuuriin liittyviä asiasanoja esiintyy eräässä 1955 mainoskuvassa. [lahdenmuseo.lkm-461598]</p></li>
+<li><p>Vaatetukseen ja tuotemainontaan liittyviä tietueita (paitatehtaan mainoksia, mallinukkeihin viittaavia asiasanoja) on kolmessa 1956 tietueessa. [werstas.we-1613705, werstas.we-1613706, werstas.we-1613707]</p></li>
+<li><p>Yksi varhaisempi mainos vuodelta 1921 liittyy naisjärjestöön ja poliittiseen mainontaan. [werstas.we-1372484]</p></li>
+<li><p>Yksi juliste vuodelta 1949 on luokiteltu avunantoon ja hyväntekeväisyyteen liittyväksi. [ta_ah.ta-1595150]</p></li>
+</ul>
+<p>Tulkinta (erillään havaintoista):</p>
+<ul>
+<li><p>Katalogimerkintöjen perusteella naisia näyttäisi olevan liitettyinä sekä kotitalouteen ja puhtauteen, että tuotemainontaan, poliittiseen toimintaan ja hyväntekeväisyyteen näissä tietueissa. [ta_ah.ta-1595150, lahdenmuseo.lkm-381533, lahdenmuseo.lkm-381387, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, werstas.we-1613707, werstas.we-1372484]</p></li>
+<li><p>Huomioitavaa on, että tulkinta perustuu vain katalogiasiasanoihin eikä varmistettuun visuaaliseen tai tekstuaaliseen sisältöön; katalogiasiasanat eivät välttämättä vastaa sitä, miten kuva tai teksti esittää naisen. [ta_ah.ta-1595150, lahdenmuseo.lkm-381533, werstas.we-1372484, werstas.we-1613707, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, lahdenmuseo.lkm-381387]</p></li>
+</ul>
+<p>Rajoitukset:</p>
+<ul>
+<li>Saatavilla olevat tietueet muodostavat rajallisen otoksen vuosilta 1920–1960, eivätkä nämä yksittäiset tietueet riitä yleistyksiin koko aikakauden mainoskuvauksista. [ta_ah.ta-1595150, lahdenmuseo.lkm-381533, werstas.we-1372484, werstas.we-1613707, lahdenmuseo.lkm-461598, werstas.we-1613705, werstas.we-1613706, lahdenmuseo.lkm-381387]</li>
+</ul>
+<p>Jos haluat, voin auttaa järjestämään nämä havainnot taulukoksi, etsimään lisää tietueita tai tulkitsemaan yksittäisen mainoksen sisältöä, mikäli saatavilla on kuva tai täydellinen tekstikuvaus.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Emigrant letters
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations (from the retrieved catalogue records):</p>
+<ul>
+<li><p>The record titled “Till Nya Världen, Norra Amerika / To The New World, North America : Utvandrare från Leksand, Djura, Ål, Siljansnäs 1850-1930” is dated 1930 and its subjects include terms for letters, emigration, North America, reasons for emigration, and sea voyage; the record identifier is utu.9918644965405971 [utu.9918644965405971].</p></li>
+<li><p>The record “ÖTA 180 Brev från 1899” is dated 1899 and its subjects include letters, correspondence, migration, and photographs; the record identifier is sls.%C3%96TA+180 [sls.%C3%96TA+180].</p></li>
+<li><p>The record “ÖTA 394 Irene och Viktor Erikssons arkiv‎ (1930–1970)” is dated 1930 (start) and its subjects include letters, emigrants, emigration, correspondence, postcards, death notices, and relatives; the record identifier is sls.%C3%96TA+394 [sls.%C3%96TA+394].</p></li>
+<li><p>The record “ÖTA 213 Hjördis Sjöbergs arkiv‎ (1907–1975)” is dated 1907 (start) and its subjects include library, letters, migration, teacher training and schooling, sociability, youth, emigrants, and emigration; the record identifier is sls.%C3%96TA+213 [sls.%C3%96TA+213].</p></li>
+<li><p>The record “A Silvan Tomkins Handbook Foundations for Affect Theory” is dated 1895 and its subject is affect (psychology); the record identifier is samk.991385868605968 [samk.991385868605968].</p></li>
+</ul>
+<p>Interpretation (separate from the above direct catalogue observations):</p>
+<ul>
+<li><p>The retrieved metadata indicate that there are catalogue records describing letters and correspondence connected to migration and emigration to North America in the late nineteenth and early twentieth centuries in these collections [utu.9918644965405971; sls.%C3%96TA+180; sls.%C3%96TA+394; sls.%C3%96TA+213].</p></li>
+<li><p>However, the retrieved records as presented here do not explicitly identify Finnish emigration or Finnish-language emigrant letters for the period 1870–1930 in their visible metadata [utu.9918644965405971; sls.%C3%96TA+180; sls.%C3%96TA+394; sls.%C3%96TA+213; samk.991385868605968].</p></li>
+</ul>
+<p>Evidence limitations and next steps:</p>
+<ul>
+<li><p>The available evidence is insufficient to answer how Finnish emigration to North America is documented specifically in emigrant letters between 1870 and 1930, because none of the retrieved catalogue entries explicitly name Finland or Finnish-language letters for that period and catalogue metadata alone does not confirm the textual content of the items [utu.9918644965405971; sls.%C3%96TA+180; sls.%C3%96TA+394; sls.%C3%96TA+213; samk.991385868605968].</p></li>
+<li><p>To answer the question more fully, locate and examine catalogue records or item-level descriptions from collections that explicitly collect Finnish emigrant correspondence from 1870–1930 and, where possible, inspect the letters themselves or detailed finding aids (the present records do not provide that level of content detail) [utu.9918644965405971; sls.%C3%96TA+180; sls.%C3%96TA+394; sls.%C3%96TA+213; samk.991385868605968].</p></li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations (from the catalogue records)</p>
+<ul>
+<li><p>A catalogue item titled “Brev från 1899” is described with the subjects “brev; brevväxling; migration; fotografier” and dated 1899 [sls.%C3%96TA+180].</p></li>
+<li><p>The archive “ÖTA 394 Irene och Viktor Erikssons arkiv (1930–1970)” is catalogued with subjects including “brev; utvandrare; utvandring; brevväxling; postkort; dödsannonser; släktingar” and has material beginning in 1930 [sls.%C3%96TA+394].</p></li>
+<li><p>The archive “ÖTA 213 Hjördis Sjöbergs arkiv (1907–1975)” is catalogued with subjects including “brev; migration; utvandrare; utvandring” and begins in 1907 [sls.%C3%96TA+213].</p></li>
+<li><p>A 1930 record “Till Nya Världen, Norra Amerika / To The New World, North America : Utvandrare …” lists “kirjeet” (letters) among its subjects and covers the period 1850–1930 in its title/description [utu.9918644965405971].</p></li>
+<li><p>A 1914 group photograph item is catalogued with subjects including “postcards; relatives; Finnish Americans; migrants; Chicago; Yhdysvallat” (but this is a photograph, not explicitly a letter) [lahdenmuseo.lkm-214297].</p></li>
+<li><p>A 1928 edition record concerning Karl Ax. Gottlund and J. Boëthii is catalogued with subjects such as “brev.; brevväxling.; … metsäsuomalaiset.; skogsfinnar.;” [helka.9910803783506253].</p></li>
+</ul>
+<p>Interpretation and limitations (separate from direct catalogue observations)</p>
+<ul>
+<li><p>These catalogue entries indicate that archival collections and at least one exhibition record include letters or correspondence related to migration and emigrants, and that some of those collections cover years within the 1870–1930 range (for example 1899, 1907–1930, and an 1850–1930 exhibition range) [sls.%C3%96TA+180][sls.%C3%96TA+213][sls.%C3%96TA+394][utu.9918644965405971].</p></li>
+<li><p>The available catalogue metadata does not provide the texts of the emigrant letters themselves, so the specific contents, themes, languages, senders/recipients, or narrative framings of Finnish emigration to North America as expressed in those letters cannot be determined from these records alone [sls.%C3%96TA+180][sls.%C3%96TA+213][sls.%C3%96TA+394][utu.9918644965405971][helka.9910803783506253][lahdenmuseo.lkm-214297].</p></li>
+<li><p>Because the retrieval consists only of catalogue entries and a few archival descriptions, the evidence is insufficient to describe patterns or trends in how emigrant letters documented Finnish emigration to North America between 1870 and 1930 [sls.%C3%96TA+180][sls.%C3%96TA+213][sls.%C3%96TA+394][utu.9918644965405971].</p></li>
+</ul>
+<p>Suggested next steps (based on the records found)</p>
+<ul>
+<li><p>To analyze how Finnish emigration to North America is documented in emigrant letters, request access to the letter collections or full archival descriptions for the listed ÖTA archives and the 1930 “To The New World” item and examine the letters’ transcriptions or originals for content, dates, correspondents, and locations [sls.%C3%96TA+180][sls.%C3%96TA+213][sls.%C3%96TA+394][utu.9918644965405971].</p></li>
+<li><p>Use the Lahti Museum photograph record as contextual material for Finnish American communities (e.g., Chicago, 1914), while noting that it is photographic material, not letter text, and so can only provide visual/social context unless related correspondence is held with it [lahdenmuseo.lkm-214297].</p></li>
+</ul>
+<p>Summary</p>
+<ul>
+<li>The catalogue records show the existence of letter collections and archival fonds connected with migration and emigrants within the period of interest, but the provided metadata does not allow reading or detailed analysis of the emigrant letters themselves, so substantive conclusions about how Finnish emigration to North America is documented in those letters cannot be drawn from these records alone [sls.%C3%96TA+180][sls.%C3%96TA+213][sls.%C3%96TA+394][utu.9918644965405971][lahdenmuseo.lkm-214297][helka.9910803783506253].</li>
+</ul>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations (from the supplied catalogue records and descriptions):</p>
+<ul>
+<li><p>A record titled “Brev från 1899” is described with the subjects “brev; brevväxling; migration; fotografier” and is dated 1899 [sls.%C3%96TA+180].</p></li>
+<li><p>The Knuutman collection (1900–1921) is catalogued with subjects including “kirjeenvaihto”, “siirtolaiset”, “Yhdysvallat” and place names such as Medicine Bow and Raymond, indicating correspondence connected to Finnish migrants in the United States [siirtolaisuusinstituutti.353].</p></li>
+<li><p>An item or exhibition record “Till Nya Världen, Norra Amerika / To The New World, North America” covering emigrants 1850–1930 lists “kirjeet” among its subjects [utu.9918644965405971].</p></li>
+<li><p>Hjördis Sjöbergs arkiv (1907–1975) is catalogued with subjects including “brev” and “utvandrare” [sls.%C3%96TA+213].</p></li>
+<li><p>Irene och Viktor Erikssons arkiv (1930–1970) is catalogued with subjects including “brev” and “utvandring/utvandrare” and has an entry dated 1930 [sls.%C3%96TA+394].</p></li>
+<li><p>A 1928 item concerning Karl Ax. Gottlund and prosten J. Boëthius lists “brev.” and “kirjeenvaihto” among its subjects and relates to ethnological study of Finnish forest Finns (metsäsuomalaiset) [helka.9910803783506253].</p></li>
+<li><p>A 1929 photograph is described as showing a group on a shore “Käynnissä todennäköisesti kirjeiden kirjoitus kotiväelle,” linking a visual record to the act of writing letters home and to expatriate Finns in Canada [siirtolaisuusmuseo_ah.ssm-1450158].</p></li>
+<li><p>A 1914 family group postcard is catalogued with subjects including “postcards”, “Finnish Americans”, “Chicago”, and “migrants” [lahdenmuseo.lkm-214297].</p></li>
+</ul>
+<p>Interpretation and limits of the evidence:</p>
+<ul>
+<li><p>The metadata in these records indicates that letters and correspondence form part of archival documentation related to Finnish emigration to North America, appearing in personal archives, a thematic exhibition, and in at least one photograph described as showing letter-writing [sls.%C3%96TA+180] [siirtolaisuusinstituutti.353] [utu.9918644965405971] [sls.%C3%96TA+213] [sls.%C3%96TA+394] [helka.9910803783506253] [siirtolaisuusmuseo_ah.ssm-1450158] [lahdenmuseo.lkm-214297].</p></li>
+<li><p>The supplied records do not include the letter texts, transcriptions, or item-level content in their descriptions, so the evidence is insufficient to describe the letters’ contents, languages, recurring themes, sender/recipient networks, or how those elements changed between 1870 and 1930 [sls.%C3%96TA+180] [siirtolaisuusinstituutti.353] [utu.9918644965405971] [sls.%C3%96TA+213] [sls.%C3%96TA+394] [helka.9910803783506253] [siirtolaisuusmuseo_ah.ssm-1450158] [lahdenmuseo.lkm-214297].</p></li>
+<li><p>Because only a small set of catalogue records and one photograph caption are available here, it is not possible to establish trends or make general claims about the nature of emigrant letters across the full 1870–1930 period from this evidence alone [sls.%C3%96TA+180] [siirtolaisuusinstituutti.353] [utu.9918644965405971] [sls.%C3%96TA+213] [sls.%C3%96TA+394] [helka.9910803783506253] [siirtolaisuusmuseo_ah.ssm-1450158] [lahdenmuseo.lkm-214297].</p></li>
+</ul>
+<p>If you want to proceed further (noting that this goes beyond the supplied evidence), the next step would be to consult the full catalogue entries and the actual letter texts or archival finding aids at the holding institutions named in these records to analyze content, frequency, and correspondence networks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Civil War prison camps
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations (metadata from the retrieved Finna records):</p>
+<ul>
+<li><p>A record titled “Piirustus vankileiriltä. Kuvan piirtänyt Arvo August Lång?” (1918) lists subjects “prison camps; civil wars.” [ta_ah.ta-1198629]</p></li>
+<li><p>A record titled “Tuomaritoimiston edusta. Vas. rovasti Urho Valtari, joka luovutti Riihimäen vankileiristä kertovan kuvasarjan 1946. Muita ei ole tunnistettu.” (1918) lists subjects “civil wars; prison camps.” [ta_ah.ta-1288006]</p></li>
+<li><p>A record titled “Tampereen sotavankilan henkilökuntaa syksyllä 1918. Taustalla kasarmeja ja piikkilanka-aitaa.” (1918) lists subjects “civil wars; prison camps; Tampere, Kalevankangas.” [werstas.we-1225674]</p></li>
+<li><p>A record titled “Tampereen sotavankila, henkilökunta poseeraa kasarmirakennuksen ja piikkilanka-aidan edessä.” (1918) lists subjects “civil wars; prison camps; Tampere, Kalevankangas.” [werstas.we-1225675]</p></li>
+<li><p>A record titled “Vankilan kanslia kanslia-apulaisineen.” (1918) lists subjects “prison camps; civil wars.” [ta_ah.ta-1287993]</p></li>
+<li><p>A record titled “Tammisaaren vankileiri, yleiskuva leirin rakennuksista.” (1918) lists subjects “civil wars; prison camps.” [ta_ah.ta-98815]</p></li>
+<li><p>A record titled “Tammisaaren vankileiri, punavankeja marssii piikkilanka-aidan takana.” (1918) lists subjects “civil wars; prison camps.” [ta_ah.ta-98816]</p></li>
+<li><p>A record titled “Riihimäen vankileiri. Vankien tunnistajia.” (1918) lists subjects “civil wars; prison camps.” [ta_ah.ta-1287999]</p></li>
+</ul>
+<p>Interpretation and limits of the evidence:</p>
+<ul>
+<li><p>The retrieved Finna records above reference prison camps of the Finnish Civil War in their titles and/or subject metadata, as shown in the cited records [ta_ah.ta-1198629, ta_ah.ta-1288006, werstas.we-1225674, werstas.we-1225675, ta_ah.ta-1287993, ta_ah.ta-98815, ta_ah.ta-98816, ta_ah.ta-1287999].</p></li>
+<li><p>The available evidence is insufficient to identify institutional collection names (beyond these Finna records) or to say which archives or museums formally hold the wider collections these items may belong to [ta_ah.ta-1198629, ta_ah.ta-1288006, werstas.we-1225674, werstas.we-1225675, ta_ah.ta-1287993, ta_ah.ta-98815, ta_ah.ta-98816, ta_ah.ta-1287999].</p></li>
+<li><p>I cannot assume the catalogue metadata fully describes the visual or textual content of the items; the statements above are based on the titles and subjects provided in the records [ta_ah.ta-1198629, ta_ah.ta-1288006, werstas.we-1225674, werstas.we-1225675, ta_ah.ta-1287993, ta_ah.ta-98815, ta_ah.ta-98816, ta_ah.ta-1287999].</p></li>
+</ul>
+<p>If you want, I can list the records again with their Finna URLs or help search for institutional collection names outside the current evidence.</p>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The Finna record titled “Naisvankeja tuodaan Tammisaaren vankileirille? Omaiset vierailulla vankileirillä?” (1918) has subjects including Reds (Finnish civil war), red guards, Finnish Civil War, prisoners, prisoners of war, civil wars, and prison camps [ta_ah.ta-98814].</p></li>
+<li><p>The Finna record titled “Riihimäen Kormun vankileiri. Miehet ryhmäkuvassa, taustalla piikkilanka-aita.” (1918) has subjects including prison camps, prisoners of war, civil wars, and barbed wire [kansa_ah.ka-86707].</p></li>
+<li><p>The Finna record titled “Santahaminan vankileiri 1918; Santahamina prison camp 1918” (1918) has subjects including Finnish civil war, prisoner camp, prisoners, prison camps, and prisoners of war [museovirasto.a93bc7a2-6aab-489a-adfb-57bce0394896].</p></li>
+<li><p>The Finna record titled “Kuvan takana teksti: ‘Yrjö Matinmäki 27-vuotiaana otettu kuva viisi päivää sen jälkeen kun pääsi vankileiriltä’.” (1918) has subjects including prison camps, prisoners of war, and civil wars [ta_ah.ta-1476411].</p></li>
+<li><p>The Finna record titled “Vankeja Riihimäen vankileirillä.” (1918) has subjects including prisoners of war, red guards, prison camps, prisoners, and civil wars [ta_ah.ta-1237121].</p></li>
+<li><p>The Finna record titled “Punavankeja kuljetetaan parijonossa. Vangit matkalla Viaporiin. Aseistautunut vartija seuraa sivussa.” (1918) has subjects including prison camps, prisoners of war, civil wars, and red guards [kansa_ah.ka-78334].</p></li>
+<li><p>The Finna record titled “Riihimäen vankileirin punakaartilaisvankeja ryhmäkuvassa Lopen tiilitehtaan mäessä.” (1919) has subjects including prison camps, prisoners of war, civil wars, and red guards [kansa_ah.ka-77348].</p></li>
+<li><p>The Finna record titled “Riihimäen vankilan punavankeja ryhmäkuvassa rakennustyömaan edustalla. Vangit olivat pakkotyössä Riihimäen lähettyvillä.” (1918) has subjects including prison camps, prisoners of war, civil wars, and red guards [kansa_ah.ka-83553].</p></li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>The retrieved Finna records above are catalogued with subjects that associate them with prison camps and prisoners from the 1918 Finnish Civil War, which indicates these records document aspects of prison camps in that conflict [ta_ah.ta-98814, kansa_ah.ka-86707, museovirasto.a93bc7a2-6aab-489a-adfb-57bce0394896, ta_ah.ta-1476411, ta_ah.ta-1237121, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553].</li>
+</ul>
+<p>Evidence limitations:</p>
+<ul>
+<li><p>The supplied metadata entries do not provide enough information to identify the larger institutional collections or holding archives beyond the record identifiers and the generic “Finna” source, so the evidence is insufficient to state which named collections (e.g., specific archives or museums) hold these items [ta_ah.ta-98814, kansa_ah.ka-86707, museovirasto.a93bc7a2-6aab-489a-adfb-57bce0394896, ta_ah.ta-1476411, ta_ah.ta-1237121, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553].</p></li>
+<li><p>The available metadata should not be taken as a substitute for examining the items themselves, so I cannot confirm visual or textual content beyond the catalogue subjects and titles supplied here [ta_ah.ta-98814, kansa_ah.ka-86707, museovirasto.a93bc7a2-6aab-489a-adfb-57bce0394896, ta_ah.ta-1476411, ta_ah.ta-1237121, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553].</p></li>
+</ul>
+<p>If you would like, I can summarize these records in a different format or help request full item-level details or holding information from Finna based on these record identifiers.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations — individual Finna records (title, year, subjects, URL as given):</p>
+<p>Record ta_ah.ta-98814: Title “Naisvankeja tuodaan Tammisaaren vankileirille? Omaiset vierailulla vankileirillä?”, Year 1918, Subjects: Reds (Finnish civil war); red guards; Finnish Civil War; prisoners; prisoners of war; civil wars; prison camps; URL: https://finna.fi/Record/ta_ah.ta-98814 [ta_ah.ta-98814].</p>
+<p>Record kansa_ah.ka-77340: Title “Punavankeja Riihimäen vankileirillä Lopen siirtolassa, todennäköisesti Santamäen tiilitehtaalla.”, Year 1920, Subjects: prison camps; prisoners of war; civil wars; red guards; URL: https://finna.fi/Record/kansa_ah.ka-77340 [kansa_ah.ka-77340].</p>
+<p>Record kansa_ah.ka-78334: Title “Punavankeja kuljetetaan parijonossa. Vangit matkalla Viaporiin. Aseistautunut vartija seuraa sivussa.”, Year 1918, Subjects: prison camps; prisoners of war; civil wars; red guards; URL: https://finna.fi/Record/kansa_ah.ka-78334 [kansa_ah.ka-78334].</p>
+<p>Record kansa_ah.ka-77348: Title “Riihimäen vankileirin punakaartilaisvankeja ryhmäkuvassa Lopen tiilitehtaan mäessä.”, Year 1919, Subjects: prison camps; prisoners of war; civil wars; red guards; URL: https://finna.fi/Record/kansa_ah.ka-77348 [kansa_ah.ka-77348].</p>
+<p>Record kansa_ah.ka-83553: Title “Riihimäen vankilan punavankeja ryhmäkuvassa rakennustyömaan edustalla. Vangit olivat pakkotyössä Riihimäen lähettyvillä.”, Year 1918, Subjects: prison camps; prisoners of war; civil wars; red guards; URL: https://finna.fi/Record/kansa_ah.ka-83553 [kansa_ah.ka-83553].</p>
+<p>Record kansa_ah.ka-77159: Title “Vangittuja punakaartilaisia nuotion ääressä. Sangossa keitetään ruokaa. Ihmiset istuvat nuotioiden ympärillä. Taustalla hevosia. Fellmanin pelto.”, Year 1918, Subjects: prison camps; prisoners of war; civil wars; red guards; URL: https://finna.fi/Record/kansa_ah.ka-77159 [kansa_ah.ka-77159].</p>
+<p>Record kansa_ah.ka-86707: Title “Riihimäen Kormun vankileiri. Miehet ryhmäkuvassa, taustalla piikkilanka-aita.”, Year 1918, Subjects: prison camps; prisoners of war; civil wars; barbed wire; URL: https://finna.fi/Record/kansa_ah.ka-86707 [kansa_ah.ka-86707].</p>
+<p>Record ta_ah.ta-1584658: Title “Saksan Itämeren-divisioona Helsingissä, Töölön sokeritehtaan pihalla punaisia vankeja.”, Year 1918, Subjects: Whites (Finnish civil war); prisoners of war; sugar industry; civil wars; Germans; Reds (Finnish civil war); URL: https://finna.fi/Record/ta_ah.ta-1584658 [ta_ah.ta-1584658].</p>
+<p>Interpretation and limitations:</p>
+<p>The set of Finna catalogue records above references prison camps and prisoners in the context of the Finnish Civil War as reflected in their titles and subject metadata, including references to Tammisaari, Riihimäki (Kormu), transports to Viapori, and an entry mentioning the German Baltic Division in Helsinki [ta_ah.ta-98814, kansa_ah.ka-77340, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553, kansa_ah.ka-77159, kansa_ah.ka-86707, ta_ah.ta-1584658].</p>
+<p>The available evidence is limited to the provided catalogue metadata (titles, subjects, years, and URLs) and does not by itself confirm the visual or textual contents of the items or the holding institution beyond these Finna entries [ta_ah.ta-98814, kansa_ah.ka-77340, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553, kansa_ah.ka-77159, kansa_ah.ka-86707, ta_ah.ta-1584658].</p>
+<p>Therefore the evidence is insufficient to determine, from these records alone, the exact institutional collections (archives or museums) that hold the original materials or to provide detailed item content descriptions; consult each Finna record via the provided URLs for further repository and item-level information [ta_ah.ta-98814, kansa_ah.ka-77340, kansa_ah.ka-78334, kansa_ah.ka-77348, kansa_ah.ka-83553, kansa_ah.ka-77159, kansa_ah.ka-86707, ta_ah.ta-1584658].</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Temperance posters
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The retrieved items are six educational posters (Valistustaulu) dated 1920 [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>The catalogue records list subjects for these items as alcohol education, temperance movement, school posters (study material), prohibition acts, and temperance education [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>The titles in the records refer to specific themes such as Juovutusjuomat ja kuolevaisuus; Alkoholi ja perinnöllisyys; Juovutusjuomat ja koulutyö; Juovutusjuomat ja tapaturmat; Juovutusjuomat ja rikollisuus; and Alkoholin kulutus eri maissa [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+</ul>
+<p>Interpretation (based on the records’ metadata and titles):</p>
+<ul>
+<li><p>The presence of school‑labelled posters with temperance and alcohol‑education subjects suggests that temperance promotion in 1920 included educational materials aimed at schools or instruction contexts [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>The variety of themes named in the titles (mortality, heredity, schooling, accidents, crime, and international consumption) suggests that messaging addressed multiple alleged harms of alcohol to argue for temperance or prohibition policies [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>I do not assert specific visual or textual claims about the posters beyond their catalogue titles and subjects; the interpretation above is drawn from those metadata fields and titles rather than direct examination of item content [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li><p>These six records are all dated 1920 and comprise a small, narrow sample, so the evidence is insufficient to describe how the temperance movement was promoted across the entire period 1880–1930 [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>Because the dataset is limited, I cannot claim broader trends or the full range of promotion strategies used in Finland between 1880 and 1930 based on these items alone [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+</ul>
+<p>If you want a fuller answer for 1880–1930, additional evidence from other years and other types of sources (newspapers, society pamphlets, organisational records, legislation texts, and visual examples from different decades) would be needed; the current records document only school‑labelled temperance posters from 1920 [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations (based on the supplied catalogue records):</p>
+<ul>
+<li><p>Record werstas.we-1418725 is titled “Valistustaulu; Juovutusjuomat ja kuolevaisuus -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418725].</p></li>
+<li><p>Record werstas.we-1418727 is titled “Valistustaulu; Alkoholi ja perinnöllisyys -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418727].</p></li>
+<li><p>Record werstas.we-1418712 is titled “Valistustaulu; Juovutusjuomat ja koulutyö -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418712].</p></li>
+<li><p>Record werstas.we-1418723 is titled “Valistustaulu; Juovutusjuomat ja tapaturmat -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418723].</p></li>
+<li><p>Record werstas.we-1418747 is titled “Valistustaulu; Juovutusjuomat ja rikollisuus -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418747].</p></li>
+<li><p>Record werstas.we-1418699 is titled “Valistustaulu; Alkoholin kulutus eri maissa -opetustaulu” and its catalogue subjects include alcohol education; temperance movement; school posters (study material); prohibition acts; temperance education [werstas.we-1418699].</p></li>
+<li><p>All six records are dated 1920 in their catalogue entries [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>The description field for these records is given as “NA” in the supplied evidence (no further descriptive text was provided) [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+</ul>
+<p>Interpretation and limits of the evidence:</p>
+<ul>
+<li><p>The catalogue subjects and titles indicate that temperance-related educational posters (Valistustaulu) addressed topics such as alcohol and mortality, alcohol and heredity, alcohol and school/work, alcohol and accidents, alcohol and crime, and international comparisons of alcohol consumption, which suggests school-based alcohol education was one mode of promotion documented here in 1920 [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>Because the supplied records are all from a single year (1920) and only six items are provided, the evidence is insufficient to characterize how the temperance movement was promoted across the whole period 1880–1930 or to establish broader trends over time [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+<li><p>The catalogue entries list subjects but the descriptions are NA, and I must not assume the catalogue metadata fully describes the visual or textual content of the items; therefore the supplied evidence is insufficient to report the posters’ exact arguments, imagery, authorship, target audiences, distribution, or impact [werstas.we-1418725, werstas.we-1418727, werstas.we-1418712, werstas.we-1418723, werstas.we-1418747, werstas.we-1418699].</p></li>
+</ul>
+<p>If you want more detail, you could request images or full catalogue descriptions for these specific records or ask for additional records from other years to support conclusions about 1880–1930.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The retrieved items are titled “Juliste” (poster) and are dated between 1925 and 1930: ta_ah.ta-1407740 (1925), ta_ah.ta-1407410 (1926), ta_ah.ta-1407406 (1927), ta_ah.ta-1407408 (1927), ta_ah.ta-1405998 (1928), ta_ah.ta-1408263 (1929), ta_ah.ta-1408231 (1930), and ta_ah.ta-1406546 (1930) [ta_ah.ta-1407740, ta_ah.ta-1407410, ta_ah.ta-1407406, ta_ah.ta-1407408, ta_ah.ta-1405998, ta_ah.ta-1408263, ta_ah.ta-1408231, ta_ah.ta-1406546].</p></li>
+<li><p>The catalogue subject headings assigned to these posters include temperance movements, temperance education, youth organisations, prohibition acts, general elections, celebrations, and people’s houses (community halls) as shown in the individual records [ta_ah.ta-1407740, ta_ah.ta-1407410, ta_ah.ta-1407406, ta_ah.ta-1407408, ta_ah.ta-1405998, ta_ah.ta-1408263, ta_ah.ta-1408231, ta_ah.ta-1406546].</p></li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li><p>The available posters indicate that temperance promotion in the late 1920s was associated, at least in these items, with public-facing formats (posters) and linked temperance to education, youth work, prohibition legislation, electoral matters, celebrations, and community halls, as reflected in the subject headings of the records [ta_ah.ta-1407740, ta_ah.ta-1407410, ta_ah.ta-1407406, ta_ah.ta-1407408, ta_ah.ta-1405998, ta_ah.ta-1408263, ta_ah.ta-1408231, ta_ah.ta-1406546].</p></li>
+<li><p>These interpretations are constrained because the catalogue entries supply subjects but do not by themselves provide the visual or textual content of the posters, so they cannot show exact messaging, wording, imagery, distribution, or reception [ta_ah.ta-1407740, ta_ah.ta-1407410, ta_ah.ta-1407406, ta_ah.ta-1407408, ta_ah.ta-1405998, ta_ah.ta-1408263, ta_ah.ta-1408231, ta_ah.ta-1406546].</p></li>
+<li><p>The evidence is insufficient to describe how the temperance movement was promoted across the entire period 1880–1930 because the retrieved records cover only 1925–1930 and are limited to posters [ta_ah.ta-1407740, ta_ah.ta-1407410, ta_ah.ta-1407406, ta_ah.ta-1407408, ta_ah.ta-1405998, ta_ah.ta-1408263, ta_ah.ta-1408231, ta_ah.ta-1406546].</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sámi handicrafts
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Summary: Based on the eight retrieved catalogue records, Sámi handicrafts appear as an indexed subject across multiple Finnish heritage records [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</p>
+<p>Direct observations</p>
+<ul>
+<li><p>The set contains eight catalogue records with titles explicitly referencing Sámi handicraft or related terms such as “duodji,” “garraduodji,” and “Sami ornaments” [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</p></li>
+<li><p>The records span publication or catalogue years from 1982 through 2024 as given in their metadata [oy.999476803906252] [arto.012582898] [arto.015339633] [arto.014351367] [lapinkirjasto.667124] [lapinkirjasto.1196130] [oy.9915402633906252] [aipa.node-5458].</p></li>
+<li><p>Subject terms in the records explicitly include duodji (Sámi handicraft), traditional handicrafts and folk art, and ornamentation (koristetaide) in several entries [arto.014351367] [oy.9915402633906252] [oy.999476803906252] [arto.015339633] [lapinkirjasto.1196130].</p></li>
+<li><p>Some catalogue subjects list materials and techniques such as bone and wood work (luu; puu; boneworks; woodwork) in at least two records [lapinkirjasto.1196130] [aipa.node-5458].</p></li>
+<li><p>Educational and vocational contexts are present in the metadata of some records, including references to vocational training, textbooks, and secondary education [arto.012582898] [lapinkirjasto.667124].</p></li>
+<li><p>At least one record includes gendered subject indexing (women) alongside handicraft tradition [arto.015339633].</p></li>
+<li><p>One record title is explicitly multilingual (Sámi duodji = Sami handicraft = Samisk slöjd), and other records use English or multilingual titling in their catalogue entries [oy.999476803906252] [arto.014351367].</p></li>
+</ul>
+<p>Interpretation and limits</p>
+<ul>
+<li><p>These catalogue entries suggest that Finnish heritage cataloguing for Sámi handicrafts includes thematic indexing for duodji, materials/techniques (bone, wood), folk art/ornamentation, education, and occasional gendered emphasis, based on the subject metadata provided in the retrieved records [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</p></li>
+<li><p>The evidence supplied is a small sample of catalogue records and is therefore insufficient to assess how comprehensively Sámi handicrafts are represented across all Finnish heritage collections, or to establish trends in collecting, display, or scholarly treatment nationwide [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</p></li>
+<li><p>The metadata alone cannot be assumed to describe an item’s visual or textual content; I have not inferred visual details, provenance, or the contents of the items beyond the catalogue subjects and titles provided in these records [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</p></li>
+</ul>
+<p>If you would like, I can:</p>
+<ul>
+<li>List each record’s title, year, and subject lines exactly as given in the retrieved metadata, one record per line [lapinkirjasto.1196130] [aipa.node-5458] [arto.014351367] [oy.999476803906252] [arto.015339633] [oy.9915402633906252] [lapinkirjasto.667124] [arto.012582898].</li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The retrieved records include publications and collection records explicitly about Sámi handicraft, with titles such as “Sámi handicrafts”, “Dáiddaduodji : en bok om samiskt konsthantverk = The art handicraft of the Sami”, “Sámi garraduodji”, “Sámi handicraft : a form of folk art”, “Sámi duodji = Sami handicraft = Samisk slöjd”, and “Duodji/Sami handicraft - a part of the whole” [lapinkirjasto.1196130; lapinkirjasto.238891; aipa.node-5458; arto.014351367; oy.999476803906252; arto.015339633].</p></li>
+<li><p>Metadata subject headings across these records include terms such as taidekäsityö (art handicraft), duodji (Sámi handicraft), käsityöt (handicrafts), boneworks, woodwork, jewellery, hornwork, folk art, handicraft tradition, women, Sami people, indigenous peoples, music and folk beliefs [lapinkirjasto.1196130; lapinkirjasto.238891; aipa.node-5458; sks_doabooks.25013; arto.014351367; arto.015339633; siida.sda-24058].</p></li>
+<li><p>One record appears to be an object record for a pendant or jewellery item in Siida’s holdings, with subjects including pendants (jewellery), hornwork and boneworks [siida.sda-24058].</p></li>
+<li><p>The metadata shows published or catalogued years among the retrieved records that range from 1982 to 2024 (1982; 1995; 1996; 2003; 2011; 2014; 2024) [oy.999476803906252; arto.015339633; lapinkirjasto.238891; arto.014351367; sks_doabooks.25013; lapinkirjasto.1196130; aipa.node-5458].</p></li>
+<li><p>Some titles are presented in multiple languages (for example Swedish and English, or Finnish/English/Swedish), indicating multilingual catalogue entries for at least some items [lapinkirjasto.238891; oy.999476803906252].</p></li>
+</ul>
+<p>Interpretation and limits:</p>
+<ul>
+<li><p>Based on the supplied metadata, Sámi handicrafts are represented in these Finnish heritage records as subjects of art handicraft, traditional handicraft practice (duodji), material-specific work (bone, wood, horn), jewellery, and as part of broader cultural topics (music, folk beliefs, indigenous studies) [lapinkirjasto.1196130; arto.014351367; aipa.node-5458; siida.sda-24058; sks_doabooks.25013].</p></li>
+<li><p>The presence of both publication-type records and at least one object record suggests that representation includes both written/graphic works and collection items, as indicated by the titles and subject terms in the metadata [lapinkirjasto.1196130; lapinkirjasto.238891; arto.014351367; siida.sda-24058].</p></li>
+<li><p>The available evidence is too limited to determine the visual or textual content of these items, the depth of documentation, or how comprehensively Sámi handicrafts are covered across Finnish heritage institutions beyond these records [lapinkirjasto.1196130; lapinkirjasto.238891; aipa.node-5458; sks_doabooks.25013; arto.014351367; oy.999476803906252; siida.sda-24058; arto.015339633].</p></li>
+</ul>
+<p>If you would like, I can list which records are likely publications versus collection objects from the supplied metadata, or extract the subject terms per record.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations</p>
+<ul>
+<li><p>The retrieved records have titles explicitly about Sámi handicrafts or duodji, including “Sámi handicrafts”, “Duodji / čájáhuskataloga”, “Duodji, árbi, arvet : handicraft in the Sámi culture”, and “Dáiddaduodji : en bok om samiskt konsthantverk = The art handicraft of the Sami” [lapinkirjasto.1196130] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [erkki.57294] [lapinkirjasto.238891].</p></li>
+<li><p>The set spans publication years from 1985 to 2014 according to the record metadata [helka.9934515628606253] [arto.015339633] [lapinkirjasto.238891] [arto.014351367] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [erkki.57294] [arto.013724311] [lapinkirjasto.1196130].</p></li>
+<li><p>Metadata subject terms in these records repeatedly include käsityöt (handicrafts), taidekäsityö (art handicraft), käsityöperinne (handicraft tradition), saamelaiset (Sami), and duodji (Sami handicraft) [lapinkirjasto.1196130] [erkki.57294] [lapinkirjasto.238891] [arto.014351367] [arto.015339633].</p></li>
+<li><p>Several records include exhibition-related subject terms or formats such as näyttelyt (exhibitions), näyttelyjulkaisut (exhibition publications), and kiertonäyttelyt (touring exhibitions) [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [arto.013724311] [helka.9934515628606253].</p></li>
+<li><p>Some records link Sámi handicraft to other framings in the metadata such as folk art, design, and gender (for example, references to “folk art, Sami”, “muotoilu” (design), and “naiset” (women)) [arto.014351367] [arto.013724311] [arto.015339633].</p></li>
+</ul>
+<p>Interpretation (separate from the direct observations above)</p>
+<ul>
+<li><p>Within this small set of catalog records, Sámi handicrafts (duodji) are represented in metadata as topics of books and exhibition publications and are described using terms that locate them in craft, art/folk-art, tradition, and exhibition contexts [lapinkirjasto.1196130] [lapinkirjasto.238891] [arto.014351367] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [helka.9934515628606253] [arto.013724311].</p></li>
+<li><p>This suggests that Finnish heritage cataloguing for these items pays attention to multiple framings (craft tradition, art/folk art, exhibitions, and links to design or social categories) in the records represented here [arto.015339633] [arto.014351367] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [arto.013724311].</p></li>
+</ul>
+<p>Limitations and what the evidence does not show</p>
+<ul>
+<li><p>The evidence set is limited to the eight retrieved records above, so it is insufficient to determine how widely Sámi handicrafts are represented across Finnish heritage collections generally or to establish trends over time across institutions [lapinkirjasto.1196130] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [erkki.57294] [arto.013724311] [lapinkirjasto.238891] [arto.015339633] [arto.014351367] [helka.9934515628606253].</p></li>
+<li><p>The metadata alone does not allow conclusions about the visual or textual content of the items, how objects are displayed, provenance details, cataloguing practices across institutions, or the extent of object-level holdings — the records’ subject terms and titles are the only supplied evidence here [lapinkirjasto.1196130] [vaasa.70622fc5-ad11-4518-b5aa-52fbbc5e96d3] [erkki.57294] [arto.013724311] [lapinkirjasto.238891] [arto.015339633] [arto.014351367] [helka.9934515628606253].</p></li>
+</ul>
+<p>If you want, I can (a) list each record’s metadata fields as given here in full, or (b) suggest specific queries or types of catalogue/object records to retrieve next to assess broader representation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Working-class housing
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The retrieved items include a titled record from 1900 concerning working-class residential buildings in Männistö and surrounding terrain [raumanmuseo.rkm-42970].</p></li>
+<li><p>The retrieved items include a report titled “Helsingin työväestön asunto-olot : selonteko työväenasunto-tutkimuksesta vuonna 1900” dated 1904 and described with subjects including hygiene, housing policy and workers’ housing [helka.9918157113506253].</p></li>
+<li><p>The retrieved items include a 1906 record about state measures to promote construction of workers’ housing with subjects listing housing production and the working class [helka.9918155883506253].</p></li>
+<li><p>The retrieved items include a 1911 title “Asuntokysymyksen alalta : esitelmiä ja kirjoitelmia” with subjects related to housing, housing policy and workers [helka.9917913143506253].</p></li>
+<li><p>The retrieved items include municipal or association-related items from 1915 titled “Rautaniemen Työväenyhdistys” and “Seppä Herman Järvinen” that have subjects including housings and residential buildings [sastamalanmuseo.puk-10150, sastamalanmuseo.puk-10148].</p></li>
+<li><p>The retrieved items include a 1918 title “The housing problem in war and in peace” with subjects such as housing and working-class dwellings [vaari.914984].</p></li>
+<li><p>The retrieved items include a 1922 title “Poverty : a study of town life” dated 1922 [fikka.625530].</p></li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li><p>The titles and subject terms in the retrieved records indicate that the available materials (as represented in the retrieval) concern housing policy, living conditions of workers, and specific working-class residential areas in Finnish towns in the early 20th century [raumanmuseo.rkm-42970, helka.9918157113506253, helka.9918155883506253, helka.9917913143506253, sastamalanmuseo.puk-10150, sastamalanmuseo.puk-10148, vaari.914984, fikka.625530].</p></li>
+<li><p>Because the retrieval contains items dated between 1900 and 1922 but none dated after 1922, the evidence provided is insufficient to document working-class housing in Finnish towns for the full period 1900–1960 [raumanmuseo.rkm-42970, helka.9918157113506253, helka.9918155883506253, helka.9917913143506253, sastamalanmuseo.puk-10150, sastamalanmuseo.puk-10148, vaari.914984, fikka.625530].</p></li>
+</ul>
+<p>Limits and next steps:</p>
+<ul>
+<li><p>I cannot assume the specific contents (for example whether an item is a photograph, a pamphlet, a municipal report, or archival material) without inspecting the items themselves or fuller catalogue entries, because only titles, subjects and dates are present in the retrieved evidence [raumanmuseo.rkm-42970, helka.9918157113506253, helka.9918155883506253, helka.9917913143506253, sastamalanmuseo.puk-10150, sastamalanmuseo.puk-10148, vaari.914984, fikka.625530].</p></li>
+<li><p>To cover 1923–1960, further searches for records dated in that interval or consultation of municipal and housing archives would be necessary because the current retrieval does not include items from those years [fikka.625530].</p></li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The record titled “The housing problem in war and in peace” (1918) lists subjects including Housing, United States, Working class dwellings, City planning, and Garden cities [vaari.914984].</p></li>
+<li><p>The record titled “Poverty : a study of town life” is dated 1922 [fikka.625530].</p></li>
+<li><p>The record titled “Männistön työväen asuinrakennukset sekä ympäröivää rakentamatonta maastoa.” is dated 1900 and lists subjects including labour tradition, working class, residential buildings, wooden buildings, architecture, constructed environment, and Rauma (Männistö) [raumanmuseo.rkm-42970].</p></li>
+<li><p>The records “Rautaniemen Työväenyhdistys” (1915) and “Seppä Herman Järvinen” (1915) include subjects referencing working class, workers’ associations, housings, and residential buildings [sastamalanmuseo.puk-10150] [sastamalanmuseo.puk-10148].</p></li>
+<li><p>The record “Asuntokysymyksen alalta : esitelmiä ja kirjoitelmia” is dated 1911 and lists subjects related to housing, housing policy, housing production, and workers (työläiset) [helka.9917913143506253].</p></li>
+<li><p>The record “Valtion toimista työväenasuntojen rakentamisen edistämiseksi” is dated 1906 and lists subjects concerning housing production, the working class, and the state (valtio) [helka.9918155883506253].</p></li>
+<li><p>The record “Helsingin työväestön asunto-olot : selonteko työväenasunto-tutkimuksesta vuonna 1900” is dated 1904 and lists subjects including hygiene, housing policy, workers, and Helsinki [helka.9918157113506253].</p></li>
+</ul>
+<p>Interpretation (separate from direct observations):</p>
+<ul>
+<li><p>The retrieved catalog records indicate the presence of published studies or reports addressing working-class housing and housing policy in Finnish towns in the early 20th century, as shown by titles and subjects such as “Poverty : a study of town life” and the Helsinki housing inquiry [fikka.625530] [helka.9918157113506253].</p></li>
+<li><p>The records also suggest documentation relating to specific working-class residential buildings and local labour culture (for example the Männistö record and the 1915 items referencing workers’ associations and housings) [raumanmuseo.rkm-42970] [sastamalanmuseo.puk-10150] [sastamalanmuseo.puk-10148].</p></li>
+<li><p>The set includes materials concerned with state action and housing production for workers, as indicated by the 1906 title on state measures to promote worker housing and the 1911 collection on housing questions [helka.9918155883506253] [helka.9917913143506253].</p></li>
+</ul>
+<p>Limits of the evidence and cautions:</p>
+<ul>
+<li><p>The retrieved evidence is limited to the catalog metadata for these specific records and does not allow confirmation of the formats (e.g., book, report, photograph, plan) or the full contents of the items; the catalog entries alone are insufficient to determine item formats or detailed content [vaari.914984] [fikka.625530] [raumanmuseo.rkm-42970] [sastamalanmuseo.puk-10150] [sastamalanmuseo.puk-10148] [helka.9917913143506253] [helka.9918155883506253] [helka.9918157113506253].</p></li>
+<li><p>The records retrieved here span 1900–1922 and do not provide evidence for materials documenting working-class housing up to 1960; the available records are therefore insufficient to assess later decades (post‑1922) [raumanmuseo.rkm-42970] [helka.9918157113506253] [fikka.625530].</p></li>
+</ul>
+<p>If you want, I can list these records grouped by type (policy reports, local building documentation, social studies) or suggest what additional searches or repositories to consult to find material specifically dated after 1922.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations (catalogue metadata only):</p>
+<ul>
+<li><p>The item titled “Pohjapiirros + sinikopio; Helsingin kaupungin kunnalliset työväenasunnot, Hietaniemenkatu 5-23, korttelisuunnitelma” is dated 1900 and its subjects include demolition of buildings, floor plans, construction design, urban design, and working class (municipal workers’ housing in Helsinki is indicated by the title and subjects) [werstas.we-1372739].</p></li>
+<li><p>The item “Männistön työväen asuinrakennukset sekä ympäröivää rakentamatonta maastoa.” is dated 1900 and its subjects include working class, residential buildings, wooden buildings, architecture, and building history with place names Rauma and Männistö listed in the metadata [raumanmuseo.rkm-42970].</p></li>
+<li><p>The record “Valtion toimista työväenasuntojen rakentamisen edistämiseksi” is dated 1906 and its subjects include housing production, the working class, and the state in Finland [helka.9918155883506253].</p></li>
+<li><p>The statistical study “Tilastollinen tutkimus yhteiskunta-taloudellisista oloista Suomen maalaiskunnissa v. 1901. V, Työväenperheitten asunto- ja maataloudellisia oloja” is dated 1916 and its subjects include the working class and conditions of habitation in rural communes of Finland (the metadata explicitly names rural communes) [erkki.30197].</p></li>
+<li><p>“The housing problem in war and in peace” is dated 1918 and its subjects in the metadata include housing, working class dwellings, city planning, and garden cities (the record also lists United States among subjects) [vaari.914984].</p></li>
+<li><p>“Poverty : a study of town life” is dated 1922 (title and year are given in the metadata) [fikka.625530].</p></li>
+<li><p>The record “Rautaniemen Työväenyhdistys” dated 1915 includes subjects such as working class, workers’ associations, and housings in its metadata [sastamalanmuseo.puk-10150].</p></li>
+<li><p>The item “Betænkning vedrørende loven om opførelse af arbejderboliger på landet … 3.” is dated 1960 and its subjects include dwellings and working class but the metadata indicates a Danish context (Tanska) rather than Finland [ekk.99914404006250].</p></li>
+</ul>
+<p>Interpretation (based on the above catalogue metadata):</p>
+<ul>
+<li><p>The retrieved records indicate several types of documentary material relevant to working-class housing: architectural plans and urban-design plans, municipal/state reports on housing policy, local building or architectural records tied to specific towns, statistical studies of housing conditions, and monographs or studies on poverty and town life [werstas.we-1372739][helka.9918155883506253][raumanmuseo.rkm-42970][erkki.30197][vaari.914984][fikka.625530][sastamalanmuseo.puk-10150].</p></li>
+<li><p>Specifically for Finnish towns, the Helsinki municipal plan (1900) and the Rauma/Männistö building record (1900) are direct municipal/local items in the period you specified [werstas.we-1372739][raumanmuseo.rkm-42970].</p></li>
+</ul>
+<p>Limitations and cautions:</p>
+<ul>
+<li><p>These observations are based only on the provided catalogue metadata (titles, years, and subject headings); I cannot confirm the actual formats (e.g., whether items are photographs, full reports, drawings, or pamphlets) or the detailed content beyond what the metadata states [werstas.we-1372739][raumanmuseo.rkm-42970][helka.9918155883506253][erkki.30197][vaari.914984][fikka.625530][sastamalanmuseo.puk-10150][ekk.99914404006250].</p></li>
+<li><p>The set of retrieved records is small and unevenly focused (some items concern rural communes or foreign contexts), so it is insufficient to claim a comprehensive or representative picture of documentation for working-class housing across all Finnish towns between 1900 and 1960 [erkki.30197][ekk.99914404006250][werstas.we-1372739][raumanmuseo.rkm-42970][helka.9918155883506253][vaari.914984][fikka.625530][sastamalanmuseo.puk-10150].</p></li>
+</ul>
+<p>If you want, I can (a) prioritize which of these items to check first for town-specific working-class housing evidence, or (b) suggest search terms or record types to locate more municipal plans, housing-board reports, photographs of workers’ housing, and town statistical studies from 1900–1960.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Women’s suffrage
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The retrieved catalogue includes an item titled “Women’s suffrage : a record of the women’s suffrage movement in the British Isles with biographical sketches of Miss Becker” (1902) [uef.99262213705966].</p></li>
+<li><p>There is another 1902 record titled “Womens suffrage” [fikka.93093].</p></li>
+<li><p>A record concerns the First Quinquennial International Woman-Suffrage Alliance Meeting, held in London, April 26th to May 2nd, 1909 [fikka.1526747].</p></li>
+<li><p>A 1908 item is titled “Woman suffrage in Australia” and includes subject headings for women and suffrage [helka.9917557493506253].</p></li>
+<li><p>A 1909 report titled “Report of fifth conference and first quinquennial, London, England, April 26, 27, 28, 29, 30, May 1, 1909” appears in the retrieval with subjects including naisasialiikkeet (women’s movement) [fikka.1522012].</p></li>
+<li><p>The same 1909 report has a separate catalogue entry with subjects including kokoukset (meetings) [abo.999165003405972].</p></li>
+<li><p>A 1905 periodical entry is “The international women’s news - jus suffragii : the monthly organ of The international woman suffrage alliance” [abo.9910659573405972].</p></li>
+<li><p>A 1907 item titled “The sphere of ‘man’ in relation to that of ‘woman’ in the constitution” is present with subjects indicating Women, Great Britain and Women, Suffrage [fikka.1397504].</p></li>
+</ul>
+<p>Interpretation and limits:</p>
+<ul>
+<li><p>None of the retrieved records’ titles or catalogue subjects explicitly indicate they concern Finland or the Finnish 1906 reform granting women’s suffrage [uef.99262213705966; fikka.93093; fikka.1526747; helka.9917557493506253; fikka.1522012; abo.999165003405972; abo.9910659573405972; fikka.1397504].</p></li>
+<li><p>Therefore the available evidence is insufficient to describe how women’s suffrage was represented in Finland around the 1906 reform [uef.99262213705966; fikka.93093; fikka.1526747; helka.9917557493506253; fikka.1522012; abo.999165003405972; abo.9910659573405972; fikka.1397504].</p></li>
+<li><p>I cannot assume the catalogue metadata here fully describes the items’ visual or textual content, so direct inspection of item contents or identification of Finnish-specific items would be required to answer the question adequately [uef.99262213705966; fikka.93093; fikka.1526747; helka.9917557493506253; fikka.1522012; abo.999165003405972; abo.9910659573405972; fikka.1397504].</p></li>
+</ul>
+<p>If you would like, I can try to retrieve Finnish-language or Finland-specific records from the catalogue that date to around 1906.</p>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Observations:</p>
+<ul>
+<li><p>The catalogue includes a record titled “Maikki Friberg Naisasialiitto Unioni” dated 1910 with subjects listing women’s rights organisations, women’s rights movements, associations (organisations), woman’s status, women’s history, and women’s movements [werstas.we-1609044].</p></li>
+<li><p>A record titled “Strömman kartano” dated 1900 has subjects that include women’s rights movements and biographical history among others [werstas.we-1610726].</p></li>
+<li><p>There is a record “Hämeenlinnan työväen naisyhdistys.” dated 1910 with subjects women’s rights movements and workers’ associations [ta_ah.ta-1231573].</p></li>
+<li><p>Multiple records concern “Turun Sosialidemokraattinen naisyhdistys.” (dated 1900 and 1908) and list subjects women’s rights movements and women’s rights organisations [ta_ah.ta-1447419; ta_ah.ta-1447423; ta_ah.ta-1447425].</p></li>
+<li><p>A 1910 record titled “Ihmiset asioivat virastossa” lists government agencies and women’s rights movements among its subjects [werstas.we-1610722].</p></li>
+<li><p>A 1910 record for “Oulun työväenyhdistyksrn naisjaoston johtokunta” lists boards of directors and women’s rights movements as subjects and includes several personal names in its title text [ta_ah.ta-1399204].</p></li>
+</ul>
+<p>Interpretation and limits:</p>
+<ul>
+<li><p>The metadata in these records indicates that around 1900–1910 (which brackets the 1906 reform) Finnish catalogue entries related to women frequently used subject terms such as women’s rights movements, women’s rights organisations, and workers’ or social-democratic women’s associations [werstas.we-1610726; ta_ah.ta-1447419; ta_ah.ta-1447423; ta_ah.ta-1447425; werstas.we-1609044; ta_ah.ta-1231573; werstas.we-1610722; ta_ah.ta-1399204].</p></li>
+<li><p>The presence of a record that links government agencies and women’s rights movements may indicate some interaction between women’s organising and official institutions in the period covered by these records [werstas.we-1610722].</p></li>
+<li><p>The available evidence does not explicitly mention the 1906 reform or the term “suffrage” in the provided metadata, so it is insufficient to state how women’s suffrage specifically was represented in these items or how the reform was described in them [werstas.we-1609044; werstas.we-1610726; ta_ah.ta-1231573; ta_ah.ta-1447425; werstas.we-1610722; ta_ah.ta-1447419; ta_ah.ta-1447423; ta_ah.ta-1399204].</p></li>
+<li><p>I do not assume catalogue metadata alone describes the visual or textual content of an item; to determine how suffrage was represented (words, images, arguments), the full item content would need to be examined.</p></li>
+</ul>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations from the retrieved catalogue records:</p>
+<ul>
+<li><p>Several of the retrieved Finna catalogue records are tagged with subjects relating to the right to vote, elections, women’s rights organisations, women’s rights movements, and feminism, indicating those catalogue terms were applied to these items [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, werstas.we-1610726, ta_ah.ta-1231573, werstas.we-1610722, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+<li><p>One item in the set has the title “Köyhälistön naiset ketä äänestätte?” (1908) and is specifically catalogued under “elections” and “right to vote” [werstas.we-1621132].</p></li>
+<li><p>The item titled “Helmi Tengén Jääsken pappilan portailla” (1900) carries subjects including “right to vote,” “women’s rights organisations,” “feminism,” and “women’s rights movements” in its catalogue metadata [werstas.we-1610968].</p></li>
+<li><p>Multiple records pertain to named women’s associations or labour women’s groups, including “Maikki Friberg Naisasialiitto Unioni” (1910), “Hämeenlinnan työväen naisyhdistys.” (1910), and two records for “Turun Sosialidemokraattinen naisyhdistys.” (1900 and 1908) [werstas.we-1609044, ta_ah.ta-1231573, ta_ah.ta-1447427, ta_ah.ta-1447425].</p></li>
+<li><p>The record “Strömman kartano” (1900) is also catalogued under “women’s rights movements” and related subjects [werstas.we-1610726].</p></li>
+<li><p>The catalogue entries in this set show “Description: NA” for their description fields, indicating no descriptive text was provided in these retrieved metadata entries [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, werstas.we-1610726, ta_ah.ta-1231573, werstas.we-1610722, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+<li><p>The retrieved items have years ranging from 1900 to 1910, so they fall in the period around 1906 as represented by these catalogue dates [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, werstas.we-1610726, ta_ah.ta-1231573, werstas.we-1610722, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+</ul>
+<p>Interpretation and limitations:</p>
+<ul>
+<li><p>The catalogue subjects and titles in this set suggest that women’s suffrage and electoral issues were topics connected to items in these holdings and that women’s associations and labour women’s groups appear in the metadata for this period [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, ta_ah.ta-1231573, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+<li><p>The available metadata and titles alone are insufficient to describe how women’s suffrage was visually or textually represented in the items (for example, whether items are photographs, posters, meeting records, or something else), because the description fields are empty in these records and catalogue subjects do not guarantee specific content [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, werstas.we-1610726, ta_ah.ta-1231573, werstas.we-1610722, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+<li><p>Because the set is limited and lacks descriptive content, it is not possible from these records alone to make broader claims about the prevalence, nature, or change in representations of women’s suffrage around the 1906 reform in Finland [werstas.we-1610968, werstas.we-1621132, werstas.we-1609044, werstas.we-1610726, ta_ah.ta-1231573, werstas.we-1610722, ta_ah.ta-1447425, ta_ah.ta-1447427].</p></li>
+</ul>
+<p>If you want a fuller answer, the next step would be to consult the full item records or images/texts (not just the catalogue metadata) for these entries and to search for additional contemporary sources (newspapers, party pamphlets, association minutes) from 1904–1908.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sawmill workers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Direct observations (catalogue metadata)</p>
+<ul>
+<li><p>The retrieved catalogue records include titles, years, and subject headings that reference sawmills, industrial workers, and related topics [lusto.knp-93301, kansa_ah.ka-1617268, lusto.knp-120228, lusto.knp-93302, ta_ah.ta-102572, lusto.knp-80529, lusto.knp-85897, lusto.knp-80526].</p></li>
+<li><p>Two records have titles that explicitly mention workers or labour action: “Sahan työväkeä ryhmäkuvassa sahalla” (1928) and “Martinniemen sahan lakkolaiset” (1929) [kansa_ah.ka-1617268, ta_ah.ta-102572].</p></li>
+<li><p>Several records list subjects such as industrial workers, sawmill industry, sawmills, industrial buildings, sawn timber, and the forest or wood industry [lusto.knp-93301, lusto.knp-120228, lusto.knp-93302, lusto.knp-80529, lusto.knp-85897, lusto.knp-80526].</p></li>
+<li><p>The dates given in the retrieved records run from 1910 to 1937, with items dated 1910, 1920, 1922, 1928, 1929, and 1937 [lusto.knp-80529, lusto.knp-85897, lusto.knp-80526, kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302].</p></li>
+<li><p>Some catalogue entries include place names (for example Häme/Tammela/Kaukola; Kymenlaakso/Kotka/Hietanen; Lauritsala/Lappeenranta), indicating geographic references in these records [lusto.knp-93301, lusto.knp-93302, lusto.knp-80529, lusto.knp-80526, lusto.knp-85897].</p></li>
+</ul>
+<p>Interpretation (what these retrieved sources can document)</p>
+<ul>
+<li><p>The metadata indicates that the retrieved items are sources that concern sawmill workplaces, machinery, buildings, and workers, and at least one labour action (a strike), so these catalogue records may serve as documentary sources about aspects of sawmill workers’ lives in the early 20th century [kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302, lusto.knp-80529, lusto.knp-85897, lusto.knp-80526].</p></li>
+<li><p>I cannot confirm the visual or textual content of the items beyond their catalogue metadata, so I cannot assert specific details about individual workers’ lives from the records alone [kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302, lusto.knp-80529, lusto.knp-85897, lusto.knp-80526].</p></li>
+<li><p>The retrieved evidence covers 1910–1937 but does not include records dated between 1870 and 1909 or dated 1938–1939, so the evidence is insufficient to document sawmill workers’ lives for the full requested period 1870–1939 based on these items alone [lusto.knp-80529, lusto.knp-85897, lusto.knp-80526, kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302].</p></li>
+</ul>
+<p>Summary</p>
+<ul>
+<li><p>The retrieved catalogue records document sawmill-related workplaces, workers, and at least one strike mainly between 1910 and 1937, with specific items identified above [lusto.knp-80529, lusto.knp-85897, lusto.knp-80526, kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302].</p></li>
+<li><p>The available evidence from these records is too limited to claim coverage of the entire 1870–1939 span or to provide detailed biographical information about individual sawmill workers [lusto.knp-80529, lusto.knp-85897, lusto.knp-80526, kansa_ah.ka-1617268, ta_ah.ta-102572, lusto.knp-93301, lusto.knp-120228, lusto.knp-93302].</p></li>
+</ul>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations — catalogue records retrieved that reference sawmill workers:</p>
+<ul>
+<li><p>The catalogue record titled “Seikun saha ja laatikkotehdas” is dated 1923 and lists subjects including interiors, sawmill industry and sawmill worker [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff].</p></li>
+<li><p>A separate catalogue record with the same title “Seikun saha ja laatikkotehdas” is dated 1923 and lists subjects including sawmill industry and sawmill worker [satakunnanmuseo.0ffb6afa-4682-41df-b18a-906943608001].</p></li>
+<li><p>The catalogue record “Pihlavan höyrysaha” is dated 1929 and lists subjects including sawmill worker and sawmill industry [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9].</p></li>
+<li><p>A second catalogue record also titled “Pihlavan höyrysaha” is dated 1929 and lists subjects including sawmill worker and sawmill industry [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd].</p></li>
+<li><p>The catalogue record “Koskisen Saha Oy:n omistama sahalaitos ja työväkeä Suonpäässä” is dated 1930 and lists subjects including workers and sawmill worker [forssanmuseo.pju-106026].</p></li>
+<li><p>The catalogue record “Karihaaralaisen sahan työntekijöitä” is dated 1920 and lists subjects including sawmill worker, timber yards and sawmill industry [ta_ah.ta-1592344].</p></li>
+<li><p>The catalogue record “Loviisan Saha ja Tynnyritehdas Oy” is dated 1930 and lists subjects including sawmills, employees, interiors and sawmill worker [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21].</p></li>
+<li><p>The catalogue record “Reposaaren höyrysaha” is dated 1922 and lists subjects including interiors, sawmills, sawmill worker, men and women [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+</ul>
+<p>Interpretation and limitations:</p>
+<ul>
+<li><p>The retrieved catalogue records identify items indexed with sawmill-worker–related subjects dated between 1920 and 1930, which indicates these items may be relevant for researching sawmill workers in that period [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff; satakunnanmuseo.0ffb6afa-4682-41df-b18a-906943608001; satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9; satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd; forssanmuseo.pju-106026; ta_ah.ta-1592344; loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21; satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+<li><p>The retrieved evidence does not include items dated between 1870 and 1919, so these particular records do not document sawmill workers in 1870–1919 [ta_ah.ta-1592344; satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44; satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff; satakunnanmuseo.0ffb6afa-4682-41df-b18a-906943608001; satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9; satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd; forssanmuseo.pju-106026; loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21].</p></li>
+<li><p>Because I am limited to the supplied catalogue metadata and must not assume that metadata describes the visual or textual content, I cannot determine from these records alone what specific information about workers’ lives (for example, names, working conditions, demographics, or daily routines) is actually contained in the items [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff; satakunnanmuseo.0ffb6afa-4682-41df-b18a-906943608001; satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9; satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd; forssanmuseo.pju-106026; ta_ah.ta-1592344; loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21; satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+</ul>
+<p>Recommended next step based on the retrieved evidence:</p>
+<ul>
+<li>To establish how these items document the lives of sawmill workers, consult the individual records or holding institutions (the items identified by the above catalogue records) to view the items themselves and their full descriptions [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff; satakunnanmuseo.0ffb6afa-4682-41df-b18a-906943608001; satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9; satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd; forssanmuseo.pju-106026; ta_ah.ta-1592344; loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21; satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</li>
+</ul>
+<p>If you want, I can list the record titles with their URLs from the retrieved metadata so you can follow up at each holding institution.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations (metadata from the retrieved Finna records):</p>
+<ul>
+<li><p>Koskisen Saha Oy:n omistama sahalaitos ja työväkeä Suonpäässä (1930); subjects listed: workers; sawmill worker; sawmills; sawmill industry [forssanmuseo.pju-106026].</p></li>
+<li><p>Seikun saha ja laatikkotehdas (1923); subjects listed: interiors; sawmill industry; sawmills; sawmill worker [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff].</p></li>
+<li><p>Pihlavan höyrysaha (1929); subjects listed: sawmill worker; sawmill industry; location metadata includes Finland, Satakunta, Pori, Pihlava [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9].</p></li>
+<li><p>Pihlavan höyrysaha (1929); subjects listed: sawmill worker; sawmill industry; location metadata includes Finland, Satakunta, Pori, Pihlava [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd].</p></li>
+<li><p>Sahatyöntekijät (1913); subjects listed: sawmill worker; sawmills; sawmill industry; buildings; wooden buildings; building culture; architectural tradition; human being; women; men; apparel (scarves, aprons, men’s suits, skirts); employees; timber; location metadata includes Finland, Satakunta, Rauma [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D].</p></li>
+<li><p>Karihaaralaisen sahan työntekijöitä (1920); subjects listed: sawmill worker; timber yards; sawmill industry [ta_ah.ta-1592344].</p></li>
+<li><p>Loviisan Saha ja Tynnyritehdas Oy (1930); subjects listed: sawmills; employees; interiors; sawmill industry; sawmill worker; location metadata includes Finland, Uusimaa, Loviisa [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21].</p></li>
+<li><p>Reposaaren höyrysaha (1922); subjects listed: interiors; sawmills; sawmill worker; sawmill industry; men; women; location metadata includes Finland, Satakunta, Pori, Reposaari [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+</ul>
+<p>Interpretation (what these records, as described in their metadata, can potentially contribute to research):</p>
+<ul>
+<li><p>Several records explicitly list “sawmill worker,” “workers,” or “employees” as subjects, which indicates the items are directly associated with sawmill labour and therefore may document aspects of sawmill workers’ lives or work roles [forssanmuseo.pju-106026] [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff] [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9] [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd] [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D] [ta_ah.ta-1592344] [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21] [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+<li><p>Subjects such as “interiors,” “buildings,” and apparel-related terms suggest the items may bear information relevant to workplace environments and clothing or appearance of workers, which can be useful for social or material-culture study of sawmill communities [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff] [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D] [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21] [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+</ul>
+<p>Evidence limitations and coverage:</p>
+<ul>
+<li><p>The retrieved records are dated 1913, 1920, 1922, 1923, 1929, and 1930, so the set documents the 1913–1930 portion of the 1870–1939 range rather than the entire period 1870–1939 [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D] [ta_ah.ta-1592344] [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44] [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff] [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9] [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd] [forssanmuseo.pju-106026] [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21].</p></li>
+<li><p>All retrieved records show “Description: NA” in the provided metadata, so I cannot confirm from this evidence what the items visually or textually contain beyond the catalogue fields shown here [forssanmuseo.pju-106026] [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff] [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9] [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd] [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D] [ta_ah.ta-1592344] [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21] [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+<li><p>Because the metadata alone is all that is available here, the evidence is insufficient to produce a comprehensive account of sawmill workers’ lives across 1870–1939 or to confirm specific visual or textual content in the items listed [forssanmuseo.pju-106026] [satakunnanmuseo.30e6f270-87bd-48b8-85bb-9128e492efff] [satakunnanmuseo.812a1e69-f5ef-4b41-b41f-5d9189c9ccc9] [satakunnanmuseo.d4c83ac0-3aa5-45d3-babf-fa27b264f0fd] [satakunnanmuseo.B803974D-FF41-406E-849E-64887741646D] [ta_ah.ta-1592344] [loviisakm.ca6e3b4c-e1c8-40f6-9497-76201ecbaf21] [satakunnanmuseo.fe20bcb2-66f3-478f-add4-db5b9aa72b44].</p></li>
+</ul>
+<p>If you would like, I can list the individual record URLs again or extract any additional catalogue fields shown in these records for closer inspection.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Children’s book illustration
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-a">Search A: your own words</span></p>
+<div class="answer-md">
+<p>Summary: The retrieved catalog records provide a small, heterogeneous sample of materials from the 1930s–1940s that touch on illustration, illustrators, and photographic uses in children’s literature, but they are insufficient to describe broad changes in Finnish children’s-book illustration between 1900 and 1950. [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d] [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721]</p>
+<p>Direct observations from the retrieved records:</p>
+<ul>
+<li><p>A 1934 record explicitly concerns photography in children’s literature and the history of picture books for children. [jamk.993865806106251]</p></li>
+<li><p>A 1939 record is a collection titled Ivar Arosenius sagor : femtiosex bilder and the subject metadata includes illustrators and illustrations in children’s literature. [aalto.997405144406526]</p></li>
+<li><p>Two 1947 records concern Rudolf Koivu as a fairy-tale illustrator and list subjects such as Koivu, illustration, illustrators, fairy tales, children’s literature, and Finland. [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d]</p></li>
+<li><p>Several retrieved items are juvenile titles or periodicals from the 1930s–1940s (including Jack and Jill 1938, Alice in Orchestralia 1943, The First Woman Doctor 1944, and King of the Wind 1948) whose metadata identifies them as children’s or juvenile literature but does not indicate they are Finnish or describe their illustrations. [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721]</p></li>
+</ul>
+<p>Interpretation and limitations:</p>
+<ul>
+<li><p>The 1934 record on photography in children’s literature suggests that photographic techniques or questions about photography’s role in picture books were a subject of attention by that date, but the record’s metadata does not itself show how photographs were used in specific Finnish children’s books. [jamk.993865806106251]</p></li>
+<li><p>The 1939 and 1947 records that focus on named illustrators (Arosenius and Koivu) indicate that certain illustrators were prominent enough to warrant dedicated works or catalog entries, which may reflect professional recognition of illustrators in the period, but the catalogue entries do not provide the images or descriptions needed to characterize stylistic change. [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d]</p></li>
+<li><p>Because many retrieved juvenile records are United States publications from the 1940s and the catalog metadata does not describe visual content, the current evidence cannot support claims about changes in illustration style, technique, or themes across Finland from 1900 to 1950. [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721]</p></li>
+</ul>
+<p>Conclusion:</p>
+<ul>
+<li>The available records hint at attention to illustrators and to photography in children’s literature during the 1930s–1940s, but they are too few, too focused on metadata, and not consistently Finnish to document how illustrations in Finnish children’s books changed between 1900 and 1950. [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d] [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721]</li>
+</ul>
+<p>Suggested next steps for research:</p>
+<ul>
+<li><p>Inspect actual copies or digitized images of the Finnish titles by Arosenius and Koivu to compare visual style, techniques, and subject matter across dates.</p></li>
+<li><p>Search catalogs systematically for Finnish picture books and illustrated children’s books across the full 1900–1950 period and collect representative images and publication details.</p></li>
+<li><p>Look for secondary literature or histories of Finnish children’s-book illustration that analyze stylistic or technological shifts (e.g., adoption of photographic reproduction, changes in printing techniques, or evolving illustration genres).</p></li>
+</ul>
+<p>If you want, I can prioritize locating digitized images or fuller catalogue records for the Arosenius and Koivu items and the 1934 photography record as a next step.</p>
+</div>
+<p><span class="cond cond-b">Search B: your words + the indexer’s suggestions</span></p>
+<div class="answer-md">
+<p>Direct observations (based only on the retrieved catalogue records):</p>
+<ul>
+<li><p>A 1934 record is titled “Photography in Children’s Literature” and its subjects include children’s literature history/criticism and photography in literature, indicating attention to photography within children’s-book studies in that year [jamk.993865806106251].</p></li>
+<li><p>A 1939 record “Ivar Arosenius sagor : femtiosex bilder” is catalogued with subjects including illustrators and illustrations for children’s literature, indicating a published collection of pictures associated with Arosenius in that year [aalto.997405144406526].</p></li>
+<li><p>Two 1947 records titled “Sadunkuvittaja Rudolf Koivu / Sagotecknaren Rudolf Koivu” list subjects such as Koivu, illustration, children’s literature, and Finland (1910–1940), indicating published material focused on Rudolf Koivu as an illustrator in 1947 [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d].</p></li>
+<li><p>Several juvenile titles from the late 1930s and 1940s appear among the records (Jack and Jill, 1938; Alice in Orchestralia, 1943; The First Woman Doctor, 1944; King of the Wind, 1948), each catalogued under children’s/juvenile literature and related subjects [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721].</p></li>
+</ul>
+<p>Interpretation and limitations (separated from the observations above):</p>
+<ul>
+<li><p>The retrieved records suggest that, in the 1930s–1940s, there was documented interest in the role of photography in children’s literature and in individual illustrators (examples in the records include the 1934 photography item and the 1939 and 1947 items related to Arosenius and Koivu) [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d].</p></li>
+<li><p>The available evidence is concentrated in the 1930s–1940s and contains no records from 1900–1929 in the retrieved set, and the catalogue entries do not themselves describe visual styles or provide images, so they are insufficient to document how illustrations changed across the full period 1900–1950 [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d] [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721].</p></li>
+<li><p>Because only a small set of records (mostly from the 1930s–1940s) is available here, it would not be appropriate to claim a general trend or definitive stylistic change over 1900–1950 based on this material alone [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d] [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721].</p></li>
+</ul>
+<p>Conclusion and next steps:</p>
+<ul>
+<li>The retrieved records point to mid-period interests (photography in children’s books; attention to named illustrators such as Arosenius and Koivu) but do not provide enough coverage or visual description to answer how illustrations in Finnish children’s books changed between 1900 and 1950 [jamk.993865806106251] [aalto.997405144406526] [heili.dfb68eea-8e35-40a7-9cec-83c7da70a26a] [kirjava.41515442325576484141414161413d3d] [jamk.993623630206251] [helka.9920807903506253] [outi.1987382] [outi.1987721].</li>
+</ul>
+<p>If you would like, I can search specifically for earlier (1900–1929) and additional 1940s–1950 records or for catalogue descriptions and digitized images to better assess stylistic changes.</p>
+</div>
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>I will answer using only the eight retrieved records listed below.<br>
+Records referenced: slsbib.39478; abo.993787513405972; tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA; jamk.993865806106251; tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B; lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF; tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0; outi.1987721. [slsbib.39478 abo.993787513405972 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA jamk.993865806106251 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 outi.1987721]</p>
+<p>Direct observations (from the records’ metadata only)</p>
+<ul>
+<li><p>A 1900 record’s title states it contains illustrations after original drawings by Lorenz Frølich and specifies “Med 113 illustrationer,” i.e., 113 illustrations in that edition [slsbib.39478]. [slsbib.39478]</p></li>
+<li><p>A 1905 record is catalogued as a children’s/youth book in Swedish (Peter Kock i Port Arthur) with no further illustration details in the provided metadata [abo.993787513405972]. [abo.993787513405972]</p></li>
+<li><p>A 1921 record’s title includes the phrase “sisäkuvitus” (interior illustration) in relation to Z. Topelius’s Lukemisia lapsille II [tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA]. [tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA]</p></li>
+<li><p>A 1934 record’s title is “Photography in Children’s Literature” and its subjects include “Photography in literature” and “Picture books for children, History,” according to the metadata [jamk.993865806106251]. [jamk.993865806106251]</p></li>
+<li><p>A 1934 record’s title/metadata indicates a cover illustration attribution phrased as “kansikuvitus Carl Blinkin kirjaan” (cover illustration credited in the entry) [tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B]. [tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B]</p></li>
+<li><p>A 1937 record’s title/metadata names Martta Wendelin as the illustrator for Arvid Lydeckenin Metsän satuja [lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF]. [lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF]</p></li>
+<li><p>Another 1937 record’s title/metadata indicates a cover illustration attribution phrased as “kansikuvitus Annikki Setälän kirjaan” [tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0]. [tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0]</p></li>
+<li><p>A 1948 record (King of the wind) is catalogued as a juvenile/adventure/children’s book from the United States (1940s) in the metadata provided here, with no illustration detail in the supplied entry [outi.1987721]. [outi.1987721]</p></li>
+</ul>
+<p>Interpretation and limitations (distinguishing interpretation from the direct observations above)</p>
+<ul>
+<li><p>From the metadata, the set of records shows that illustrated children’s books or books with illustration attributions appear in the period covered (1900–1948) as represented by these records, including a 1900 edition explicitly listing many illustrations, entries noting interior or cover illustrations in the 1920s–1930s, and a 1934 item concerned with photography in children’s literature; this is an interpretation based on the cited metadata records [slsbib.39478 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF jamk.993865806106251]. [slsbib.39478 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF jamk.993865806106251]</p></li>
+<li><p>The metadata also shows named illustrators or illustration attributions in several 1930s records (Martta Wendelin, Annikki Setälä, and the entry mentioning “Carl Blinkin”), which may indicate that illustrator credits appear in catalogue records of that decade; this is an interpretation supported by those records’ metadata [lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B]. [lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B]</p></li>
+</ul>
+<p>Evidence insufficiency and caution</p>
+<ul>
+<li>The available evidence (the eight provided records) is too limited to establish detailed changes in illustration style, technique, production methods, or the overall prevalence of illustrations in Finnish children’s books between 1900 and 1950; more extensive primary visual data would be required to make such claims [slsbib.39478 abo.993787513405972 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA jamk.993865806106251 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 outi.1987721]. [slsbib.39478 abo.993787513405972 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA jamk.993865806106251 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 outi.1987721]</li>
+</ul>
+<p>Recommendations for further research (based only on the gaps seen in these records)</p>
+<ul>
+<li>To assess how illustrations changed visually and technically, consult digitized images or physical copies of representative Finnish children’s books across 1900–1950 to examine styles, media, and production quality directly (the current metadata entries do not provide those images) [slsbib.39478 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA jamk.993865806106251 lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B outi.1987721 abo.993787513405972]. [slsbib.39478 tuusulanmuseo.6D05CAACD84A780969F6C83DC03115DA jamk.993865806106251 lappeenrannanmuseot.B0CD717D-71AA-4577-98C0-DC4E62DA31EF tuusulanmuseo.20CC13789874C58BF5B70A2E473A8AC0 tuusulanmuseo.9E14C4B4C73885533F978BE106F8605B outi.1987721 abo.993787513405972]</li>
+</ul>
+<p>If you would like, I can (a) list specific types of book-level evidence to collect (e.g., sample titles per decade, scans of title pages/illustrations, publisher data), or (b) help design a search strategy for Finnish collections to gather a larger, representative set of illustrated children’s books from 1900–1950.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Amateur radio clubs
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="cond cond-c">Search C: B + official thesaurus terms in Finnish, Swedish and English</span></p>
+<div class="answer-md">
+<p>Direct observations:</p>
+<ul>
+<li><p>The catalogue entry is titled “Tammerkoski” and is dated 1938, with subjects listed as “kotiseutututkimus.; hembygdsforskning.” [helka.9914699183506253]</p></li>
+<li><p>The catalogue entry is titled “Nokian uutiset” and is dated 1939, with subjects listed as “Nokia (kaupunki); Pirkanmaa.” [piki.311241]</p></li>
+</ul>
+<p>Interpretation and limitations:</p>
+<ul>
+<li><p>The provided catalogue metadata for these two records does not mention amateur radio or amateur radio clubs in the fields shown, so the metadata alone does not indicate that these items document amateur radio activity. [helka.9914699183506253; piki.311241]</p></li>
+<li><p>Because the retrieved evidence consists only of these two catalogue entries, it is insufficient to answer how amateur radio clubs operated in Finland between 1925 and 1939. [helka.9914699183506253; piki.311241]</p></li>
+<li><p>I cannot assume the actual textual or visual content of the items beyond the supplied catalogue metadata; full item descriptions, digitized content, or additional records explicitly about amateur radio clubs from 1925–1939 would be needed to address your question.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./compare.html" class="pagination-link" aria-label="Compare the searches">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./extra-tests.html" class="pagination-link" aria-label="Extra tests">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Extra tests</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>From metadata to narrative: Jeba, Matveeva, Laitinen, Lahti. University of Turku.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto from the heritageRAG result files.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

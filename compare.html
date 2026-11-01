@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.20">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Compare the searches – HeritageRAG study report</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ai-answers.html" rel="next">
+<link href="./questions.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a53c764061a324549f5579b988345580.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./results.html">What we found</a></li><li class="breadcrumb-item"><a href="./compare.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">HeritageRAG study report</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How the way we search changes what we find</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">The study</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./runs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The two runs, explained</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-it-works.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How the study works, step by step</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">What we found</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">What we found across all questions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question by question</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./compare.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ai-answers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extra-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Extra tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./paper-figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Figures for the paper</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">In this chapter</h2>
+   
+  <ul class="collapse">
+  <li><a href="#how-to-read-the-charts" id="toc-how-to-read-the-charts" class="nav-link active" data-scroll-target="#how-to-read-the-charts">How to read the charts</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./results.html">What we found</a></li><li class="breadcrumb-item"><a href="./compare.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Compare the searches</span></h1>
+<p class="subtitle lead">Which institutions, languages, material types, decades and subjects each search shows, question by question</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="in-short">
+<p><strong>In short.</strong> For every question, the charts below compare the records kept by the three searches: where they come from, what language they are in, what kind of material they are, which decade they date from, and which subject words describe them. Each tab starts with a one-line note on what changed between search A and search C.</p>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Checkers: please stop here
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These charts show which search found records from which institution. If you are judging records or sentences for the study, please come back after you have finished.</p>
+</div>
+</div>
+<section id="how-to-read-the-charts" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-the-charts">How to read the charts</h2>
+<ul>
+<li><strong>Each group of three bars is one category</strong> (for example one museum). The bars show what share of each search’s kept records falls in that category: <span class="cond cond-a">A: own words</span> <span class="cond cond-b">B: + Annif</span> <span class="cond cond-c">C: + YSO terms</span></li>
+<li><strong>Shares, not counts</strong>, so that a search with 11 records and one with 57 can be compared. The small number at the end of each bar is the actual number of records.</li>
+<li><span style="color:#7A3F94;font-weight:700">Purple, bold labels</span> are categories that search A did not show at all: they appear only through Annif’s or the thesaurus’s words.</li>
+<li><span style="color:#9AA5AB">Grey labels</span> are categories that search A showed but search C does not: the wider search pushed them out of its top 60.</li>
+<li>Each chart shows the ten largest categories. <em>(not given)</em> means the record has no value for that field. In the language charts it is left out and reported in the note instead, because most records (photographs and objects) have no language.</li>
+</ul>
+</section>
+<div class="cell" data-layout-align="left">
+<section id="compare-women-advertising" class="level2">
+<h2 class="anchored" data-anchor-id="compare-women-advertising">Women in advertising (asked in English)</h2>
+<p><em>How did representations of women in Finnish advertising change between 1920 and 1960?</em><br>
+Records kept: A 60, B 60, C 60. <a href="./questions.html#women-advertising">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>New in C:</strong> The Society of Swedish Literature in Finland (1). <strong>Missing from C:</strong> Kerava Museum Services (4 in A), Lahti City Museums (1 in A), The People’s Archives (1 in A). <strong>Biggest change in share:</strong> Hyvinkää City Museum, from 73% in A to 88% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Women in advertising (asked in English)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>New in C:</strong> Swedish (1). No language is given for 100% of A’s records and 98% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Women in advertising (asked in English)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><strong>New in C:</strong> Archive/Collection (1), Book material (1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Women in advertising (asked in English)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p><strong>Missing from C:</strong> 1940s (3 in A), 1920s (2 in A).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Women in advertising (asked in English)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p><strong>New in C:</strong> knitwork (13), fashion (3), commissions (organs) (1). <strong>Missing from C:</strong> men (6 in A), advertising photography (2 in A), design (artistic creation) (2 in A). <strong>Biggest change in share:</strong> wool industry, from 13% in A to 35% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Women in advertising (asked in English)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-women-advertising-fi" class="level2">
+<h2 class="anchored" data-anchor-id="compare-women-advertising-fi">Women in advertising (asked in Finnish)</h2>
+<p><em>Miten naisia kuvattiin suomalaisissa mainoksissa vuosina 1920-1960?</em><br>
+Records kept: A 60, B 56, C 60. <a href="./questions.html#women-advertising-fi">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><strong>New in C:</strong> The Finnish Labour Museum Werstas (11), Lahti City Museums (4), The People’s Archives (3). <strong>Missing from C:</strong> Tampere City Museums (Siiri) (6 in A), North Karelian Museum (2 in A), The Finnish Arts and Culture Agency (1 in A). <strong>Biggest change in share:</strong> Helsinki City Museum, from 70% in A to 2% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-fi-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Women in advertising (asked in Finnish)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><strong>New in C:</strong> Swedish (1). No language is given for 100% of A’s records and 98% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-fi-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Women in advertising (asked in Finnish)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><strong>New in C:</strong> Work of art (2), Book material (1). <strong>Missing from C:</strong> Video (1 in A).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-fi-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Women in advertising (asked in Finnish)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><strong>Biggest change in share:</strong> 1950s, from 67% in A to 33% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-fi-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Women in advertising (asked in Finnish)</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p><strong>New in C:</strong> advertisements (38), suomi (18), hyvinkää (18). <strong>Missing from C:</strong> naiset (45 in A), uusimaa (25 in A), europe (24 in A). <strong>Biggest change in share:</strong> women, from 12% in A to 80% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/women-advertising-fi-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Women in advertising (asked in Finnish)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-emigrant-letters" class="level2">
+<h2 class="anchored" data-anchor-id="compare-emigrant-letters">Emigrant letters</h2>
+<p><em>How is Finnish emigration to North America documented in emigrant letters between 1870 and 1930?</em><br>
+Records kept: A 5, B 10, C 60. <a href="./questions.html#emigrant-letters">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><strong>New in C:</strong> Migration Institute of Finland (46), Finnish Heritage Agency (4), Helka Libraries (1). <strong>Missing from C:</strong> Satakunta University of Applied Sciences (1 in A). <strong>Biggest change in share:</strong> The Society of Swedish Literature in Finland, from 60% in A to 8% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/emigrant-letters-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Emigrant letters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><strong>New in C:</strong> Finnish (32). <strong>Biggest change in share:</strong> Swedish, from 80% in A to 12% in C. No language is given for 0% of A’s records and 10% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/emigrant-letters-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Emigrant letters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><strong>New in C:</strong> Text (41), Image (6). <strong>Biggest change in share:</strong> Archive/Collection, from 60% in A to 18% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/emigrant-letters-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Emigrant letters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p><strong>New in C:</strong> 1880s (9), 1910s (6), 1920s (3). <strong>Biggest change in share:</strong> 1930s, from 40% in A to 3% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/emigrant-letters-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Emigrant letters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<p><strong>New in C:</strong> siirtolaiset (49), amerikansuomalaiset (47), yhdysvallat (46). <strong>Missing from C:</strong> affect (psychology) (1 in A). <strong>Biggest change in share:</strong> brev, from 60% in A to 5% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/emigrant-letters-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Emigrant letters</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-civil-war-camps" class="level2">
+<h2 class="anchored" data-anchor-id="compare-civil-war-camps">Civil War prison camps</h2>
+<p><em>What collections document the prison camps of the Finnish Civil War?</em><br>
+Records kept: A 58, B 59, C 59. <a href="./questions.html#civil-war-camps">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><strong>New in C:</strong> Lahti City Museums (2), Helsinki City Museum (1). <strong>Missing from C:</strong> Helsinki University Museum Flame (4 in A). <strong>Biggest change in share:</strong> The People’s Archives, from 2% in A to 44% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/civil-war-camps-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Civil War prison camps</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>No language is given for 100% of A’s records and 100% of C’s.</p>
+<p><em>No values to chart for this dimension.</em></p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><strong>Biggest change in share:</strong> Physical object, from 14% in A to 29% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/civil-war-camps-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Civil War prison camps</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p>The three searches show much the same mix.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/civil-war-camps-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Civil War prison camps</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<p><strong>New in C:</strong> finnish civil war (20), reds (finnish civil war) (9), military law (8). <strong>Missing from C:</strong> tampere (10 in A), kalevankangas (7 in A), collections (3 in A). <strong>Biggest change in share:</strong> prisoners of war, from 2% in A to 71% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/civil-war-camps-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Civil War prison camps</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-temperance-posters" class="level2">
+<h2 class="anchored" data-anchor-id="compare-temperance-posters">Temperance posters</h2>
+<p><em>How was the temperance movement promoted in Finland between 1880 and 1930?</em><br>
+Records kept: A 6, B 6, C 25. <a href="./questions.html#temperance-posters">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><strong>New in C:</strong> The Labour Archives (15), Archives of the Organizations of the National Coalition Party (1), Helsinki City Museum (1). <strong>Biggest change in share:</strong> The Finnish Labour Museum Werstas, from 100% in A to 28% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/temperance-posters-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Temperance posters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><strong>New in C:</strong> Finnish (1). No language is given for 100% of A’s records and 96% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/temperance-posters-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Temperance posters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p><strong>New in C:</strong> Archive/Collection (1), Image (1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/temperance-posters-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Temperance posters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<p><strong>New in C:</strong> 1910s (3), 1930s (3). <strong>Biggest change in share:</strong> 1920s, from 100% in A to 76% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/temperance-posters-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Temperance posters</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
+<p><strong>New in C:</strong> temperance movements (13), celebrations (6), trade union movement (3). <strong>Biggest change in share:</strong> alcohol education, from 100% in A to 24% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/temperance-posters-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Temperance posters</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-sami-handicrafts" class="level2">
+<h2 class="anchored" data-anchor-id="compare-sami-handicrafts">Sámi handicrafts</h2>
+<p><em>How are Sámi handicrafts represented in Finnish heritage collections?</em><br>
+Records kept: A 60, B 60, C 60. <a href="./questions.html#sami-handicrafts">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><strong>New in C:</strong> Vaasa City Library (2), Anders Libraries (1), Kyyti-libraries (1). <strong>Missing from C:</strong> University of Oulu (3 in A), 3AMK libraries (2 in A), Finnish National Gallery / Library (2 in A). <strong>Biggest change in share:</strong> The National Library, from 27% in A to 63% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sami-handicrafts-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Sámi handicrafts</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><strong>Missing from C:</strong> German (2 in A), French (1 in A), Northern Sámi (1 in A). <strong>Biggest change in share:</strong> Finnish, from 12% in A to 47% in C. No language is given for 17% of A’s records and 5% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sami-handicrafts-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Sámi handicrafts</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><strong>Missing from C:</strong> Video (6 in A), Curated materials (1 in A), Thesis (1 in A). <strong>Biggest change in share:</strong> Journal/Article, from 17% in A to 52% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sami-handicrafts-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Sámi handicrafts</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<p><strong>New in C:</strong> 1920s (1). <strong>Missing from C:</strong> 1950s (1 in A). <strong>Biggest change in share:</strong> 2000s, from 13% in A to 30% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sami-handicrafts-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Sámi handicrafts</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<p><strong>New in C:</strong> käsityöläiset (11), hantverkare (10), enare (4). <strong>Missing from C:</strong> gákti (sámi clothing) (9 in A), textile handicrafts (9 in A), nauhat (tekstiilit) (4 in A). <strong>Biggest change in share:</strong> handarbeten och hantverk (objekt), from 23% in A to 73% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sami-handicrafts-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Sámi handicrafts</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-working-class-housing" class="level2">
+<h2 class="anchored" data-anchor-id="compare-working-class-housing">Working-class housing</h2>
+<p><em>What materials document working-class housing in Finnish towns between 1900 and 1960?</em><br>
+Records kept: A 11, B 11, C 57. <a href="./questions.html#working-class-housing">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p><strong>New in C:</strong> The Finnish Arts and Culture Agency (11), Helsinki City Museum (7), Tampere City Museums (Siiri) (5). <strong>Biggest change in share:</strong> Helka Libraries, from 27% in A to 9% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/working-class-housing-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Working-class housing</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><strong>New in C:</strong> Danish (1). <strong>Biggest change in share:</strong> English, from 18% in A to 4% in C. No language is given for 27% of A’s records and 49% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/working-class-housing-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Working-class housing</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><strong>New in C:</strong> Video (11), Journal/Article (3), Physical object (2). <strong>Biggest change in share:</strong> Book material, from 73% in A to 30% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/working-class-housing-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Working-class housing</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p><strong>New in C:</strong> 1930s (9), 1960s (1). <strong>Biggest change in share:</strong> 1950s, from 9% in A to 37% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/working-class-housing-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Working-class housing</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p><strong>New in C:</strong> yhteiskuntaluokat (9), europe (6), nordic countries (6). <strong>Biggest change in share:</strong> asuminen, from 27% in A to 5% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/working-class-housing-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Working-class housing</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-womens-suffrage" class="level2">
+<h2 class="anchored" data-anchor-id="compare-womens-suffrage">Women’s suffrage</h2>
+<p><em>How was women’s suffrage represented in Finland around the 1906 reform?</em><br>
+Records kept: A 11, B 54, C 60. <a href="./questions.html#womens-suffrage">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-5" role="tab" aria-controls="tabset-8-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p><strong>New in C:</strong> The Labour Archives (14), The Finnish Labour Museum Werstas (11), The People’s Archives (2). <strong>Missing from C:</strong> Swedish central archive (1 in A), University of Eastern Finland (1 in A). <strong>Biggest change in share:</strong> The National Library, from 45% in A to 22% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/womens-suffrage-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Women’s suffrage</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p><strong>New in C:</strong> Finnish (13), Swedish (12), German (1). <strong>Biggest change in share:</strong> English, from 91% in A to 10% in C. No language is given for 9% of A’s records and 47% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/womens-suffrage-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Women’s suffrage</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<p><strong>New in C:</strong> Image (26), Text (7), Other (1). <strong>Missing from C:</strong> Archive/Collection (1 in A). <strong>Biggest change in share:</strong> Book material, from 82% in A to 38% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/womens-suffrage-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Women’s suffrage</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-4-tab">
+<p><strong>New in C:</strong> 1910s (8). <strong>Biggest change in share:</strong> 1900s, from 100% in A to 87% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/womens-suffrage-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Women’s suffrage</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-5-tab">
+<p><strong>New in C:</strong> women’s rights movements (22), women’s rights organisations (13), naisen asema (7). <strong>Missing from C:</strong> feminister (1 in A), finlandssvenskar (1 in A), great britain (1 in A). <strong>Biggest change in share:</strong> kvinnosaksrörelser, from 18% in A to 5% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/womens-suffrage-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Women’s suffrage</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-sawmill-workers" class="level2">
+<h2 class="anchored" data-anchor-id="compare-sawmill-workers">Sawmill workers</h2>
+<p><em>What sources document the lives of sawmill workers between 1870 and 1939?</em><br>
+Records kept: A 60, B 60, C 60. <a href="./questions.html#sawmill-workers">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-4" role="tab" aria-controls="tabset-9-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-5" role="tab" aria-controls="tabset-9-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p><strong>New in C:</strong> KAMU Espoo City Museum (2), Pargas hembygdsmuseum (1), Tampere City Museums (Siiri) (1). <strong>Missing from C:</strong> Rauma Museum (1 in A), The Finnish Labour Museum Werstas (1 in A). <strong>Biggest change in share:</strong> Lusto - The Finnish Forest Museum, from 40% in A to 30% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sawmill-workers-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Sawmill workers</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p>No language is given for 100% of A’s records and 100% of C’s.</p>
+<p><em>No values to chart for this dimension.</em></p>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<p>The three searches show much the same mix.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sawmill-workers-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Sawmill workers</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-9-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-4-tab">
+<p>The three searches show much the same mix.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sawmill-workers-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Sawmill workers</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-9-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-5-tab">
+<p><strong>New in C:</strong> miehet (3), sahalaitokset (3), työntekijät (3). <strong>Missing from C:</strong> drums (2 in A), forest workers (2 in A), architecture (1 in A). <strong>Biggest change in share:</strong> industrial workers, from 48% in A to 28% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/sawmill-workers-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Sawmill workers</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-childrens-book-illustration" class="level2">
+<h2 class="anchored" data-anchor-id="compare-childrens-book-illustration">Children’s book illustration</h2>
+<p><em>How did illustrations in Finnish children’s books change between 1900 and 1950?</em><br>
+Records kept: A 18, B 18, C 59. <a href="./questions.html#childrens-book-illustration">What happened to this question</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">Institution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Language</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-3" role="tab" aria-controls="tabset-10-3" aria-selected="false" href="">Material type</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-4" role="tab" aria-controls="tabset-10-4" aria-selected="false" href="">Decade</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-5" role="tab" aria-controls="tabset-10-5" aria-selected="false" href="">Subject word</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p><strong>New in C:</strong> Tuusula Museum (41), Åbo Akademi Library (9), The Society of Swedish Literature in Finland (3). <strong>Missing from C:</strong> The National Library (5 in A), Aalto University Learning Centre (1 in A), Eepos Libraries (1 in A).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/childrens-book-illustration-institution.png" class="img-fluid figure-img" alt="Grouped bar chart of institution shares in searches A, B and C"></p>
+<figcaption>Institution compared across searches A, B and C for Children’s book illustration</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<p><strong>New in C:</strong> Danish (2), French (1). <strong>Missing from C:</strong> German (1 in A), Several languages (1 in A). <strong>Biggest change in share:</strong> English, from 44% in A to 8% in C. No language is given for 0% of A’s records and 69% of C’s.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/childrens-book-illustration-language.png" class="img-fluid figure-img" alt="Grouped bar chart of language shares in searches A, B and C"></p>
+<figcaption>Language compared across searches A, B and C for Children’s book illustration</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-10-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-3-tab">
+<p><strong>New in C:</strong> Work of art (41). <strong>Missing from C:</strong> Thesis (1 in A). <strong>Biggest change in share:</strong> Book material, from 94% in A to 31% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/childrens-book-illustration-material.png" class="img-fluid figure-img" alt="Grouped bar chart of material type shares in searches A, B and C"></p>
+<figcaption>Material type compared across searches A, B and C for Children’s book illustration</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-10-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-4-tab">
+<p><strong>New in C:</strong> 1920s (18), 1900s (5). <strong>Biggest change in share:</strong> 1940s, from 56% in A to 17% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/childrens-book-illustration-decade.png" class="img-fluid figure-img" alt="Grouped bar chart of decade shares in searches A, B and C"></p>
+<figcaption>Decade compared across searches A, B and C for Children’s book illustration</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-10-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-5-tab">
+<p><strong>New in C:</strong> illustration (art forms) (41), illustrations (41), ungdomslitteratur (12). <strong>Missing from C:</strong> koivu (6 in A), kuvittajat (6 in A), suomi (6 in A). <strong>Biggest change in share:</strong> lastenkirjallisuus, from 50% in A to 17% in C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/compare/childrens-book-illustration-subject.png" class="img-fluid figure-img" alt="Grouped bar chart of subject word shares in searches A, B and C"></p>
+<figcaption>Subject word compared across searches A, B and C for Children’s book illustration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="questions-without-charts" class="level2">
+<h2 class="anchored" data-anchor-id="questions-without-charts">Questions without charts</h2>
+<ul>
+<li><strong>Karelian evacuees</strong>: no search kept any records.</li>
+<li><strong>Swedish-language theatre</strong>: no search kept any records.</li>
+<li><strong>Amateur radio clubs</strong>: its only records came from a wrong thesaurus match, <em>clubs</em> taken as <em>music clubs</em>, which heritageRAG 0.3.1 fixes.</li>
+</ul>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./questions.html" class="pagination-link" aria-label="Question by question">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question by question</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ai-answers.html" class="pagination-link" aria-label="What the AI wrote, and can we trust it?">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">What the AI wrote, and can we trust it?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>From metadata to narrative: Jeba, Matveeva, Laitinen, Lahti. University of Turku.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto from the heritageRAG result files.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

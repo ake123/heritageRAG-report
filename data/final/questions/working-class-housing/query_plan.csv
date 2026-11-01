@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","""working class"" AND housing",2,"en","search_daterange_mv:""overlap|[1900 TO 1960]""","ok",13,13,0.579684019088745,
-"B_annif","""working class"" AND housing",2,"en","search_daterange_mv:""overlap|[1900 TO 1960]""","ok",13,13,0.242471933364868,
-"C_finto","(""working class"" OR työväenluokka OR arbetarklassen) AND (housing OR asunnot OR bostäder OR housings)",7,"en, fi, sv","search_daterange_mv:""overlap|[1900 TO 1960]""","ok",111,60,1.02380800247192,

@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","""children's literature"" AND illustrations",2,"en","search_daterange_mv:""overlap|[1900 TO 1950]""","ok",20,20,0.631819009780884,
-"B_annif","(""children's literature"" OR ""juvenile literature"" OR ""children's authors"") AND illustrations",4,"en","search_daterange_mv:""overlap|[1900 TO 1950]""","ok",20,20,0.731791019439697,
-"C_finto","(""children's literature"" OR ""juvenile literature"" OR ""children's authors"" OR lastenkirjallisuus OR barnlitteratur OR nuortenkirjallisuus OR ungdomslitteratur OR lastenkirjailijat OR barnboksförfattare) AND (illustrations OR kuvitukset OR illustrationer)",12,"en, fi, sv","search_daterange_mv:""overlap|[1900 TO 1950]""","ok",660,60,1.27633190155029,

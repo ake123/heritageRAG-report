@@ -1,4 +1,0 @@
-"condition","query","query_terms","term_languages","filters","status","index_matches","retrieved","seconds","error"
-"A_direct","""temperance movement"" AND posters",2,"en","search_daterange_mv:""overlap|[1880 TO 1930]""","ok",6,6,0.430618047714233,
-"B_annif","""temperance movement"" AND posters",2,"en","search_daterange_mv:""overlap|[1880 TO 1930]""","ok",6,6,0.225009918212891,
-"C_finto","(""temperance movement"" OR raittiusliikkeet OR nykterhetsrörelser OR ""temperance movements"") AND (posters OR julisteet OR affischer)",7,"en, fi, sv","search_daterange_mv:""overlap|[1880 TO 1930]""","ok",25,25,0.639657020568848,

@@ -1,4 +1,0 @@
-"condition_a","condition_b","shared","only_a","only_b","jaccard","rbo"
-"A_direct","B_annif",6,0,0,1,1
-"A_direct","C_finto",6,0,19,0.24,0
-"B_annif","C_finto",6,0,19,0.24,0
